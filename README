@@ -7,6 +7,7 @@ http://github.com/sbl/sc-max
 some supercollider ugens ported to max-msp.
 forks and patches are welcome.
 
+You need the supercollider header files to compile most of the externals.
 #############################
 
 SuperCollider real time audio synthesis system Copyright (c) 2002 James McCartney. All rights reserved.

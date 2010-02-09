@@ -1,9 +1,9 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 267.0, 179.0, 640.0, 506.0 ],
+		"rect" : [ 337.0, 204.0, 640.0, 506.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 267.0, 179.0, 640.0, 506.0 ],
+		"defrect" : [ 337.0, 204.0, 640.0, 506.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -19,6 +19,47 @@
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "part of sc-max. http://github.com/sbl/sc-max\nport by stephen lumenta\nsupercollider is licensed under the GPL so is this.",
+					"linecount" : 3,
+					"numinlets" : 1,
+					"id" : "obj-12",
+					"patching_rect" : [ 5.0, 458.0, 277.0, 43.0 ],
+					"numoutlets" : 0,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "description of the product",
+					"numinlets" : 1,
+					"id" : "obj-9",
+					"patching_rect" : [ 13.0, 38.0, 150.0, 19.0 ],
+					"numoutlets" : 0,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "Product",
+					"numinlets" : 1,
+					"id" : "obj-7",
+					"patching_rect" : [ 13.0, 11.0, 150.0, 25.0 ],
+					"numoutlets" : 0,
+					"fontname" : "Arial",
+					"fontface" : 3,
+					"fontsize" : 16.0
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -59,7 +100,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "number~",
-					"sig" : 24.0,
+					"sig" : 0.0,
 					"mode" : 1,
 					"numinlets" : 2,
 					"id" : "obj-2",
@@ -74,14 +115,26 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "sc.dust~",
+					"text" : "simplemsp~",
 					"numinlets" : 1,
 					"id" : "obj-1",
-					"patching_rect" : [ 175.0, 175.0, 54.0, 19.0 ],
+					"patching_rect" : [ 175.0, 175.0, 72.0, 19.0 ],
 					"numoutlets" : 1,
 					"fontname" : "Verdana",
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"fontsize" : 10.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"id" : "obj-10",
+					"patching_rect" : [ 9.0, 6.0, 162.0, 58.0 ],
+					"rounded" : 0,
+					"numoutlets" : 0,
+					"bgcolor" : [ 0.501961, 0.717647, 0.764706, 1.0 ]
 				}
 
 			}

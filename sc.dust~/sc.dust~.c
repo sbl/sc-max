@@ -4,7 +4,7 @@
  (c) stephen lumenta under GPL
  http://www.gnu.org/licenses/gpl.html
  
- part of sc-max
+ part of sc-max http://github.com/sbl/sc-max
  see README
 */
 
@@ -35,12 +35,7 @@ t_int *dust_perform(t_int *w);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void)
-{	
-	// object initialization, note the use of dsp_free for the freemethod, which is required
-	// unless you need to free allocated memory, in which case you should call dsp_free from
-	// your custom free function.
-
+int main(void){	
 	t_class *c;
 	
 	c = class_new("sc.dust~", (method)dust_new, (method)dsp_free, (long)sizeof(t_dust), 0L, A_GIMME, 0);
@@ -49,8 +44,8 @@ int main(void)
 	class_addmethod(c, (method)dust_dsp,		"dsp",		A_CANT, 0);
 	class_addmethod(c, (method)dust_assist,     "assist",	A_CANT, 0);
 	
-	class_dspinit(c);				// new style object version of dsp_initclass();
-	class_register(CLASS_BOX, c);	// register class as a box class
+	class_dspinit(c);				
+	class_register(CLASS_BOX, c);
 	dust_class = c;
 	
 	return 0;
@@ -63,7 +58,6 @@ void dust_float(t_dust *x, double f){
 }
 
 void dust_dsp(t_dust *x, t_signal **sp, short *count){
-	post("my sample rate is: %f", sp[0]->s_sr);	
 	dsp_add(dust_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[0]->s_n);
 }
 
