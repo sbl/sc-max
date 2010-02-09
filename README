@@ -5,10 +5,12 @@ ports by stephen lumenta
 http://github.com/sbl/sc-max
 
 some supercollider ugens ported to max-msp.
-forks and patches are welcome.
-
+forks and patches are welcome. if someone wants to do a windows port please let me know.
 
 You need the supercollider header files to compile most of the externals.
+
+contact me via github.
+
 #############################
 
 SuperCollider:
