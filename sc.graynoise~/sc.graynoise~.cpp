@@ -26,7 +26,7 @@ t_class *graynoise_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *graynoise_new(t_symbol *s, long argc, t_atom *argv);
+void *graynoise_new(long argc, t_atom *argv);
 void graynoise_free(t_graynoise *x);
 void graynoise_assist(t_graynoise *x, void *b, long m, long a, char *s);
 
@@ -63,6 +63,9 @@ t_int *graynoise_perform(t_int *w){
     t_float *out = (t_float *)(w[2]);
 	int n = (int)w[3];
     
+    if (x->ob.z_disabled)
+        return w + 4;    
+    
     RGET
     
 	while (n--){
@@ -89,7 +92,7 @@ void graynoise_assist(t_graynoise *x, void *b, long m, long a, char *s)
 	}
 }
 
-void *graynoise_new(t_symbol *s, long argc, t_atom *argv){
+void *graynoise_new(long argc, t_atom *argv){
 	t_graynoise *x = NULL;
 	x = (t_graynoise *)object_alloc(graynoise_class);
     
