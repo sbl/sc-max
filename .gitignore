@@ -1,0 +1,7 @@
+*.mode1v3
+*.pbxuser
+_build/*
+*.pbxuser
+*.o
+*/build/*
+*.tmproj

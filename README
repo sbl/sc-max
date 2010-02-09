@@ -1,0 +1,20 @@
+sc-max (2009 - ongoing)
+ports by stephen lumenta
+#############################
+
+http://github.com/sbl/sc-max
+
+some supercollider ugens ported to max-msp.
+forks and patches are welcome.
+
+#############################
+
+SuperCollider real time audio synthesis system Copyright (c) 2002 James McCartney. All rights reserved.
+http://www.audiosynth.com
+http://supercollider.sourceforge.net
+
+Max/MSP:
+http://cycling74.com
+
+All SuperCollider code and sc-max are licensed under the gpl
+http://www.gnu.org/licenses/gpl.html
