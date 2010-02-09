@@ -38,6 +38,8 @@
 typedef struct _dust2 
 {
 	t_pxobject		m_ob;
+    short           m_connected;
+    
     float           m_density;
     float           m_thresh;
     float           m_scale;
@@ -88,30 +90,34 @@ void dust2_float(t_dust2 *x, double density){
 }
 
 void dust2_int(t_dust2 *x, long density){
-    x->m_density = (float) density;
-    dust2_calc_density(x);
+    dust2_float(x, (double) density);
 }
 
-void dust2_dsp(t_dust2 *x, t_signal **sp, short *count){
-    x->m_sr = sp[0]->s_sr;
-    x->m_isr = 1.0f / x->m_sr;
-    
-    dust2_calc_density(x);
-	dsp_add(dust2_perform, 3, x, sp[0]->s_vec, sp[0]->s_n);
-}
 
 void dust2_calc_density(t_dust2 *x){
     x->m_thresh = x->m_density * x->m_isr;
     x->m_scale  = x->m_thresh > 0.f ? 2.f / x->m_thresh : 0.f;
 }
 
+void dust2_dsp(t_dust2 *x, t_signal **sp, short *count){
+    x->m_connected = count[0];
+    // t_dust2, in_density, out_density, n
+	dsp_add(dust2_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[1]->s_n);
+}
+
 t_int *dust2_perform(t_int *w){
     t_dust2 *x = (t_dust2 *)(w[1]);
-    t_float *out = (t_float *)(w[2]);
-	int n = (int)w[3];
+    t_float density = x->m_connected ? (*(t_float *)(w[2])) : x->m_density;
+    t_float *out = (t_float *)(w[3]);
+	int n = (int)w[4];
     
     if (x->m_ob.z_disabled)
-        return w + 4;
+        return w + 5;
+    
+    if (density != x->m_density) {
+        x->m_density = density;
+        dust2_calc_density(x);
+    }
     
     RGET
         
@@ -126,7 +132,7 @@ t_int *dust2_perform(t_int *w){
     
     RPUT
         
-	return w + 4;
+	return w + 5;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,10 +140,10 @@ t_int *dust2_perform(t_int *w){
 void dust2_assist(t_dust2 *x, void *b, long m, long a, char *s)
 {
 	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "(int/float) density");
+		sprintf(s, "(signal/float) density");
 	} 
 	else {	// outlet
-		sprintf(s, "(signal) dust2"); 			
+		sprintf(s, "(signal) dust2 out"); 			
 	}
 }
 
@@ -146,18 +152,18 @@ void *dust2_new(double density){
 	x = (t_dust2 *)object_alloc(dust2_class);
     
 	if (x) {
-        dsp_setup((t_pxobject *)x, 0);
+        dsp_setup((t_pxobject *)x, 1);
         outlet_new((t_object *)x, "signal");
 
+        x->rgen.init(time(NULL));
         x->m_density = density;
         
-        // all calculation have to be done after a dsp chain rebuild
-        x->m_sr = 44100.;
+        x->m_sr = sys_getsr();
         x->m_isr = 1/x->m_sr;
         x->m_scale = 0.;
         x->m_thresh = 0.;
-
-        x->rgen.init(time(NULL));
+        
+        dust2_calc_density(x);
 	}
 	return (x);
 }
