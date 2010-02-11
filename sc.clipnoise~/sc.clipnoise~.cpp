@@ -91,14 +91,12 @@ t_int *clipnoise_perform(t_int *w){
     
     RPUT
     
-    
 	return w + 4;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s)
-{
+void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s){
 	if (m == ASSIST_INLET) { //inlet
 		sprintf(s, "Ignore this inlet");
 	} 

@@ -55,12 +55,12 @@ t_class *logistic_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *logistic_new(t_symbol *s, long argc, t_atom *argv);
-void logistic_assist(t_logistic *x, void *b, long m, long a, char *s);
-void logistic_float(t_logistic *x, double f);
-void logistic_int(t_logistic *x, long l);
-void logistic_dsp(t_logistic *x, t_signal **sp, short *count);
-t_int *logistic_perform(t_int *w);
+void    *logistic_new       (t_symbol *s, long argc, t_atom *argv);
+void    logistic_assist     (t_logistic *x, void *b, long m, long a, char *s);
+void    logistic_float      (t_logistic *x, double f);
+void    logistic_int        (t_logistic *x, long l);
+void    logistic_dsp        (t_logistic *x, t_signal **sp, short *count);
+t_int   *logistic_perform   (t_int *w);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -39,8 +39,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct _pinknoise 
-{
+typedef struct _pinknoise {
 	t_pxobject					ob;
     uint32                      m_dice[N_DICE];
     int32                       m_total;
@@ -117,8 +116,7 @@ t_int *pinknoise_perform(t_int *w){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void pinknoise_assist(t_pinknoise *x, void *b, long m, long a, char *s)
-{
+void pinknoise_assist(t_pinknoise *x, void *b, long m, long a, char *s){
 	if (m == ASSIST_INLET) { //inlet
 		sprintf(s, "Ignore this inlet");
 	} 

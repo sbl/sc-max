@@ -36,10 +36,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct _mantissamask {
-
 	t_pxobject	ob;
     
-    short       m_connect;  
     int         m_bits;
 } t_mantissamask;
 
@@ -91,7 +89,6 @@ void mantissamask_dsp(t_mantissamask *x, t_signal **sp, short *count){
     dsp_add(mantissamask_perform, 5, x, sp[0]->s_vec, sp[1]->s_vec, sp[2]->s_vec, sp[0]->s_n);
 }
 
-
 t_int *mantissamask_perform(t_int *w){
     t_mantissamask  *x      = (t_mantissamask *)(w[1]);	
     int32           *in     = (int32*)(w[2]);    
@@ -104,10 +101,7 @@ t_int *mantissamask_perform(t_int *w){
     
     if (x->ob.z_disabled) return w + 6;    
     
-	while (n--){
-		*out++ = mask & (*(in)++);
-    }
-    
+	while (n--) *out++ = mask & (*(in)++);
     
 	return w + 6;
 }
