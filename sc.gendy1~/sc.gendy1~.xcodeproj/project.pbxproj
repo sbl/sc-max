@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22CF119B0EE9A8250054F513 /* sc.gendy1~.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.gendy1~.cpp */; };
+		22CF119B0EE9A8250054F513 /* sc.gendy1~.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.gendy1~.c */; };
 		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
 		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
 		DCABC5701124AD99009BC2EA /* rgen_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = DCABC56F1124AD99009BC2EA /* rgen_helper.h */; };
@@ -170,7 +170,7 @@
 
 /* Begin PBXFileReference section */
 		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
-		22CF119A0EE9A8250054F513 /* sc.gendy1~.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "sc.gendy1~.cpp"; sourceTree = "<group>"; };
+		22CF119A0EE9A8250054F513 /* sc.gendy1~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sc.gendy1~.c"; sourceTree = "<group>"; };
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.gendy1~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.gendy1~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
@@ -370,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				DCABC56F1124AD99009BC2EA /* rgen_helper.h */,
-				22CF119A0EE9A8250054F513 /* sc.gendy1~.cpp */,
+				22CF119A0EE9A8250054F513 /* sc.gendy1~.c */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -840,7 +840,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22CF119B0EE9A8250054F513 /* sc.gendy1~.cpp in Sources */,
+				22CF119B0EE9A8250054F513 /* sc.gendy1~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
