@@ -20,7 +20,7 @@
 
 /*
 
- sc.lfclipnoise~
+ sc.lfnoise1~
  (c) stephen lumenta under GPL
  http://www.gnu.org/licenses/gpl.html
  
@@ -44,7 +44,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct _lfclipnoise 
+typedef struct _lfnoise 
 {
 	t_pxobject      ob;
     
@@ -55,60 +55,60 @@ typedef struct _lfclipnoise
     int             m_counter;
     
     RGen            rgen;
-} t_lfclipnoise;
+} t_lfnoise;
 
-t_class *lfclipnoise_class;
+t_class *lfnoise_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *lfclipnoise_new       (double freq);
-void lfclipnoise_free       (t_lfclipnoise *x);
-void lfclipnoise_assist     (t_lfclipnoise *x, void *b, long m, long a, char *s);
+void *lfnoise_new       (double freq);
+void lfnoise_free       (t_lfnoise *x);
+void lfnoise_assist     (t_lfnoise *x, void *b, long m, long a, char *s);
 
-void lfclipnoise_float      (t_lfclipnoise *x, double freq);
+void lfnoise_float      (t_lfnoise *x, double freq);
 
-void lfclipnoise_dsp        (t_lfclipnoise *x, t_signal **sp, short *count);
-t_int *lfclipnoise_perform  (t_int *w);
+void lfnoise_dsp        (t_lfnoise *x, t_signal **sp, short *count);
+t_int *lfnoise_perform  (t_int *w);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(void){	
 	t_class *c;
     
-	c = class_new("sc.lfclipnoise~", (method)lfclipnoise_new, (method)dsp_free, (long)sizeof(t_lfclipnoise), 0L, A_DEFFLOAT, 0);
+	c = class_new("sc.lfnoise1~", (method)lfnoise_new, (method)dsp_free, (long)sizeof(t_lfnoise), 0L, A_DEFFLOAT, 0);
 	
-	class_addmethod(c, (method)lfclipnoise_dsp,         "dsp",      A_CANT, 0);
-	class_addmethod(c, (method)lfclipnoise_assist,      "assist",	A_CANT, 0);
-    class_addmethod(c, (method)lfclipnoise_float,       "float",	A_FLOAT, 0);
+	class_addmethod(c, (method)lfnoise_dsp,         "dsp",      A_CANT, 0);
+	class_addmethod(c, (method)lfnoise_assist,      "assist",	A_CANT, 0);
+    class_addmethod(c, (method)lfnoise_float,       "float",	A_FLOAT, 0);
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
-	lfclipnoise_class = c;
+	lfnoise_class = c;
 	
 	return 0;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lfclipnoise_float(t_lfclipnoise *x, double freq){    
+void lfnoise_float(t_lfnoise *x, double freq){    
     x->m_freq = (float) freq;
 }
 
-void lfclipnoise_dsp(t_lfclipnoise *x, t_signal **sp, short *count){
+void lfnoise_dsp(t_lfnoise *x, t_signal **sp, short *count){
     x->m_sr         = sp[0]->s_sr;
     x->m_connected  = count[0];
     // class, in, out, n
-	dsp_add(lfclipnoise_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[1]->s_n);
+	dsp_add(lfnoise_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[1]->s_n);
 }
 
-t_int *lfclipnoise_perform(t_int *w){
-    t_lfclipnoise   *x      = (t_lfclipnoise *) w[1];	
+t_int *lfnoise_perform(t_int *w){
+    t_lfnoise   *x      = (t_lfnoise *) w[1];	
     t_float         *out    = (t_float *)       w[3];
 	int             remain  = (int)  w[4];
     
     t_float         freq    = x->m_connected ? (*(t_float *)(w[2])) : x->m_freq;
     float           level   = x->m_level;
-	int32           counter = x->m_counter;
+	long            counter = x->m_counter;
     
     
     if (x->ob.z_disabled) return w + 5;
@@ -119,19 +119,15 @@ t_int *lfclipnoise_perform(t_int *w){
     
 	do {
 		if (counter<=0) {
-            // otherwise not working
-            if(freq < 0.0001) freq = 0.0001;
-            
-			counter = (int) x->m_sr / sc_max(freq, 0.001f);
+			counter = (int)(x->m_sr / sc_max(freq, .001f));
 			counter = sc_max(1, counter);
-			level = fcoin(s1,s2,s3);
+			level = frand2(s1,s2,s3);
 		}
 		int nsmps = sc_min(remain, counter);
 		remain -= nsmps;
 		counter -= nsmps;
         
-        int i;
-        for(i=0; i<nsmps;i++){
+        while(nsmps--){
             *out++ = level;
         }
 	} while (remain);
@@ -146,19 +142,19 @@ t_int *lfclipnoise_perform(t_int *w){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lfclipnoise_assist(t_lfclipnoise *x, void *b, long m, long a, char *s)
+void lfnoise_assist(t_lfnoise *x, void *b, long m, long a, char *s)
 {
 	if (m == ASSIST_INLET) { //inlet
 		sprintf(s, "(signal/float) set freq");
 	} 
 	else {	// outlet
-		sprintf(s, "(signal) lfclipnoise"); 			
+		sprintf(s, "(signal) lfnoise"); 			
 	}
 }
 
-void *lfclipnoise_new(double freq){
-	t_lfclipnoise *x = NULL;
-	x = (t_lfclipnoise *)object_alloc(lfclipnoise_class);
+void *lfnoise_new(double freq){
+	t_lfnoise *x = NULL;
+	x = (t_lfnoise *)object_alloc(lfnoise_class);
     
 	if (x) {
         // 1 inlet
