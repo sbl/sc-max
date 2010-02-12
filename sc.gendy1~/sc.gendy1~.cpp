@@ -41,7 +41,7 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
-
+#include "rgen_helper.h"
 
 // we always use 12 control points for the calculation
 # define CONTROL_POINTS 12
@@ -64,6 +64,9 @@ typedef struct _gendy
     int                 mIndex;
     float               *mMemoryAmp; 	
     float               *mMemoryDur;
+    
+    // we use sc's random distribution
+    RGen                rgen;
     
 } t_gendy;
 
@@ -88,8 +91,6 @@ void    gendy_minfreq           (t_gendy *x, double freq);
 void    gendy_maxfreq           (t_gendy *x, double freq);
 void    gendy_ampscale          (t_gendy *x, double scale);
 void    gendy_durscale          (t_gendy *x, double scale);
-
-double frand(); // not the same thing as in sc but sufficient for our needs here
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -193,7 +194,6 @@ t_int *gendy_perform(t_int *w){
     
     float   speed= x->mSpeed;
     
-    //    (sbl) again the original frand() implementation has been replaced by the weak frand here
     while (n--){
 		*out++ = 0.f;
         
@@ -211,7 +211,8 @@ t_int *gendy_perform(t_int *w){
             
             //Gendy dist gives value [-1,1], then use scaleamp
             //first term was amp before, now must check new memory slot
-            nextamp= (x->mMemoryAmp[index])+(x->ampscale * gendy_distribution(x->ampdist, x->adparam,frand()));
+            
+            nextamp= (x->mMemoryAmp[index])+(x->ampscale * gendy_distribution(x->ampdist, x->adparam,x->rgen.frand()));
             
             //mirroring for bounds- safe version
             if(nextamp>1.0 || nextamp<-1.0) {
@@ -236,7 +237,11 @@ t_int *gendy_perform(t_int *w){
             x->mMemoryAmp[index]= nextamp;
             
             //    Gendy dist gives value [-1,1]
-            rate= (x->mMemoryDur[index])+(x->durscale * gendy_distribution(x->durdist, x->ddparam, frand()));
+            
+            
+            
+            rate= (x->mMemoryDur[index])+(x->durscale * gendy_distribution(x->durdist, x->ddparam, x->rgen.frand()));
+            
             
             if(rate>1.0 || rate<0.0)
             {
@@ -288,10 +293,10 @@ void gendy_assist(t_gendy *x, void *b, long m, long a, char *s){
 }
 
 void gendy_free(t_gendy *x){
+    dsp_free((t_pxobject *)x);    
+
     sysmem_freeptr(x->mMemoryAmp);
     sysmem_freeptr(x->mMemoryDur);
-
-    dsp_free((t_pxobject *)x);    
 }
 
 void *gendy_new(long argc, t_atom *argv){
@@ -321,13 +326,15 @@ void *gendy_new(long argc, t_atom *argv){
         x->minfreq      = 440.f;
         x->maxfreq      = 660.f;
         x->ampscale     = 0.5f;
-        x->durscale     = 0.5f;        
+        x->durscale     = 0.5f; 
+        
+        x->rgen.init(rand());
                 
         //initialise to zeroes and separations
         int i=0;
         for(i=0; i<CONTROL_POINTS;++i) {
-            x->mMemoryAmp[i] = 2 * frand() - 1.0;
-            x->mMemoryDur[i] = frand();
+            x->mMemoryAmp[i] = 2 * x->rgen.frand() - 1.0;
+            x->mMemoryDur[i] = x->rgen.frand();
         }
         
         outlet_new((t_object *)x, "signal");
@@ -338,9 +345,6 @@ void *gendy_new(long argc, t_atom *argv){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-double frand(){
-    return (double) rand() / RAND_MAX;
-}
 
 float gendy_distribution( int which, float a, float f) {
     
