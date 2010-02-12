@@ -49,7 +49,7 @@ t_class *whitenoise_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *whitenoise_new(long argc, t_atom *argv);
+void *whitenoise_new();
 void whitenoise_free(t_whitenoise *x);
 void whitenoise_assist(t_whitenoise *x, void *b, long m, long a, char *s);
 
@@ -61,7 +61,7 @@ t_int *whitenoise_perform(t_int *w);
 int main(void){	
 	t_class *c;
     
-	c = class_new("sc.whitenoise~", (method)whitenoise_new, (method)dsp_free, (long)sizeof(t_whitenoise), 0L, A_GIMME, 0);
+	c = class_new("sc.whitenoise~", (method)whitenoise_new, (method)dsp_free, (long)sizeof(t_whitenoise), 0L, NULL, 0);
 	
 	class_addmethod(c, (method)whitenoise_dsp,		"dsp",		A_CANT, 0);
 	class_addmethod(c, (method)whitenoise_assist,    "assist",	A_CANT, 0);
@@ -111,7 +111,7 @@ void whitenoise_assist(t_whitenoise *x, void *b, long m, long a, char *s)
 	}
 }
 
-void *whitenoise_new(long argc, t_atom *argv){
+void *whitenoise_new(){
 	t_whitenoise *x = NULL;
 	x = (t_whitenoise *)object_alloc(whitenoise_class);
     
