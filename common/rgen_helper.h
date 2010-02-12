@@ -1,7 +1,7 @@
 /*
  *  rgen_helper.h
  *
- * is there a smarter way to do this?
+ *  rewritten rget rput for max
  */
 
 #include "SC_RGen.h"

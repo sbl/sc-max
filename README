@@ -1,17 +1,23 @@
+////////////////////////
+
 sc-max (2009 - ongoing)
 ports by stephen lumenta
-#############################
+
+////////////////////////
 
 http://github.com/sbl/sc-max
 
 some supercollider ugens ported to max-msp.
-forks and patches are welcome. if someone wants to do a windows port please let me know.
 
+all credits are due to the original authors (James McCartney et alt.). these are merely ports to max/msp and might be helpful.
+if you haven't done so. check out supercollider as well. it is a really nice language for sound.
+
+forks and patches are welcome. if someone wants to do a windows port please let me know.
 You need the supercollider header files to compile most of the externals.
 
-contact me via github.
+bugs, anything else? contact me via github.
 
-#############################
+////////////////////////
 
 SuperCollider:
 http://www.audiosynth.com
