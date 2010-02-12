@@ -217,11 +217,11 @@ t_int *gendy_perform(t_int *w){
             phase -= 1.f;
             
             int index   = x->mIndex;
-            int num     = x->g_knum;//(unit->mMemorySize);(((int)ZIN0(9))%(unit->mMemorySize))+1;
-            if((num>(x->g_cps)) || (num<1)) num=x->g_cps;
+            int num     = x->g_knum;
+        
+            if((num>(x->g_cps)) || (num<1)) num=x->g_cps; // clip
             
-            //new code for indexing
-            index=(index+1)%num;
+            index=(index+1) % num;
             amp=nextamp;
             
             x->mIndex=index;
@@ -232,22 +232,17 @@ t_int *gendy_perform(t_int *w){
             
             //mirroring for bounds- safe version
             if(nextamp>1.0 || nextamp<-1.0) {
-                
-                //printf("mirroring nextamp %f ", nextamp);
-                
+                                
                 //to force mirroring to be sensible
                 if(nextamp<0.0) nextamp=nextamp+4.0;
                 
                 nextamp=fmod(nextamp,4.0f);
-                //printf("fmod  %f ", nextamp);
                 
                 if(nextamp>1.0 && nextamp<3.0)
 					nextamp= 2.0-nextamp;
                 
                 else if(nextamp>1.0)
 					nextamp=nextamp-4.0;
-                
-                //printf("mirrorednextamp %f \n", nextamp);
             };
             
             x->mMemoryAmp[index]= nextamp;
@@ -262,9 +257,7 @@ t_int *gendy_perform(t_int *w){
             }
             
             x->mMemoryDur[index]= rate;
-            
-            //printf("nextamp %f rate %f \n", nextamp, rate);
-            
+                        
             //define range of speeds (say between 20 and 1000 Hz)
             //can have bounds as fourth and fifth inputs
             speed=  (minfreq+((maxfreq-minfreq)*rate))*(x->mFreqMul);
@@ -328,22 +321,17 @@ void *gendy_new(long init_cps){
         
         x->mIndex=0;
         
-        
-        
-        if(init_cps>0){
-            x->g_cps = (int) init_cps;
-            
-            x->mMemoryAmp= (float*)sysmem_newptr(x->g_cps * sizeof(float));
-            x->mMemoryDur= (float*)sysmem_newptr(x->g_cps * sizeof(float));
-        } else {
-            x->g_cps = CONTROL_POINTS;
-            
-            x->mMemoryAmp= (float*)sysmem_newptr(x->g_cps * sizeof(float));
-            x->mMemoryDur= (float*)sysmem_newptr(x->g_cps * sizeof(float));
-        }
 
-        
-        object_post((t_object*) x, "number of cps: %d", x->g_cps);
+        if(init_cps>0){
+            x->g_cps = (int) init_cps;    
+            object_post((t_object*) x, "number of cps: %d", x->g_cps);
+        } else {
+            x->g_cps = CONTROL_POINTS;  
+            object_error((t_object*) x, "number of control points too small, setting to default (12)");
+        } 
+            
+        x->mMemoryAmp= (float*)sysmem_newptr(x->g_cps * sizeof(float));
+        x->mMemoryDur= (float*)sysmem_newptr(x->g_cps * sizeof(float));
         
         /* defaults */
         x->g_ampdist      = 0;
