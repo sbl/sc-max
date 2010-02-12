@@ -50,7 +50,7 @@ typedef struct _lfnoise
     
     float           m_freq;
     short           m_connected;
-    float           m_level;
+    float           m_level, m_slope;
     float           m_sr;
     int             m_counter;
     
@@ -90,7 +90,8 @@ int main(void){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lfnoise_float(t_lfnoise *x, double freq){    
+void lfnoise_float(t_lfnoise *x, double freq){
+    
     x->m_freq = (float) freq;
 }
 
@@ -102,40 +103,44 @@ void lfnoise_dsp(t_lfnoise *x, t_signal **sp, short *count){
 }
 
 t_int *lfnoise_perform(t_int *w){
-    t_lfnoise   *x      = (t_lfnoise *) w[1];	
+    t_lfnoise       *x      = (t_lfnoise *) w[1];	
     t_float         *out    = (t_float *)       w[3];
 	int             remain  = (int)  w[4];
     
     t_float         freq    = x->m_connected ? (*(t_float *)(w[2])) : x->m_freq;
     float           level   = x->m_level;
-	long            counter = x->m_counter;
+	float           slope   = x->m_slope;
+    long            counter = x->m_counter;
     
     
     if (x->ob.z_disabled) return w + 5;
     
-    
-    
-    RGET
+	
+	RGET
     
 	do {
 		if (counter<=0) {
-			counter = (int)(x->m_sr / sc_max(freq, .001f));
+			counter = (long)(x->m_sr / sc_max(freq, .001f));
 			counter = sc_max(1, counter);
-			level = frand2(s1,s2,s3);
+			float nextlevel = frand2(s1,s2,s3);
+			slope = (nextlevel - level) / counter;
 		}
 		int nsmps = sc_min(remain, counter);
 		remain -= nsmps;
 		counter -= nsmps;
         
-        while(nsmps--){
+        while (nsmps--) {
             *out++ = level;
+            level += slope;
         }
+
 	} while (remain);
-    
+
+	x->m_level  = level;
+	x->m_slope  = slope;
+	x->m_counter= counter;
+	
     RPUT
-    
-    x->m_level = level;
-	x->m_counter = counter;
     
 	return w + 5;
 }
@@ -160,13 +165,14 @@ void *lfnoise_new(double freq){
         // 1 inlet
 		dsp_setup((t_pxobject *)x, 1);
         
+        x->rgen.init(time(NULL));
+        
         x->m_freq       = freq <= 0 ? 500 : freq;
         x->m_counter    = 0;
-        x->m_level      = 0.0;
+        x->m_level      = x->rgen.frand2();
+        x->m_slope      = 0.f;
         x->m_sr         = sys_getsr();
         
-        
-        x->rgen.init(time(NULL));
         
         outlet_new((t_object *)x, "signal");
 	}
