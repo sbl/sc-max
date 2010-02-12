@@ -57,8 +57,6 @@ typedef struct _gendy
     float               g_adparam, g_ddparam;
     float               g_minfreq, g_maxfreq;
     float               g_ampscale, g_durscale;
-
-    
     int                 g_cps, g_knum;   // defaults to 12
 
     double              mPhase;
@@ -77,8 +75,8 @@ t_class *gendy_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// obligatory arg is init_cps
-void    *gendy_new              (long init_cps);
+// first param is required number of cps rest is used for attributes to set gendyn values
+void    *gendy_new              (t_symbol *s, long argc, t_atom *argv);
 void    gendy_free              (t_gendy *x);
 void    gendy_assist            (t_gendy *x, void *b, long m, long a, char *s);
 void    gendy_dsp               (t_gendy *x, t_signal **sp, short *count);
@@ -86,93 +84,56 @@ t_int   *gendy_perform          (t_int *w);
 
 float   gendy_distribution      (int which, float a, float f);
 
-// we are explicit here and don't catch everything in a anything method
-void    gendy_ampdist           (t_gendy *x, long dist);
-void    gendy_durdist           (t_gendy *x, long dist);
-void    gendy_adparam           (t_gendy *x, double param);
-void    gendy_ddparam           (t_gendy *x, double param);
-void    gendy_minfreq           (t_gendy *x, double freq);
-void    gendy_maxfreq           (t_gendy *x, double freq);
-void    gendy_ampscale          (t_gendy *x, double scale);
-void    gendy_durscale          (t_gendy *x, double scale);
-void    gendy_knum              (t_gendy *x, long knum); // this clipped to 1 - cps internally
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(void){	
 	t_class *c;
+        
+	c = class_new("sc.gendy1~", (method)gendy_new, (method)gendy_free, (long)sizeof(t_gendy), 0L, A_GIMME, 0);
     
-	c = class_new("sc.gendy1~", (method)gendy_new, (method)gendy_free, (long)sizeof(t_gendy), 0L, A_LONG, 0);
-	
 	class_addmethod(c, (method)gendy_dsp,		"dsp",		A_CANT, 0);
 	class_addmethod(c, (method)gendy_assist,    "assist",	A_CANT, 0);
     
-    class_addmethod(c, (method) gendy_ampdist,  "ampdist",  A_LONG, 0);
-    class_addmethod(c, (method) gendy_durdist,  "durdist",  A_LONG, 0);
-    class_addmethod(c, (method) gendy_adparam,  "adparam",  A_FLOAT, 0);
-    class_addmethod(c, (method) gendy_ddparam,  "ddparam",  A_FLOAT, 0);
-    class_addmethod(c, (method) gendy_minfreq,  "minfreq",  A_FLOAT, 0);
-    class_addmethod(c, (method) gendy_maxfreq,  "maxfreq",  A_FLOAT, 0);    
-    class_addmethod(c, (method) gendy_ampscale, "ampscale", A_FLOAT, 0);    
-    class_addmethod(c, (method) gendy_durscale, "durscale", A_FLOAT, 0);    
-    class_addmethod(c, (method) gendy_knum,     "knum",     A_LONG, 0);    
+    // the gendy parameters are set via attributes
+    
+    CLASS_ATTR_LONG         (c, "ampdist",  ATTR_FLAGS_NONE, t_gendy, g_ampdist);
+    CLASS_ATTR_FILTER_CLIP  (c, "ampdist",  0, 6);
+    CLASS_ATTR_ORDER        (c, "ampdist",	ATTR_FLAGS_NONE, "1");
+    
+    CLASS_ATTR_LONG         (c, "durdist",  ATTR_FLAGS_NONE, t_gendy, g_durdist);
+    CLASS_ATTR_FILTER_CLIP  (c, "durdist",  0, 6);
+    CLASS_ATTR_ORDER        (c, "durdist",	ATTR_FLAGS_NONE, "2");
+    
+    CLASS_ATTR_FLOAT        (c, "adparam",  ATTR_FLAGS_NONE, t_gendy, g_adparam);
+    CLASS_ATTR_ORDER        (c, "adparam",	ATTR_FLAGS_NONE, "3");
+    
+    CLASS_ATTR_FLOAT        (c, "ddparam",  ATTR_FLAGS_NONE, t_gendy, g_ddparam);
+    CLASS_ATTR_ORDER        (c, "ddparam",	ATTR_FLAGS_NONE, "4");
+    
+    CLASS_ATTR_FLOAT        (c, "minfreq",  ATTR_FLAGS_NONE, t_gendy, g_minfreq);
+    CLASS_ATTR_FILTER_MIN   (c, "minfreq",  1.f);
+    CLASS_ATTR_ORDER        (c, "minfreq",	ATTR_FLAGS_NONE, "5");
+    
+    CLASS_ATTR_FLOAT        (c, "maxfreq",  ATTR_FLAGS_NONE, t_gendy, g_maxfreq);
+    CLASS_ATTR_FILTER_MIN   (c, "maxfreq",  1.f);
+    CLASS_ATTR_ORDER        (c, "maxfreq",	ATTR_FLAGS_NONE, "6");
+    
+    CLASS_ATTR_FLOAT        (c, "ampscale", ATTR_FLAGS_NONE, t_gendy, g_ampscale);
+    CLASS_ATTR_FILTER_CLIP  (c, "ampscale", 0.f, 1.f);
+    CLASS_ATTR_ORDER        (c, "ampscale",	ATTR_FLAGS_NONE, "7");
+    
+    CLASS_ATTR_FLOAT        (c, "durscale", ATTR_FLAGS_NONE, t_gendy, g_durscale);
+    CLASS_ATTR_FILTER_CLIP  (c, "durscale", 0.f, 1.f);
+    CLASS_ATTR_ORDER        (c, "durscale",	ATTR_FLAGS_NONE, "8");
+    
+    CLASS_ATTR_LONG         (c, "knum",     ATTR_FLAGS_NONE, t_gendy, g_knum);
+    CLASS_ATTR_ORDER        (c, "knum",     ATTR_FLAGS_NONE, "9");
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
 	gendy_class = c;
 	
-	return 0;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void gendy_ampdist(t_gendy *x, long dist){
-    
-    // clip values
-    if(dist<0) dist = 0;
-    if(dist>6) dist = 6;
-    
-    x->g_ampdist = (int) dist;
-}
-
-void gendy_durdist(t_gendy *x, long dist){
-    
-    // clip values
-    if(dist<0) dist = 0;
-    if(dist>6) dist = 6;
-    
-    x->g_durdist = (int) dist;
-}
-
-void gendy_adparam(t_gendy *x, double param){
-    x->g_adparam = (float) param;
-}
-
-void gendy_ddparam(t_gendy *x, double param){
-    x->g_ddparam = (float) param;
-}
-
-void gendy_minfreq(t_gendy *x, double freq){
-    if(freq < 1.0) freq = 1.0; // prevent blow up
-    
-    x->g_minfreq = (float) freq;
-}
-
-void gendy_maxfreq(t_gendy *x, double freq){
-    if(freq < 1.0) freq = 1.0; // prevent blow up
-    
-    x->g_maxfreq = (float) freq;
-}
-
-void gendy_ampscale(t_gendy *x, double scale){    
-    x->g_ampscale = (float) scale;
-}
-
-void gendy_durscale(t_gendy *x, double scale){    
-    x->g_durscale = (float) scale;
-}
-
-void gendy_knum(t_gendy *x, long knum){
-    x->g_knum = knum;
+	return EXIT_SUCCESS;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -289,7 +250,7 @@ t_int *gendy_perform(t_int *w){
 
 void gendy_assist(t_gendy *x, void *b, long m, long a, char *s){
 	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "Ignore this inlet");
+		sprintf(s, "messages to gendy");
 	} 
 	else {	// outlet
 		sprintf(s, "(signal) Gendy"); 			
@@ -304,13 +265,13 @@ void gendy_free(t_gendy *x){
     
 }
 
-void *gendy_new(long init_cps){
+void *gendy_new(t_symbol *s, long ac, t_atom *av){
 	t_gendy *x = NULL;
-	x = (t_gendy *)object_alloc(gendy_class);
+    long init_cps;
+    
+    x = (t_gendy *)object_alloc(gendy_class);
     
 	if (x) {
-        
-        
 		dsp_setup((t_pxobject *)x, 0);
         
         x->mFreqMul     = (float) 1.f/sys_getsr();
@@ -321,19 +282,28 @@ void *gendy_new(long init_cps){
         
         x->mIndex=0;
         
+        
+        // if the first value is a long use it as our number of cps
+        // non incremented av always points to the first value in the atom array
+        if (attr_args_offset(ac, av) > 0 && atom_gettype(av) == A_LONG) {
+            init_cps = atom_getlong(av);
 
-        if(init_cps>0){
-            x->g_cps = (int) init_cps;    
-            object_post((t_object*) x, "number of cps: %d", x->g_cps);
+            if(init_cps>0){
+                x->g_cps = (int) init_cps;    
+                object_post((t_object*) x, "number of cps: %d", x->g_cps);
+            } else {
+                x->g_cps = CONTROL_POINTS;  
+                object_error((t_object*) x, "number of cps too small, setting to default (12)");
+            } 
         } else {
-            x->g_cps = CONTROL_POINTS;  
-            object_error((t_object*) x, "number of control points too small, setting to default (12)");
-        } 
-            
+            x->g_cps = CONTROL_POINTS;
+            object_post((t_object*)x, "no number of cps supplied, using the default (12)");
+        }
+        
         x->mMemoryAmp= (float*)sysmem_newptr(x->g_cps * sizeof(float));
         x->mMemoryDur= (float*)sysmem_newptr(x->g_cps * sizeof(float));
         
-        /* defaults */
+        // defaults
         x->g_ampdist      = 0;
         x->g_durdist      = 0;
         x->g_adparam      = 1.f;
@@ -342,6 +312,10 @@ void *gendy_new(long init_cps){
         x->g_maxfreq      = 660.f;
         x->g_ampscale     = 0.5f;
         x->g_durscale     = 0.5f; 
+        
+        // process the attributes after the defaults have been set
+        
+        attr_args_process(x, ac, av);
         
         x->rgen.init(rand());
                 
