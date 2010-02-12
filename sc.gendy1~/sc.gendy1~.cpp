@@ -43,7 +43,6 @@
 #include "z_dsp.h"
 #include "rgen_helper.h"
 
-// we always use 12 control points for the calculation
 # define CONTROL_POINTS 12
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,10 +57,13 @@ typedef struct _gendy
     float               adparam, ddparam;
     float               minfreq, maxfreq;
     float               ampscale, durscale;
+
     
+    int                 cps, knum;   // defaults to 12
     double              mPhase;
     float               mFreqMul, mAmp, mNextAmp, mSpeed, mDur;
     int                 mIndex;
+    
     float               *mMemoryAmp; 	
     float               *mMemoryDur;
     
@@ -74,13 +76,14 @@ t_class *gendy_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void    *gendy_new              (long argc, t_atom *argv);
+// obligatory arg is init_cps
+void    *gendy_new              (long init_cps);
 void    gendy_free              (t_gendy *x);
 void    gendy_assist            (t_gendy *x, void *b, long m, long a, char *s);
-float   gendy_distribution      (int which, float a, float f);
 void    gendy_dsp               (t_gendy *x, t_signal **sp, short *count);
 t_int   *gendy_perform          (t_int *w);
 
+float   Gendyn_distribution      (int which, float a, float f);
 
 // we are explicit here and don't catch everything in a anything method
 void    gendy_ampdist           (t_gendy *x, long dist);
@@ -91,13 +94,13 @@ void    gendy_minfreq           (t_gendy *x, double freq);
 void    gendy_maxfreq           (t_gendy *x, double freq);
 void    gendy_ampscale          (t_gendy *x, double scale);
 void    gendy_durscale          (t_gendy *x, double scale);
-
+void    gendy_knum              (t_gendy *x, long knum); // this clipped to 1 - cps internally
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(void){	
 	t_class *c;
     
-	c = class_new("sc.gendy1~", (method)gendy_new, (method)gendy_free, (long)sizeof(t_gendy), 0L, A_GIMME, 0);
+	c = class_new("sc.gendy1~", (method)gendy_new, (method)gendy_free, (long)sizeof(t_gendy), 0L, A_LONG, 0);
 	
 	class_addmethod(c, (method)gendy_dsp,		"dsp",		A_CANT, 0);
 	class_addmethod(c, (method)gendy_assist,    "assist",	A_CANT, 0);
@@ -109,7 +112,8 @@ int main(void){
     class_addmethod(c, (method) gendy_minfreq,  "minfreq",  A_FLOAT, 0);
     class_addmethod(c, (method) gendy_maxfreq,  "maxfreq",  A_FLOAT, 0);    
     class_addmethod(c, (method) gendy_ampscale, "ampscale", A_FLOAT, 0);    
-    class_addmethod(c, (method) gendy_durscale, "durscale",  A_FLOAT, 0);    
+    class_addmethod(c, (method) gendy_durscale, "durscale", A_FLOAT, 0);    
+    class_addmethod(c, (method) gendy_knum,     "knum",     A_LONG, 0);    
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
@@ -167,6 +171,9 @@ void gendy_durscale(t_gendy *x, double scale){
     x->durscale = (float) scale;
 }
 
+void gendy_knum(t_gendy *x, long knum){
+    x->knum = knum;
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -183,36 +190,45 @@ t_int *gendy_perform(t_int *w){
     
     if (x->ob.z_disabled) return w + 4;    
     
-        
-    float   rate= x->mDur;
     
+    // these are all set via max messages
+    int     whichamp    = x->ampdist;
+    int     whichdur    = x->durdist;
+    float   aamp        = x->adparam;
+    float   adur        = x->ddparam;
+    float   minfreq     = x->minfreq;
+    float   maxfreq     = x->maxfreq;
+    float   scaleamp    = x->ampscale;
+    float   scaledur    = x->durscale;
+    
+    
+    float   rate    = x->mDur;
     //phase gives proportion for linear interpolation automatically
-    double  phase = x->mPhase;
+    double  phase   = x->mPhase;
+    float   amp     = x->mAmp;
+    float   nextamp = x->mNextAmp;
+    float   speed   = x->mSpeed;
     
-    float   amp= x->mAmp;
-    float   nextamp= x->mNextAmp;
-    
-    float   speed= x->mSpeed;
     
     while (n--){
-		*out++ = 0.f;
-        
         float z;
         
         if (phase >= 1.f) {
             phase -= 1.f;
             
-            int index= x->mIndex;            
-
-            index=(index+1)%CONTROL_POINTS;
+            int index   = x->mIndex;
+            int num     = x->knum;//(unit->mMemorySize);(((int)ZIN0(9))%(unit->mMemorySize))+1;
+            if((num>(x->cps)) || (num<1)) num=x->cps;
+            
+            //new code for indexing
+            index=(index+1)%num;
             amp=nextamp;
             
             x->mIndex=index;
             
             //Gendy dist gives value [-1,1], then use scaleamp
             //first term was amp before, now must check new memory slot
-            
-            nextamp= (x->mMemoryAmp[index])+(x->ampscale * gendy_distribution(x->ampdist, x->adparam,x->rgen.frand()));
+            nextamp= (x->mMemoryAmp[index])+(scaleamp*Gendyn_distribution(whichamp, aamp,x->rgen.frand()));
             
             //mirroring for bounds- safe version
             if(nextamp>1.0 || nextamp<-1.0) {
@@ -226,25 +242,20 @@ t_int *gendy_perform(t_int *w){
                 //printf("fmod  %f ", nextamp);
                 
                 if(nextamp>1.0 && nextamp<3.0)
-                    nextamp= 2.0-nextamp;
+					nextamp= 2.0-nextamp;
                 
                 else if(nextamp>1.0)
-                    nextamp=nextamp-4.0;
+					nextamp=nextamp-4.0;
                 
                 //printf("mirrorednextamp %f \n", nextamp);
             };
             
             x->mMemoryAmp[index]= nextamp;
             
-            //    Gendy dist gives value [-1,1]
+            //Gendy dist gives value [-1,1]
+            rate= (x->mMemoryDur[index])+(scaledur*Gendyn_distribution(whichdur, adur, x->rgen.frand()));
             
-            
-            
-            rate= (x->mMemoryDur[index])+(x->durscale * gendy_distribution(x->durdist, x->ddparam, x->rgen.frand()));
-            
-            
-            if(rate>1.0 || rate<0.0)
-            {
+            if(rate>1.0 || rate<0.0) {
                 if(rate<0.0) rate=rate+2.0;
                 rate= fmod(rate,2.0f);
                 rate= 2.0-rate;
@@ -256,19 +267,19 @@ t_int *gendy_perform(t_int *w){
             
             //define range of speeds (say between 20 and 1000 Hz)
             //can have bounds as fourth and fifth inputs
-            speed=  (x->minfreq+((x->maxfreq-x->minfreq)*rate))*(x->mFreqMul);
+            speed=  (minfreq+((maxfreq-minfreq)*rate))*(x->mFreqMul);
             
             //if there are 12 control points in memory, that is 12 per cycle
             //the speed is multiplied by 12
             //(I don't store this because updating rates must remain in range [0,1]
-            speed *= CONTROL_POINTS;
+            speed *= num;
         }
         
         //linear interpolation could be changed
         z = ((1.0-phase)*amp) + (phase*nextamp);
         
-        phase +=  speed;
-        *out++ = z;
+        phase   +=  speed;
+        *out++   =  z;
     }
     
     x->mPhase = phase;
@@ -297,13 +308,16 @@ void gendy_free(t_gendy *x){
 
     sysmem_freeptr(x->mMemoryAmp);
     sysmem_freeptr(x->mMemoryDur);
+    
 }
 
-void *gendy_new(long argc, t_atom *argv){
+void *gendy_new(long init_cps){
 	t_gendy *x = NULL;
 	x = (t_gendy *)object_alloc(gendy_class);
     
 	if (x) {
+        
+        
 		dsp_setup((t_pxobject *)x, 0);
         
         x->mFreqMul     = (float) 1.f/sys_getsr();
@@ -314,9 +328,22 @@ void *gendy_new(long argc, t_atom *argv){
         
         x->mIndex=0;
         
-        x->mMemoryAmp= (float*)sysmem_newptr(CONTROL_POINTS * sizeof(float));
-        x->mMemoryDur= (float*)sysmem_newptr(CONTROL_POINTS * sizeof(float));
         
+        
+        if(init_cps>0){
+            x->cps = (int) init_cps;
+            
+            x->mMemoryAmp= (float*)sysmem_newptr(x->cps * sizeof(float));
+            x->mMemoryDur= (float*)sysmem_newptr(x->cps * sizeof(float));
+        } else {
+            x->cps = CONTROL_POINTS;
+            
+            x->mMemoryAmp= (float*)sysmem_newptr(x->cps * sizeof(float));
+            x->mMemoryDur= (float*)sysmem_newptr(x->cps * sizeof(float));
+        }
+
+        
+        object_post((t_object*) x, "number of cps: %d", x->cps);
         
         /* defaults */
         x->ampdist      = 0;
@@ -332,7 +359,7 @@ void *gendy_new(long argc, t_atom *argv){
                 
         //initialise to zeroes and separations
         int i=0;
-        for(i=0; i<CONTROL_POINTS;++i) {
+        for(i=0; i < x->cps; ++i) {
             x->mMemoryAmp[i] = 2 * x->rgen.frand() - 1.0;
             x->mMemoryDur[i] = x->rgen.frand();
         }
@@ -346,7 +373,7 @@ void *gendy_new(long argc, t_atom *argv){
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-float gendy_distribution( int which, float a, float f) {
+float Gendyn_distribution( int which, float a, float f) {
     
     float temp, c;
     

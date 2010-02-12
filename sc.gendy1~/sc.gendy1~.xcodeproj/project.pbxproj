@@ -864,6 +864,7 @@
 			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				DSTROOT = "$(SRCROOT)/../_build";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../c74support/msp-includes\"",
