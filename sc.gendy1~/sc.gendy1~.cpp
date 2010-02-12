@@ -41,7 +41,8 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
-#include "rgen_helper.h"
+
+#include "SC_RGen.h"
 
 # define CONTROL_POINTS 12
 
@@ -280,7 +281,7 @@ void *gendy_new(t_symbol *s, long ac, t_atom *av){
         x->mNextAmp     = 0.0;
         x->mSpeed       = 100;
         
-        x->mIndex=0;
+        x->mIndex       = 0;
         
         
         // if the first value is a long use it as our number of cps
@@ -300,8 +301,8 @@ void *gendy_new(t_symbol *s, long ac, t_atom *av){
             object_post((t_object*)x, "no number of cps supplied, using the default (12)");
         }
         
-        x->mMemoryAmp= (float*)sysmem_newptr(x->g_cps * sizeof(float));
-        x->mMemoryDur= (float*)sysmem_newptr(x->g_cps * sizeof(float));
+        x->mMemoryAmp = (float*)sysmem_newptr(x->g_cps * sizeof(float));
+        x->mMemoryDur = (float*)sysmem_newptr(x->g_cps * sizeof(float));
         
         // defaults
         x->g_ampdist      = 0;
@@ -314,9 +315,9 @@ void *gendy_new(t_symbol *s, long ac, t_atom *av){
         x->g_durscale     = 0.5f; 
         
         // process the attributes after the defaults have been set
-        
         attr_args_process(x, ac, av);
         
+        // set up the random generator
         x->rgen.init(rand());
                 
         //initialise to zeroes and separations

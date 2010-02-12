@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/supercollider/!svn/ver/9694/trunk/Headers/lang
+END
+GC.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/supercollider/!svn/ver/9597/trunk/Headers/lang/GC.h
+END
+HashTable.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/HashTable.h
+END
+PyrDeepFreezer.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9597/trunk/Headers/lang/PyrDeepFreezer.h
+END
+ReadWriteMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/ReadWriteMacros.h
+END
+ByteCodeArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/ByteCodeArray.h
+END
+PyrInterpreter.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrInterpreter.h
+END
+AdvancingAllocPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/AdvancingAllocPool.h
+END
+SC_TerminalClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/supercollider/!svn/ver/9694/trunk/Headers/lang/SC_TerminalClient.h
+END
+PyrSymbol.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrSymbol.h
+END
+PyrObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9608/trunk/Headers/lang/PyrObject.h
+END
+MiscInlineMath.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/MiscInlineMath.h
+END
+SFHeaders.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/SFHeaders.h
+END
+SC_LogFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/SC_LogFile.h
+END
+PyrErrors.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrErrors.h
+END
+FIFOT.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/FIFOT.h
+END
+PyrLexer.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrLexer.h
+END
+PyrParseNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrParseNode.h
+END
+PyrKernel.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9598/trunk/Headers/lang/PyrKernel.h
+END
+SC_Msg.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SC_Msg.h
+END
+PyrMathPrim.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrMathPrim.h
+END
+PyrSlot.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/9627/trunk/Headers/lang/PyrSlot.h
+END
+OSCData.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/OSCData.h
+END
+PredefinedSymbols.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PredefinedSymbols.h
+END
+SC_LibraryConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SC_LibraryConfig.h
+END
+SimpleStack.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/SimpleStack.h
+END
+PowerOfTwoAllocPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PowerOfTwoAllocPool.h
+END
+PyrSlot32.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9615/trunk/Headers/lang/PyrSlot32.h
+END
+PyrArchiverT.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9597/trunk/Headers/lang/PyrArchiverT.h
+END
+PyrObjectProto.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrObjectProto.h
+END
+PriorityQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PriorityQueue.h
+END
+VMGlobals.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/VMGlobals.h
+END
+PyrFileUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrFileUtils.h
+END
+Opcodes.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/Opcodes.h
+END
+PyrListPrim.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrListPrim.h
+END
+PyrKernelProto.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrKernelProto.h
+END
+PyrSignalPrim.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrSignalPrim.h
+END
+SCBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SCBase.h
+END
+SC_List.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SC_List.h
+END
+Samp.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/Samp.h
+END
+readSamples.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/readSamples.h
+END
+PyrFilePrim.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrFilePrim.h
+END
+PyrPrimitive.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrPrimitive.h
+END
+AllocPools.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/AllocPools.h
+END
+SC_LanguageClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/supercollider/!svn/ver/9694/trunk/Headers/lang/SC_LanguageClient.h
+END
+PyrSignal.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrSignal.h
+END
+PyrSymbolTable.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrSymbolTable.h
+END
+SC_ComPort.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SC_ComPort.h
+END
+SC_UnorderedList.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/SC_UnorderedList.h
+END
+PyrDeepCopier.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9597/trunk/Headers/lang/PyrDeepCopier.h
+END
+SC_SynthImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/SC_SynthImpl.h
+END
+InitAlloc.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/InitAlloc.h
+END
+PyrMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/lang/PyrMessage.h
+END
+PyrSched.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrSched.h
+END
+PyrSlot64.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9615/trunk/Headers/lang/PyrSlot64.h
+END
+PyrPrimitiveProto.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/lang/PyrPrimitiveProto.h
+END
+bullet.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/supercollider/!svn/ver/6094/trunk/Headers/lang/bullet.h
+END

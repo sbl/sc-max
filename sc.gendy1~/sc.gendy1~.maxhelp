@@ -214,7 +214,7 @@
 					"text" : "dcblock",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.0, 376.0, 52.0, 19.0 ],
+					"patching_rect" : [ 181.0, 375.0, 52.0, 19.0 ],
 					"id" : "obj-28",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0

@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/supercollider/!svn/ver/9697/trunk/Headers/server
+END
+SC_AU.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_AU.h
+END
+MsgFifo.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/MsgFifo.h
+END
+SC_Lib.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_Lib.h
+END
+ReadWriteMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/ReadWriteMacros.h
+END
+HashTable.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/HashTable.h
+END
+SC_Complex.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_Complex.h
+END
+SC_CoreAudio.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_CoreAudio.h
+END
+SC_List.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_List.h
+END
+SC_SequencedCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/supercollider/!svn/ver/9697/trunk/Headers/server/SC_SequencedCommand.h
+END
+SC_Errors.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_Errors.h
+END
+Rendezvous.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/Rendezvous.h
+END
+SC_GraphDef.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_GraphDef.h
+END
+SC_WireSpec.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_WireSpec.h
+END
+SC_ComPort.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_ComPort.h
+END
+SC_SyncCondition.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_SyncCondition.h
+END
+SC_SynthDef.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_SynthDef.h
+END
+OSC_Packet.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/OSC_Packet.h
+END
+SC_Lock.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_Lock.h
+END
+SC_Prototypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_Prototypes.h
+END
+SC_Lib_Cintf.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_Lib_Cintf.h
+END
+SC_UnitSpec.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_UnitSpec.h
+END
+SC_Group.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_Group.h
+END
+SC_Str4.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_Str4.h
+END
+SC_UnitDef.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_UnitDef.h
+END
+SC_Samp.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/server/SC_Samp.h
+END
+PriorityQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/PriorityQueue.h
+END
+SC_HiddenWorld.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/server/SC_HiddenWorld.h
+END

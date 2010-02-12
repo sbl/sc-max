@@ -12,8 +12,8 @@ some supercollider ugens ported to max-msp.
 all credits are due to the original authors (James McCartney et alt.). these are merely ports to max/msp and might be helpful.
 if you haven't done so. check out supercollider as well. it is a really nice language for sound.
 
-forks and patches are welcome. if someone wants to do a windows port please let me know.
-You need the supercollider header files to compile most of the externals.
+forks and patches are welcome. if someone wants to do a windows port please let me know. 
+the included sc header files are from the supercollider sourceforge svn repository
 
 bugs, anything else? contact me via github.
 

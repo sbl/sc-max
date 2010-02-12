@@ -10,162 +10,161 @@
 		22CF119B0EE9A8250054F513 /* sc.graynoise~.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.graynoise~.cpp */; };
 		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
 		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
-		DCCA3237112195BB00A774D0 /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3195112195BA00A774D0 /* ChangeCounter.h */; };
-		DCCA3238112195BB00A774D0 /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3196112195BA00A774D0 /* ControlSpec.h */; };
-		DCCA3239112195BB00A774D0 /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3197112195BA00A774D0 /* DrawBackground.h */; };
-		DCCA323A112195BB00A774D0 /* GetStringFromUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3198112195BA00A774D0 /* GetStringFromUser.h */; };
-		DCCA323B112195BB00A774D0 /* GoToPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3199112195BA00A774D0 /* GoToPanel.h */; };
-		DCCA323C112195BB00A774D0 /* HTMLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA319A112195BA00A774D0 /* HTMLRenderer.h */; };
-		DCCA323D112195BB00A774D0 /* iPhoneSCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA319C112195BA00A774D0 /* iPhoneSCGraphView.h */; };
-		DCCA323E112195BB00A774D0 /* iPhoneSCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA319D112195BA00A774D0 /* iPhoneSCView.h */; };
-		DCCA323F112195BB00A774D0 /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA319E112195BA00A774D0 /* MyDocument.h */; };
-		DCCA3240112195BB00A774D0 /* RendezvousClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA319F112195BA00A774D0 /* RendezvousClient.h */; };
-		DCCA3241112195BB00A774D0 /* SCCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A0112195BA00A774D0 /* SCCocoaView.h */; };
-		DCCA3242112195BB00A774D0 /* SCDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A1112195BA00A774D0 /* SCDialog.h */; };
-		DCCA3243112195BB00A774D0 /* SCGeom.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A2112195BA00A774D0 /* SCGeom.h */; };
-		DCCA3244112195BB00A774D0 /* SCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A3112195BA00A774D0 /* SCGraphView.h */; };
-		DCCA3245112195BB00A774D0 /* SCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A4112195BA00A774D0 /* SCImage.h */; };
-		DCCA3246112195BB00A774D0 /* SCNSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A5112195BA00A774D0 /* SCNSWindow.h */; };
-		DCCA3247112195BB00A774D0 /* SCService.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A6112195BA00A774D0 /* SCService.h */; };
-		DCCA3248112195BB00A774D0 /* SCSoundFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A7112195BA00A774D0 /* SCSoundFileView.h */; };
-		DCCA3249112195BB00A774D0 /* SCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A8112195BA00A774D0 /* SCTextView.h */; };
-		DCCA324A112195BB00A774D0 /* SCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31A9112195BA00A774D0 /* SCView.h */; };
-		DCCA324B112195BB00A774D0 /* SCVirtualMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31AA112195BA00A774D0 /* SCVirtualMachine.h */; };
-		DCCA324C112195BB00A774D0 /* ICUMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31AD112195BA00A774D0 /* ICUMatcher.h */; };
-		DCCA324D112195BB00A774D0 /* ICUPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31AE112195BA00A774D0 /* ICUPattern.h */; };
-		DCCA324E112195BB00A774D0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCCA31AF112195BA00A774D0 /* LICENSE.txt */; };
-		DCCA324F112195BB00A774D0 /* NSStringICUAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B0112195BA00A774D0 /* NSStringICUAdditions.h */; };
-		DCCA3250112195BB00A774D0 /* SMLAdvancedFindController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B1112195BA00A774D0 /* SMLAdvancedFindController.h */; };
-		DCCA3251112195BB00A774D0 /* SMLStatusBarTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B2112195BA00A774D0 /* SMLStatusBarTextFieldCell.h */; };
-		DCCA3252112195BB00A774D0 /* TabletEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B3112195BA00A774D0 /* TabletEvents.h */; };
-		DCCA3253112195BB00A774D0 /* TextFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B4112195BA00A774D0 /* TextFinder.h */; };
-		DCCA3254112195BB00A774D0 /* UserPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B5112195BA00A774D0 /* UserPanel.h */; };
-		DCCA3255112195BB00A774D0 /* dfftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B7112195BA00A774D0 /* dfftlib.h */; };
-		DCCA3256112195BB00A774D0 /* fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B8112195BA00A774D0 /* fftlib.h */; };
-		DCCA3257112195BB00A774D0 /* SC_AllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31B9112195BA00A774D0 /* SC_AllocPool.h */; };
-		DCCA3258112195BB00A774D0 /* SC_Altivec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BA112195BA00A774D0 /* SC_Altivec.h */; };
-		DCCA3259112195BB00A774D0 /* SC_DirUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BB112195BA00A774D0 /* SC_DirUtils.h */; };
-		DCCA325A112195BB00A774D0 /* SC_Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BC112195BA00A774D0 /* SC_Endian.h */; };
-		DCCA325B112195BB00A774D0 /* SC_fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BD112195BA00A774D0 /* SC_fftlib.h */; };
-		DCCA325C112195BB00A774D0 /* SC_FIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BE112195BA00A774D0 /* SC_FIFO.h */; };
-		DCCA325D112195BB00A774D0 /* sc_popen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31BF112195BA00A774D0 /* sc_popen.h */; };
-		DCCA325E112195BB00A774D0 /* SC_Reply.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C0112195BA00A774D0 /* SC_Reply.h */; };
-		DCCA325F112195BB00A774D0 /* SC_Sem.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C1112195BA00A774D0 /* SC_Sem.h */; };
-		DCCA3260112195BB00A774D0 /* SC_StandAloneInfo_Darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C2112195BA00A774D0 /* SC_StandAloneInfo_Darwin.h */; };
-		DCCA3261112195BB00A774D0 /* SC_StringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C3112195BA00A774D0 /* SC_StringBuffer.h */; };
-		DCCA3262112195BB00A774D0 /* SC_StringParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C4112195BA00A774D0 /* SC_StringParser.h */; };
-		DCCA3263112195BB00A774D0 /* SC_VFP11.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C5112195BA00A774D0 /* SC_VFP11.h */; };
-		DCCA3264112195BB00A774D0 /* SC_Win32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C6112195BA00A774D0 /* SC_Win32Utils.h */; };
-		DCCA3265112195BB00A774D0 /* scsynthsend.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C7112195BA00A774D0 /* scsynthsend.h */; };
-		DCCA3266112195BB00A774D0 /* AdvancingAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31C9112195BB00A774D0 /* AdvancingAllocPool.h */; };
-		DCCA3267112195BB00A774D0 /* AllocPools.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CA112195BB00A774D0 /* AllocPools.h */; };
-		DCCA3268112195BB00A774D0 /* bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CB112195BB00A774D0 /* bullet.h */; };
-		DCCA3269112195BB00A774D0 /* ByteCodeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CC112195BB00A774D0 /* ByteCodeArray.h */; };
-		DCCA326A112195BB00A774D0 /* FIFOT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CD112195BB00A774D0 /* FIFOT.h */; };
-		DCCA326B112195BB00A774D0 /* GC.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CE112195BB00A774D0 /* GC.h */; };
-		DCCA326C112195BB00A774D0 /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31CF112195BB00A774D0 /* HashTable.h */; };
-		DCCA326D112195BB00A774D0 /* InitAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D0112195BB00A774D0 /* InitAlloc.h */; };
-		DCCA326E112195BB00A774D0 /* MiscInlineMath.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D1112195BB00A774D0 /* MiscInlineMath.h */; };
-		DCCA326F112195BB00A774D0 /* Opcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D2112195BB00A774D0 /* Opcodes.h */; };
-		DCCA3270112195BB00A774D0 /* OSCData.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D3112195BB00A774D0 /* OSCData.h */; };
-		DCCA3271112195BB00A774D0 /* PowerOfTwoAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D4112195BB00A774D0 /* PowerOfTwoAllocPool.h */; };
-		DCCA3272112195BB00A774D0 /* PredefinedSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D5112195BB00A774D0 /* PredefinedSymbols.h */; };
-		DCCA3273112195BB00A774D0 /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D6112195BB00A774D0 /* PriorityQueue.h */; };
-		DCCA3274112195BB00A774D0 /* PyrArchiverT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D7112195BB00A774D0 /* PyrArchiverT.h */; };
-		DCCA3275112195BB00A774D0 /* PyrDeepCopier.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D8112195BB00A774D0 /* PyrDeepCopier.h */; };
-		DCCA3276112195BB00A774D0 /* PyrDeepFreezer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31D9112195BB00A774D0 /* PyrDeepFreezer.h */; };
-		DCCA3277112195BB00A774D0 /* PyrErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DA112195BB00A774D0 /* PyrErrors.h */; };
-		DCCA3278112195BB00A774D0 /* PyrFilePrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DB112195BB00A774D0 /* PyrFilePrim.h */; };
-		DCCA3279112195BB00A774D0 /* PyrFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DC112195BB00A774D0 /* PyrFileUtils.h */; };
-		DCCA327A112195BB00A774D0 /* PyrInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DD112195BB00A774D0 /* PyrInterpreter.h */; };
-		DCCA327B112195BB00A774D0 /* PyrKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DE112195BB00A774D0 /* PyrKernel.h */; };
-		DCCA327C112195BB00A774D0 /* PyrKernelProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31DF112195BB00A774D0 /* PyrKernelProto.h */; };
-		DCCA327D112195BB00A774D0 /* PyrLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E0112195BB00A774D0 /* PyrLexer.h */; };
-		DCCA327E112195BB00A774D0 /* PyrListPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E1112195BB00A774D0 /* PyrListPrim.h */; };
-		DCCA327F112195BB00A774D0 /* PyrMathPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E2112195BB00A774D0 /* PyrMathPrim.h */; };
-		DCCA3280112195BB00A774D0 /* PyrMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E3112195BB00A774D0 /* PyrMessage.h */; };
-		DCCA3281112195BB00A774D0 /* PyrObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E4112195BB00A774D0 /* PyrObject.h */; };
-		DCCA3282112195BB00A774D0 /* PyrObjectProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E5112195BB00A774D0 /* PyrObjectProto.h */; };
-		DCCA3283112195BB00A774D0 /* PyrParseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E6112195BB00A774D0 /* PyrParseNode.h */; };
-		DCCA3284112195BB00A774D0 /* PyrPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E7112195BB00A774D0 /* PyrPrimitive.h */; };
-		DCCA3285112195BB00A774D0 /* PyrPrimitiveProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E8112195BB00A774D0 /* PyrPrimitiveProto.h */; };
-		DCCA3286112195BB00A774D0 /* PyrSched.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31E9112195BB00A774D0 /* PyrSched.h */; };
-		DCCA3287112195BB00A774D0 /* PyrSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31EA112195BB00A774D0 /* PyrSignal.h */; };
-		DCCA3288112195BB00A774D0 /* PyrSignalPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31EB112195BB00A774D0 /* PyrSignalPrim.h */; };
-		DCCA3289112195BB00A774D0 /* PyrSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31EC112195BB00A774D0 /* PyrSlot.h */; };
-		DCCA328A112195BB00A774D0 /* PyrSlot32.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31ED112195BB00A774D0 /* PyrSlot32.h */; };
-		DCCA328B112195BB00A774D0 /* PyrSlot64.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31EE112195BB00A774D0 /* PyrSlot64.h */; };
-		DCCA328C112195BB00A774D0 /* PyrSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31EF112195BB00A774D0 /* PyrSymbol.h */; };
-		DCCA328D112195BB00A774D0 /* PyrSymbolTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F0112195BB00A774D0 /* PyrSymbolTable.h */; };
-		DCCA328E112195BB00A774D0 /* readSamples.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F1112195BB00A774D0 /* readSamples.h */; };
-		DCCA328F112195BB00A774D0 /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F2112195BB00A774D0 /* ReadWriteMacros.h */; };
-		DCCA3290112195BB00A774D0 /* Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F3112195BB00A774D0 /* Samp.h */; };
-		DCCA3291112195BB00A774D0 /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F4112195BB00A774D0 /* SC_ComPort.h */; };
-		DCCA3292112195BB00A774D0 /* SC_LanguageClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F5112195BB00A774D0 /* SC_LanguageClient.h */; };
-		DCCA3293112195BB00A774D0 /* SC_LibraryConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F6112195BB00A774D0 /* SC_LibraryConfig.h */; };
-		DCCA3294112195BB00A774D0 /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F7112195BB00A774D0 /* SC_List.h */; };
-		DCCA3295112195BB00A774D0 /* SC_LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F8112195BB00A774D0 /* SC_LogFile.h */; };
-		DCCA3296112195BB00A774D0 /* SC_Msg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31F9112195BB00A774D0 /* SC_Msg.h */; };
-		DCCA3297112195BB00A774D0 /* SC_SynthImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FA112195BB00A774D0 /* SC_SynthImpl.h */; };
-		DCCA3298112195BB00A774D0 /* SC_TerminalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FB112195BB00A774D0 /* SC_TerminalClient.h */; };
-		DCCA3299112195BB00A774D0 /* SC_UnorderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FC112195BB00A774D0 /* SC_UnorderedList.h */; };
-		DCCA329A112195BB00A774D0 /* SCBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FD112195BB00A774D0 /* SCBase.h */; };
-		DCCA329B112195BB00A774D0 /* SFHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FE112195BB00A774D0 /* SFHeaders.h */; };
-		DCCA329C112195BB00A774D0 /* SimpleStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA31FF112195BB00A774D0 /* SimpleStack.h */; };
-		DCCA329D112195BB00A774D0 /* VMGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3200112195BB00A774D0 /* VMGlobals.h */; };
-		DCCA329E112195BB00A774D0 /* clz.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3202112195BB00A774D0 /* clz.h */; };
-		DCCA329F112195BB00A774D0 /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3203112195BB00A774D0 /* Hash.h */; };
-		DCCA32A0112195BB00A774D0 /* SC_BoundsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3204112195BB00A774D0 /* SC_BoundsMacros.h */; };
-		DCCA32A1112195BB00A774D0 /* SC_BufGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3205112195BB00A774D0 /* SC_BufGen.h */; };
-		DCCA32A2112195BB00A774D0 /* SC_Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3206112195BB00A774D0 /* SC_Constants.h */; };
-		DCCA32A3112195BB00A774D0 /* SC_DemandUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3207112195BB00A774D0 /* SC_DemandUnit.h */; };
-		DCCA32A4112195BB00A774D0 /* SC_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3208112195BB00A774D0 /* SC_Dimension.h */; };
-		DCCA32A5112195BB00A774D0 /* SC_FifoMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3209112195BB00A774D0 /* SC_FifoMsg.h */; };
-		DCCA32A6112195BB00A774D0 /* SC_Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320A112195BB00A774D0 /* SC_Graph.h */; };
-		DCCA32A7112195BB00A774D0 /* SC_InlineBinaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320B112195BB00A774D0 /* SC_InlineBinaryOp.h */; };
-		DCCA32A8112195BB00A774D0 /* SC_InlineUnaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320C112195BB00A774D0 /* SC_InlineUnaryOp.h */; };
-		DCCA32A9112195BB00A774D0 /* SC_InterfaceTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320D112195BB00A774D0 /* SC_InterfaceTable.h */; };
-		DCCA32AA112195BB00A774D0 /* sc_msg_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320E112195BB00A774D0 /* sc_msg_iter.h */; };
-		DCCA32AB112195BB00A774D0 /* SC_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA320F112195BB00A774D0 /* SC_Node.h */; };
-		DCCA32AC112195BB00A774D0 /* SC_PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3210112195BB00A774D0 /* SC_PlugIn.h */; };
-		DCCA32AD112195BB00A774D0 /* SC_Rate.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3211112195BB00A774D0 /* SC_Rate.h */; };
-		DCCA32AE112195BB00A774D0 /* SC_RGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3212112195BB00A774D0 /* SC_RGen.h */; };
-		DCCA32AF112195BB00A774D0 /* SC_SndBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3213112195BB00A774D0 /* SC_SndBuf.h */; };
-		DCCA32B0112195BB00A774D0 /* SC_sndfile_stub.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3214112195BB00A774D0 /* SC_sndfile_stub.h */; };
-		DCCA32B1112195BB00A774D0 /* SC_Types.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3215112195BB00A774D0 /* SC_Types.h */; };
-		DCCA32B2112195BB00A774D0 /* SC_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3216112195BB00A774D0 /* SC_Unit.h */; };
-		DCCA32B3112195BB00A774D0 /* SC_Wire.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3217112195BB00A774D0 /* SC_Wire.h */; };
-		DCCA32B4112195BB00A774D0 /* SC_World.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3218112195BB00A774D0 /* SC_World.h */; };
-		DCCA32B5112195BB00A774D0 /* SC_WorldOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3219112195BB00A774D0 /* SC_WorldOptions.h */; };
-		DCCA32B6112195BB00A774D0 /* Unroll.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA321A112195BB00A774D0 /* Unroll.h */; };
-		DCCA32B7112195BB00A774D0 /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA321C112195BB00A774D0 /* HashTable.h */; };
-		DCCA32B8112195BB00A774D0 /* MsgFifo.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA321D112195BB00A774D0 /* MsgFifo.h */; };
-		DCCA32B9112195BB00A774D0 /* OSC_Packet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA321E112195BB00A774D0 /* OSC_Packet.h */; };
-		DCCA32BA112195BB00A774D0 /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA321F112195BB00A774D0 /* PriorityQueue.h */; };
-		DCCA32BB112195BB00A774D0 /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3220112195BB00A774D0 /* ReadWriteMacros.h */; };
-		DCCA32BC112195BB00A774D0 /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3221112195BB00A774D0 /* Rendezvous.h */; };
-		DCCA32BD112195BB00A774D0 /* SC_AU.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3222112195BB00A774D0 /* SC_AU.h */; };
-		DCCA32BE112195BB00A774D0 /* SC_Complex.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3223112195BB00A774D0 /* SC_Complex.h */; };
-		DCCA32BF112195BB00A774D0 /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3224112195BB00A774D0 /* SC_ComPort.h */; };
-		DCCA32C0112195BB00A774D0 /* SC_CoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3225112195BB00A774D0 /* SC_CoreAudio.h */; };
-		DCCA32C1112195BB00A774D0 /* SC_Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3226112195BB00A774D0 /* SC_Errors.h */; };
-		DCCA32C2112195BB00A774D0 /* SC_GraphDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3227112195BB00A774D0 /* SC_GraphDef.h */; };
-		DCCA32C3112195BB00A774D0 /* SC_Group.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3228112195BB00A774D0 /* SC_Group.h */; };
-		DCCA32C4112195BB00A774D0 /* SC_HiddenWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3229112195BB00A774D0 /* SC_HiddenWorld.h */; };
-		DCCA32C5112195BB00A774D0 /* SC_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322A112195BB00A774D0 /* SC_Lib.h */; };
-		DCCA32C6112195BB00A774D0 /* SC_Lib_Cintf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322B112195BB00A774D0 /* SC_Lib_Cintf.h */; };
-		DCCA32C7112195BB00A774D0 /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322C112195BB00A774D0 /* SC_List.h */; };
-		DCCA32C8112195BB00A774D0 /* SC_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322D112195BB00A774D0 /* SC_Lock.h */; };
-		DCCA32C9112195BB00A774D0 /* SC_Prototypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322E112195BB00A774D0 /* SC_Prototypes.h */; };
-		DCCA32CA112195BB00A774D0 /* SC_Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA322F112195BB00A774D0 /* SC_Samp.h */; };
-		DCCA32CB112195BB00A774D0 /* SC_SequencedCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3230112195BB00A774D0 /* SC_SequencedCommand.h */; };
-		DCCA32CC112195BB00A774D0 /* SC_Str4.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3231112195BB00A774D0 /* SC_Str4.h */; };
-		DCCA32CD112195BB00A774D0 /* SC_SyncCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3232112195BB00A774D0 /* SC_SyncCondition.h */; };
-		DCCA32CE112195BB00A774D0 /* SC_SynthDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3233112195BB00A774D0 /* SC_SynthDef.h */; };
-		DCCA32CF112195BB00A774D0 /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3234112195BB00A774D0 /* SC_UnitDef.h */; };
-		DCCA32D0112195BB00A774D0 /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3235112195BB00A774D0 /* SC_UnitSpec.h */; };
-		DCCA32D1112195BB00A774D0 /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA3236112195BB00A774D0 /* SC_WireSpec.h */; };
-		DCCA338F1121A12800A774D0 /* rgen_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCA338E1121A12800A774D0 /* rgen_helper.h */; };
+		DCC9CF8B1125C5320050A91B /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEE91125C5320050A91B /* ChangeCounter.h */; };
+		DCC9CF8C1125C5320050A91B /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEEA1125C5320050A91B /* ControlSpec.h */; };
+		DCC9CF8D1125C5320050A91B /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEEB1125C5320050A91B /* DrawBackground.h */; };
+		DCC9CF8E1125C5320050A91B /* GetStringFromUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEEC1125C5320050A91B /* GetStringFromUser.h */; };
+		DCC9CF8F1125C5320050A91B /* GoToPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEED1125C5320050A91B /* GoToPanel.h */; };
+		DCC9CF901125C5320050A91B /* HTMLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEEE1125C5320050A91B /* HTMLRenderer.h */; };
+		DCC9CF911125C5320050A91B /* iPhoneSCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF01125C5320050A91B /* iPhoneSCGraphView.h */; };
+		DCC9CF921125C5320050A91B /* iPhoneSCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF11125C5320050A91B /* iPhoneSCView.h */; };
+		DCC9CF931125C5320050A91B /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF21125C5320050A91B /* MyDocument.h */; };
+		DCC9CF941125C5320050A91B /* RendezvousClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF31125C5320050A91B /* RendezvousClient.h */; };
+		DCC9CF951125C5320050A91B /* SCCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF41125C5320050A91B /* SCCocoaView.h */; };
+		DCC9CF961125C5320050A91B /* SCDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF51125C5320050A91B /* SCDialog.h */; };
+		DCC9CF971125C5320050A91B /* SCGeom.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF61125C5320050A91B /* SCGeom.h */; };
+		DCC9CF981125C5320050A91B /* SCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF71125C5320050A91B /* SCGraphView.h */; };
+		DCC9CF991125C5320050A91B /* SCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF81125C5320050A91B /* SCImage.h */; };
+		DCC9CF9A1125C5320050A91B /* SCNSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEF91125C5320050A91B /* SCNSWindow.h */; };
+		DCC9CF9B1125C5320050A91B /* SCService.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEFA1125C5320050A91B /* SCService.h */; };
+		DCC9CF9C1125C5320050A91B /* SCSoundFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEFB1125C5320050A91B /* SCSoundFileView.h */; };
+		DCC9CF9D1125C5320050A91B /* SCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEFC1125C5320050A91B /* SCTextView.h */; };
+		DCC9CF9E1125C5320050A91B /* SCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEFD1125C5320050A91B /* SCView.h */; };
+		DCC9CF9F1125C5320050A91B /* SCVirtualMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CEFE1125C5320050A91B /* SCVirtualMachine.h */; };
+		DCC9CFA01125C5320050A91B /* ICUMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF011125C5320050A91B /* ICUMatcher.h */; };
+		DCC9CFA11125C5320050A91B /* ICUPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF021125C5320050A91B /* ICUPattern.h */; };
+		DCC9CFA21125C5320050A91B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCC9CF031125C5320050A91B /* LICENSE.txt */; };
+		DCC9CFA31125C5320050A91B /* NSStringICUAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF041125C5320050A91B /* NSStringICUAdditions.h */; };
+		DCC9CFA41125C5320050A91B /* SMLAdvancedFindController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF051125C5320050A91B /* SMLAdvancedFindController.h */; };
+		DCC9CFA51125C5320050A91B /* SMLStatusBarTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF061125C5320050A91B /* SMLStatusBarTextFieldCell.h */; };
+		DCC9CFA61125C5320050A91B /* TabletEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF071125C5320050A91B /* TabletEvents.h */; };
+		DCC9CFA71125C5320050A91B /* TextFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF081125C5320050A91B /* TextFinder.h */; };
+		DCC9CFA81125C5320050A91B /* UserPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF091125C5320050A91B /* UserPanel.h */; };
+		DCC9CFA91125C5320050A91B /* dfftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF0B1125C5320050A91B /* dfftlib.h */; };
+		DCC9CFAA1125C5320050A91B /* fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF0C1125C5320050A91B /* fftlib.h */; };
+		DCC9CFAB1125C5320050A91B /* SC_AllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF0D1125C5320050A91B /* SC_AllocPool.h */; };
+		DCC9CFAC1125C5320050A91B /* SC_Altivec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF0E1125C5320050A91B /* SC_Altivec.h */; };
+		DCC9CFAD1125C5320050A91B /* SC_DirUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF0F1125C5320050A91B /* SC_DirUtils.h */; };
+		DCC9CFAE1125C5320050A91B /* SC_Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF101125C5320050A91B /* SC_Endian.h */; };
+		DCC9CFAF1125C5320050A91B /* SC_fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF111125C5320050A91B /* SC_fftlib.h */; };
+		DCC9CFB01125C5320050A91B /* SC_FIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF121125C5320050A91B /* SC_FIFO.h */; };
+		DCC9CFB11125C5320050A91B /* sc_popen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF131125C5320050A91B /* sc_popen.h */; };
+		DCC9CFB21125C5320050A91B /* SC_Reply.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF141125C5320050A91B /* SC_Reply.h */; };
+		DCC9CFB31125C5320050A91B /* SC_Sem.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF151125C5320050A91B /* SC_Sem.h */; };
+		DCC9CFB41125C5320050A91B /* SC_StandAloneInfo_Darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF161125C5320050A91B /* SC_StandAloneInfo_Darwin.h */; };
+		DCC9CFB51125C5320050A91B /* SC_StringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF171125C5320050A91B /* SC_StringBuffer.h */; };
+		DCC9CFB61125C5320050A91B /* SC_StringParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF181125C5320050A91B /* SC_StringParser.h */; };
+		DCC9CFB71125C5320050A91B /* SC_VFP11.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF191125C5320050A91B /* SC_VFP11.h */; };
+		DCC9CFB81125C5320050A91B /* SC_Win32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF1A1125C5320050A91B /* SC_Win32Utils.h */; };
+		DCC9CFB91125C5320050A91B /* scsynthsend.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF1B1125C5320050A91B /* scsynthsend.h */; };
+		DCC9CFBA1125C5320050A91B /* AdvancingAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF1D1125C5320050A91B /* AdvancingAllocPool.h */; };
+		DCC9CFBB1125C5320050A91B /* AllocPools.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF1E1125C5320050A91B /* AllocPools.h */; };
+		DCC9CFBC1125C5320050A91B /* bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF1F1125C5320050A91B /* bullet.h */; };
+		DCC9CFBD1125C5320050A91B /* ByteCodeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF201125C5320050A91B /* ByteCodeArray.h */; };
+		DCC9CFBE1125C5320050A91B /* FIFOT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF211125C5320050A91B /* FIFOT.h */; };
+		DCC9CFBF1125C5320050A91B /* GC.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF221125C5320050A91B /* GC.h */; };
+		DCC9CFC01125C5320050A91B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF231125C5320050A91B /* HashTable.h */; };
+		DCC9CFC11125C5320050A91B /* InitAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF241125C5320050A91B /* InitAlloc.h */; };
+		DCC9CFC21125C5320050A91B /* MiscInlineMath.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF251125C5320050A91B /* MiscInlineMath.h */; };
+		DCC9CFC31125C5320050A91B /* Opcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF261125C5320050A91B /* Opcodes.h */; };
+		DCC9CFC41125C5320050A91B /* OSCData.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF271125C5320050A91B /* OSCData.h */; };
+		DCC9CFC51125C5320050A91B /* PowerOfTwoAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF281125C5320050A91B /* PowerOfTwoAllocPool.h */; };
+		DCC9CFC61125C5320050A91B /* PredefinedSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF291125C5320050A91B /* PredefinedSymbols.h */; };
+		DCC9CFC71125C5320050A91B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2A1125C5320050A91B /* PriorityQueue.h */; };
+		DCC9CFC81125C5320050A91B /* PyrArchiverT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2B1125C5320050A91B /* PyrArchiverT.h */; };
+		DCC9CFC91125C5320050A91B /* PyrDeepCopier.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2C1125C5320050A91B /* PyrDeepCopier.h */; };
+		DCC9CFCA1125C5320050A91B /* PyrDeepFreezer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2D1125C5320050A91B /* PyrDeepFreezer.h */; };
+		DCC9CFCB1125C5320050A91B /* PyrErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2E1125C5320050A91B /* PyrErrors.h */; };
+		DCC9CFCC1125C5320050A91B /* PyrFilePrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF2F1125C5320050A91B /* PyrFilePrim.h */; };
+		DCC9CFCD1125C5320050A91B /* PyrFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF301125C5320050A91B /* PyrFileUtils.h */; };
+		DCC9CFCE1125C5320050A91B /* PyrInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF311125C5320050A91B /* PyrInterpreter.h */; };
+		DCC9CFCF1125C5320050A91B /* PyrKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF321125C5320050A91B /* PyrKernel.h */; };
+		DCC9CFD01125C5320050A91B /* PyrKernelProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF331125C5320050A91B /* PyrKernelProto.h */; };
+		DCC9CFD11125C5320050A91B /* PyrLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF341125C5320050A91B /* PyrLexer.h */; };
+		DCC9CFD21125C5320050A91B /* PyrListPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF351125C5320050A91B /* PyrListPrim.h */; };
+		DCC9CFD31125C5320050A91B /* PyrMathPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF361125C5320050A91B /* PyrMathPrim.h */; };
+		DCC9CFD41125C5320050A91B /* PyrMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF371125C5320050A91B /* PyrMessage.h */; };
+		DCC9CFD51125C5320050A91B /* PyrObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF381125C5320050A91B /* PyrObject.h */; };
+		DCC9CFD61125C5320050A91B /* PyrObjectProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF391125C5320050A91B /* PyrObjectProto.h */; };
+		DCC9CFD71125C5320050A91B /* PyrParseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3A1125C5320050A91B /* PyrParseNode.h */; };
+		DCC9CFD81125C5320050A91B /* PyrPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3B1125C5320050A91B /* PyrPrimitive.h */; };
+		DCC9CFD91125C5320050A91B /* PyrPrimitiveProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3C1125C5320050A91B /* PyrPrimitiveProto.h */; };
+		DCC9CFDA1125C5320050A91B /* PyrSched.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3D1125C5320050A91B /* PyrSched.h */; };
+		DCC9CFDB1125C5320050A91B /* PyrSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3E1125C5320050A91B /* PyrSignal.h */; };
+		DCC9CFDC1125C5320050A91B /* PyrSignalPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF3F1125C5320050A91B /* PyrSignalPrim.h */; };
+		DCC9CFDD1125C5320050A91B /* PyrSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF401125C5320050A91B /* PyrSlot.h */; };
+		DCC9CFDE1125C5320050A91B /* PyrSlot32.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF411125C5320050A91B /* PyrSlot32.h */; };
+		DCC9CFDF1125C5320050A91B /* PyrSlot64.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF421125C5320050A91B /* PyrSlot64.h */; };
+		DCC9CFE01125C5320050A91B /* PyrSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF431125C5320050A91B /* PyrSymbol.h */; };
+		DCC9CFE11125C5320050A91B /* PyrSymbolTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF441125C5320050A91B /* PyrSymbolTable.h */; };
+		DCC9CFE21125C5320050A91B /* readSamples.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF451125C5320050A91B /* readSamples.h */; };
+		DCC9CFE31125C5320050A91B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF461125C5320050A91B /* ReadWriteMacros.h */; };
+		DCC9CFE41125C5320050A91B /* Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF471125C5320050A91B /* Samp.h */; };
+		DCC9CFE51125C5320050A91B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF481125C5320050A91B /* SC_ComPort.h */; };
+		DCC9CFE61125C5320050A91B /* SC_LanguageClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF491125C5320050A91B /* SC_LanguageClient.h */; };
+		DCC9CFE71125C5320050A91B /* SC_LibraryConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4A1125C5320050A91B /* SC_LibraryConfig.h */; };
+		DCC9CFE81125C5320050A91B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4B1125C5320050A91B /* SC_List.h */; };
+		DCC9CFE91125C5320050A91B /* SC_LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4C1125C5320050A91B /* SC_LogFile.h */; };
+		DCC9CFEA1125C5320050A91B /* SC_Msg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4D1125C5320050A91B /* SC_Msg.h */; };
+		DCC9CFEB1125C5320050A91B /* SC_SynthImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4E1125C5320050A91B /* SC_SynthImpl.h */; };
+		DCC9CFEC1125C5320050A91B /* SC_TerminalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF4F1125C5320050A91B /* SC_TerminalClient.h */; };
+		DCC9CFED1125C5320050A91B /* SC_UnorderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF501125C5320050A91B /* SC_UnorderedList.h */; };
+		DCC9CFEE1125C5320050A91B /* SCBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF511125C5320050A91B /* SCBase.h */; };
+		DCC9CFEF1125C5320050A91B /* SFHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF521125C5320050A91B /* SFHeaders.h */; };
+		DCC9CFF01125C5320050A91B /* SimpleStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF531125C5320050A91B /* SimpleStack.h */; };
+		DCC9CFF11125C5320050A91B /* VMGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF541125C5320050A91B /* VMGlobals.h */; };
+		DCC9CFF21125C5320050A91B /* clz.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF561125C5320050A91B /* clz.h */; };
+		DCC9CFF31125C5320050A91B /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF571125C5320050A91B /* Hash.h */; };
+		DCC9CFF41125C5320050A91B /* SC_BoundsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF581125C5320050A91B /* SC_BoundsMacros.h */; };
+		DCC9CFF51125C5320050A91B /* SC_BufGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF591125C5320050A91B /* SC_BufGen.h */; };
+		DCC9CFF61125C5320050A91B /* SC_Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5A1125C5320050A91B /* SC_Constants.h */; };
+		DCC9CFF71125C5320050A91B /* SC_DemandUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5B1125C5320050A91B /* SC_DemandUnit.h */; };
+		DCC9CFF81125C5320050A91B /* SC_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5C1125C5320050A91B /* SC_Dimension.h */; };
+		DCC9CFF91125C5320050A91B /* SC_FifoMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5D1125C5320050A91B /* SC_FifoMsg.h */; };
+		DCC9CFFA1125C5320050A91B /* SC_Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5E1125C5320050A91B /* SC_Graph.h */; };
+		DCC9CFFB1125C5320050A91B /* SC_InlineBinaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF5F1125C5320050A91B /* SC_InlineBinaryOp.h */; };
+		DCC9CFFC1125C5320050A91B /* SC_InlineUnaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF601125C5320050A91B /* SC_InlineUnaryOp.h */; };
+		DCC9CFFD1125C5320050A91B /* SC_InterfaceTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF611125C5320050A91B /* SC_InterfaceTable.h */; };
+		DCC9CFFE1125C5320050A91B /* sc_msg_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF621125C5320050A91B /* sc_msg_iter.h */; };
+		DCC9CFFF1125C5320050A91B /* SC_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF631125C5320050A91B /* SC_Node.h */; };
+		DCC9D0001125C5320050A91B /* SC_PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF641125C5320050A91B /* SC_PlugIn.h */; };
+		DCC9D0011125C5320050A91B /* SC_Rate.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF651125C5320050A91B /* SC_Rate.h */; };
+		DCC9D0021125C5320050A91B /* SC_RGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF661125C5320050A91B /* SC_RGen.h */; };
+		DCC9D0031125C5320050A91B /* SC_SndBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF671125C5320050A91B /* SC_SndBuf.h */; };
+		DCC9D0041125C5320050A91B /* SC_sndfile_stub.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF681125C5320050A91B /* SC_sndfile_stub.h */; };
+		DCC9D0051125C5320050A91B /* SC_Types.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF691125C5320050A91B /* SC_Types.h */; };
+		DCC9D0061125C5320050A91B /* SC_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF6A1125C5320050A91B /* SC_Unit.h */; };
+		DCC9D0071125C5320050A91B /* SC_Wire.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF6B1125C5320050A91B /* SC_Wire.h */; };
+		DCC9D0081125C5320050A91B /* SC_World.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF6C1125C5320050A91B /* SC_World.h */; };
+		DCC9D0091125C5320050A91B /* SC_WorldOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF6D1125C5320050A91B /* SC_WorldOptions.h */; };
+		DCC9D00A1125C5320050A91B /* Unroll.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF6E1125C5320050A91B /* Unroll.h */; };
+		DCC9D00B1125C5320050A91B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF701125C5320050A91B /* HashTable.h */; };
+		DCC9D00C1125C5320050A91B /* MsgFifo.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF711125C5320050A91B /* MsgFifo.h */; };
+		DCC9D00D1125C5320050A91B /* OSC_Packet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF721125C5320050A91B /* OSC_Packet.h */; };
+		DCC9D00E1125C5320050A91B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF731125C5320050A91B /* PriorityQueue.h */; };
+		DCC9D00F1125C5320050A91B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF741125C5320050A91B /* ReadWriteMacros.h */; };
+		DCC9D0101125C5320050A91B /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF751125C5320050A91B /* Rendezvous.h */; };
+		DCC9D0111125C5320050A91B /* SC_AU.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF761125C5320050A91B /* SC_AU.h */; };
+		DCC9D0121125C5320050A91B /* SC_Complex.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF771125C5320050A91B /* SC_Complex.h */; };
+		DCC9D0131125C5320050A91B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF781125C5320050A91B /* SC_ComPort.h */; };
+		DCC9D0141125C5320050A91B /* SC_CoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF791125C5320050A91B /* SC_CoreAudio.h */; };
+		DCC9D0151125C5320050A91B /* SC_Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7A1125C5320050A91B /* SC_Errors.h */; };
+		DCC9D0161125C5320050A91B /* SC_GraphDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7B1125C5320050A91B /* SC_GraphDef.h */; };
+		DCC9D0171125C5320050A91B /* SC_Group.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7C1125C5320050A91B /* SC_Group.h */; };
+		DCC9D0181125C5320050A91B /* SC_HiddenWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7D1125C5320050A91B /* SC_HiddenWorld.h */; };
+		DCC9D0191125C5320050A91B /* SC_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7E1125C5320050A91B /* SC_Lib.h */; };
+		DCC9D01A1125C5320050A91B /* SC_Lib_Cintf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF7F1125C5320050A91B /* SC_Lib_Cintf.h */; };
+		DCC9D01B1125C5320050A91B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF801125C5320050A91B /* SC_List.h */; };
+		DCC9D01C1125C5320050A91B /* SC_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF811125C5320050A91B /* SC_Lock.h */; };
+		DCC9D01D1125C5320050A91B /* SC_Prototypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF821125C5320050A91B /* SC_Prototypes.h */; };
+		DCC9D01E1125C5320050A91B /* SC_Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF831125C5320050A91B /* SC_Samp.h */; };
+		DCC9D01F1125C5320050A91B /* SC_SequencedCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF841125C5320050A91B /* SC_SequencedCommand.h */; };
+		DCC9D0201125C5320050A91B /* SC_Str4.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF851125C5320050A91B /* SC_Str4.h */; };
+		DCC9D0211125C5320050A91B /* SC_SyncCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF861125C5320050A91B /* SC_SyncCondition.h */; };
+		DCC9D0221125C5320050A91B /* SC_SynthDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF871125C5320050A91B /* SC_SynthDef.h */; };
+		DCC9D0231125C5320050A91B /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF881125C5320050A91B /* SC_UnitDef.h */; };
+		DCC9D0241125C5320050A91B /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF891125C5320050A91B /* SC_UnitSpec.h */; };
+		DCC9D0251125C5320050A91B /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9CF8A1125C5320050A91B /* SC_WireSpec.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,162 +173,161 @@
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.graynoise~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.graynoise~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
-		DCCA3195112195BA00A774D0 /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeCounter.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/ChangeCounter.h; sourceTree = "<absolute>"; };
-		DCCA3196112195BA00A774D0 /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlSpec.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/ControlSpec.h; sourceTree = "<absolute>"; };
-		DCCA3197112195BA00A774D0 /* DrawBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawBackground.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/DrawBackground.h; sourceTree = "<absolute>"; };
-		DCCA3198112195BA00A774D0 /* GetStringFromUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetStringFromUser.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/GetStringFromUser.h; sourceTree = "<absolute>"; };
-		DCCA3199112195BA00A774D0 /* GoToPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoToPanel.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/GoToPanel.h; sourceTree = "<absolute>"; };
-		DCCA319A112195BA00A774D0 /* HTMLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLRenderer.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/HTMLRenderer.h; sourceTree = "<absolute>"; };
-		DCCA319C112195BA00A774D0 /* iPhoneSCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhoneSCGraphView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/iPhone/iPhoneSCGraphView.h; sourceTree = "<absolute>"; };
-		DCCA319D112195BA00A774D0 /* iPhoneSCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhoneSCView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/iPhone/iPhoneSCView.h; sourceTree = "<absolute>"; };
-		DCCA319E112195BA00A774D0 /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDocument.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/MyDocument.h; sourceTree = "<absolute>"; };
-		DCCA319F112195BA00A774D0 /* RendezvousClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RendezvousClient.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/RendezvousClient.h; sourceTree = "<absolute>"; };
-		DCCA31A0112195BA00A774D0 /* SCCocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCocoaView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCCocoaView.h; sourceTree = "<absolute>"; };
-		DCCA31A1112195BA00A774D0 /* SCDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCDialog.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCDialog.h; sourceTree = "<absolute>"; };
-		DCCA31A2112195BA00A774D0 /* SCGeom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGeom.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCGeom.h; sourceTree = "<absolute>"; };
-		DCCA31A3112195BA00A774D0 /* SCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGraphView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCGraphView.h; sourceTree = "<absolute>"; };
-		DCCA31A4112195BA00A774D0 /* SCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCImage.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCImage.h; sourceTree = "<absolute>"; };
-		DCCA31A5112195BA00A774D0 /* SCNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNSWindow.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCNSWindow.h; sourceTree = "<absolute>"; };
-		DCCA31A6112195BA00A774D0 /* SCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCService.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCService.h; sourceTree = "<absolute>"; };
-		DCCA31A7112195BA00A774D0 /* SCSoundFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCSoundFileView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCSoundFileView.h; sourceTree = "<absolute>"; };
-		DCCA31A8112195BA00A774D0 /* SCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCTextView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCTextView.h; sourceTree = "<absolute>"; };
-		DCCA31A9112195BA00A774D0 /* SCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCView.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCView.h; sourceTree = "<absolute>"; };
-		DCCA31AA112195BA00A774D0 /* SCVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCVirtualMachine.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SCVirtualMachine.h; sourceTree = "<absolute>"; };
-		DCCA31AD112195BA00A774D0 /* ICUMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICUMatcher.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/ICU/ICUMatcher.h; sourceTree = "<absolute>"; };
-		DCCA31AE112195BA00A774D0 /* ICUPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICUPattern.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/ICU/ICUPattern.h; sourceTree = "<absolute>"; };
-		DCCA31AF112195BA00A774D0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/ICU/LICENSE.txt; sourceTree = "<absolute>"; };
-		DCCA31B0112195BA00A774D0 /* NSStringICUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSStringICUAdditions.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/ICU/NSStringICUAdditions.h; sourceTree = "<absolute>"; };
-		DCCA31B1112195BA00A774D0 /* SMLAdvancedFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMLAdvancedFindController.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/SMLAdvancedFindController.h; sourceTree = "<absolute>"; };
-		DCCA31B2112195BA00A774D0 /* SMLStatusBarTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMLStatusBarTextFieldCell.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/SMLStatusBarTextFieldCell.h; sourceTree = "<absolute>"; };
-		DCCA31B3112195BA00A774D0 /* TabletEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabletEvents.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/TabletEvents.h; sourceTree = "<absolute>"; };
-		DCCA31B4112195BA00A774D0 /* TextFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFinder.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/TextFinder.h; sourceTree = "<absolute>"; };
-		DCCA31B5112195BA00A774D0 /* UserPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserPanel.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/UserPanel.h; sourceTree = "<absolute>"; };
-		DCCA31B7112195BA00A774D0 /* dfftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfftlib.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/dfftlib.h; sourceTree = "<absolute>"; };
-		DCCA31B8112195BA00A774D0 /* fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fftlib.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/fftlib.h; sourceTree = "<absolute>"; };
-		DCCA31B9112195BA00A774D0 /* SC_AllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_AllocPool.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_AllocPool.h; sourceTree = "<absolute>"; };
-		DCCA31BA112195BA00A774D0 /* SC_Altivec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Altivec.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_Altivec.h; sourceTree = "<absolute>"; };
-		DCCA31BB112195BA00A774D0 /* SC_DirUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_DirUtils.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_DirUtils.h; sourceTree = "<absolute>"; };
-		DCCA31BC112195BA00A774D0 /* SC_Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Endian.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_Endian.h; sourceTree = "<absolute>"; };
-		DCCA31BD112195BA00A774D0 /* SC_fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_fftlib.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_fftlib.h; sourceTree = "<absolute>"; };
-		DCCA31BE112195BA00A774D0 /* SC_FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_FIFO.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_FIFO.h; sourceTree = "<absolute>"; };
-		DCCA31BF112195BA00A774D0 /* sc_popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sc_popen.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/sc_popen.h; sourceTree = "<absolute>"; };
-		DCCA31C0112195BA00A774D0 /* SC_Reply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Reply.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_Reply.h; sourceTree = "<absolute>"; };
-		DCCA31C1112195BA00A774D0 /* SC_Sem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Sem.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_Sem.h; sourceTree = "<absolute>"; };
-		DCCA31C2112195BA00A774D0 /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_StandAloneInfo_Darwin.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_StandAloneInfo_Darwin.h; sourceTree = "<absolute>"; };
-		DCCA31C3112195BA00A774D0 /* SC_StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_StringBuffer.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_StringBuffer.h; sourceTree = "<absolute>"; };
-		DCCA31C4112195BA00A774D0 /* SC_StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_StringParser.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_StringParser.h; sourceTree = "<absolute>"; };
-		DCCA31C5112195BA00A774D0 /* SC_VFP11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_VFP11.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_VFP11.h; sourceTree = "<absolute>"; };
-		DCCA31C6112195BA00A774D0 /* SC_Win32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Win32Utils.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/SC_Win32Utils.h; sourceTree = "<absolute>"; };
-		DCCA31C7112195BA00A774D0 /* scsynthsend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scsynthsend.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common/scsynthsend.h; sourceTree = "<absolute>"; };
-		DCCA31C9112195BB00A774D0 /* AdvancingAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvancingAllocPool.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/AdvancingAllocPool.h; sourceTree = "<absolute>"; };
-		DCCA31CA112195BB00A774D0 /* AllocPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllocPools.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/AllocPools.h; sourceTree = "<absolute>"; };
-		DCCA31CB112195BB00A774D0 /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bullet.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/bullet.h; sourceTree = "<absolute>"; };
-		DCCA31CC112195BB00A774D0 /* ByteCodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ByteCodeArray.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/ByteCodeArray.h; sourceTree = "<absolute>"; };
-		DCCA31CD112195BB00A774D0 /* FIFOT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIFOT.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/FIFOT.h; sourceTree = "<absolute>"; };
-		DCCA31CE112195BB00A774D0 /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GC.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/GC.h; sourceTree = "<absolute>"; };
-		DCCA31CF112195BB00A774D0 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/HashTable.h; sourceTree = "<absolute>"; };
-		DCCA31D0112195BB00A774D0 /* InitAlloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitAlloc.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/InitAlloc.h; sourceTree = "<absolute>"; };
-		DCCA31D1112195BB00A774D0 /* MiscInlineMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscInlineMath.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/MiscInlineMath.h; sourceTree = "<absolute>"; };
-		DCCA31D2112195BB00A774D0 /* Opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Opcodes.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/Opcodes.h; sourceTree = "<absolute>"; };
-		DCCA31D3112195BB00A774D0 /* OSCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSCData.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/OSCData.h; sourceTree = "<absolute>"; };
-		DCCA31D4112195BB00A774D0 /* PowerOfTwoAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerOfTwoAllocPool.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PowerOfTwoAllocPool.h; sourceTree = "<absolute>"; };
-		DCCA31D5112195BB00A774D0 /* PredefinedSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PredefinedSymbols.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PredefinedSymbols.h; sourceTree = "<absolute>"; };
-		DCCA31D6112195BB00A774D0 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriorityQueue.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PriorityQueue.h; sourceTree = "<absolute>"; };
-		DCCA31D7112195BB00A774D0 /* PyrArchiverT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrArchiverT.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrArchiverT.h; sourceTree = "<absolute>"; };
-		DCCA31D8112195BB00A774D0 /* PyrDeepCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrDeepCopier.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrDeepCopier.h; sourceTree = "<absolute>"; };
-		DCCA31D9112195BB00A774D0 /* PyrDeepFreezer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrDeepFreezer.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrDeepFreezer.h; sourceTree = "<absolute>"; };
-		DCCA31DA112195BB00A774D0 /* PyrErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrErrors.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrErrors.h; sourceTree = "<absolute>"; };
-		DCCA31DB112195BB00A774D0 /* PyrFilePrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrFilePrim.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrFilePrim.h; sourceTree = "<absolute>"; };
-		DCCA31DC112195BB00A774D0 /* PyrFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrFileUtils.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrFileUtils.h; sourceTree = "<absolute>"; };
-		DCCA31DD112195BB00A774D0 /* PyrInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrInterpreter.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrInterpreter.h; sourceTree = "<absolute>"; };
-		DCCA31DE112195BB00A774D0 /* PyrKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrKernel.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrKernel.h; sourceTree = "<absolute>"; };
-		DCCA31DF112195BB00A774D0 /* PyrKernelProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrKernelProto.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrKernelProto.h; sourceTree = "<absolute>"; };
-		DCCA31E0112195BB00A774D0 /* PyrLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrLexer.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrLexer.h; sourceTree = "<absolute>"; };
-		DCCA31E1112195BB00A774D0 /* PyrListPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrListPrim.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrListPrim.h; sourceTree = "<absolute>"; };
-		DCCA31E2112195BB00A774D0 /* PyrMathPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrMathPrim.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrMathPrim.h; sourceTree = "<absolute>"; };
-		DCCA31E3112195BB00A774D0 /* PyrMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrMessage.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrMessage.h; sourceTree = "<absolute>"; };
-		DCCA31E4112195BB00A774D0 /* PyrObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrObject.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrObject.h; sourceTree = "<absolute>"; };
-		DCCA31E5112195BB00A774D0 /* PyrObjectProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrObjectProto.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrObjectProto.h; sourceTree = "<absolute>"; };
-		DCCA31E6112195BB00A774D0 /* PyrParseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrParseNode.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrParseNode.h; sourceTree = "<absolute>"; };
-		DCCA31E7112195BB00A774D0 /* PyrPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrPrimitive.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrPrimitive.h; sourceTree = "<absolute>"; };
-		DCCA31E8112195BB00A774D0 /* PyrPrimitiveProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrPrimitiveProto.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrPrimitiveProto.h; sourceTree = "<absolute>"; };
-		DCCA31E9112195BB00A774D0 /* PyrSched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSched.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSched.h; sourceTree = "<absolute>"; };
-		DCCA31EA112195BB00A774D0 /* PyrSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSignal.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSignal.h; sourceTree = "<absolute>"; };
-		DCCA31EB112195BB00A774D0 /* PyrSignalPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSignalPrim.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSignalPrim.h; sourceTree = "<absolute>"; };
-		DCCA31EC112195BB00A774D0 /* PyrSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSlot.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSlot.h; sourceTree = "<absolute>"; };
-		DCCA31ED112195BB00A774D0 /* PyrSlot32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSlot32.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSlot32.h; sourceTree = "<absolute>"; };
-		DCCA31EE112195BB00A774D0 /* PyrSlot64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSlot64.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSlot64.h; sourceTree = "<absolute>"; };
-		DCCA31EF112195BB00A774D0 /* PyrSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSymbol.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSymbol.h; sourceTree = "<absolute>"; };
-		DCCA31F0112195BB00A774D0 /* PyrSymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PyrSymbolTable.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/PyrSymbolTable.h; sourceTree = "<absolute>"; };
-		DCCA31F1112195BB00A774D0 /* readSamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = readSamples.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/readSamples.h; sourceTree = "<absolute>"; };
-		DCCA31F2112195BB00A774D0 /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadWriteMacros.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/ReadWriteMacros.h; sourceTree = "<absolute>"; };
-		DCCA31F3112195BB00A774D0 /* Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Samp.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/Samp.h; sourceTree = "<absolute>"; };
-		DCCA31F4112195BB00A774D0 /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_ComPort.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_ComPort.h; sourceTree = "<absolute>"; };
-		DCCA31F5112195BB00A774D0 /* SC_LanguageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_LanguageClient.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_LanguageClient.h; sourceTree = "<absolute>"; };
-		DCCA31F6112195BB00A774D0 /* SC_LibraryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_LibraryConfig.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_LibraryConfig.h; sourceTree = "<absolute>"; };
-		DCCA31F7112195BB00A774D0 /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_List.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_List.h; sourceTree = "<absolute>"; };
-		DCCA31F8112195BB00A774D0 /* SC_LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_LogFile.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_LogFile.h; sourceTree = "<absolute>"; };
-		DCCA31F9112195BB00A774D0 /* SC_Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Msg.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_Msg.h; sourceTree = "<absolute>"; };
-		DCCA31FA112195BB00A774D0 /* SC_SynthImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_SynthImpl.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_SynthImpl.h; sourceTree = "<absolute>"; };
-		DCCA31FB112195BB00A774D0 /* SC_TerminalClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_TerminalClient.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_TerminalClient.h; sourceTree = "<absolute>"; };
-		DCCA31FC112195BB00A774D0 /* SC_UnorderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_UnorderedList.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SC_UnorderedList.h; sourceTree = "<absolute>"; };
-		DCCA31FD112195BB00A774D0 /* SCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCBase.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SCBase.h; sourceTree = "<absolute>"; };
-		DCCA31FE112195BB00A774D0 /* SFHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHeaders.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SFHeaders.h; sourceTree = "<absolute>"; };
-		DCCA31FF112195BB00A774D0 /* SimpleStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleStack.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/SimpleStack.h; sourceTree = "<absolute>"; };
-		DCCA3200112195BB00A774D0 /* VMGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMGlobals.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang/VMGlobals.h; sourceTree = "<absolute>"; };
-		DCCA3202112195BB00A774D0 /* clz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clz.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/clz.h; sourceTree = "<absolute>"; };
-		DCCA3203112195BB00A774D0 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hash.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/Hash.h; sourceTree = "<absolute>"; };
-		DCCA3204112195BB00A774D0 /* SC_BoundsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_BoundsMacros.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_BoundsMacros.h; sourceTree = "<absolute>"; };
-		DCCA3205112195BB00A774D0 /* SC_BufGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_BufGen.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_BufGen.h; sourceTree = "<absolute>"; };
-		DCCA3206112195BB00A774D0 /* SC_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Constants.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Constants.h; sourceTree = "<absolute>"; };
-		DCCA3207112195BB00A774D0 /* SC_DemandUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_DemandUnit.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_DemandUnit.h; sourceTree = "<absolute>"; };
-		DCCA3208112195BB00A774D0 /* SC_Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Dimension.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Dimension.h; sourceTree = "<absolute>"; };
-		DCCA3209112195BB00A774D0 /* SC_FifoMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_FifoMsg.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_FifoMsg.h; sourceTree = "<absolute>"; };
-		DCCA320A112195BB00A774D0 /* SC_Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Graph.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Graph.h; sourceTree = "<absolute>"; };
-		DCCA320B112195BB00A774D0 /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_InlineBinaryOp.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_InlineBinaryOp.h; sourceTree = "<absolute>"; };
-		DCCA320C112195BB00A774D0 /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_InlineUnaryOp.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_InlineUnaryOp.h; sourceTree = "<absolute>"; };
-		DCCA320D112195BB00A774D0 /* SC_InterfaceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_InterfaceTable.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_InterfaceTable.h; sourceTree = "<absolute>"; };
-		DCCA320E112195BB00A774D0 /* sc_msg_iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sc_msg_iter.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/sc_msg_iter.h; sourceTree = "<absolute>"; };
-		DCCA320F112195BB00A774D0 /* SC_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Node.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Node.h; sourceTree = "<absolute>"; };
-		DCCA3210112195BB00A774D0 /* SC_PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_PlugIn.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_PlugIn.h; sourceTree = "<absolute>"; };
-		DCCA3211112195BB00A774D0 /* SC_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Rate.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Rate.h; sourceTree = "<absolute>"; };
-		DCCA3212112195BB00A774D0 /* SC_RGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_RGen.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_RGen.h; sourceTree = "<absolute>"; };
-		DCCA3213112195BB00A774D0 /* SC_SndBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_SndBuf.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_SndBuf.h; sourceTree = "<absolute>"; };
-		DCCA3214112195BB00A774D0 /* SC_sndfile_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_sndfile_stub.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_sndfile_stub.h; sourceTree = "<absolute>"; };
-		DCCA3215112195BB00A774D0 /* SC_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Types.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Types.h; sourceTree = "<absolute>"; };
-		DCCA3216112195BB00A774D0 /* SC_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Unit.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Unit.h; sourceTree = "<absolute>"; };
-		DCCA3217112195BB00A774D0 /* SC_Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Wire.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_Wire.h; sourceTree = "<absolute>"; };
-		DCCA3218112195BB00A774D0 /* SC_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_World.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_World.h; sourceTree = "<absolute>"; };
-		DCCA3219112195BB00A774D0 /* SC_WorldOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_WorldOptions.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/SC_WorldOptions.h; sourceTree = "<absolute>"; };
-		DCCA321A112195BB00A774D0 /* Unroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unroll.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface/Unroll.h; sourceTree = "<absolute>"; };
-		DCCA321C112195BB00A774D0 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/HashTable.h; sourceTree = "<absolute>"; };
-		DCCA321D112195BB00A774D0 /* MsgFifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgFifo.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/MsgFifo.h; sourceTree = "<absolute>"; };
-		DCCA321E112195BB00A774D0 /* OSC_Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSC_Packet.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/OSC_Packet.h; sourceTree = "<absolute>"; };
-		DCCA321F112195BB00A774D0 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriorityQueue.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/PriorityQueue.h; sourceTree = "<absolute>"; };
-		DCCA3220112195BB00A774D0 /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadWriteMacros.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/ReadWriteMacros.h; sourceTree = "<absolute>"; };
-		DCCA3221112195BB00A774D0 /* Rendezvous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rendezvous.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/Rendezvous.h; sourceTree = "<absolute>"; };
-		DCCA3222112195BB00A774D0 /* SC_AU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_AU.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_AU.h; sourceTree = "<absolute>"; };
-		DCCA3223112195BB00A774D0 /* SC_Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Complex.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Complex.h; sourceTree = "<absolute>"; };
-		DCCA3224112195BB00A774D0 /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_ComPort.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_ComPort.h; sourceTree = "<absolute>"; };
-		DCCA3225112195BB00A774D0 /* SC_CoreAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_CoreAudio.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_CoreAudio.h; sourceTree = "<absolute>"; };
-		DCCA3226112195BB00A774D0 /* SC_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Errors.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Errors.h; sourceTree = "<absolute>"; };
-		DCCA3227112195BB00A774D0 /* SC_GraphDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_GraphDef.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_GraphDef.h; sourceTree = "<absolute>"; };
-		DCCA3228112195BB00A774D0 /* SC_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Group.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Group.h; sourceTree = "<absolute>"; };
-		DCCA3229112195BB00A774D0 /* SC_HiddenWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_HiddenWorld.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_HiddenWorld.h; sourceTree = "<absolute>"; };
-		DCCA322A112195BB00A774D0 /* SC_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Lib.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Lib.h; sourceTree = "<absolute>"; };
-		DCCA322B112195BB00A774D0 /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Lib_Cintf.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Lib_Cintf.h; sourceTree = "<absolute>"; };
-		DCCA322C112195BB00A774D0 /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_List.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_List.h; sourceTree = "<absolute>"; };
-		DCCA322D112195BB00A774D0 /* SC_Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Lock.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Lock.h; sourceTree = "<absolute>"; };
-		DCCA322E112195BB00A774D0 /* SC_Prototypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Prototypes.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Prototypes.h; sourceTree = "<absolute>"; };
-		DCCA322F112195BB00A774D0 /* SC_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Samp.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Samp.h; sourceTree = "<absolute>"; };
-		DCCA3230112195BB00A774D0 /* SC_SequencedCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_SequencedCommand.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_SequencedCommand.h; sourceTree = "<absolute>"; };
-		DCCA3231112195BB00A774D0 /* SC_Str4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_Str4.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_Str4.h; sourceTree = "<absolute>"; };
-		DCCA3232112195BB00A774D0 /* SC_SyncCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_SyncCondition.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_SyncCondition.h; sourceTree = "<absolute>"; };
-		DCCA3233112195BB00A774D0 /* SC_SynthDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_SynthDef.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_SynthDef.h; sourceTree = "<absolute>"; };
-		DCCA3234112195BB00A774D0 /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_UnitDef.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_UnitDef.h; sourceTree = "<absolute>"; };
-		DCCA3235112195BB00A774D0 /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_UnitSpec.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_UnitSpec.h; sourceTree = "<absolute>"; };
-		DCCA3236112195BB00A774D0 /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SC_WireSpec.h; path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server/SC_WireSpec.h; sourceTree = "<absolute>"; };
-		DCCA338E1121A12800A774D0 /* rgen_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rgen_helper.h; path = "/Users/stephen/Documents/code/maxmsp/sbl/sc-max/common/rgen_helper.h"; sourceTree = "<absolute>"; };
+		DCC9CEE91125C5320050A91B /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCounter.h; sourceTree = "<group>"; };
+		DCC9CEEA1125C5320050A91B /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpec.h; sourceTree = "<group>"; };
+		DCC9CEEB1125C5320050A91B /* DrawBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBackground.h; sourceTree = "<group>"; };
+		DCC9CEEC1125C5320050A91B /* GetStringFromUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetStringFromUser.h; sourceTree = "<group>"; };
+		DCC9CEED1125C5320050A91B /* GoToPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoToPanel.h; sourceTree = "<group>"; };
+		DCC9CEEE1125C5320050A91B /* HTMLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLRenderer.h; sourceTree = "<group>"; };
+		DCC9CEF01125C5320050A91B /* iPhoneSCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCGraphView.h; sourceTree = "<group>"; };
+		DCC9CEF11125C5320050A91B /* iPhoneSCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCView.h; sourceTree = "<group>"; };
+		DCC9CEF21125C5320050A91B /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		DCC9CEF31125C5320050A91B /* RendezvousClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendezvousClient.h; sourceTree = "<group>"; };
+		DCC9CEF41125C5320050A91B /* SCCocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCocoaView.h; sourceTree = "<group>"; };
+		DCC9CEF51125C5320050A91B /* SCDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDialog.h; sourceTree = "<group>"; };
+		DCC9CEF61125C5320050A91B /* SCGeom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGeom.h; sourceTree = "<group>"; };
+		DCC9CEF71125C5320050A91B /* SCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGraphView.h; sourceTree = "<group>"; };
+		DCC9CEF81125C5320050A91B /* SCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImage.h; sourceTree = "<group>"; };
+		DCC9CEF91125C5320050A91B /* SCNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNSWindow.h; sourceTree = "<group>"; };
+		DCC9CEFA1125C5320050A91B /* SCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCService.h; sourceTree = "<group>"; };
+		DCC9CEFB1125C5320050A91B /* SCSoundFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSoundFileView.h; sourceTree = "<group>"; };
+		DCC9CEFC1125C5320050A91B /* SCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextView.h; sourceTree = "<group>"; };
+		DCC9CEFD1125C5320050A91B /* SCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCView.h; sourceTree = "<group>"; };
+		DCC9CEFE1125C5320050A91B /* SCVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVirtualMachine.h; sourceTree = "<group>"; };
+		DCC9CF011125C5320050A91B /* ICUMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUMatcher.h; sourceTree = "<group>"; };
+		DCC9CF021125C5320050A91B /* ICUPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUPattern.h; sourceTree = "<group>"; };
+		DCC9CF031125C5320050A91B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DCC9CF041125C5320050A91B /* NSStringICUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringICUAdditions.h; sourceTree = "<group>"; };
+		DCC9CF051125C5320050A91B /* SMLAdvancedFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAdvancedFindController.h; sourceTree = "<group>"; };
+		DCC9CF061125C5320050A91B /* SMLStatusBarTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStatusBarTextFieldCell.h; sourceTree = "<group>"; };
+		DCC9CF071125C5320050A91B /* TabletEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabletEvents.h; sourceTree = "<group>"; };
+		DCC9CF081125C5320050A91B /* TextFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFinder.h; sourceTree = "<group>"; };
+		DCC9CF091125C5320050A91B /* UserPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPanel.h; sourceTree = "<group>"; };
+		DCC9CF0B1125C5320050A91B /* dfftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfftlib.h; sourceTree = "<group>"; };
+		DCC9CF0C1125C5320050A91B /* fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftlib.h; sourceTree = "<group>"; };
+		DCC9CF0D1125C5320050A91B /* SC_AllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AllocPool.h; sourceTree = "<group>"; };
+		DCC9CF0E1125C5320050A91B /* SC_Altivec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Altivec.h; sourceTree = "<group>"; };
+		DCC9CF0F1125C5320050A91B /* SC_DirUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DirUtils.h; sourceTree = "<group>"; };
+		DCC9CF101125C5320050A91B /* SC_Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Endian.h; sourceTree = "<group>"; };
+		DCC9CF111125C5320050A91B /* SC_fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_fftlib.h; sourceTree = "<group>"; };
+		DCC9CF121125C5320050A91B /* SC_FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FIFO.h; sourceTree = "<group>"; };
+		DCC9CF131125C5320050A91B /* sc_popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_popen.h; sourceTree = "<group>"; };
+		DCC9CF141125C5320050A91B /* SC_Reply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Reply.h; sourceTree = "<group>"; };
+		DCC9CF151125C5320050A91B /* SC_Sem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Sem.h; sourceTree = "<group>"; };
+		DCC9CF161125C5320050A91B /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StandAloneInfo_Darwin.h; sourceTree = "<group>"; };
+		DCC9CF171125C5320050A91B /* SC_StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringBuffer.h; sourceTree = "<group>"; };
+		DCC9CF181125C5320050A91B /* SC_StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringParser.h; sourceTree = "<group>"; };
+		DCC9CF191125C5320050A91B /* SC_VFP11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_VFP11.h; sourceTree = "<group>"; };
+		DCC9CF1A1125C5320050A91B /* SC_Win32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Win32Utils.h; sourceTree = "<group>"; };
+		DCC9CF1B1125C5320050A91B /* scsynthsend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scsynthsend.h; sourceTree = "<group>"; };
+		DCC9CF1D1125C5320050A91B /* AdvancingAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancingAllocPool.h; sourceTree = "<group>"; };
+		DCC9CF1E1125C5320050A91B /* AllocPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllocPools.h; sourceTree = "<group>"; };
+		DCC9CF1F1125C5320050A91B /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
+		DCC9CF201125C5320050A91B /* ByteCodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteCodeArray.h; sourceTree = "<group>"; };
+		DCC9CF211125C5320050A91B /* FIFOT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOT.h; sourceTree = "<group>"; };
+		DCC9CF221125C5320050A91B /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC.h; sourceTree = "<group>"; };
+		DCC9CF231125C5320050A91B /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		DCC9CF241125C5320050A91B /* InitAlloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitAlloc.h; sourceTree = "<group>"; };
+		DCC9CF251125C5320050A91B /* MiscInlineMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscInlineMath.h; sourceTree = "<group>"; };
+		DCC9CF261125C5320050A91B /* Opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opcodes.h; sourceTree = "<group>"; };
+		DCC9CF271125C5320050A91B /* OSCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCData.h; sourceTree = "<group>"; };
+		DCC9CF281125C5320050A91B /* PowerOfTwoAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerOfTwoAllocPool.h; sourceTree = "<group>"; };
+		DCC9CF291125C5320050A91B /* PredefinedSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredefinedSymbols.h; sourceTree = "<group>"; };
+		DCC9CF2A1125C5320050A91B /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		DCC9CF2B1125C5320050A91B /* PyrArchiverT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrArchiverT.h; sourceTree = "<group>"; };
+		DCC9CF2C1125C5320050A91B /* PyrDeepCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepCopier.h; sourceTree = "<group>"; };
+		DCC9CF2D1125C5320050A91B /* PyrDeepFreezer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepFreezer.h; sourceTree = "<group>"; };
+		DCC9CF2E1125C5320050A91B /* PyrErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrErrors.h; sourceTree = "<group>"; };
+		DCC9CF2F1125C5320050A91B /* PyrFilePrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFilePrim.h; sourceTree = "<group>"; };
+		DCC9CF301125C5320050A91B /* PyrFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFileUtils.h; sourceTree = "<group>"; };
+		DCC9CF311125C5320050A91B /* PyrInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrInterpreter.h; sourceTree = "<group>"; };
+		DCC9CF321125C5320050A91B /* PyrKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernel.h; sourceTree = "<group>"; };
+		DCC9CF331125C5320050A91B /* PyrKernelProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernelProto.h; sourceTree = "<group>"; };
+		DCC9CF341125C5320050A91B /* PyrLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrLexer.h; sourceTree = "<group>"; };
+		DCC9CF351125C5320050A91B /* PyrListPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrListPrim.h; sourceTree = "<group>"; };
+		DCC9CF361125C5320050A91B /* PyrMathPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMathPrim.h; sourceTree = "<group>"; };
+		DCC9CF371125C5320050A91B /* PyrMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMessage.h; sourceTree = "<group>"; };
+		DCC9CF381125C5320050A91B /* PyrObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObject.h; sourceTree = "<group>"; };
+		DCC9CF391125C5320050A91B /* PyrObjectProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObjectProto.h; sourceTree = "<group>"; };
+		DCC9CF3A1125C5320050A91B /* PyrParseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrParseNode.h; sourceTree = "<group>"; };
+		DCC9CF3B1125C5320050A91B /* PyrPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitive.h; sourceTree = "<group>"; };
+		DCC9CF3C1125C5320050A91B /* PyrPrimitiveProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitiveProto.h; sourceTree = "<group>"; };
+		DCC9CF3D1125C5320050A91B /* PyrSched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSched.h; sourceTree = "<group>"; };
+		DCC9CF3E1125C5320050A91B /* PyrSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignal.h; sourceTree = "<group>"; };
+		DCC9CF3F1125C5320050A91B /* PyrSignalPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignalPrim.h; sourceTree = "<group>"; };
+		DCC9CF401125C5320050A91B /* PyrSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot.h; sourceTree = "<group>"; };
+		DCC9CF411125C5320050A91B /* PyrSlot32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot32.h; sourceTree = "<group>"; };
+		DCC9CF421125C5320050A91B /* PyrSlot64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot64.h; sourceTree = "<group>"; };
+		DCC9CF431125C5320050A91B /* PyrSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbol.h; sourceTree = "<group>"; };
+		DCC9CF441125C5320050A91B /* PyrSymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbolTable.h; sourceTree = "<group>"; };
+		DCC9CF451125C5320050A91B /* readSamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readSamples.h; sourceTree = "<group>"; };
+		DCC9CF461125C5320050A91B /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
+		DCC9CF471125C5320050A91B /* Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samp.h; sourceTree = "<group>"; };
+		DCC9CF481125C5320050A91B /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
+		DCC9CF491125C5320050A91B /* SC_LanguageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LanguageClient.h; sourceTree = "<group>"; };
+		DCC9CF4A1125C5320050A91B /* SC_LibraryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LibraryConfig.h; sourceTree = "<group>"; };
+		DCC9CF4B1125C5320050A91B /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
+		DCC9CF4C1125C5320050A91B /* SC_LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LogFile.h; sourceTree = "<group>"; };
+		DCC9CF4D1125C5320050A91B /* SC_Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Msg.h; sourceTree = "<group>"; };
+		DCC9CF4E1125C5320050A91B /* SC_SynthImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthImpl.h; sourceTree = "<group>"; };
+		DCC9CF4F1125C5320050A91B /* SC_TerminalClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_TerminalClient.h; sourceTree = "<group>"; };
+		DCC9CF501125C5320050A91B /* SC_UnorderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnorderedList.h; sourceTree = "<group>"; };
+		DCC9CF511125C5320050A91B /* SCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBase.h; sourceTree = "<group>"; };
+		DCC9CF521125C5320050A91B /* SFHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHeaders.h; sourceTree = "<group>"; };
+		DCC9CF531125C5320050A91B /* SimpleStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleStack.h; sourceTree = "<group>"; };
+		DCC9CF541125C5320050A91B /* VMGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMGlobals.h; sourceTree = "<group>"; };
+		DCC9CF561125C5320050A91B /* clz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clz.h; sourceTree = "<group>"; };
+		DCC9CF571125C5320050A91B /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		DCC9CF581125C5320050A91B /* SC_BoundsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BoundsMacros.h; sourceTree = "<group>"; };
+		DCC9CF591125C5320050A91B /* SC_BufGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BufGen.h; sourceTree = "<group>"; };
+		DCC9CF5A1125C5320050A91B /* SC_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Constants.h; sourceTree = "<group>"; };
+		DCC9CF5B1125C5320050A91B /* SC_DemandUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DemandUnit.h; sourceTree = "<group>"; };
+		DCC9CF5C1125C5320050A91B /* SC_Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Dimension.h; sourceTree = "<group>"; };
+		DCC9CF5D1125C5320050A91B /* SC_FifoMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FifoMsg.h; sourceTree = "<group>"; };
+		DCC9CF5E1125C5320050A91B /* SC_Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Graph.h; sourceTree = "<group>"; };
+		DCC9CF5F1125C5320050A91B /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineBinaryOp.h; sourceTree = "<group>"; };
+		DCC9CF601125C5320050A91B /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineUnaryOp.h; sourceTree = "<group>"; };
+		DCC9CF611125C5320050A91B /* SC_InterfaceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InterfaceTable.h; sourceTree = "<group>"; };
+		DCC9CF621125C5320050A91B /* sc_msg_iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_msg_iter.h; sourceTree = "<group>"; };
+		DCC9CF631125C5320050A91B /* SC_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Node.h; sourceTree = "<group>"; };
+		DCC9CF641125C5320050A91B /* SC_PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_PlugIn.h; sourceTree = "<group>"; };
+		DCC9CF651125C5320050A91B /* SC_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Rate.h; sourceTree = "<group>"; };
+		DCC9CF661125C5320050A91B /* SC_RGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_RGen.h; sourceTree = "<group>"; };
+		DCC9CF671125C5320050A91B /* SC_SndBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SndBuf.h; sourceTree = "<group>"; };
+		DCC9CF681125C5320050A91B /* SC_sndfile_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_sndfile_stub.h; sourceTree = "<group>"; };
+		DCC9CF691125C5320050A91B /* SC_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Types.h; sourceTree = "<group>"; };
+		DCC9CF6A1125C5320050A91B /* SC_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Unit.h; sourceTree = "<group>"; };
+		DCC9CF6B1125C5320050A91B /* SC_Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Wire.h; sourceTree = "<group>"; };
+		DCC9CF6C1125C5320050A91B /* SC_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_World.h; sourceTree = "<group>"; };
+		DCC9CF6D1125C5320050A91B /* SC_WorldOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WorldOptions.h; sourceTree = "<group>"; };
+		DCC9CF6E1125C5320050A91B /* Unroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unroll.h; sourceTree = "<group>"; };
+		DCC9CF701125C5320050A91B /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		DCC9CF711125C5320050A91B /* MsgFifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgFifo.h; sourceTree = "<group>"; };
+		DCC9CF721125C5320050A91B /* OSC_Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSC_Packet.h; sourceTree = "<group>"; };
+		DCC9CF731125C5320050A91B /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		DCC9CF741125C5320050A91B /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
+		DCC9CF751125C5320050A91B /* Rendezvous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
+		DCC9CF761125C5320050A91B /* SC_AU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AU.h; sourceTree = "<group>"; };
+		DCC9CF771125C5320050A91B /* SC_Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Complex.h; sourceTree = "<group>"; };
+		DCC9CF781125C5320050A91B /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
+		DCC9CF791125C5320050A91B /* SC_CoreAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_CoreAudio.h; sourceTree = "<group>"; };
+		DCC9CF7A1125C5320050A91B /* SC_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Errors.h; sourceTree = "<group>"; };
+		DCC9CF7B1125C5320050A91B /* SC_GraphDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_GraphDef.h; sourceTree = "<group>"; };
+		DCC9CF7C1125C5320050A91B /* SC_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Group.h; sourceTree = "<group>"; };
+		DCC9CF7D1125C5320050A91B /* SC_HiddenWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_HiddenWorld.h; sourceTree = "<group>"; };
+		DCC9CF7E1125C5320050A91B /* SC_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib.h; sourceTree = "<group>"; };
+		DCC9CF7F1125C5320050A91B /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib_Cintf.h; sourceTree = "<group>"; };
+		DCC9CF801125C5320050A91B /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
+		DCC9CF811125C5320050A91B /* SC_Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lock.h; sourceTree = "<group>"; };
+		DCC9CF821125C5320050A91B /* SC_Prototypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Prototypes.h; sourceTree = "<group>"; };
+		DCC9CF831125C5320050A91B /* SC_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Samp.h; sourceTree = "<group>"; };
+		DCC9CF841125C5320050A91B /* SC_SequencedCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SequencedCommand.h; sourceTree = "<group>"; };
+		DCC9CF851125C5320050A91B /* SC_Str4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Str4.h; sourceTree = "<group>"; };
+		DCC9CF861125C5320050A91B /* SC_SyncCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SyncCondition.h; sourceTree = "<group>"; };
+		DCC9CF871125C5320050A91B /* SC_SynthDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthDef.h; sourceTree = "<group>"; };
+		DCC9CF881125C5320050A91B /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitDef.h; sourceTree = "<group>"; };
+		DCC9CF891125C5320050A91B /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitSpec.h; sourceTree = "<group>"; };
+		DCC9CF8A1125C5320050A91B /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WireSpec.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,7 +357,7 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA3193112195BA00A774D0 /* sc-headers */,
+				DCC9CEE71125C5320050A91B /* sc-headers */,
 				54266BCE05E6E9780000000C /* MaxAPI.framework */,
 				22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */,
 			);
@@ -369,7 +367,6 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA338E1121A12800A774D0 /* rgen_helper.h */,
 				22CF119A0EE9A8250054F513 /* sc.graynoise~.cpp */,
 			);
 			name = Source;
@@ -383,240 +380,232 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCCA3193112195BA00A774D0 /* sc-headers */ = {
+		DCC9CEE71125C5320050A91B /* sc-headers */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA3194112195BA00A774D0 /* app */,
-				DCCA31B6112195BA00A774D0 /* common */,
-				DCCA31C8112195BA00A774D0 /* lang */,
-				DCCA3201112195BB00A774D0 /* plugin_interface */,
-				DCCA321B112195BB00A774D0 /* server */,
+				DCC9CEE81125C5320050A91B /* app */,
+				DCC9CF0A1125C5320050A91B /* common */,
+				DCC9CF1C1125C5320050A91B /* lang */,
+				DCC9CF551125C5320050A91B /* plugin_interface */,
+				DCC9CF6F1125C5320050A91B /* server */,
 			);
 			name = "sc-headers";
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers;
-			sourceTree = "<absolute>";
+			path = "../lib/sc-headers";
+			sourceTree = SOURCE_ROOT;
 		};
-		DCCA3194112195BA00A774D0 /* app */ = {
+		DCC9CEE81125C5320050A91B /* app */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA3195112195BA00A774D0 /* ChangeCounter.h */,
-				DCCA3196112195BA00A774D0 /* ControlSpec.h */,
-				DCCA3197112195BA00A774D0 /* DrawBackground.h */,
-				DCCA3198112195BA00A774D0 /* GetStringFromUser.h */,
-				DCCA3199112195BA00A774D0 /* GoToPanel.h */,
-				DCCA319A112195BA00A774D0 /* HTMLRenderer.h */,
-				DCCA319B112195BA00A774D0 /* iPhone */,
-				DCCA319E112195BA00A774D0 /* MyDocument.h */,
-				DCCA319F112195BA00A774D0 /* RendezvousClient.h */,
-				DCCA31A0112195BA00A774D0 /* SCCocoaView.h */,
-				DCCA31A1112195BA00A774D0 /* SCDialog.h */,
-				DCCA31A2112195BA00A774D0 /* SCGeom.h */,
-				DCCA31A3112195BA00A774D0 /* SCGraphView.h */,
-				DCCA31A4112195BA00A774D0 /* SCImage.h */,
-				DCCA31A5112195BA00A774D0 /* SCNSWindow.h */,
-				DCCA31A6112195BA00A774D0 /* SCService.h */,
-				DCCA31A7112195BA00A774D0 /* SCSoundFileView.h */,
-				DCCA31A8112195BA00A774D0 /* SCTextView.h */,
-				DCCA31A9112195BA00A774D0 /* SCView.h */,
-				DCCA31AA112195BA00A774D0 /* SCVirtualMachine.h */,
-				DCCA31AB112195BA00A774D0 /* SMLAdvancedFind */,
-				DCCA31B3112195BA00A774D0 /* TabletEvents.h */,
-				DCCA31B4112195BA00A774D0 /* TextFinder.h */,
-				DCCA31B5112195BA00A774D0 /* UserPanel.h */,
+				DCC9CEE91125C5320050A91B /* ChangeCounter.h */,
+				DCC9CEEA1125C5320050A91B /* ControlSpec.h */,
+				DCC9CEEB1125C5320050A91B /* DrawBackground.h */,
+				DCC9CEEC1125C5320050A91B /* GetStringFromUser.h */,
+				DCC9CEED1125C5320050A91B /* GoToPanel.h */,
+				DCC9CEEE1125C5320050A91B /* HTMLRenderer.h */,
+				DCC9CEEF1125C5320050A91B /* iPhone */,
+				DCC9CEF21125C5320050A91B /* MyDocument.h */,
+				DCC9CEF31125C5320050A91B /* RendezvousClient.h */,
+				DCC9CEF41125C5320050A91B /* SCCocoaView.h */,
+				DCC9CEF51125C5320050A91B /* SCDialog.h */,
+				DCC9CEF61125C5320050A91B /* SCGeom.h */,
+				DCC9CEF71125C5320050A91B /* SCGraphView.h */,
+				DCC9CEF81125C5320050A91B /* SCImage.h */,
+				DCC9CEF91125C5320050A91B /* SCNSWindow.h */,
+				DCC9CEFA1125C5320050A91B /* SCService.h */,
+				DCC9CEFB1125C5320050A91B /* SCSoundFileView.h */,
+				DCC9CEFC1125C5320050A91B /* SCTextView.h */,
+				DCC9CEFD1125C5320050A91B /* SCView.h */,
+				DCC9CEFE1125C5320050A91B /* SCVirtualMachine.h */,
+				DCC9CEFF1125C5320050A91B /* SMLAdvancedFind */,
+				DCC9CF071125C5320050A91B /* TabletEvents.h */,
+				DCC9CF081125C5320050A91B /* TextFinder.h */,
+				DCC9CF091125C5320050A91B /* UserPanel.h */,
 			);
-			name = app;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app;
-			sourceTree = "<absolute>";
+			path = app;
+			sourceTree = "<group>";
 		};
-		DCCA319B112195BA00A774D0 /* iPhone */ = {
+		DCC9CEEF1125C5320050A91B /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA319C112195BA00A774D0 /* iPhoneSCGraphView.h */,
-				DCCA319D112195BA00A774D0 /* iPhoneSCView.h */,
+				DCC9CEF01125C5320050A91B /* iPhoneSCGraphView.h */,
+				DCC9CEF11125C5320050A91B /* iPhoneSCView.h */,
 			);
-			name = iPhone;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/iPhone;
-			sourceTree = "<absolute>";
+			path = iPhone;
+			sourceTree = "<group>";
 		};
-		DCCA31AB112195BA00A774D0 /* SMLAdvancedFind */ = {
+		DCC9CEFF1125C5320050A91B /* SMLAdvancedFind */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA31AC112195BA00A774D0 /* ICU */,
-				DCCA31B1112195BA00A774D0 /* SMLAdvancedFindController.h */,
-				DCCA31B2112195BA00A774D0 /* SMLStatusBarTextFieldCell.h */,
+				DCC9CF001125C5320050A91B /* ICU */,
+				DCC9CF051125C5320050A91B /* SMLAdvancedFindController.h */,
+				DCC9CF061125C5320050A91B /* SMLStatusBarTextFieldCell.h */,
 			);
-			name = SMLAdvancedFind;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind;
-			sourceTree = "<absolute>";
+			path = SMLAdvancedFind;
+			sourceTree = "<group>";
 		};
-		DCCA31AC112195BA00A774D0 /* ICU */ = {
+		DCC9CF001125C5320050A91B /* ICU */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA31AD112195BA00A774D0 /* ICUMatcher.h */,
-				DCCA31AE112195BA00A774D0 /* ICUPattern.h */,
-				DCCA31AF112195BA00A774D0 /* LICENSE.txt */,
-				DCCA31B0112195BA00A774D0 /* NSStringICUAdditions.h */,
+				DCC9CF011125C5320050A91B /* ICUMatcher.h */,
+				DCC9CF021125C5320050A91B /* ICUPattern.h */,
+				DCC9CF031125C5320050A91B /* LICENSE.txt */,
+				DCC9CF041125C5320050A91B /* NSStringICUAdditions.h */,
 			);
-			name = ICU;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/app/SMLAdvancedFind/ICU;
-			sourceTree = "<absolute>";
+			path = ICU;
+			sourceTree = "<group>";
 		};
-		DCCA31B6112195BA00A774D0 /* common */ = {
+		DCC9CF0A1125C5320050A91B /* common */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA31B7112195BA00A774D0 /* dfftlib.h */,
-				DCCA31B8112195BA00A774D0 /* fftlib.h */,
-				DCCA31B9112195BA00A774D0 /* SC_AllocPool.h */,
-				DCCA31BA112195BA00A774D0 /* SC_Altivec.h */,
-				DCCA31BB112195BA00A774D0 /* SC_DirUtils.h */,
-				DCCA31BC112195BA00A774D0 /* SC_Endian.h */,
-				DCCA31BD112195BA00A774D0 /* SC_fftlib.h */,
-				DCCA31BE112195BA00A774D0 /* SC_FIFO.h */,
-				DCCA31BF112195BA00A774D0 /* sc_popen.h */,
-				DCCA31C0112195BA00A774D0 /* SC_Reply.h */,
-				DCCA31C1112195BA00A774D0 /* SC_Sem.h */,
-				DCCA31C2112195BA00A774D0 /* SC_StandAloneInfo_Darwin.h */,
-				DCCA31C3112195BA00A774D0 /* SC_StringBuffer.h */,
-				DCCA31C4112195BA00A774D0 /* SC_StringParser.h */,
-				DCCA31C5112195BA00A774D0 /* SC_VFP11.h */,
-				DCCA31C6112195BA00A774D0 /* SC_Win32Utils.h */,
-				DCCA31C7112195BA00A774D0 /* scsynthsend.h */,
+				DCC9CF0B1125C5320050A91B /* dfftlib.h */,
+				DCC9CF0C1125C5320050A91B /* fftlib.h */,
+				DCC9CF0D1125C5320050A91B /* SC_AllocPool.h */,
+				DCC9CF0E1125C5320050A91B /* SC_Altivec.h */,
+				DCC9CF0F1125C5320050A91B /* SC_DirUtils.h */,
+				DCC9CF101125C5320050A91B /* SC_Endian.h */,
+				DCC9CF111125C5320050A91B /* SC_fftlib.h */,
+				DCC9CF121125C5320050A91B /* SC_FIFO.h */,
+				DCC9CF131125C5320050A91B /* sc_popen.h */,
+				DCC9CF141125C5320050A91B /* SC_Reply.h */,
+				DCC9CF151125C5320050A91B /* SC_Sem.h */,
+				DCC9CF161125C5320050A91B /* SC_StandAloneInfo_Darwin.h */,
+				DCC9CF171125C5320050A91B /* SC_StringBuffer.h */,
+				DCC9CF181125C5320050A91B /* SC_StringParser.h */,
+				DCC9CF191125C5320050A91B /* SC_VFP11.h */,
+				DCC9CF1A1125C5320050A91B /* SC_Win32Utils.h */,
+				DCC9CF1B1125C5320050A91B /* scsynthsend.h */,
 			);
-			name = common;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/common;
-			sourceTree = "<absolute>";
+			path = common;
+			sourceTree = "<group>";
 		};
-		DCCA31C8112195BA00A774D0 /* lang */ = {
+		DCC9CF1C1125C5320050A91B /* lang */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA31C9112195BB00A774D0 /* AdvancingAllocPool.h */,
-				DCCA31CA112195BB00A774D0 /* AllocPools.h */,
-				DCCA31CB112195BB00A774D0 /* bullet.h */,
-				DCCA31CC112195BB00A774D0 /* ByteCodeArray.h */,
-				DCCA31CD112195BB00A774D0 /* FIFOT.h */,
-				DCCA31CE112195BB00A774D0 /* GC.h */,
-				DCCA31CF112195BB00A774D0 /* HashTable.h */,
-				DCCA31D0112195BB00A774D0 /* InitAlloc.h */,
-				DCCA31D1112195BB00A774D0 /* MiscInlineMath.h */,
-				DCCA31D2112195BB00A774D0 /* Opcodes.h */,
-				DCCA31D3112195BB00A774D0 /* OSCData.h */,
-				DCCA31D4112195BB00A774D0 /* PowerOfTwoAllocPool.h */,
-				DCCA31D5112195BB00A774D0 /* PredefinedSymbols.h */,
-				DCCA31D6112195BB00A774D0 /* PriorityQueue.h */,
-				DCCA31D7112195BB00A774D0 /* PyrArchiverT.h */,
-				DCCA31D8112195BB00A774D0 /* PyrDeepCopier.h */,
-				DCCA31D9112195BB00A774D0 /* PyrDeepFreezer.h */,
-				DCCA31DA112195BB00A774D0 /* PyrErrors.h */,
-				DCCA31DB112195BB00A774D0 /* PyrFilePrim.h */,
-				DCCA31DC112195BB00A774D0 /* PyrFileUtils.h */,
-				DCCA31DD112195BB00A774D0 /* PyrInterpreter.h */,
-				DCCA31DE112195BB00A774D0 /* PyrKernel.h */,
-				DCCA31DF112195BB00A774D0 /* PyrKernelProto.h */,
-				DCCA31E0112195BB00A774D0 /* PyrLexer.h */,
-				DCCA31E1112195BB00A774D0 /* PyrListPrim.h */,
-				DCCA31E2112195BB00A774D0 /* PyrMathPrim.h */,
-				DCCA31E3112195BB00A774D0 /* PyrMessage.h */,
-				DCCA31E4112195BB00A774D0 /* PyrObject.h */,
-				DCCA31E5112195BB00A774D0 /* PyrObjectProto.h */,
-				DCCA31E6112195BB00A774D0 /* PyrParseNode.h */,
-				DCCA31E7112195BB00A774D0 /* PyrPrimitive.h */,
-				DCCA31E8112195BB00A774D0 /* PyrPrimitiveProto.h */,
-				DCCA31E9112195BB00A774D0 /* PyrSched.h */,
-				DCCA31EA112195BB00A774D0 /* PyrSignal.h */,
-				DCCA31EB112195BB00A774D0 /* PyrSignalPrim.h */,
-				DCCA31EC112195BB00A774D0 /* PyrSlot.h */,
-				DCCA31ED112195BB00A774D0 /* PyrSlot32.h */,
-				DCCA31EE112195BB00A774D0 /* PyrSlot64.h */,
-				DCCA31EF112195BB00A774D0 /* PyrSymbol.h */,
-				DCCA31F0112195BB00A774D0 /* PyrSymbolTable.h */,
-				DCCA31F1112195BB00A774D0 /* readSamples.h */,
-				DCCA31F2112195BB00A774D0 /* ReadWriteMacros.h */,
-				DCCA31F3112195BB00A774D0 /* Samp.h */,
-				DCCA31F4112195BB00A774D0 /* SC_ComPort.h */,
-				DCCA31F5112195BB00A774D0 /* SC_LanguageClient.h */,
-				DCCA31F6112195BB00A774D0 /* SC_LibraryConfig.h */,
-				DCCA31F7112195BB00A774D0 /* SC_List.h */,
-				DCCA31F8112195BB00A774D0 /* SC_LogFile.h */,
-				DCCA31F9112195BB00A774D0 /* SC_Msg.h */,
-				DCCA31FA112195BB00A774D0 /* SC_SynthImpl.h */,
-				DCCA31FB112195BB00A774D0 /* SC_TerminalClient.h */,
-				DCCA31FC112195BB00A774D0 /* SC_UnorderedList.h */,
-				DCCA31FD112195BB00A774D0 /* SCBase.h */,
-				DCCA31FE112195BB00A774D0 /* SFHeaders.h */,
-				DCCA31FF112195BB00A774D0 /* SimpleStack.h */,
-				DCCA3200112195BB00A774D0 /* VMGlobals.h */,
+				DCC9CF1D1125C5320050A91B /* AdvancingAllocPool.h */,
+				DCC9CF1E1125C5320050A91B /* AllocPools.h */,
+				DCC9CF1F1125C5320050A91B /* bullet.h */,
+				DCC9CF201125C5320050A91B /* ByteCodeArray.h */,
+				DCC9CF211125C5320050A91B /* FIFOT.h */,
+				DCC9CF221125C5320050A91B /* GC.h */,
+				DCC9CF231125C5320050A91B /* HashTable.h */,
+				DCC9CF241125C5320050A91B /* InitAlloc.h */,
+				DCC9CF251125C5320050A91B /* MiscInlineMath.h */,
+				DCC9CF261125C5320050A91B /* Opcodes.h */,
+				DCC9CF271125C5320050A91B /* OSCData.h */,
+				DCC9CF281125C5320050A91B /* PowerOfTwoAllocPool.h */,
+				DCC9CF291125C5320050A91B /* PredefinedSymbols.h */,
+				DCC9CF2A1125C5320050A91B /* PriorityQueue.h */,
+				DCC9CF2B1125C5320050A91B /* PyrArchiverT.h */,
+				DCC9CF2C1125C5320050A91B /* PyrDeepCopier.h */,
+				DCC9CF2D1125C5320050A91B /* PyrDeepFreezer.h */,
+				DCC9CF2E1125C5320050A91B /* PyrErrors.h */,
+				DCC9CF2F1125C5320050A91B /* PyrFilePrim.h */,
+				DCC9CF301125C5320050A91B /* PyrFileUtils.h */,
+				DCC9CF311125C5320050A91B /* PyrInterpreter.h */,
+				DCC9CF321125C5320050A91B /* PyrKernel.h */,
+				DCC9CF331125C5320050A91B /* PyrKernelProto.h */,
+				DCC9CF341125C5320050A91B /* PyrLexer.h */,
+				DCC9CF351125C5320050A91B /* PyrListPrim.h */,
+				DCC9CF361125C5320050A91B /* PyrMathPrim.h */,
+				DCC9CF371125C5320050A91B /* PyrMessage.h */,
+				DCC9CF381125C5320050A91B /* PyrObject.h */,
+				DCC9CF391125C5320050A91B /* PyrObjectProto.h */,
+				DCC9CF3A1125C5320050A91B /* PyrParseNode.h */,
+				DCC9CF3B1125C5320050A91B /* PyrPrimitive.h */,
+				DCC9CF3C1125C5320050A91B /* PyrPrimitiveProto.h */,
+				DCC9CF3D1125C5320050A91B /* PyrSched.h */,
+				DCC9CF3E1125C5320050A91B /* PyrSignal.h */,
+				DCC9CF3F1125C5320050A91B /* PyrSignalPrim.h */,
+				DCC9CF401125C5320050A91B /* PyrSlot.h */,
+				DCC9CF411125C5320050A91B /* PyrSlot32.h */,
+				DCC9CF421125C5320050A91B /* PyrSlot64.h */,
+				DCC9CF431125C5320050A91B /* PyrSymbol.h */,
+				DCC9CF441125C5320050A91B /* PyrSymbolTable.h */,
+				DCC9CF451125C5320050A91B /* readSamples.h */,
+				DCC9CF461125C5320050A91B /* ReadWriteMacros.h */,
+				DCC9CF471125C5320050A91B /* Samp.h */,
+				DCC9CF481125C5320050A91B /* SC_ComPort.h */,
+				DCC9CF491125C5320050A91B /* SC_LanguageClient.h */,
+				DCC9CF4A1125C5320050A91B /* SC_LibraryConfig.h */,
+				DCC9CF4B1125C5320050A91B /* SC_List.h */,
+				DCC9CF4C1125C5320050A91B /* SC_LogFile.h */,
+				DCC9CF4D1125C5320050A91B /* SC_Msg.h */,
+				DCC9CF4E1125C5320050A91B /* SC_SynthImpl.h */,
+				DCC9CF4F1125C5320050A91B /* SC_TerminalClient.h */,
+				DCC9CF501125C5320050A91B /* SC_UnorderedList.h */,
+				DCC9CF511125C5320050A91B /* SCBase.h */,
+				DCC9CF521125C5320050A91B /* SFHeaders.h */,
+				DCC9CF531125C5320050A91B /* SimpleStack.h */,
+				DCC9CF541125C5320050A91B /* VMGlobals.h */,
 			);
-			name = lang;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/lang;
-			sourceTree = "<absolute>";
+			path = lang;
+			sourceTree = "<group>";
 		};
-		DCCA3201112195BB00A774D0 /* plugin_interface */ = {
+		DCC9CF551125C5320050A91B /* plugin_interface */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA3202112195BB00A774D0 /* clz.h */,
-				DCCA3203112195BB00A774D0 /* Hash.h */,
-				DCCA3204112195BB00A774D0 /* SC_BoundsMacros.h */,
-				DCCA3205112195BB00A774D0 /* SC_BufGen.h */,
-				DCCA3206112195BB00A774D0 /* SC_Constants.h */,
-				DCCA3207112195BB00A774D0 /* SC_DemandUnit.h */,
-				DCCA3208112195BB00A774D0 /* SC_Dimension.h */,
-				DCCA3209112195BB00A774D0 /* SC_FifoMsg.h */,
-				DCCA320A112195BB00A774D0 /* SC_Graph.h */,
-				DCCA320B112195BB00A774D0 /* SC_InlineBinaryOp.h */,
-				DCCA320C112195BB00A774D0 /* SC_InlineUnaryOp.h */,
-				DCCA320D112195BB00A774D0 /* SC_InterfaceTable.h */,
-				DCCA320E112195BB00A774D0 /* sc_msg_iter.h */,
-				DCCA320F112195BB00A774D0 /* SC_Node.h */,
-				DCCA3210112195BB00A774D0 /* SC_PlugIn.h */,
-				DCCA3211112195BB00A774D0 /* SC_Rate.h */,
-				DCCA3212112195BB00A774D0 /* SC_RGen.h */,
-				DCCA3213112195BB00A774D0 /* SC_SndBuf.h */,
-				DCCA3214112195BB00A774D0 /* SC_sndfile_stub.h */,
-				DCCA3215112195BB00A774D0 /* SC_Types.h */,
-				DCCA3216112195BB00A774D0 /* SC_Unit.h */,
-				DCCA3217112195BB00A774D0 /* SC_Wire.h */,
-				DCCA3218112195BB00A774D0 /* SC_World.h */,
-				DCCA3219112195BB00A774D0 /* SC_WorldOptions.h */,
-				DCCA321A112195BB00A774D0 /* Unroll.h */,
+				DCC9CF561125C5320050A91B /* clz.h */,
+				DCC9CF571125C5320050A91B /* Hash.h */,
+				DCC9CF581125C5320050A91B /* SC_BoundsMacros.h */,
+				DCC9CF591125C5320050A91B /* SC_BufGen.h */,
+				DCC9CF5A1125C5320050A91B /* SC_Constants.h */,
+				DCC9CF5B1125C5320050A91B /* SC_DemandUnit.h */,
+				DCC9CF5C1125C5320050A91B /* SC_Dimension.h */,
+				DCC9CF5D1125C5320050A91B /* SC_FifoMsg.h */,
+				DCC9CF5E1125C5320050A91B /* SC_Graph.h */,
+				DCC9CF5F1125C5320050A91B /* SC_InlineBinaryOp.h */,
+				DCC9CF601125C5320050A91B /* SC_InlineUnaryOp.h */,
+				DCC9CF611125C5320050A91B /* SC_InterfaceTable.h */,
+				DCC9CF621125C5320050A91B /* sc_msg_iter.h */,
+				DCC9CF631125C5320050A91B /* SC_Node.h */,
+				DCC9CF641125C5320050A91B /* SC_PlugIn.h */,
+				DCC9CF651125C5320050A91B /* SC_Rate.h */,
+				DCC9CF661125C5320050A91B /* SC_RGen.h */,
+				DCC9CF671125C5320050A91B /* SC_SndBuf.h */,
+				DCC9CF681125C5320050A91B /* SC_sndfile_stub.h */,
+				DCC9CF691125C5320050A91B /* SC_Types.h */,
+				DCC9CF6A1125C5320050A91B /* SC_Unit.h */,
+				DCC9CF6B1125C5320050A91B /* SC_Wire.h */,
+				DCC9CF6C1125C5320050A91B /* SC_World.h */,
+				DCC9CF6D1125C5320050A91B /* SC_WorldOptions.h */,
+				DCC9CF6E1125C5320050A91B /* Unroll.h */,
 			);
-			name = plugin_interface;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/plugin_interface;
-			sourceTree = "<absolute>";
+			path = plugin_interface;
+			sourceTree = "<group>";
 		};
-		DCCA321B112195BB00A774D0 /* server */ = {
+		DCC9CF6F1125C5320050A91B /* server */ = {
 			isa = PBXGroup;
 			children = (
-				DCCA321C112195BB00A774D0 /* HashTable.h */,
-				DCCA321D112195BB00A774D0 /* MsgFifo.h */,
-				DCCA321E112195BB00A774D0 /* OSC_Packet.h */,
-				DCCA321F112195BB00A774D0 /* PriorityQueue.h */,
-				DCCA3220112195BB00A774D0 /* ReadWriteMacros.h */,
-				DCCA3221112195BB00A774D0 /* Rendezvous.h */,
-				DCCA3222112195BB00A774D0 /* SC_AU.h */,
-				DCCA3223112195BB00A774D0 /* SC_Complex.h */,
-				DCCA3224112195BB00A774D0 /* SC_ComPort.h */,
-				DCCA3225112195BB00A774D0 /* SC_CoreAudio.h */,
-				DCCA3226112195BB00A774D0 /* SC_Errors.h */,
-				DCCA3227112195BB00A774D0 /* SC_GraphDef.h */,
-				DCCA3228112195BB00A774D0 /* SC_Group.h */,
-				DCCA3229112195BB00A774D0 /* SC_HiddenWorld.h */,
-				DCCA322A112195BB00A774D0 /* SC_Lib.h */,
-				DCCA322B112195BB00A774D0 /* SC_Lib_Cintf.h */,
-				DCCA322C112195BB00A774D0 /* SC_List.h */,
-				DCCA322D112195BB00A774D0 /* SC_Lock.h */,
-				DCCA322E112195BB00A774D0 /* SC_Prototypes.h */,
-				DCCA322F112195BB00A774D0 /* SC_Samp.h */,
-				DCCA3230112195BB00A774D0 /* SC_SequencedCommand.h */,
-				DCCA3231112195BB00A774D0 /* SC_Str4.h */,
-				DCCA3232112195BB00A774D0 /* SC_SyncCondition.h */,
-				DCCA3233112195BB00A774D0 /* SC_SynthDef.h */,
-				DCCA3234112195BB00A774D0 /* SC_UnitDef.h */,
-				DCCA3235112195BB00A774D0 /* SC_UnitSpec.h */,
-				DCCA3236112195BB00A774D0 /* SC_WireSpec.h */,
+				DCC9CF701125C5320050A91B /* HashTable.h */,
+				DCC9CF711125C5320050A91B /* MsgFifo.h */,
+				DCC9CF721125C5320050A91B /* OSC_Packet.h */,
+				DCC9CF731125C5320050A91B /* PriorityQueue.h */,
+				DCC9CF741125C5320050A91B /* ReadWriteMacros.h */,
+				DCC9CF751125C5320050A91B /* Rendezvous.h */,
+				DCC9CF761125C5320050A91B /* SC_AU.h */,
+				DCC9CF771125C5320050A91B /* SC_Complex.h */,
+				DCC9CF781125C5320050A91B /* SC_ComPort.h */,
+				DCC9CF791125C5320050A91B /* SC_CoreAudio.h */,
+				DCC9CF7A1125C5320050A91B /* SC_Errors.h */,
+				DCC9CF7B1125C5320050A91B /* SC_GraphDef.h */,
+				DCC9CF7C1125C5320050A91B /* SC_Group.h */,
+				DCC9CF7D1125C5320050A91B /* SC_HiddenWorld.h */,
+				DCC9CF7E1125C5320050A91B /* SC_Lib.h */,
+				DCC9CF7F1125C5320050A91B /* SC_Lib_Cintf.h */,
+				DCC9CF801125C5320050A91B /* SC_List.h */,
+				DCC9CF811125C5320050A91B /* SC_Lock.h */,
+				DCC9CF821125C5320050A91B /* SC_Prototypes.h */,
+				DCC9CF831125C5320050A91B /* SC_Samp.h */,
+				DCC9CF841125C5320050A91B /* SC_SequencedCommand.h */,
+				DCC9CF851125C5320050A91B /* SC_Str4.h */,
+				DCC9CF861125C5320050A91B /* SC_SyncCondition.h */,
+				DCC9CF871125C5320050A91B /* SC_SynthDef.h */,
+				DCC9CF881125C5320050A91B /* SC_UnitDef.h */,
+				DCC9CF891125C5320050A91B /* SC_UnitSpec.h */,
+				DCC9CF8A1125C5320050A91B /* SC_WireSpec.h */,
 			);
-			name = server;
-			path = /Users/stephen/Documents/code/supercollider/sc_src/Headers/server;
-			sourceTree = "<absolute>";
+			path = server;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -625,161 +614,160 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCCA3237112195BB00A774D0 /* ChangeCounter.h in Headers */,
-				DCCA3238112195BB00A774D0 /* ControlSpec.h in Headers */,
-				DCCA3239112195BB00A774D0 /* DrawBackground.h in Headers */,
-				DCCA323A112195BB00A774D0 /* GetStringFromUser.h in Headers */,
-				DCCA323B112195BB00A774D0 /* GoToPanel.h in Headers */,
-				DCCA323C112195BB00A774D0 /* HTMLRenderer.h in Headers */,
-				DCCA323D112195BB00A774D0 /* iPhoneSCGraphView.h in Headers */,
-				DCCA323E112195BB00A774D0 /* iPhoneSCView.h in Headers */,
-				DCCA323F112195BB00A774D0 /* MyDocument.h in Headers */,
-				DCCA3240112195BB00A774D0 /* RendezvousClient.h in Headers */,
-				DCCA3241112195BB00A774D0 /* SCCocoaView.h in Headers */,
-				DCCA3242112195BB00A774D0 /* SCDialog.h in Headers */,
-				DCCA3243112195BB00A774D0 /* SCGeom.h in Headers */,
-				DCCA3244112195BB00A774D0 /* SCGraphView.h in Headers */,
-				DCCA3245112195BB00A774D0 /* SCImage.h in Headers */,
-				DCCA3246112195BB00A774D0 /* SCNSWindow.h in Headers */,
-				DCCA3247112195BB00A774D0 /* SCService.h in Headers */,
-				DCCA3248112195BB00A774D0 /* SCSoundFileView.h in Headers */,
-				DCCA3249112195BB00A774D0 /* SCTextView.h in Headers */,
-				DCCA324A112195BB00A774D0 /* SCView.h in Headers */,
-				DCCA324B112195BB00A774D0 /* SCVirtualMachine.h in Headers */,
-				DCCA324C112195BB00A774D0 /* ICUMatcher.h in Headers */,
-				DCCA324D112195BB00A774D0 /* ICUPattern.h in Headers */,
-				DCCA324F112195BB00A774D0 /* NSStringICUAdditions.h in Headers */,
-				DCCA3250112195BB00A774D0 /* SMLAdvancedFindController.h in Headers */,
-				DCCA3251112195BB00A774D0 /* SMLStatusBarTextFieldCell.h in Headers */,
-				DCCA3252112195BB00A774D0 /* TabletEvents.h in Headers */,
-				DCCA3253112195BB00A774D0 /* TextFinder.h in Headers */,
-				DCCA3254112195BB00A774D0 /* UserPanel.h in Headers */,
-				DCCA3255112195BB00A774D0 /* dfftlib.h in Headers */,
-				DCCA3256112195BB00A774D0 /* fftlib.h in Headers */,
-				DCCA3257112195BB00A774D0 /* SC_AllocPool.h in Headers */,
-				DCCA3258112195BB00A774D0 /* SC_Altivec.h in Headers */,
-				DCCA3259112195BB00A774D0 /* SC_DirUtils.h in Headers */,
-				DCCA325A112195BB00A774D0 /* SC_Endian.h in Headers */,
-				DCCA325B112195BB00A774D0 /* SC_fftlib.h in Headers */,
-				DCCA325C112195BB00A774D0 /* SC_FIFO.h in Headers */,
-				DCCA325D112195BB00A774D0 /* sc_popen.h in Headers */,
-				DCCA325E112195BB00A774D0 /* SC_Reply.h in Headers */,
-				DCCA325F112195BB00A774D0 /* SC_Sem.h in Headers */,
-				DCCA3260112195BB00A774D0 /* SC_StandAloneInfo_Darwin.h in Headers */,
-				DCCA3261112195BB00A774D0 /* SC_StringBuffer.h in Headers */,
-				DCCA3262112195BB00A774D0 /* SC_StringParser.h in Headers */,
-				DCCA3263112195BB00A774D0 /* SC_VFP11.h in Headers */,
-				DCCA3264112195BB00A774D0 /* SC_Win32Utils.h in Headers */,
-				DCCA3265112195BB00A774D0 /* scsynthsend.h in Headers */,
-				DCCA3266112195BB00A774D0 /* AdvancingAllocPool.h in Headers */,
-				DCCA3267112195BB00A774D0 /* AllocPools.h in Headers */,
-				DCCA3268112195BB00A774D0 /* bullet.h in Headers */,
-				DCCA3269112195BB00A774D0 /* ByteCodeArray.h in Headers */,
-				DCCA326A112195BB00A774D0 /* FIFOT.h in Headers */,
-				DCCA326B112195BB00A774D0 /* GC.h in Headers */,
-				DCCA326C112195BB00A774D0 /* HashTable.h in Headers */,
-				DCCA326D112195BB00A774D0 /* InitAlloc.h in Headers */,
-				DCCA326E112195BB00A774D0 /* MiscInlineMath.h in Headers */,
-				DCCA326F112195BB00A774D0 /* Opcodes.h in Headers */,
-				DCCA3270112195BB00A774D0 /* OSCData.h in Headers */,
-				DCCA3271112195BB00A774D0 /* PowerOfTwoAllocPool.h in Headers */,
-				DCCA3272112195BB00A774D0 /* PredefinedSymbols.h in Headers */,
-				DCCA3273112195BB00A774D0 /* PriorityQueue.h in Headers */,
-				DCCA3274112195BB00A774D0 /* PyrArchiverT.h in Headers */,
-				DCCA3275112195BB00A774D0 /* PyrDeepCopier.h in Headers */,
-				DCCA3276112195BB00A774D0 /* PyrDeepFreezer.h in Headers */,
-				DCCA3277112195BB00A774D0 /* PyrErrors.h in Headers */,
-				DCCA3278112195BB00A774D0 /* PyrFilePrim.h in Headers */,
-				DCCA3279112195BB00A774D0 /* PyrFileUtils.h in Headers */,
-				DCCA327A112195BB00A774D0 /* PyrInterpreter.h in Headers */,
-				DCCA327B112195BB00A774D0 /* PyrKernel.h in Headers */,
-				DCCA327C112195BB00A774D0 /* PyrKernelProto.h in Headers */,
-				DCCA327D112195BB00A774D0 /* PyrLexer.h in Headers */,
-				DCCA327E112195BB00A774D0 /* PyrListPrim.h in Headers */,
-				DCCA327F112195BB00A774D0 /* PyrMathPrim.h in Headers */,
-				DCCA3280112195BB00A774D0 /* PyrMessage.h in Headers */,
-				DCCA3281112195BB00A774D0 /* PyrObject.h in Headers */,
-				DCCA3282112195BB00A774D0 /* PyrObjectProto.h in Headers */,
-				DCCA3283112195BB00A774D0 /* PyrParseNode.h in Headers */,
-				DCCA3284112195BB00A774D0 /* PyrPrimitive.h in Headers */,
-				DCCA3285112195BB00A774D0 /* PyrPrimitiveProto.h in Headers */,
-				DCCA3286112195BB00A774D0 /* PyrSched.h in Headers */,
-				DCCA3287112195BB00A774D0 /* PyrSignal.h in Headers */,
-				DCCA3288112195BB00A774D0 /* PyrSignalPrim.h in Headers */,
-				DCCA3289112195BB00A774D0 /* PyrSlot.h in Headers */,
-				DCCA328A112195BB00A774D0 /* PyrSlot32.h in Headers */,
-				DCCA328B112195BB00A774D0 /* PyrSlot64.h in Headers */,
-				DCCA328C112195BB00A774D0 /* PyrSymbol.h in Headers */,
-				DCCA328D112195BB00A774D0 /* PyrSymbolTable.h in Headers */,
-				DCCA328E112195BB00A774D0 /* readSamples.h in Headers */,
-				DCCA328F112195BB00A774D0 /* ReadWriteMacros.h in Headers */,
-				DCCA3290112195BB00A774D0 /* Samp.h in Headers */,
-				DCCA3291112195BB00A774D0 /* SC_ComPort.h in Headers */,
-				DCCA3292112195BB00A774D0 /* SC_LanguageClient.h in Headers */,
-				DCCA3293112195BB00A774D0 /* SC_LibraryConfig.h in Headers */,
-				DCCA3294112195BB00A774D0 /* SC_List.h in Headers */,
-				DCCA3295112195BB00A774D0 /* SC_LogFile.h in Headers */,
-				DCCA3296112195BB00A774D0 /* SC_Msg.h in Headers */,
-				DCCA3297112195BB00A774D0 /* SC_SynthImpl.h in Headers */,
-				DCCA3298112195BB00A774D0 /* SC_TerminalClient.h in Headers */,
-				DCCA3299112195BB00A774D0 /* SC_UnorderedList.h in Headers */,
-				DCCA329A112195BB00A774D0 /* SCBase.h in Headers */,
-				DCCA329B112195BB00A774D0 /* SFHeaders.h in Headers */,
-				DCCA329C112195BB00A774D0 /* SimpleStack.h in Headers */,
-				DCCA329D112195BB00A774D0 /* VMGlobals.h in Headers */,
-				DCCA329E112195BB00A774D0 /* clz.h in Headers */,
-				DCCA329F112195BB00A774D0 /* Hash.h in Headers */,
-				DCCA32A0112195BB00A774D0 /* SC_BoundsMacros.h in Headers */,
-				DCCA32A1112195BB00A774D0 /* SC_BufGen.h in Headers */,
-				DCCA32A2112195BB00A774D0 /* SC_Constants.h in Headers */,
-				DCCA32A3112195BB00A774D0 /* SC_DemandUnit.h in Headers */,
-				DCCA32A4112195BB00A774D0 /* SC_Dimension.h in Headers */,
-				DCCA32A5112195BB00A774D0 /* SC_FifoMsg.h in Headers */,
-				DCCA32A6112195BB00A774D0 /* SC_Graph.h in Headers */,
-				DCCA32A7112195BB00A774D0 /* SC_InlineBinaryOp.h in Headers */,
-				DCCA32A8112195BB00A774D0 /* SC_InlineUnaryOp.h in Headers */,
-				DCCA32A9112195BB00A774D0 /* SC_InterfaceTable.h in Headers */,
-				DCCA32AA112195BB00A774D0 /* sc_msg_iter.h in Headers */,
-				DCCA32AB112195BB00A774D0 /* SC_Node.h in Headers */,
-				DCCA32AC112195BB00A774D0 /* SC_PlugIn.h in Headers */,
-				DCCA32AD112195BB00A774D0 /* SC_Rate.h in Headers */,
-				DCCA32AE112195BB00A774D0 /* SC_RGen.h in Headers */,
-				DCCA32AF112195BB00A774D0 /* SC_SndBuf.h in Headers */,
-				DCCA32B0112195BB00A774D0 /* SC_sndfile_stub.h in Headers */,
-				DCCA32B1112195BB00A774D0 /* SC_Types.h in Headers */,
-				DCCA32B2112195BB00A774D0 /* SC_Unit.h in Headers */,
-				DCCA32B3112195BB00A774D0 /* SC_Wire.h in Headers */,
-				DCCA32B4112195BB00A774D0 /* SC_World.h in Headers */,
-				DCCA32B5112195BB00A774D0 /* SC_WorldOptions.h in Headers */,
-				DCCA32B6112195BB00A774D0 /* Unroll.h in Headers */,
-				DCCA32B7112195BB00A774D0 /* HashTable.h in Headers */,
-				DCCA32B8112195BB00A774D0 /* MsgFifo.h in Headers */,
-				DCCA32B9112195BB00A774D0 /* OSC_Packet.h in Headers */,
-				DCCA32BA112195BB00A774D0 /* PriorityQueue.h in Headers */,
-				DCCA32BB112195BB00A774D0 /* ReadWriteMacros.h in Headers */,
-				DCCA32BC112195BB00A774D0 /* Rendezvous.h in Headers */,
-				DCCA32BD112195BB00A774D0 /* SC_AU.h in Headers */,
-				DCCA32BE112195BB00A774D0 /* SC_Complex.h in Headers */,
-				DCCA32BF112195BB00A774D0 /* SC_ComPort.h in Headers */,
-				DCCA32C0112195BB00A774D0 /* SC_CoreAudio.h in Headers */,
-				DCCA32C1112195BB00A774D0 /* SC_Errors.h in Headers */,
-				DCCA32C2112195BB00A774D0 /* SC_GraphDef.h in Headers */,
-				DCCA32C3112195BB00A774D0 /* SC_Group.h in Headers */,
-				DCCA32C4112195BB00A774D0 /* SC_HiddenWorld.h in Headers */,
-				DCCA32C5112195BB00A774D0 /* SC_Lib.h in Headers */,
-				DCCA32C6112195BB00A774D0 /* SC_Lib_Cintf.h in Headers */,
-				DCCA32C7112195BB00A774D0 /* SC_List.h in Headers */,
-				DCCA32C8112195BB00A774D0 /* SC_Lock.h in Headers */,
-				DCCA32C9112195BB00A774D0 /* SC_Prototypes.h in Headers */,
-				DCCA32CA112195BB00A774D0 /* SC_Samp.h in Headers */,
-				DCCA32CB112195BB00A774D0 /* SC_SequencedCommand.h in Headers */,
-				DCCA32CC112195BB00A774D0 /* SC_Str4.h in Headers */,
-				DCCA32CD112195BB00A774D0 /* SC_SyncCondition.h in Headers */,
-				DCCA32CE112195BB00A774D0 /* SC_SynthDef.h in Headers */,
-				DCCA32CF112195BB00A774D0 /* SC_UnitDef.h in Headers */,
-				DCCA32D0112195BB00A774D0 /* SC_UnitSpec.h in Headers */,
-				DCCA32D1112195BB00A774D0 /* SC_WireSpec.h in Headers */,
-				DCCA338F1121A12800A774D0 /* rgen_helper.h in Headers */,
+				DCC9CF8B1125C5320050A91B /* ChangeCounter.h in Headers */,
+				DCC9CF8C1125C5320050A91B /* ControlSpec.h in Headers */,
+				DCC9CF8D1125C5320050A91B /* DrawBackground.h in Headers */,
+				DCC9CF8E1125C5320050A91B /* GetStringFromUser.h in Headers */,
+				DCC9CF8F1125C5320050A91B /* GoToPanel.h in Headers */,
+				DCC9CF901125C5320050A91B /* HTMLRenderer.h in Headers */,
+				DCC9CF911125C5320050A91B /* iPhoneSCGraphView.h in Headers */,
+				DCC9CF921125C5320050A91B /* iPhoneSCView.h in Headers */,
+				DCC9CF931125C5320050A91B /* MyDocument.h in Headers */,
+				DCC9CF941125C5320050A91B /* RendezvousClient.h in Headers */,
+				DCC9CF951125C5320050A91B /* SCCocoaView.h in Headers */,
+				DCC9CF961125C5320050A91B /* SCDialog.h in Headers */,
+				DCC9CF971125C5320050A91B /* SCGeom.h in Headers */,
+				DCC9CF981125C5320050A91B /* SCGraphView.h in Headers */,
+				DCC9CF991125C5320050A91B /* SCImage.h in Headers */,
+				DCC9CF9A1125C5320050A91B /* SCNSWindow.h in Headers */,
+				DCC9CF9B1125C5320050A91B /* SCService.h in Headers */,
+				DCC9CF9C1125C5320050A91B /* SCSoundFileView.h in Headers */,
+				DCC9CF9D1125C5320050A91B /* SCTextView.h in Headers */,
+				DCC9CF9E1125C5320050A91B /* SCView.h in Headers */,
+				DCC9CF9F1125C5320050A91B /* SCVirtualMachine.h in Headers */,
+				DCC9CFA01125C5320050A91B /* ICUMatcher.h in Headers */,
+				DCC9CFA11125C5320050A91B /* ICUPattern.h in Headers */,
+				DCC9CFA31125C5320050A91B /* NSStringICUAdditions.h in Headers */,
+				DCC9CFA41125C5320050A91B /* SMLAdvancedFindController.h in Headers */,
+				DCC9CFA51125C5320050A91B /* SMLStatusBarTextFieldCell.h in Headers */,
+				DCC9CFA61125C5320050A91B /* TabletEvents.h in Headers */,
+				DCC9CFA71125C5320050A91B /* TextFinder.h in Headers */,
+				DCC9CFA81125C5320050A91B /* UserPanel.h in Headers */,
+				DCC9CFA91125C5320050A91B /* dfftlib.h in Headers */,
+				DCC9CFAA1125C5320050A91B /* fftlib.h in Headers */,
+				DCC9CFAB1125C5320050A91B /* SC_AllocPool.h in Headers */,
+				DCC9CFAC1125C5320050A91B /* SC_Altivec.h in Headers */,
+				DCC9CFAD1125C5320050A91B /* SC_DirUtils.h in Headers */,
+				DCC9CFAE1125C5320050A91B /* SC_Endian.h in Headers */,
+				DCC9CFAF1125C5320050A91B /* SC_fftlib.h in Headers */,
+				DCC9CFB01125C5320050A91B /* SC_FIFO.h in Headers */,
+				DCC9CFB11125C5320050A91B /* sc_popen.h in Headers */,
+				DCC9CFB21125C5320050A91B /* SC_Reply.h in Headers */,
+				DCC9CFB31125C5320050A91B /* SC_Sem.h in Headers */,
+				DCC9CFB41125C5320050A91B /* SC_StandAloneInfo_Darwin.h in Headers */,
+				DCC9CFB51125C5320050A91B /* SC_StringBuffer.h in Headers */,
+				DCC9CFB61125C5320050A91B /* SC_StringParser.h in Headers */,
+				DCC9CFB71125C5320050A91B /* SC_VFP11.h in Headers */,
+				DCC9CFB81125C5320050A91B /* SC_Win32Utils.h in Headers */,
+				DCC9CFB91125C5320050A91B /* scsynthsend.h in Headers */,
+				DCC9CFBA1125C5320050A91B /* AdvancingAllocPool.h in Headers */,
+				DCC9CFBB1125C5320050A91B /* AllocPools.h in Headers */,
+				DCC9CFBC1125C5320050A91B /* bullet.h in Headers */,
+				DCC9CFBD1125C5320050A91B /* ByteCodeArray.h in Headers */,
+				DCC9CFBE1125C5320050A91B /* FIFOT.h in Headers */,
+				DCC9CFBF1125C5320050A91B /* GC.h in Headers */,
+				DCC9CFC01125C5320050A91B /* HashTable.h in Headers */,
+				DCC9CFC11125C5320050A91B /* InitAlloc.h in Headers */,
+				DCC9CFC21125C5320050A91B /* MiscInlineMath.h in Headers */,
+				DCC9CFC31125C5320050A91B /* Opcodes.h in Headers */,
+				DCC9CFC41125C5320050A91B /* OSCData.h in Headers */,
+				DCC9CFC51125C5320050A91B /* PowerOfTwoAllocPool.h in Headers */,
+				DCC9CFC61125C5320050A91B /* PredefinedSymbols.h in Headers */,
+				DCC9CFC71125C5320050A91B /* PriorityQueue.h in Headers */,
+				DCC9CFC81125C5320050A91B /* PyrArchiverT.h in Headers */,
+				DCC9CFC91125C5320050A91B /* PyrDeepCopier.h in Headers */,
+				DCC9CFCA1125C5320050A91B /* PyrDeepFreezer.h in Headers */,
+				DCC9CFCB1125C5320050A91B /* PyrErrors.h in Headers */,
+				DCC9CFCC1125C5320050A91B /* PyrFilePrim.h in Headers */,
+				DCC9CFCD1125C5320050A91B /* PyrFileUtils.h in Headers */,
+				DCC9CFCE1125C5320050A91B /* PyrInterpreter.h in Headers */,
+				DCC9CFCF1125C5320050A91B /* PyrKernel.h in Headers */,
+				DCC9CFD01125C5320050A91B /* PyrKernelProto.h in Headers */,
+				DCC9CFD11125C5320050A91B /* PyrLexer.h in Headers */,
+				DCC9CFD21125C5320050A91B /* PyrListPrim.h in Headers */,
+				DCC9CFD31125C5320050A91B /* PyrMathPrim.h in Headers */,
+				DCC9CFD41125C5320050A91B /* PyrMessage.h in Headers */,
+				DCC9CFD51125C5320050A91B /* PyrObject.h in Headers */,
+				DCC9CFD61125C5320050A91B /* PyrObjectProto.h in Headers */,
+				DCC9CFD71125C5320050A91B /* PyrParseNode.h in Headers */,
+				DCC9CFD81125C5320050A91B /* PyrPrimitive.h in Headers */,
+				DCC9CFD91125C5320050A91B /* PyrPrimitiveProto.h in Headers */,
+				DCC9CFDA1125C5320050A91B /* PyrSched.h in Headers */,
+				DCC9CFDB1125C5320050A91B /* PyrSignal.h in Headers */,
+				DCC9CFDC1125C5320050A91B /* PyrSignalPrim.h in Headers */,
+				DCC9CFDD1125C5320050A91B /* PyrSlot.h in Headers */,
+				DCC9CFDE1125C5320050A91B /* PyrSlot32.h in Headers */,
+				DCC9CFDF1125C5320050A91B /* PyrSlot64.h in Headers */,
+				DCC9CFE01125C5320050A91B /* PyrSymbol.h in Headers */,
+				DCC9CFE11125C5320050A91B /* PyrSymbolTable.h in Headers */,
+				DCC9CFE21125C5320050A91B /* readSamples.h in Headers */,
+				DCC9CFE31125C5320050A91B /* ReadWriteMacros.h in Headers */,
+				DCC9CFE41125C5320050A91B /* Samp.h in Headers */,
+				DCC9CFE51125C5320050A91B /* SC_ComPort.h in Headers */,
+				DCC9CFE61125C5320050A91B /* SC_LanguageClient.h in Headers */,
+				DCC9CFE71125C5320050A91B /* SC_LibraryConfig.h in Headers */,
+				DCC9CFE81125C5320050A91B /* SC_List.h in Headers */,
+				DCC9CFE91125C5320050A91B /* SC_LogFile.h in Headers */,
+				DCC9CFEA1125C5320050A91B /* SC_Msg.h in Headers */,
+				DCC9CFEB1125C5320050A91B /* SC_SynthImpl.h in Headers */,
+				DCC9CFEC1125C5320050A91B /* SC_TerminalClient.h in Headers */,
+				DCC9CFED1125C5320050A91B /* SC_UnorderedList.h in Headers */,
+				DCC9CFEE1125C5320050A91B /* SCBase.h in Headers */,
+				DCC9CFEF1125C5320050A91B /* SFHeaders.h in Headers */,
+				DCC9CFF01125C5320050A91B /* SimpleStack.h in Headers */,
+				DCC9CFF11125C5320050A91B /* VMGlobals.h in Headers */,
+				DCC9CFF21125C5320050A91B /* clz.h in Headers */,
+				DCC9CFF31125C5320050A91B /* Hash.h in Headers */,
+				DCC9CFF41125C5320050A91B /* SC_BoundsMacros.h in Headers */,
+				DCC9CFF51125C5320050A91B /* SC_BufGen.h in Headers */,
+				DCC9CFF61125C5320050A91B /* SC_Constants.h in Headers */,
+				DCC9CFF71125C5320050A91B /* SC_DemandUnit.h in Headers */,
+				DCC9CFF81125C5320050A91B /* SC_Dimension.h in Headers */,
+				DCC9CFF91125C5320050A91B /* SC_FifoMsg.h in Headers */,
+				DCC9CFFA1125C5320050A91B /* SC_Graph.h in Headers */,
+				DCC9CFFB1125C5320050A91B /* SC_InlineBinaryOp.h in Headers */,
+				DCC9CFFC1125C5320050A91B /* SC_InlineUnaryOp.h in Headers */,
+				DCC9CFFD1125C5320050A91B /* SC_InterfaceTable.h in Headers */,
+				DCC9CFFE1125C5320050A91B /* sc_msg_iter.h in Headers */,
+				DCC9CFFF1125C5320050A91B /* SC_Node.h in Headers */,
+				DCC9D0001125C5320050A91B /* SC_PlugIn.h in Headers */,
+				DCC9D0011125C5320050A91B /* SC_Rate.h in Headers */,
+				DCC9D0021125C5320050A91B /* SC_RGen.h in Headers */,
+				DCC9D0031125C5320050A91B /* SC_SndBuf.h in Headers */,
+				DCC9D0041125C5320050A91B /* SC_sndfile_stub.h in Headers */,
+				DCC9D0051125C5320050A91B /* SC_Types.h in Headers */,
+				DCC9D0061125C5320050A91B /* SC_Unit.h in Headers */,
+				DCC9D0071125C5320050A91B /* SC_Wire.h in Headers */,
+				DCC9D0081125C5320050A91B /* SC_World.h in Headers */,
+				DCC9D0091125C5320050A91B /* SC_WorldOptions.h in Headers */,
+				DCC9D00A1125C5320050A91B /* Unroll.h in Headers */,
+				DCC9D00B1125C5320050A91B /* HashTable.h in Headers */,
+				DCC9D00C1125C5320050A91B /* MsgFifo.h in Headers */,
+				DCC9D00D1125C5320050A91B /* OSC_Packet.h in Headers */,
+				DCC9D00E1125C5320050A91B /* PriorityQueue.h in Headers */,
+				DCC9D00F1125C5320050A91B /* ReadWriteMacros.h in Headers */,
+				DCC9D0101125C5320050A91B /* Rendezvous.h in Headers */,
+				DCC9D0111125C5320050A91B /* SC_AU.h in Headers */,
+				DCC9D0121125C5320050A91B /* SC_Complex.h in Headers */,
+				DCC9D0131125C5320050A91B /* SC_ComPort.h in Headers */,
+				DCC9D0141125C5320050A91B /* SC_CoreAudio.h in Headers */,
+				DCC9D0151125C5320050A91B /* SC_Errors.h in Headers */,
+				DCC9D0161125C5320050A91B /* SC_GraphDef.h in Headers */,
+				DCC9D0171125C5320050A91B /* SC_Group.h in Headers */,
+				DCC9D0181125C5320050A91B /* SC_HiddenWorld.h in Headers */,
+				DCC9D0191125C5320050A91B /* SC_Lib.h in Headers */,
+				DCC9D01A1125C5320050A91B /* SC_Lib_Cintf.h in Headers */,
+				DCC9D01B1125C5320050A91B /* SC_List.h in Headers */,
+				DCC9D01C1125C5320050A91B /* SC_Lock.h in Headers */,
+				DCC9D01D1125C5320050A91B /* SC_Prototypes.h in Headers */,
+				DCC9D01E1125C5320050A91B /* SC_Samp.h in Headers */,
+				DCC9D01F1125C5320050A91B /* SC_SequencedCommand.h in Headers */,
+				DCC9D0201125C5320050A91B /* SC_Str4.h in Headers */,
+				DCC9D0211125C5320050A91B /* SC_SyncCondition.h in Headers */,
+				DCC9D0221125C5320050A91B /* SC_SynthDef.h in Headers */,
+				DCC9D0231125C5320050A91B /* SC_UnitDef.h in Headers */,
+				DCC9D0241125C5320050A91B /* SC_UnitSpec.h in Headers */,
+				DCC9D0251125C5320050A91B /* SC_WireSpec.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +815,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCCA324E112195BB00A774D0 /* LICENSE.txt in Resources */,
+				DCC9CFA21125C5320050A91B /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SMLAdvancedFind/ICU
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SMLAdvancedFind/ICU/LICENSE.txt
+END
+ICUPattern.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SMLAdvancedFind/ICU/ICUPattern.h
+END
+ICUMatcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SMLAdvancedFind/ICU/ICUMatcher.h
+END
+NSStringICUAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/supercollider/!svn/ver/6976/trunk/Headers/app/SMLAdvancedFind/ICU/NSStringICUAdditions.h
+END

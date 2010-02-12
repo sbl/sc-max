@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/supercollider/!svn/ver/9467/trunk/Headers/app
+END
+GetStringFromUser.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/app/GetStringFromUser.h
+END
+HTMLRenderer.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/6370/trunk/Headers/app/HTMLRenderer.h
+END
+ControlSpec.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/ControlSpec.h
+END
+DrawBackground.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/DrawBackground.h
+END
+SCNSWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/app/SCNSWindow.h
+END
+UserPanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/UserPanel.h
+END
+SCView.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/supercollider/!svn/ver/9467/trunk/Headers/app/SCView.h
+END
+TabletEvents.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/TabletEvents.h
+END
+SCVirtualMachine.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/supercollider/!svn/ver/9467/trunk/Headers/app/SCVirtualMachine.h
+END
+RendezvousClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/supercollider/!svn/ver/6094/trunk/Headers/app/RendezvousClient.h
+END
+SCCocoaView.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SCCocoaView.h
+END
+SCTextView.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SCTextView.h
+END
+SCImage.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SCImage.h
+END
+SCSoundFileView.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SCSoundFileView.h
+END
+TextFinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/6094/trunk/Headers/app/TextFinder.h
+END
+SCGeom.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/SCGeom.h
+END
+SCGraphView.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/app/SCGraphView.h
+END
+MyDocument.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/MyDocument.h
+END
+SCDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/supercollider/!svn/ver/8832/trunk/Headers/app/SCDialog.h
+END
+ChangeCounter.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/supercollider/!svn/ver/9079/trunk/Headers/app/ChangeCounter.h
+END
+SCService.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/6094/trunk/Headers/app/SCService.h
+END
+GoToPanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/supercollider/!svn/ver/9417/trunk/Headers/app/GoToPanel.h
+END

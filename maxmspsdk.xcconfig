@@ -16,8 +16,8 @@ PRODUCT_VERSION = 5.1.1
 
 // Paths
 C74SUPPORT = /Users/stephen/Documents/code/maxmsp/MaxSDK-5.1.1/c74support
-HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes"
-FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes"
+HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" $(SRCROOT)/../lib/sc-headers
+FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" $(SRCROOT)/../lib/sc-headers
 DSTROOT = $(SRCROOT)/../_build
 // (This next path is relative to DSTROOT)
 INSTALL_PATH = /

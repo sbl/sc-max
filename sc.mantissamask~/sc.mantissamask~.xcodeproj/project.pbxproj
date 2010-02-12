@@ -10,161 +10,161 @@
 		22CF119B0EE9A8250054F513 /* sc.mantissamask~.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.mantissamask~.cpp */; };
 		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
 		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
-		DC39B2751121FC3000B5D15B /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D31121FC3000B5D15B /* ChangeCounter.h */; };
-		DC39B2761121FC3000B5D15B /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D41121FC3000B5D15B /* ControlSpec.h */; };
-		DC39B2771121FC3000B5D15B /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D51121FC3000B5D15B /* DrawBackground.h */; };
-		DC39B2781121FC3000B5D15B /* GetStringFromUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D61121FC3000B5D15B /* GetStringFromUser.h */; };
-		DC39B2791121FC3000B5D15B /* GoToPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D71121FC3000B5D15B /* GoToPanel.h */; };
-		DC39B27A1121FC3000B5D15B /* HTMLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1D81121FC3000B5D15B /* HTMLRenderer.h */; };
-		DC39B27B1121FC3000B5D15B /* iPhoneSCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DA1121FC3000B5D15B /* iPhoneSCGraphView.h */; };
-		DC39B27C1121FC3000B5D15B /* iPhoneSCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DB1121FC3000B5D15B /* iPhoneSCView.h */; };
-		DC39B27D1121FC3000B5D15B /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DC1121FC3000B5D15B /* MyDocument.h */; };
-		DC39B27E1121FC3000B5D15B /* RendezvousClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DD1121FC3000B5D15B /* RendezvousClient.h */; };
-		DC39B27F1121FC3000B5D15B /* SCCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DE1121FC3000B5D15B /* SCCocoaView.h */; };
-		DC39B2801121FC3000B5D15B /* SCDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1DF1121FC3000B5D15B /* SCDialog.h */; };
-		DC39B2811121FC3000B5D15B /* SCGeom.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E01121FC3000B5D15B /* SCGeom.h */; };
-		DC39B2821121FC3000B5D15B /* SCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E11121FC3000B5D15B /* SCGraphView.h */; };
-		DC39B2831121FC3000B5D15B /* SCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E21121FC3000B5D15B /* SCImage.h */; };
-		DC39B2841121FC3000B5D15B /* SCNSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E31121FC3000B5D15B /* SCNSWindow.h */; };
-		DC39B2851121FC3000B5D15B /* SCService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E41121FC3000B5D15B /* SCService.h */; };
-		DC39B2861121FC3000B5D15B /* SCSoundFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E51121FC3000B5D15B /* SCSoundFileView.h */; };
-		DC39B2871121FC3000B5D15B /* SCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E61121FC3000B5D15B /* SCTextView.h */; };
-		DC39B2881121FC3000B5D15B /* SCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E71121FC3000B5D15B /* SCView.h */; };
-		DC39B2891121FC3000B5D15B /* SCVirtualMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1E81121FC3000B5D15B /* SCVirtualMachine.h */; };
-		DC39B28A1121FC3000B5D15B /* ICUMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1EB1121FC3000B5D15B /* ICUMatcher.h */; };
-		DC39B28B1121FC3000B5D15B /* ICUPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1EC1121FC3000B5D15B /* ICUPattern.h */; };
-		DC39B28C1121FC3000B5D15B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC39B1ED1121FC3000B5D15B /* LICENSE.txt */; };
-		DC39B28D1121FC3000B5D15B /* NSStringICUAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1EE1121FC3000B5D15B /* NSStringICUAdditions.h */; };
-		DC39B28E1121FC3000B5D15B /* SMLAdvancedFindController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1EF1121FC3000B5D15B /* SMLAdvancedFindController.h */; };
-		DC39B28F1121FC3000B5D15B /* SMLStatusBarTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F01121FC3000B5D15B /* SMLStatusBarTextFieldCell.h */; };
-		DC39B2901121FC3000B5D15B /* TabletEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F11121FC3000B5D15B /* TabletEvents.h */; };
-		DC39B2911121FC3000B5D15B /* TextFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F21121FC3000B5D15B /* TextFinder.h */; };
-		DC39B2921121FC3000B5D15B /* UserPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F31121FC3000B5D15B /* UserPanel.h */; };
-		DC39B2931121FC3000B5D15B /* dfftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F51121FC3000B5D15B /* dfftlib.h */; };
-		DC39B2941121FC3000B5D15B /* fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F61121FC3000B5D15B /* fftlib.h */; };
-		DC39B2951121FC3000B5D15B /* SC_AllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F71121FC3000B5D15B /* SC_AllocPool.h */; };
-		DC39B2961121FC3000B5D15B /* SC_Altivec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F81121FC3000B5D15B /* SC_Altivec.h */; };
-		DC39B2971121FC3000B5D15B /* SC_DirUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1F91121FC3000B5D15B /* SC_DirUtils.h */; };
-		DC39B2981121FC3000B5D15B /* SC_Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FA1121FC3000B5D15B /* SC_Endian.h */; };
-		DC39B2991121FC3000B5D15B /* SC_fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FB1121FC3000B5D15B /* SC_fftlib.h */; };
-		DC39B29A1121FC3000B5D15B /* SC_FIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FC1121FC3000B5D15B /* SC_FIFO.h */; };
-		DC39B29B1121FC3000B5D15B /* sc_popen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FD1121FC3000B5D15B /* sc_popen.h */; };
-		DC39B29C1121FC3000B5D15B /* SC_Reply.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FE1121FC3000B5D15B /* SC_Reply.h */; };
-		DC39B29D1121FC3000B5D15B /* SC_Sem.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B1FF1121FC3000B5D15B /* SC_Sem.h */; };
-		DC39B29E1121FC3000B5D15B /* SC_StandAloneInfo_Darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2001121FC3000B5D15B /* SC_StandAloneInfo_Darwin.h */; };
-		DC39B29F1121FC3000B5D15B /* SC_StringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2011121FC3000B5D15B /* SC_StringBuffer.h */; };
-		DC39B2A01121FC3000B5D15B /* SC_StringParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2021121FC3000B5D15B /* SC_StringParser.h */; };
-		DC39B2A11121FC3000B5D15B /* SC_VFP11.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2031121FC3000B5D15B /* SC_VFP11.h */; };
-		DC39B2A21121FC3000B5D15B /* SC_Win32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2041121FC3000B5D15B /* SC_Win32Utils.h */; };
-		DC39B2A31121FC3000B5D15B /* scsynthsend.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2051121FC3000B5D15B /* scsynthsend.h */; };
-		DC39B2A41121FC3000B5D15B /* AdvancingAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2071121FC3000B5D15B /* AdvancingAllocPool.h */; };
-		DC39B2A51121FC3000B5D15B /* AllocPools.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2081121FC3000B5D15B /* AllocPools.h */; };
-		DC39B2A61121FC3000B5D15B /* bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2091121FC3000B5D15B /* bullet.h */; };
-		DC39B2A71121FC3000B5D15B /* ByteCodeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20A1121FC3000B5D15B /* ByteCodeArray.h */; };
-		DC39B2A81121FC3000B5D15B /* FIFOT.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20B1121FC3000B5D15B /* FIFOT.h */; };
-		DC39B2A91121FC3000B5D15B /* GC.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20C1121FC3000B5D15B /* GC.h */; };
-		DC39B2AA1121FC3000B5D15B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20D1121FC3000B5D15B /* HashTable.h */; };
-		DC39B2AB1121FC3000B5D15B /* InitAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20E1121FC3000B5D15B /* InitAlloc.h */; };
-		DC39B2AC1121FC3000B5D15B /* MiscInlineMath.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B20F1121FC3000B5D15B /* MiscInlineMath.h */; };
-		DC39B2AD1121FC3000B5D15B /* Opcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2101121FC3000B5D15B /* Opcodes.h */; };
-		DC39B2AE1121FC3000B5D15B /* OSCData.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2111121FC3000B5D15B /* OSCData.h */; };
-		DC39B2AF1121FC3000B5D15B /* PowerOfTwoAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2121121FC3000B5D15B /* PowerOfTwoAllocPool.h */; };
-		DC39B2B01121FC3000B5D15B /* PredefinedSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2131121FC3000B5D15B /* PredefinedSymbols.h */; };
-		DC39B2B11121FC3000B5D15B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2141121FC3000B5D15B /* PriorityQueue.h */; };
-		DC39B2B21121FC3000B5D15B /* PyrArchiverT.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2151121FC3000B5D15B /* PyrArchiverT.h */; };
-		DC39B2B31121FC3000B5D15B /* PyrDeepCopier.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2161121FC3000B5D15B /* PyrDeepCopier.h */; };
-		DC39B2B41121FC3000B5D15B /* PyrDeepFreezer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2171121FC3000B5D15B /* PyrDeepFreezer.h */; };
-		DC39B2B51121FC3000B5D15B /* PyrErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2181121FC3000B5D15B /* PyrErrors.h */; };
-		DC39B2B61121FC3000B5D15B /* PyrFilePrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2191121FC3000B5D15B /* PyrFilePrim.h */; };
-		DC39B2B71121FC3000B5D15B /* PyrFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21A1121FC3000B5D15B /* PyrFileUtils.h */; };
-		DC39B2B81121FC3000B5D15B /* PyrInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21B1121FC3000B5D15B /* PyrInterpreter.h */; };
-		DC39B2B91121FC3000B5D15B /* PyrKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21C1121FC3000B5D15B /* PyrKernel.h */; };
-		DC39B2BA1121FC3000B5D15B /* PyrKernelProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21D1121FC3000B5D15B /* PyrKernelProto.h */; };
-		DC39B2BB1121FC3000B5D15B /* PyrLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21E1121FC3000B5D15B /* PyrLexer.h */; };
-		DC39B2BC1121FC3000B5D15B /* PyrListPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B21F1121FC3000B5D15B /* PyrListPrim.h */; };
-		DC39B2BD1121FC3000B5D15B /* PyrMathPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2201121FC3000B5D15B /* PyrMathPrim.h */; };
-		DC39B2BE1121FC3000B5D15B /* PyrMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2211121FC3000B5D15B /* PyrMessage.h */; };
-		DC39B2BF1121FC3000B5D15B /* PyrObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2221121FC3000B5D15B /* PyrObject.h */; };
-		DC39B2C01121FC3000B5D15B /* PyrObjectProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2231121FC3000B5D15B /* PyrObjectProto.h */; };
-		DC39B2C11121FC3000B5D15B /* PyrParseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2241121FC3000B5D15B /* PyrParseNode.h */; };
-		DC39B2C21121FC3000B5D15B /* PyrPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2251121FC3000B5D15B /* PyrPrimitive.h */; };
-		DC39B2C31121FC3000B5D15B /* PyrPrimitiveProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2261121FC3000B5D15B /* PyrPrimitiveProto.h */; };
-		DC39B2C41121FC3000B5D15B /* PyrSched.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2271121FC3000B5D15B /* PyrSched.h */; };
-		DC39B2C51121FC3000B5D15B /* PyrSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2281121FC3000B5D15B /* PyrSignal.h */; };
-		DC39B2C61121FC3000B5D15B /* PyrSignalPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2291121FC3000B5D15B /* PyrSignalPrim.h */; };
-		DC39B2C71121FC3000B5D15B /* PyrSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22A1121FC3000B5D15B /* PyrSlot.h */; };
-		DC39B2C81121FC3000B5D15B /* PyrSlot32.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22B1121FC3000B5D15B /* PyrSlot32.h */; };
-		DC39B2C91121FC3000B5D15B /* PyrSlot64.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22C1121FC3000B5D15B /* PyrSlot64.h */; };
-		DC39B2CA1121FC3000B5D15B /* PyrSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22D1121FC3000B5D15B /* PyrSymbol.h */; };
-		DC39B2CB1121FC3000B5D15B /* PyrSymbolTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22E1121FC3000B5D15B /* PyrSymbolTable.h */; };
-		DC39B2CC1121FC3000B5D15B /* readSamples.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B22F1121FC3000B5D15B /* readSamples.h */; };
-		DC39B2CD1121FC3000B5D15B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2301121FC3000B5D15B /* ReadWriteMacros.h */; };
-		DC39B2CE1121FC3000B5D15B /* Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2311121FC3000B5D15B /* Samp.h */; };
-		DC39B2CF1121FC3000B5D15B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2321121FC3000B5D15B /* SC_ComPort.h */; };
-		DC39B2D01121FC3000B5D15B /* SC_LanguageClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2331121FC3000B5D15B /* SC_LanguageClient.h */; };
-		DC39B2D11121FC3000B5D15B /* SC_LibraryConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2341121FC3000B5D15B /* SC_LibraryConfig.h */; };
-		DC39B2D21121FC3000B5D15B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2351121FC3000B5D15B /* SC_List.h */; };
-		DC39B2D31121FC3000B5D15B /* SC_LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2361121FC3000B5D15B /* SC_LogFile.h */; };
-		DC39B2D41121FC3000B5D15B /* SC_Msg.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2371121FC3000B5D15B /* SC_Msg.h */; };
-		DC39B2D51121FC3000B5D15B /* SC_SynthImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2381121FC3000B5D15B /* SC_SynthImpl.h */; };
-		DC39B2D61121FC3000B5D15B /* SC_TerminalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2391121FC3000B5D15B /* SC_TerminalClient.h */; };
-		DC39B2D71121FC3000B5D15B /* SC_UnorderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B23A1121FC3000B5D15B /* SC_UnorderedList.h */; };
-		DC39B2D81121FC3000B5D15B /* SCBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B23B1121FC3000B5D15B /* SCBase.h */; };
-		DC39B2D91121FC3000B5D15B /* SFHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B23C1121FC3000B5D15B /* SFHeaders.h */; };
-		DC39B2DA1121FC3000B5D15B /* SimpleStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B23D1121FC3000B5D15B /* SimpleStack.h */; };
-		DC39B2DB1121FC3000B5D15B /* VMGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B23E1121FC3000B5D15B /* VMGlobals.h */; };
-		DC39B2DC1121FC3000B5D15B /* clz.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2401121FC3000B5D15B /* clz.h */; };
-		DC39B2DD1121FC3000B5D15B /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2411121FC3000B5D15B /* Hash.h */; };
-		DC39B2DE1121FC3000B5D15B /* SC_BoundsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2421121FC3000B5D15B /* SC_BoundsMacros.h */; };
-		DC39B2DF1121FC3000B5D15B /* SC_BufGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2431121FC3000B5D15B /* SC_BufGen.h */; };
-		DC39B2E01121FC3000B5D15B /* SC_Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2441121FC3000B5D15B /* SC_Constants.h */; };
-		DC39B2E11121FC3000B5D15B /* SC_DemandUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2451121FC3000B5D15B /* SC_DemandUnit.h */; };
-		DC39B2E21121FC3000B5D15B /* SC_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2461121FC3000B5D15B /* SC_Dimension.h */; };
-		DC39B2E31121FC3000B5D15B /* SC_FifoMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2471121FC3000B5D15B /* SC_FifoMsg.h */; };
-		DC39B2E41121FC3000B5D15B /* SC_Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2481121FC3000B5D15B /* SC_Graph.h */; };
-		DC39B2E51121FC3000B5D15B /* SC_InlineBinaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2491121FC3000B5D15B /* SC_InlineBinaryOp.h */; };
-		DC39B2E61121FC3000B5D15B /* SC_InlineUnaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24A1121FC3000B5D15B /* SC_InlineUnaryOp.h */; };
-		DC39B2E71121FC3000B5D15B /* SC_InterfaceTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24B1121FC3000B5D15B /* SC_InterfaceTable.h */; };
-		DC39B2E81121FC3000B5D15B /* sc_msg_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24C1121FC3000B5D15B /* sc_msg_iter.h */; };
-		DC39B2E91121FC3000B5D15B /* SC_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24D1121FC3000B5D15B /* SC_Node.h */; };
-		DC39B2EA1121FC3000B5D15B /* SC_PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24E1121FC3000B5D15B /* SC_PlugIn.h */; };
-		DC39B2EB1121FC3000B5D15B /* SC_Rate.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B24F1121FC3000B5D15B /* SC_Rate.h */; };
-		DC39B2EC1121FC3000B5D15B /* SC_RGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2501121FC3000B5D15B /* SC_RGen.h */; };
-		DC39B2ED1121FC3000B5D15B /* SC_SndBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2511121FC3000B5D15B /* SC_SndBuf.h */; };
-		DC39B2EE1121FC3000B5D15B /* SC_sndfile_stub.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2521121FC3000B5D15B /* SC_sndfile_stub.h */; };
-		DC39B2EF1121FC3000B5D15B /* SC_Types.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2531121FC3000B5D15B /* SC_Types.h */; };
-		DC39B2F01121FC3000B5D15B /* SC_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2541121FC3000B5D15B /* SC_Unit.h */; };
-		DC39B2F11121FC3000B5D15B /* SC_Wire.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2551121FC3000B5D15B /* SC_Wire.h */; };
-		DC39B2F21121FC3000B5D15B /* SC_World.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2561121FC3000B5D15B /* SC_World.h */; };
-		DC39B2F31121FC3000B5D15B /* SC_WorldOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2571121FC3000B5D15B /* SC_WorldOptions.h */; };
-		DC39B2F41121FC3000B5D15B /* Unroll.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2581121FC3000B5D15B /* Unroll.h */; };
-		DC39B2F51121FC3000B5D15B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25A1121FC3000B5D15B /* HashTable.h */; };
-		DC39B2F61121FC3000B5D15B /* MsgFifo.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25B1121FC3000B5D15B /* MsgFifo.h */; };
-		DC39B2F71121FC3000B5D15B /* OSC_Packet.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25C1121FC3000B5D15B /* OSC_Packet.h */; };
-		DC39B2F81121FC3000B5D15B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25D1121FC3000B5D15B /* PriorityQueue.h */; };
-		DC39B2F91121FC3000B5D15B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25E1121FC3000B5D15B /* ReadWriteMacros.h */; };
-		DC39B2FA1121FC3000B5D15B /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B25F1121FC3000B5D15B /* Rendezvous.h */; };
-		DC39B2FB1121FC3000B5D15B /* SC_AU.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2601121FC3000B5D15B /* SC_AU.h */; };
-		DC39B2FC1121FC3000B5D15B /* SC_Complex.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2611121FC3000B5D15B /* SC_Complex.h */; };
-		DC39B2FD1121FC3000B5D15B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2621121FC3000B5D15B /* SC_ComPort.h */; };
-		DC39B2FE1121FC3000B5D15B /* SC_CoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2631121FC3000B5D15B /* SC_CoreAudio.h */; };
-		DC39B2FF1121FC3000B5D15B /* SC_Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2641121FC3000B5D15B /* SC_Errors.h */; };
-		DC39B3001121FC3000B5D15B /* SC_GraphDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2651121FC3000B5D15B /* SC_GraphDef.h */; };
-		DC39B3011121FC3000B5D15B /* SC_Group.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2661121FC3000B5D15B /* SC_Group.h */; };
-		DC39B3021121FC3000B5D15B /* SC_HiddenWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2671121FC3000B5D15B /* SC_HiddenWorld.h */; };
-		DC39B3031121FC3000B5D15B /* SC_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2681121FC3000B5D15B /* SC_Lib.h */; };
-		DC39B3041121FC3000B5D15B /* SC_Lib_Cintf.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2691121FC3000B5D15B /* SC_Lib_Cintf.h */; };
-		DC39B3051121FC3000B5D15B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26A1121FC3000B5D15B /* SC_List.h */; };
-		DC39B3061121FC3000B5D15B /* SC_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26B1121FC3000B5D15B /* SC_Lock.h */; };
-		DC39B3071121FC3000B5D15B /* SC_Prototypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26C1121FC3000B5D15B /* SC_Prototypes.h */; };
-		DC39B3081121FC3000B5D15B /* SC_Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26D1121FC3000B5D15B /* SC_Samp.h */; };
-		DC39B3091121FC3000B5D15B /* SC_SequencedCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26E1121FC3000B5D15B /* SC_SequencedCommand.h */; };
-		DC39B30A1121FC3000B5D15B /* SC_Str4.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B26F1121FC3000B5D15B /* SC_Str4.h */; };
-		DC39B30B1121FC3000B5D15B /* SC_SyncCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2701121FC3000B5D15B /* SC_SyncCondition.h */; };
-		DC39B30C1121FC3000B5D15B /* SC_SynthDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2711121FC3000B5D15B /* SC_SynthDef.h */; };
-		DC39B30D1121FC3000B5D15B /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2721121FC3000B5D15B /* SC_UnitDef.h */; };
-		DC39B30E1121FC3000B5D15B /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2731121FC3000B5D15B /* SC_UnitSpec.h */; };
-		DC39B30F1121FC3000B5D15B /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC39B2741121FC3000B5D15B /* SC_WireSpec.h */; };
+		DC1231751125C4B900236527 /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D31125C4B900236527 /* ChangeCounter.h */; };
+		DC1231761125C4B900236527 /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D41125C4B900236527 /* ControlSpec.h */; };
+		DC1231771125C4B900236527 /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D51125C4B900236527 /* DrawBackground.h */; };
+		DC1231781125C4B900236527 /* GetStringFromUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D61125C4B900236527 /* GetStringFromUser.h */; };
+		DC1231791125C4B900236527 /* GoToPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D71125C4B900236527 /* GoToPanel.h */; };
+		DC12317A1125C4B900236527 /* HTMLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230D81125C4B900236527 /* HTMLRenderer.h */; };
+		DC12317B1125C4B900236527 /* iPhoneSCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DA1125C4B900236527 /* iPhoneSCGraphView.h */; };
+		DC12317C1125C4B900236527 /* iPhoneSCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DB1125C4B900236527 /* iPhoneSCView.h */; };
+		DC12317D1125C4B900236527 /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DC1125C4B900236527 /* MyDocument.h */; };
+		DC12317E1125C4B900236527 /* RendezvousClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DD1125C4B900236527 /* RendezvousClient.h */; };
+		DC12317F1125C4B900236527 /* SCCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DE1125C4B900236527 /* SCCocoaView.h */; };
+		DC1231801125C4B900236527 /* SCDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230DF1125C4B900236527 /* SCDialog.h */; };
+		DC1231811125C4B900236527 /* SCGeom.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E01125C4B900236527 /* SCGeom.h */; };
+		DC1231821125C4B900236527 /* SCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E11125C4B900236527 /* SCGraphView.h */; };
+		DC1231831125C4B900236527 /* SCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E21125C4B900236527 /* SCImage.h */; };
+		DC1231841125C4B900236527 /* SCNSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E31125C4B900236527 /* SCNSWindow.h */; };
+		DC1231851125C4B900236527 /* SCService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E41125C4B900236527 /* SCService.h */; };
+		DC1231861125C4B900236527 /* SCSoundFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E51125C4B900236527 /* SCSoundFileView.h */; };
+		DC1231871125C4B900236527 /* SCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E61125C4B900236527 /* SCTextView.h */; };
+		DC1231881125C4B900236527 /* SCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E71125C4B900236527 /* SCView.h */; };
+		DC1231891125C4B900236527 /* SCVirtualMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230E81125C4B900236527 /* SCVirtualMachine.h */; };
+		DC12318A1125C4B900236527 /* ICUMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230EB1125C4B900236527 /* ICUMatcher.h */; };
+		DC12318B1125C4B900236527 /* ICUPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230EC1125C4B900236527 /* ICUPattern.h */; };
+		DC12318C1125C4B900236527 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC1230ED1125C4B900236527 /* LICENSE.txt */; };
+		DC12318D1125C4B900236527 /* NSStringICUAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230EE1125C4B900236527 /* NSStringICUAdditions.h */; };
+		DC12318E1125C4B900236527 /* SMLAdvancedFindController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230EF1125C4B900236527 /* SMLAdvancedFindController.h */; };
+		DC12318F1125C4B900236527 /* SMLStatusBarTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F01125C4B900236527 /* SMLStatusBarTextFieldCell.h */; };
+		DC1231901125C4B900236527 /* TabletEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F11125C4B900236527 /* TabletEvents.h */; };
+		DC1231911125C4B900236527 /* TextFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F21125C4B900236527 /* TextFinder.h */; };
+		DC1231921125C4B900236527 /* UserPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F31125C4B900236527 /* UserPanel.h */; };
+		DC1231931125C4B900236527 /* dfftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F51125C4B900236527 /* dfftlib.h */; };
+		DC1231941125C4B900236527 /* fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F61125C4B900236527 /* fftlib.h */; };
+		DC1231951125C4B900236527 /* SC_AllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F71125C4B900236527 /* SC_AllocPool.h */; };
+		DC1231961125C4B900236527 /* SC_Altivec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F81125C4B900236527 /* SC_Altivec.h */; };
+		DC1231971125C4B900236527 /* SC_DirUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230F91125C4B900236527 /* SC_DirUtils.h */; };
+		DC1231981125C4B900236527 /* SC_Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FA1125C4B900236527 /* SC_Endian.h */; };
+		DC1231991125C4B900236527 /* SC_fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FB1125C4B900236527 /* SC_fftlib.h */; };
+		DC12319A1125C4B900236527 /* SC_FIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FC1125C4B900236527 /* SC_FIFO.h */; };
+		DC12319B1125C4B900236527 /* sc_popen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FD1125C4B900236527 /* sc_popen.h */; };
+		DC12319C1125C4B900236527 /* SC_Reply.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FE1125C4B900236527 /* SC_Reply.h */; };
+		DC12319D1125C4B900236527 /* SC_Sem.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230FF1125C4B900236527 /* SC_Sem.h */; };
+		DC12319E1125C4B900236527 /* SC_StandAloneInfo_Darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231001125C4B900236527 /* SC_StandAloneInfo_Darwin.h */; };
+		DC12319F1125C4B900236527 /* SC_StringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231011125C4B900236527 /* SC_StringBuffer.h */; };
+		DC1231A01125C4B900236527 /* SC_StringParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231021125C4B900236527 /* SC_StringParser.h */; };
+		DC1231A11125C4B900236527 /* SC_VFP11.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231031125C4B900236527 /* SC_VFP11.h */; };
+		DC1231A21125C4B900236527 /* SC_Win32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231041125C4B900236527 /* SC_Win32Utils.h */; };
+		DC1231A31125C4B900236527 /* scsynthsend.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231051125C4B900236527 /* scsynthsend.h */; };
+		DC1231A41125C4B900236527 /* AdvancingAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231071125C4B900236527 /* AdvancingAllocPool.h */; };
+		DC1231A51125C4B900236527 /* AllocPools.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231081125C4B900236527 /* AllocPools.h */; };
+		DC1231A61125C4B900236527 /* bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231091125C4B900236527 /* bullet.h */; };
+		DC1231A71125C4B900236527 /* ByteCodeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310A1125C4B900236527 /* ByteCodeArray.h */; };
+		DC1231A81125C4B900236527 /* FIFOT.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310B1125C4B900236527 /* FIFOT.h */; };
+		DC1231A91125C4B900236527 /* GC.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310C1125C4B900236527 /* GC.h */; };
+		DC1231AA1125C4B900236527 /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310D1125C4B900236527 /* HashTable.h */; };
+		DC1231AB1125C4B900236527 /* InitAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310E1125C4B900236527 /* InitAlloc.h */; };
+		DC1231AC1125C4B900236527 /* MiscInlineMath.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12310F1125C4B900236527 /* MiscInlineMath.h */; };
+		DC1231AD1125C4B900236527 /* Opcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231101125C4B900236527 /* Opcodes.h */; };
+		DC1231AE1125C4B900236527 /* OSCData.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231111125C4B900236527 /* OSCData.h */; };
+		DC1231AF1125C4B900236527 /* PowerOfTwoAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231121125C4B900236527 /* PowerOfTwoAllocPool.h */; };
+		DC1231B01125C4B900236527 /* PredefinedSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231131125C4B900236527 /* PredefinedSymbols.h */; };
+		DC1231B11125C4B900236527 /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231141125C4B900236527 /* PriorityQueue.h */; };
+		DC1231B21125C4B900236527 /* PyrArchiverT.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231151125C4B900236527 /* PyrArchiverT.h */; };
+		DC1231B31125C4B900236527 /* PyrDeepCopier.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231161125C4B900236527 /* PyrDeepCopier.h */; };
+		DC1231B41125C4B900236527 /* PyrDeepFreezer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231171125C4B900236527 /* PyrDeepFreezer.h */; };
+		DC1231B51125C4B900236527 /* PyrErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231181125C4B900236527 /* PyrErrors.h */; };
+		DC1231B61125C4B900236527 /* PyrFilePrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231191125C4B900236527 /* PyrFilePrim.h */; };
+		DC1231B71125C4B900236527 /* PyrFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311A1125C4B900236527 /* PyrFileUtils.h */; };
+		DC1231B81125C4B900236527 /* PyrInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311B1125C4B900236527 /* PyrInterpreter.h */; };
+		DC1231B91125C4B900236527 /* PyrKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311C1125C4B900236527 /* PyrKernel.h */; };
+		DC1231BA1125C4B900236527 /* PyrKernelProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311D1125C4B900236527 /* PyrKernelProto.h */; };
+		DC1231BB1125C4B900236527 /* PyrLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311E1125C4B900236527 /* PyrLexer.h */; };
+		DC1231BC1125C4B900236527 /* PyrListPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12311F1125C4B900236527 /* PyrListPrim.h */; };
+		DC1231BD1125C4B900236527 /* PyrMathPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231201125C4B900236527 /* PyrMathPrim.h */; };
+		DC1231BE1125C4B900236527 /* PyrMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231211125C4B900236527 /* PyrMessage.h */; };
+		DC1231BF1125C4B900236527 /* PyrObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231221125C4B900236527 /* PyrObject.h */; };
+		DC1231C01125C4B900236527 /* PyrObjectProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231231125C4B900236527 /* PyrObjectProto.h */; };
+		DC1231C11125C4B900236527 /* PyrParseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231241125C4B900236527 /* PyrParseNode.h */; };
+		DC1231C21125C4B900236527 /* PyrPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231251125C4B900236527 /* PyrPrimitive.h */; };
+		DC1231C31125C4B900236527 /* PyrPrimitiveProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231261125C4B900236527 /* PyrPrimitiveProto.h */; };
+		DC1231C41125C4B900236527 /* PyrSched.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231271125C4B900236527 /* PyrSched.h */; };
+		DC1231C51125C4B900236527 /* PyrSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231281125C4B900236527 /* PyrSignal.h */; };
+		DC1231C61125C4B900236527 /* PyrSignalPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231291125C4B900236527 /* PyrSignalPrim.h */; };
+		DC1231C71125C4B900236527 /* PyrSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312A1125C4B900236527 /* PyrSlot.h */; };
+		DC1231C81125C4B900236527 /* PyrSlot32.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312B1125C4B900236527 /* PyrSlot32.h */; };
+		DC1231C91125C4B900236527 /* PyrSlot64.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312C1125C4B900236527 /* PyrSlot64.h */; };
+		DC1231CA1125C4B900236527 /* PyrSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312D1125C4B900236527 /* PyrSymbol.h */; };
+		DC1231CB1125C4B900236527 /* PyrSymbolTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312E1125C4B900236527 /* PyrSymbolTable.h */; };
+		DC1231CC1125C4B900236527 /* readSamples.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12312F1125C4B900236527 /* readSamples.h */; };
+		DC1231CD1125C4B900236527 /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231301125C4B900236527 /* ReadWriteMacros.h */; };
+		DC1231CE1125C4B900236527 /* Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231311125C4B900236527 /* Samp.h */; };
+		DC1231CF1125C4B900236527 /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231321125C4B900236527 /* SC_ComPort.h */; };
+		DC1231D01125C4B900236527 /* SC_LanguageClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231331125C4B900236527 /* SC_LanguageClient.h */; };
+		DC1231D11125C4B900236527 /* SC_LibraryConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231341125C4B900236527 /* SC_LibraryConfig.h */; };
+		DC1231D21125C4B900236527 /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231351125C4B900236527 /* SC_List.h */; };
+		DC1231D31125C4B900236527 /* SC_LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231361125C4B900236527 /* SC_LogFile.h */; };
+		DC1231D41125C4B900236527 /* SC_Msg.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231371125C4B900236527 /* SC_Msg.h */; };
+		DC1231D51125C4B900236527 /* SC_SynthImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231381125C4B900236527 /* SC_SynthImpl.h */; };
+		DC1231D61125C4B900236527 /* SC_TerminalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231391125C4B900236527 /* SC_TerminalClient.h */; };
+		DC1231D71125C4B900236527 /* SC_UnorderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12313A1125C4B900236527 /* SC_UnorderedList.h */; };
+		DC1231D81125C4B900236527 /* SCBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12313B1125C4B900236527 /* SCBase.h */; };
+		DC1231D91125C4B900236527 /* SFHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12313C1125C4B900236527 /* SFHeaders.h */; };
+		DC1231DA1125C4B900236527 /* SimpleStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12313D1125C4B900236527 /* SimpleStack.h */; };
+		DC1231DB1125C4B900236527 /* VMGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12313E1125C4B900236527 /* VMGlobals.h */; };
+		DC1231DC1125C4B900236527 /* clz.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231401125C4B900236527 /* clz.h */; };
+		DC1231DD1125C4B900236527 /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231411125C4B900236527 /* Hash.h */; };
+		DC1231DE1125C4B900236527 /* SC_BoundsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231421125C4B900236527 /* SC_BoundsMacros.h */; };
+		DC1231DF1125C4B900236527 /* SC_BufGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231431125C4B900236527 /* SC_BufGen.h */; };
+		DC1231E01125C4B900236527 /* SC_Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231441125C4B900236527 /* SC_Constants.h */; };
+		DC1231E11125C4B900236527 /* SC_DemandUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231451125C4B900236527 /* SC_DemandUnit.h */; };
+		DC1231E21125C4B900236527 /* SC_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231461125C4B900236527 /* SC_Dimension.h */; };
+		DC1231E31125C4B900236527 /* SC_FifoMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231471125C4B900236527 /* SC_FifoMsg.h */; };
+		DC1231E41125C4B900236527 /* SC_Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231481125C4B900236527 /* SC_Graph.h */; };
+		DC1231E51125C4B900236527 /* SC_InlineBinaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231491125C4B900236527 /* SC_InlineBinaryOp.h */; };
+		DC1231E61125C4B900236527 /* SC_InlineUnaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314A1125C4B900236527 /* SC_InlineUnaryOp.h */; };
+		DC1231E71125C4B900236527 /* SC_InterfaceTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314B1125C4B900236527 /* SC_InterfaceTable.h */; };
+		DC1231E81125C4B900236527 /* sc_msg_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314C1125C4B900236527 /* sc_msg_iter.h */; };
+		DC1231E91125C4B900236527 /* SC_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314D1125C4B900236527 /* SC_Node.h */; };
+		DC1231EA1125C4B900236527 /* SC_PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314E1125C4B900236527 /* SC_PlugIn.h */; };
+		DC1231EB1125C4B900236527 /* SC_Rate.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12314F1125C4B900236527 /* SC_Rate.h */; };
+		DC1231EC1125C4B900236527 /* SC_RGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231501125C4B900236527 /* SC_RGen.h */; };
+		DC1231ED1125C4B900236527 /* SC_SndBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231511125C4B900236527 /* SC_SndBuf.h */; };
+		DC1231EE1125C4B900236527 /* SC_sndfile_stub.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231521125C4B900236527 /* SC_sndfile_stub.h */; };
+		DC1231EF1125C4B900236527 /* SC_Types.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231531125C4B900236527 /* SC_Types.h */; };
+		DC1231F01125C4B900236527 /* SC_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231541125C4B900236527 /* SC_Unit.h */; };
+		DC1231F11125C4B900236527 /* SC_Wire.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231551125C4B900236527 /* SC_Wire.h */; };
+		DC1231F21125C4B900236527 /* SC_World.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231561125C4B900236527 /* SC_World.h */; };
+		DC1231F31125C4B900236527 /* SC_WorldOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231571125C4B900236527 /* SC_WorldOptions.h */; };
+		DC1231F41125C4B900236527 /* Unroll.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231581125C4B900236527 /* Unroll.h */; };
+		DC1231F51125C4B900236527 /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315A1125C4B900236527 /* HashTable.h */; };
+		DC1231F61125C4B900236527 /* MsgFifo.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315B1125C4B900236527 /* MsgFifo.h */; };
+		DC1231F71125C4B900236527 /* OSC_Packet.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315C1125C4B900236527 /* OSC_Packet.h */; };
+		DC1231F81125C4B900236527 /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315D1125C4B900236527 /* PriorityQueue.h */; };
+		DC1231F91125C4B900236527 /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315E1125C4B900236527 /* ReadWriteMacros.h */; };
+		DC1231FA1125C4B900236527 /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12315F1125C4B900236527 /* Rendezvous.h */; };
+		DC1231FB1125C4B900236527 /* SC_AU.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231601125C4B900236527 /* SC_AU.h */; };
+		DC1231FC1125C4B900236527 /* SC_Complex.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231611125C4B900236527 /* SC_Complex.h */; };
+		DC1231FD1125C4B900236527 /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231621125C4B900236527 /* SC_ComPort.h */; };
+		DC1231FE1125C4B900236527 /* SC_CoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231631125C4B900236527 /* SC_CoreAudio.h */; };
+		DC1231FF1125C4B900236527 /* SC_Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231641125C4B900236527 /* SC_Errors.h */; };
+		DC1232001125C4B900236527 /* SC_GraphDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231651125C4B900236527 /* SC_GraphDef.h */; };
+		DC1232011125C4B900236527 /* SC_Group.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231661125C4B900236527 /* SC_Group.h */; };
+		DC1232021125C4B900236527 /* SC_HiddenWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231671125C4B900236527 /* SC_HiddenWorld.h */; };
+		DC1232031125C4B900236527 /* SC_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231681125C4B900236527 /* SC_Lib.h */; };
+		DC1232041125C4B900236527 /* SC_Lib_Cintf.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231691125C4B900236527 /* SC_Lib_Cintf.h */; };
+		DC1232051125C4B900236527 /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316A1125C4B900236527 /* SC_List.h */; };
+		DC1232061125C4B900236527 /* SC_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316B1125C4B900236527 /* SC_Lock.h */; };
+		DC1232071125C4B900236527 /* SC_Prototypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316C1125C4B900236527 /* SC_Prototypes.h */; };
+		DC1232081125C4B900236527 /* SC_Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316D1125C4B900236527 /* SC_Samp.h */; };
+		DC1232091125C4B900236527 /* SC_SequencedCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316E1125C4B900236527 /* SC_SequencedCommand.h */; };
+		DC12320A1125C4B900236527 /* SC_Str4.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12316F1125C4B900236527 /* SC_Str4.h */; };
+		DC12320B1125C4B900236527 /* SC_SyncCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231701125C4B900236527 /* SC_SyncCondition.h */; };
+		DC12320C1125C4B900236527 /* SC_SynthDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231711125C4B900236527 /* SC_SynthDef.h */; };
+		DC12320D1125C4B900236527 /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231721125C4B900236527 /* SC_UnitDef.h */; };
+		DC12320E1125C4B900236527 /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231731125C4B900236527 /* SC_UnitSpec.h */; };
+		DC12320F1125C4B900236527 /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1231741125C4B900236527 /* SC_WireSpec.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,161 +173,161 @@
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.mantissamask~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.mantissamask~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
-		DC39B1D31121FC3000B5D15B /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCounter.h; sourceTree = "<group>"; };
-		DC39B1D41121FC3000B5D15B /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpec.h; sourceTree = "<group>"; };
-		DC39B1D51121FC3000B5D15B /* DrawBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBackground.h; sourceTree = "<group>"; };
-		DC39B1D61121FC3000B5D15B /* GetStringFromUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetStringFromUser.h; sourceTree = "<group>"; };
-		DC39B1D71121FC3000B5D15B /* GoToPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoToPanel.h; sourceTree = "<group>"; };
-		DC39B1D81121FC3000B5D15B /* HTMLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLRenderer.h; sourceTree = "<group>"; };
-		DC39B1DA1121FC3000B5D15B /* iPhoneSCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCGraphView.h; sourceTree = "<group>"; };
-		DC39B1DB1121FC3000B5D15B /* iPhoneSCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCView.h; sourceTree = "<group>"; };
-		DC39B1DC1121FC3000B5D15B /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
-		DC39B1DD1121FC3000B5D15B /* RendezvousClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendezvousClient.h; sourceTree = "<group>"; };
-		DC39B1DE1121FC3000B5D15B /* SCCocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCocoaView.h; sourceTree = "<group>"; };
-		DC39B1DF1121FC3000B5D15B /* SCDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDialog.h; sourceTree = "<group>"; };
-		DC39B1E01121FC3000B5D15B /* SCGeom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGeom.h; sourceTree = "<group>"; };
-		DC39B1E11121FC3000B5D15B /* SCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGraphView.h; sourceTree = "<group>"; };
-		DC39B1E21121FC3000B5D15B /* SCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImage.h; sourceTree = "<group>"; };
-		DC39B1E31121FC3000B5D15B /* SCNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNSWindow.h; sourceTree = "<group>"; };
-		DC39B1E41121FC3000B5D15B /* SCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCService.h; sourceTree = "<group>"; };
-		DC39B1E51121FC3000B5D15B /* SCSoundFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSoundFileView.h; sourceTree = "<group>"; };
-		DC39B1E61121FC3000B5D15B /* SCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextView.h; sourceTree = "<group>"; };
-		DC39B1E71121FC3000B5D15B /* SCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCView.h; sourceTree = "<group>"; };
-		DC39B1E81121FC3000B5D15B /* SCVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVirtualMachine.h; sourceTree = "<group>"; };
-		DC39B1EB1121FC3000B5D15B /* ICUMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUMatcher.h; sourceTree = "<group>"; };
-		DC39B1EC1121FC3000B5D15B /* ICUPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUPattern.h; sourceTree = "<group>"; };
-		DC39B1ED1121FC3000B5D15B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		DC39B1EE1121FC3000B5D15B /* NSStringICUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringICUAdditions.h; sourceTree = "<group>"; };
-		DC39B1EF1121FC3000B5D15B /* SMLAdvancedFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAdvancedFindController.h; sourceTree = "<group>"; };
-		DC39B1F01121FC3000B5D15B /* SMLStatusBarTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStatusBarTextFieldCell.h; sourceTree = "<group>"; };
-		DC39B1F11121FC3000B5D15B /* TabletEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabletEvents.h; sourceTree = "<group>"; };
-		DC39B1F21121FC3000B5D15B /* TextFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFinder.h; sourceTree = "<group>"; };
-		DC39B1F31121FC3000B5D15B /* UserPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPanel.h; sourceTree = "<group>"; };
-		DC39B1F51121FC3000B5D15B /* dfftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfftlib.h; sourceTree = "<group>"; };
-		DC39B1F61121FC3000B5D15B /* fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftlib.h; sourceTree = "<group>"; };
-		DC39B1F71121FC3000B5D15B /* SC_AllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AllocPool.h; sourceTree = "<group>"; };
-		DC39B1F81121FC3000B5D15B /* SC_Altivec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Altivec.h; sourceTree = "<group>"; };
-		DC39B1F91121FC3000B5D15B /* SC_DirUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DirUtils.h; sourceTree = "<group>"; };
-		DC39B1FA1121FC3000B5D15B /* SC_Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Endian.h; sourceTree = "<group>"; };
-		DC39B1FB1121FC3000B5D15B /* SC_fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_fftlib.h; sourceTree = "<group>"; };
-		DC39B1FC1121FC3000B5D15B /* SC_FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FIFO.h; sourceTree = "<group>"; };
-		DC39B1FD1121FC3000B5D15B /* sc_popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_popen.h; sourceTree = "<group>"; };
-		DC39B1FE1121FC3000B5D15B /* SC_Reply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Reply.h; sourceTree = "<group>"; };
-		DC39B1FF1121FC3000B5D15B /* SC_Sem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Sem.h; sourceTree = "<group>"; };
-		DC39B2001121FC3000B5D15B /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StandAloneInfo_Darwin.h; sourceTree = "<group>"; };
-		DC39B2011121FC3000B5D15B /* SC_StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringBuffer.h; sourceTree = "<group>"; };
-		DC39B2021121FC3000B5D15B /* SC_StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringParser.h; sourceTree = "<group>"; };
-		DC39B2031121FC3000B5D15B /* SC_VFP11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_VFP11.h; sourceTree = "<group>"; };
-		DC39B2041121FC3000B5D15B /* SC_Win32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Win32Utils.h; sourceTree = "<group>"; };
-		DC39B2051121FC3000B5D15B /* scsynthsend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scsynthsend.h; sourceTree = "<group>"; };
-		DC39B2071121FC3000B5D15B /* AdvancingAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancingAllocPool.h; sourceTree = "<group>"; };
-		DC39B2081121FC3000B5D15B /* AllocPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllocPools.h; sourceTree = "<group>"; };
-		DC39B2091121FC3000B5D15B /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
-		DC39B20A1121FC3000B5D15B /* ByteCodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteCodeArray.h; sourceTree = "<group>"; };
-		DC39B20B1121FC3000B5D15B /* FIFOT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOT.h; sourceTree = "<group>"; };
-		DC39B20C1121FC3000B5D15B /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC.h; sourceTree = "<group>"; };
-		DC39B20D1121FC3000B5D15B /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
-		DC39B20E1121FC3000B5D15B /* InitAlloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitAlloc.h; sourceTree = "<group>"; };
-		DC39B20F1121FC3000B5D15B /* MiscInlineMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscInlineMath.h; sourceTree = "<group>"; };
-		DC39B2101121FC3000B5D15B /* Opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opcodes.h; sourceTree = "<group>"; };
-		DC39B2111121FC3000B5D15B /* OSCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCData.h; sourceTree = "<group>"; };
-		DC39B2121121FC3000B5D15B /* PowerOfTwoAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerOfTwoAllocPool.h; sourceTree = "<group>"; };
-		DC39B2131121FC3000B5D15B /* PredefinedSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredefinedSymbols.h; sourceTree = "<group>"; };
-		DC39B2141121FC3000B5D15B /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
-		DC39B2151121FC3000B5D15B /* PyrArchiverT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrArchiverT.h; sourceTree = "<group>"; };
-		DC39B2161121FC3000B5D15B /* PyrDeepCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepCopier.h; sourceTree = "<group>"; };
-		DC39B2171121FC3000B5D15B /* PyrDeepFreezer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepFreezer.h; sourceTree = "<group>"; };
-		DC39B2181121FC3000B5D15B /* PyrErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrErrors.h; sourceTree = "<group>"; };
-		DC39B2191121FC3000B5D15B /* PyrFilePrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFilePrim.h; sourceTree = "<group>"; };
-		DC39B21A1121FC3000B5D15B /* PyrFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFileUtils.h; sourceTree = "<group>"; };
-		DC39B21B1121FC3000B5D15B /* PyrInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrInterpreter.h; sourceTree = "<group>"; };
-		DC39B21C1121FC3000B5D15B /* PyrKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernel.h; sourceTree = "<group>"; };
-		DC39B21D1121FC3000B5D15B /* PyrKernelProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernelProto.h; sourceTree = "<group>"; };
-		DC39B21E1121FC3000B5D15B /* PyrLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrLexer.h; sourceTree = "<group>"; };
-		DC39B21F1121FC3000B5D15B /* PyrListPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrListPrim.h; sourceTree = "<group>"; };
-		DC39B2201121FC3000B5D15B /* PyrMathPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMathPrim.h; sourceTree = "<group>"; };
-		DC39B2211121FC3000B5D15B /* PyrMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMessage.h; sourceTree = "<group>"; };
-		DC39B2221121FC3000B5D15B /* PyrObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObject.h; sourceTree = "<group>"; };
-		DC39B2231121FC3000B5D15B /* PyrObjectProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObjectProto.h; sourceTree = "<group>"; };
-		DC39B2241121FC3000B5D15B /* PyrParseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrParseNode.h; sourceTree = "<group>"; };
-		DC39B2251121FC3000B5D15B /* PyrPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitive.h; sourceTree = "<group>"; };
-		DC39B2261121FC3000B5D15B /* PyrPrimitiveProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitiveProto.h; sourceTree = "<group>"; };
-		DC39B2271121FC3000B5D15B /* PyrSched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSched.h; sourceTree = "<group>"; };
-		DC39B2281121FC3000B5D15B /* PyrSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignal.h; sourceTree = "<group>"; };
-		DC39B2291121FC3000B5D15B /* PyrSignalPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignalPrim.h; sourceTree = "<group>"; };
-		DC39B22A1121FC3000B5D15B /* PyrSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot.h; sourceTree = "<group>"; };
-		DC39B22B1121FC3000B5D15B /* PyrSlot32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot32.h; sourceTree = "<group>"; };
-		DC39B22C1121FC3000B5D15B /* PyrSlot64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot64.h; sourceTree = "<group>"; };
-		DC39B22D1121FC3000B5D15B /* PyrSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbol.h; sourceTree = "<group>"; };
-		DC39B22E1121FC3000B5D15B /* PyrSymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbolTable.h; sourceTree = "<group>"; };
-		DC39B22F1121FC3000B5D15B /* readSamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readSamples.h; sourceTree = "<group>"; };
-		DC39B2301121FC3000B5D15B /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
-		DC39B2311121FC3000B5D15B /* Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samp.h; sourceTree = "<group>"; };
-		DC39B2321121FC3000B5D15B /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
-		DC39B2331121FC3000B5D15B /* SC_LanguageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LanguageClient.h; sourceTree = "<group>"; };
-		DC39B2341121FC3000B5D15B /* SC_LibraryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LibraryConfig.h; sourceTree = "<group>"; };
-		DC39B2351121FC3000B5D15B /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
-		DC39B2361121FC3000B5D15B /* SC_LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LogFile.h; sourceTree = "<group>"; };
-		DC39B2371121FC3000B5D15B /* SC_Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Msg.h; sourceTree = "<group>"; };
-		DC39B2381121FC3000B5D15B /* SC_SynthImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthImpl.h; sourceTree = "<group>"; };
-		DC39B2391121FC3000B5D15B /* SC_TerminalClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_TerminalClient.h; sourceTree = "<group>"; };
-		DC39B23A1121FC3000B5D15B /* SC_UnorderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnorderedList.h; sourceTree = "<group>"; };
-		DC39B23B1121FC3000B5D15B /* SCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBase.h; sourceTree = "<group>"; };
-		DC39B23C1121FC3000B5D15B /* SFHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHeaders.h; sourceTree = "<group>"; };
-		DC39B23D1121FC3000B5D15B /* SimpleStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleStack.h; sourceTree = "<group>"; };
-		DC39B23E1121FC3000B5D15B /* VMGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMGlobals.h; sourceTree = "<group>"; };
-		DC39B2401121FC3000B5D15B /* clz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clz.h; sourceTree = "<group>"; };
-		DC39B2411121FC3000B5D15B /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
-		DC39B2421121FC3000B5D15B /* SC_BoundsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BoundsMacros.h; sourceTree = "<group>"; };
-		DC39B2431121FC3000B5D15B /* SC_BufGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BufGen.h; sourceTree = "<group>"; };
-		DC39B2441121FC3000B5D15B /* SC_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Constants.h; sourceTree = "<group>"; };
-		DC39B2451121FC3000B5D15B /* SC_DemandUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DemandUnit.h; sourceTree = "<group>"; };
-		DC39B2461121FC3000B5D15B /* SC_Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Dimension.h; sourceTree = "<group>"; };
-		DC39B2471121FC3000B5D15B /* SC_FifoMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FifoMsg.h; sourceTree = "<group>"; };
-		DC39B2481121FC3000B5D15B /* SC_Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Graph.h; sourceTree = "<group>"; };
-		DC39B2491121FC3000B5D15B /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineBinaryOp.h; sourceTree = "<group>"; };
-		DC39B24A1121FC3000B5D15B /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineUnaryOp.h; sourceTree = "<group>"; };
-		DC39B24B1121FC3000B5D15B /* SC_InterfaceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InterfaceTable.h; sourceTree = "<group>"; };
-		DC39B24C1121FC3000B5D15B /* sc_msg_iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_msg_iter.h; sourceTree = "<group>"; };
-		DC39B24D1121FC3000B5D15B /* SC_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Node.h; sourceTree = "<group>"; };
-		DC39B24E1121FC3000B5D15B /* SC_PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_PlugIn.h; sourceTree = "<group>"; };
-		DC39B24F1121FC3000B5D15B /* SC_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Rate.h; sourceTree = "<group>"; };
-		DC39B2501121FC3000B5D15B /* SC_RGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_RGen.h; sourceTree = "<group>"; };
-		DC39B2511121FC3000B5D15B /* SC_SndBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SndBuf.h; sourceTree = "<group>"; };
-		DC39B2521121FC3000B5D15B /* SC_sndfile_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_sndfile_stub.h; sourceTree = "<group>"; };
-		DC39B2531121FC3000B5D15B /* SC_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Types.h; sourceTree = "<group>"; };
-		DC39B2541121FC3000B5D15B /* SC_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Unit.h; sourceTree = "<group>"; };
-		DC39B2551121FC3000B5D15B /* SC_Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Wire.h; sourceTree = "<group>"; };
-		DC39B2561121FC3000B5D15B /* SC_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_World.h; sourceTree = "<group>"; };
-		DC39B2571121FC3000B5D15B /* SC_WorldOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WorldOptions.h; sourceTree = "<group>"; };
-		DC39B2581121FC3000B5D15B /* Unroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unroll.h; sourceTree = "<group>"; };
-		DC39B25A1121FC3000B5D15B /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
-		DC39B25B1121FC3000B5D15B /* MsgFifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgFifo.h; sourceTree = "<group>"; };
-		DC39B25C1121FC3000B5D15B /* OSC_Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSC_Packet.h; sourceTree = "<group>"; };
-		DC39B25D1121FC3000B5D15B /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
-		DC39B25E1121FC3000B5D15B /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
-		DC39B25F1121FC3000B5D15B /* Rendezvous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
-		DC39B2601121FC3000B5D15B /* SC_AU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AU.h; sourceTree = "<group>"; };
-		DC39B2611121FC3000B5D15B /* SC_Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Complex.h; sourceTree = "<group>"; };
-		DC39B2621121FC3000B5D15B /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
-		DC39B2631121FC3000B5D15B /* SC_CoreAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_CoreAudio.h; sourceTree = "<group>"; };
-		DC39B2641121FC3000B5D15B /* SC_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Errors.h; sourceTree = "<group>"; };
-		DC39B2651121FC3000B5D15B /* SC_GraphDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_GraphDef.h; sourceTree = "<group>"; };
-		DC39B2661121FC3000B5D15B /* SC_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Group.h; sourceTree = "<group>"; };
-		DC39B2671121FC3000B5D15B /* SC_HiddenWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_HiddenWorld.h; sourceTree = "<group>"; };
-		DC39B2681121FC3000B5D15B /* SC_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib.h; sourceTree = "<group>"; };
-		DC39B2691121FC3000B5D15B /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib_Cintf.h; sourceTree = "<group>"; };
-		DC39B26A1121FC3000B5D15B /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
-		DC39B26B1121FC3000B5D15B /* SC_Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lock.h; sourceTree = "<group>"; };
-		DC39B26C1121FC3000B5D15B /* SC_Prototypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Prototypes.h; sourceTree = "<group>"; };
-		DC39B26D1121FC3000B5D15B /* SC_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Samp.h; sourceTree = "<group>"; };
-		DC39B26E1121FC3000B5D15B /* SC_SequencedCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SequencedCommand.h; sourceTree = "<group>"; };
-		DC39B26F1121FC3000B5D15B /* SC_Str4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Str4.h; sourceTree = "<group>"; };
-		DC39B2701121FC3000B5D15B /* SC_SyncCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SyncCondition.h; sourceTree = "<group>"; };
-		DC39B2711121FC3000B5D15B /* SC_SynthDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthDef.h; sourceTree = "<group>"; };
-		DC39B2721121FC3000B5D15B /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitDef.h; sourceTree = "<group>"; };
-		DC39B2731121FC3000B5D15B /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitSpec.h; sourceTree = "<group>"; };
-		DC39B2741121FC3000B5D15B /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WireSpec.h; sourceTree = "<group>"; };
+		DC1230D31125C4B900236527 /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCounter.h; sourceTree = "<group>"; };
+		DC1230D41125C4B900236527 /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpec.h; sourceTree = "<group>"; };
+		DC1230D51125C4B900236527 /* DrawBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBackground.h; sourceTree = "<group>"; };
+		DC1230D61125C4B900236527 /* GetStringFromUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetStringFromUser.h; sourceTree = "<group>"; };
+		DC1230D71125C4B900236527 /* GoToPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoToPanel.h; sourceTree = "<group>"; };
+		DC1230D81125C4B900236527 /* HTMLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLRenderer.h; sourceTree = "<group>"; };
+		DC1230DA1125C4B900236527 /* iPhoneSCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCGraphView.h; sourceTree = "<group>"; };
+		DC1230DB1125C4B900236527 /* iPhoneSCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSCView.h; sourceTree = "<group>"; };
+		DC1230DC1125C4B900236527 /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		DC1230DD1125C4B900236527 /* RendezvousClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendezvousClient.h; sourceTree = "<group>"; };
+		DC1230DE1125C4B900236527 /* SCCocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCocoaView.h; sourceTree = "<group>"; };
+		DC1230DF1125C4B900236527 /* SCDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDialog.h; sourceTree = "<group>"; };
+		DC1230E01125C4B900236527 /* SCGeom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGeom.h; sourceTree = "<group>"; };
+		DC1230E11125C4B900236527 /* SCGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGraphView.h; sourceTree = "<group>"; };
+		DC1230E21125C4B900236527 /* SCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImage.h; sourceTree = "<group>"; };
+		DC1230E31125C4B900236527 /* SCNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNSWindow.h; sourceTree = "<group>"; };
+		DC1230E41125C4B900236527 /* SCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCService.h; sourceTree = "<group>"; };
+		DC1230E51125C4B900236527 /* SCSoundFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSoundFileView.h; sourceTree = "<group>"; };
+		DC1230E61125C4B900236527 /* SCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextView.h; sourceTree = "<group>"; };
+		DC1230E71125C4B900236527 /* SCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCView.h; sourceTree = "<group>"; };
+		DC1230E81125C4B900236527 /* SCVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVirtualMachine.h; sourceTree = "<group>"; };
+		DC1230EB1125C4B900236527 /* ICUMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUMatcher.h; sourceTree = "<group>"; };
+		DC1230EC1125C4B900236527 /* ICUPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUPattern.h; sourceTree = "<group>"; };
+		DC1230ED1125C4B900236527 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DC1230EE1125C4B900236527 /* NSStringICUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringICUAdditions.h; sourceTree = "<group>"; };
+		DC1230EF1125C4B900236527 /* SMLAdvancedFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAdvancedFindController.h; sourceTree = "<group>"; };
+		DC1230F01125C4B900236527 /* SMLStatusBarTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStatusBarTextFieldCell.h; sourceTree = "<group>"; };
+		DC1230F11125C4B900236527 /* TabletEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabletEvents.h; sourceTree = "<group>"; };
+		DC1230F21125C4B900236527 /* TextFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFinder.h; sourceTree = "<group>"; };
+		DC1230F31125C4B900236527 /* UserPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPanel.h; sourceTree = "<group>"; };
+		DC1230F51125C4B900236527 /* dfftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfftlib.h; sourceTree = "<group>"; };
+		DC1230F61125C4B900236527 /* fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftlib.h; sourceTree = "<group>"; };
+		DC1230F71125C4B900236527 /* SC_AllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AllocPool.h; sourceTree = "<group>"; };
+		DC1230F81125C4B900236527 /* SC_Altivec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Altivec.h; sourceTree = "<group>"; };
+		DC1230F91125C4B900236527 /* SC_DirUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DirUtils.h; sourceTree = "<group>"; };
+		DC1230FA1125C4B900236527 /* SC_Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Endian.h; sourceTree = "<group>"; };
+		DC1230FB1125C4B900236527 /* SC_fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_fftlib.h; sourceTree = "<group>"; };
+		DC1230FC1125C4B900236527 /* SC_FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FIFO.h; sourceTree = "<group>"; };
+		DC1230FD1125C4B900236527 /* sc_popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_popen.h; sourceTree = "<group>"; };
+		DC1230FE1125C4B900236527 /* SC_Reply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Reply.h; sourceTree = "<group>"; };
+		DC1230FF1125C4B900236527 /* SC_Sem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Sem.h; sourceTree = "<group>"; };
+		DC1231001125C4B900236527 /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StandAloneInfo_Darwin.h; sourceTree = "<group>"; };
+		DC1231011125C4B900236527 /* SC_StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringBuffer.h; sourceTree = "<group>"; };
+		DC1231021125C4B900236527 /* SC_StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringParser.h; sourceTree = "<group>"; };
+		DC1231031125C4B900236527 /* SC_VFP11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_VFP11.h; sourceTree = "<group>"; };
+		DC1231041125C4B900236527 /* SC_Win32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Win32Utils.h; sourceTree = "<group>"; };
+		DC1231051125C4B900236527 /* scsynthsend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scsynthsend.h; sourceTree = "<group>"; };
+		DC1231071125C4B900236527 /* AdvancingAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancingAllocPool.h; sourceTree = "<group>"; };
+		DC1231081125C4B900236527 /* AllocPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllocPools.h; sourceTree = "<group>"; };
+		DC1231091125C4B900236527 /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
+		DC12310A1125C4B900236527 /* ByteCodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteCodeArray.h; sourceTree = "<group>"; };
+		DC12310B1125C4B900236527 /* FIFOT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOT.h; sourceTree = "<group>"; };
+		DC12310C1125C4B900236527 /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC.h; sourceTree = "<group>"; };
+		DC12310D1125C4B900236527 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		DC12310E1125C4B900236527 /* InitAlloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitAlloc.h; sourceTree = "<group>"; };
+		DC12310F1125C4B900236527 /* MiscInlineMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscInlineMath.h; sourceTree = "<group>"; };
+		DC1231101125C4B900236527 /* Opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opcodes.h; sourceTree = "<group>"; };
+		DC1231111125C4B900236527 /* OSCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCData.h; sourceTree = "<group>"; };
+		DC1231121125C4B900236527 /* PowerOfTwoAllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerOfTwoAllocPool.h; sourceTree = "<group>"; };
+		DC1231131125C4B900236527 /* PredefinedSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredefinedSymbols.h; sourceTree = "<group>"; };
+		DC1231141125C4B900236527 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		DC1231151125C4B900236527 /* PyrArchiverT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrArchiverT.h; sourceTree = "<group>"; };
+		DC1231161125C4B900236527 /* PyrDeepCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepCopier.h; sourceTree = "<group>"; };
+		DC1231171125C4B900236527 /* PyrDeepFreezer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrDeepFreezer.h; sourceTree = "<group>"; };
+		DC1231181125C4B900236527 /* PyrErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrErrors.h; sourceTree = "<group>"; };
+		DC1231191125C4B900236527 /* PyrFilePrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFilePrim.h; sourceTree = "<group>"; };
+		DC12311A1125C4B900236527 /* PyrFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrFileUtils.h; sourceTree = "<group>"; };
+		DC12311B1125C4B900236527 /* PyrInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrInterpreter.h; sourceTree = "<group>"; };
+		DC12311C1125C4B900236527 /* PyrKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernel.h; sourceTree = "<group>"; };
+		DC12311D1125C4B900236527 /* PyrKernelProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrKernelProto.h; sourceTree = "<group>"; };
+		DC12311E1125C4B900236527 /* PyrLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrLexer.h; sourceTree = "<group>"; };
+		DC12311F1125C4B900236527 /* PyrListPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrListPrim.h; sourceTree = "<group>"; };
+		DC1231201125C4B900236527 /* PyrMathPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMathPrim.h; sourceTree = "<group>"; };
+		DC1231211125C4B900236527 /* PyrMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrMessage.h; sourceTree = "<group>"; };
+		DC1231221125C4B900236527 /* PyrObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObject.h; sourceTree = "<group>"; };
+		DC1231231125C4B900236527 /* PyrObjectProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrObjectProto.h; sourceTree = "<group>"; };
+		DC1231241125C4B900236527 /* PyrParseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrParseNode.h; sourceTree = "<group>"; };
+		DC1231251125C4B900236527 /* PyrPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitive.h; sourceTree = "<group>"; };
+		DC1231261125C4B900236527 /* PyrPrimitiveProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrPrimitiveProto.h; sourceTree = "<group>"; };
+		DC1231271125C4B900236527 /* PyrSched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSched.h; sourceTree = "<group>"; };
+		DC1231281125C4B900236527 /* PyrSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignal.h; sourceTree = "<group>"; };
+		DC1231291125C4B900236527 /* PyrSignalPrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSignalPrim.h; sourceTree = "<group>"; };
+		DC12312A1125C4B900236527 /* PyrSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot.h; sourceTree = "<group>"; };
+		DC12312B1125C4B900236527 /* PyrSlot32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot32.h; sourceTree = "<group>"; };
+		DC12312C1125C4B900236527 /* PyrSlot64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSlot64.h; sourceTree = "<group>"; };
+		DC12312D1125C4B900236527 /* PyrSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbol.h; sourceTree = "<group>"; };
+		DC12312E1125C4B900236527 /* PyrSymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PyrSymbolTable.h; sourceTree = "<group>"; };
+		DC12312F1125C4B900236527 /* readSamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readSamples.h; sourceTree = "<group>"; };
+		DC1231301125C4B900236527 /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
+		DC1231311125C4B900236527 /* Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samp.h; sourceTree = "<group>"; };
+		DC1231321125C4B900236527 /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
+		DC1231331125C4B900236527 /* SC_LanguageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LanguageClient.h; sourceTree = "<group>"; };
+		DC1231341125C4B900236527 /* SC_LibraryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LibraryConfig.h; sourceTree = "<group>"; };
+		DC1231351125C4B900236527 /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
+		DC1231361125C4B900236527 /* SC_LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_LogFile.h; sourceTree = "<group>"; };
+		DC1231371125C4B900236527 /* SC_Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Msg.h; sourceTree = "<group>"; };
+		DC1231381125C4B900236527 /* SC_SynthImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthImpl.h; sourceTree = "<group>"; };
+		DC1231391125C4B900236527 /* SC_TerminalClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_TerminalClient.h; sourceTree = "<group>"; };
+		DC12313A1125C4B900236527 /* SC_UnorderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnorderedList.h; sourceTree = "<group>"; };
+		DC12313B1125C4B900236527 /* SCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBase.h; sourceTree = "<group>"; };
+		DC12313C1125C4B900236527 /* SFHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHeaders.h; sourceTree = "<group>"; };
+		DC12313D1125C4B900236527 /* SimpleStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleStack.h; sourceTree = "<group>"; };
+		DC12313E1125C4B900236527 /* VMGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMGlobals.h; sourceTree = "<group>"; };
+		DC1231401125C4B900236527 /* clz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clz.h; sourceTree = "<group>"; };
+		DC1231411125C4B900236527 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		DC1231421125C4B900236527 /* SC_BoundsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BoundsMacros.h; sourceTree = "<group>"; };
+		DC1231431125C4B900236527 /* SC_BufGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BufGen.h; sourceTree = "<group>"; };
+		DC1231441125C4B900236527 /* SC_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Constants.h; sourceTree = "<group>"; };
+		DC1231451125C4B900236527 /* SC_DemandUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DemandUnit.h; sourceTree = "<group>"; };
+		DC1231461125C4B900236527 /* SC_Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Dimension.h; sourceTree = "<group>"; };
+		DC1231471125C4B900236527 /* SC_FifoMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FifoMsg.h; sourceTree = "<group>"; };
+		DC1231481125C4B900236527 /* SC_Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Graph.h; sourceTree = "<group>"; };
+		DC1231491125C4B900236527 /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineBinaryOp.h; sourceTree = "<group>"; };
+		DC12314A1125C4B900236527 /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineUnaryOp.h; sourceTree = "<group>"; };
+		DC12314B1125C4B900236527 /* SC_InterfaceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InterfaceTable.h; sourceTree = "<group>"; };
+		DC12314C1125C4B900236527 /* sc_msg_iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_msg_iter.h; sourceTree = "<group>"; };
+		DC12314D1125C4B900236527 /* SC_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Node.h; sourceTree = "<group>"; };
+		DC12314E1125C4B900236527 /* SC_PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_PlugIn.h; sourceTree = "<group>"; };
+		DC12314F1125C4B900236527 /* SC_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Rate.h; sourceTree = "<group>"; };
+		DC1231501125C4B900236527 /* SC_RGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_RGen.h; sourceTree = "<group>"; };
+		DC1231511125C4B900236527 /* SC_SndBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SndBuf.h; sourceTree = "<group>"; };
+		DC1231521125C4B900236527 /* SC_sndfile_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_sndfile_stub.h; sourceTree = "<group>"; };
+		DC1231531125C4B900236527 /* SC_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Types.h; sourceTree = "<group>"; };
+		DC1231541125C4B900236527 /* SC_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Unit.h; sourceTree = "<group>"; };
+		DC1231551125C4B900236527 /* SC_Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Wire.h; sourceTree = "<group>"; };
+		DC1231561125C4B900236527 /* SC_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_World.h; sourceTree = "<group>"; };
+		DC1231571125C4B900236527 /* SC_WorldOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WorldOptions.h; sourceTree = "<group>"; };
+		DC1231581125C4B900236527 /* Unroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unroll.h; sourceTree = "<group>"; };
+		DC12315A1125C4B900236527 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		DC12315B1125C4B900236527 /* MsgFifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgFifo.h; sourceTree = "<group>"; };
+		DC12315C1125C4B900236527 /* OSC_Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSC_Packet.h; sourceTree = "<group>"; };
+		DC12315D1125C4B900236527 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		DC12315E1125C4B900236527 /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
+		DC12315F1125C4B900236527 /* Rendezvous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
+		DC1231601125C4B900236527 /* SC_AU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AU.h; sourceTree = "<group>"; };
+		DC1231611125C4B900236527 /* SC_Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Complex.h; sourceTree = "<group>"; };
+		DC1231621125C4B900236527 /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
+		DC1231631125C4B900236527 /* SC_CoreAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_CoreAudio.h; sourceTree = "<group>"; };
+		DC1231641125C4B900236527 /* SC_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Errors.h; sourceTree = "<group>"; };
+		DC1231651125C4B900236527 /* SC_GraphDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_GraphDef.h; sourceTree = "<group>"; };
+		DC1231661125C4B900236527 /* SC_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Group.h; sourceTree = "<group>"; };
+		DC1231671125C4B900236527 /* SC_HiddenWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_HiddenWorld.h; sourceTree = "<group>"; };
+		DC1231681125C4B900236527 /* SC_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib.h; sourceTree = "<group>"; };
+		DC1231691125C4B900236527 /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib_Cintf.h; sourceTree = "<group>"; };
+		DC12316A1125C4B900236527 /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
+		DC12316B1125C4B900236527 /* SC_Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lock.h; sourceTree = "<group>"; };
+		DC12316C1125C4B900236527 /* SC_Prototypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Prototypes.h; sourceTree = "<group>"; };
+		DC12316D1125C4B900236527 /* SC_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Samp.h; sourceTree = "<group>"; };
+		DC12316E1125C4B900236527 /* SC_SequencedCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SequencedCommand.h; sourceTree = "<group>"; };
+		DC12316F1125C4B900236527 /* SC_Str4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Str4.h; sourceTree = "<group>"; };
+		DC1231701125C4B900236527 /* SC_SyncCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SyncCondition.h; sourceTree = "<group>"; };
+		DC1231711125C4B900236527 /* SC_SynthDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthDef.h; sourceTree = "<group>"; };
+		DC1231721125C4B900236527 /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitDef.h; sourceTree = "<group>"; };
+		DC1231731125C4B900236527 /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitSpec.h; sourceTree = "<group>"; };
+		DC1231741125C4B900236527 /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WireSpec.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,7 +357,7 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1D11121FC3000B5D15B /* sc-header */,
+				DC1230D11125C4B900236527 /* sc-headers */,
 				54266BCE05E6E9780000000C /* MaxAPI.framework */,
 				22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */,
 			);
@@ -380,229 +380,229 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC39B1D11121FC3000B5D15B /* sc-header */ = {
+		DC1230D11125C4B900236527 /* sc-headers */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1D21121FC3000B5D15B /* app */,
-				DC39B1F41121FC3000B5D15B /* common */,
-				DC39B2061121FC3000B5D15B /* lang */,
-				DC39B23F1121FC3000B5D15B /* plugin_interface */,
-				DC39B2591121FC3000B5D15B /* server */,
+				DC1230D21125C4B900236527 /* app */,
+				DC1230F41125C4B900236527 /* common */,
+				DC1231061125C4B900236527 /* lang */,
+				DC12313F1125C4B900236527 /* plugin_interface */,
+				DC1231591125C4B900236527 /* server */,
 			);
-			name = "sc-header";
-			path = ../../../../supercollider/sc_src/Headers;
+			name = "sc-headers";
+			path = "../lib/sc-headers";
 			sourceTree = SOURCE_ROOT;
 		};
-		DC39B1D21121FC3000B5D15B /* app */ = {
+		DC1230D21125C4B900236527 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1D31121FC3000B5D15B /* ChangeCounter.h */,
-				DC39B1D41121FC3000B5D15B /* ControlSpec.h */,
-				DC39B1D51121FC3000B5D15B /* DrawBackground.h */,
-				DC39B1D61121FC3000B5D15B /* GetStringFromUser.h */,
-				DC39B1D71121FC3000B5D15B /* GoToPanel.h */,
-				DC39B1D81121FC3000B5D15B /* HTMLRenderer.h */,
-				DC39B1D91121FC3000B5D15B /* iPhone */,
-				DC39B1DC1121FC3000B5D15B /* MyDocument.h */,
-				DC39B1DD1121FC3000B5D15B /* RendezvousClient.h */,
-				DC39B1DE1121FC3000B5D15B /* SCCocoaView.h */,
-				DC39B1DF1121FC3000B5D15B /* SCDialog.h */,
-				DC39B1E01121FC3000B5D15B /* SCGeom.h */,
-				DC39B1E11121FC3000B5D15B /* SCGraphView.h */,
-				DC39B1E21121FC3000B5D15B /* SCImage.h */,
-				DC39B1E31121FC3000B5D15B /* SCNSWindow.h */,
-				DC39B1E41121FC3000B5D15B /* SCService.h */,
-				DC39B1E51121FC3000B5D15B /* SCSoundFileView.h */,
-				DC39B1E61121FC3000B5D15B /* SCTextView.h */,
-				DC39B1E71121FC3000B5D15B /* SCView.h */,
-				DC39B1E81121FC3000B5D15B /* SCVirtualMachine.h */,
-				DC39B1E91121FC3000B5D15B /* SMLAdvancedFind */,
-				DC39B1F11121FC3000B5D15B /* TabletEvents.h */,
-				DC39B1F21121FC3000B5D15B /* TextFinder.h */,
-				DC39B1F31121FC3000B5D15B /* UserPanel.h */,
+				DC1230D31125C4B900236527 /* ChangeCounter.h */,
+				DC1230D41125C4B900236527 /* ControlSpec.h */,
+				DC1230D51125C4B900236527 /* DrawBackground.h */,
+				DC1230D61125C4B900236527 /* GetStringFromUser.h */,
+				DC1230D71125C4B900236527 /* GoToPanel.h */,
+				DC1230D81125C4B900236527 /* HTMLRenderer.h */,
+				DC1230D91125C4B900236527 /* iPhone */,
+				DC1230DC1125C4B900236527 /* MyDocument.h */,
+				DC1230DD1125C4B900236527 /* RendezvousClient.h */,
+				DC1230DE1125C4B900236527 /* SCCocoaView.h */,
+				DC1230DF1125C4B900236527 /* SCDialog.h */,
+				DC1230E01125C4B900236527 /* SCGeom.h */,
+				DC1230E11125C4B900236527 /* SCGraphView.h */,
+				DC1230E21125C4B900236527 /* SCImage.h */,
+				DC1230E31125C4B900236527 /* SCNSWindow.h */,
+				DC1230E41125C4B900236527 /* SCService.h */,
+				DC1230E51125C4B900236527 /* SCSoundFileView.h */,
+				DC1230E61125C4B900236527 /* SCTextView.h */,
+				DC1230E71125C4B900236527 /* SCView.h */,
+				DC1230E81125C4B900236527 /* SCVirtualMachine.h */,
+				DC1230E91125C4B900236527 /* SMLAdvancedFind */,
+				DC1230F11125C4B900236527 /* TabletEvents.h */,
+				DC1230F21125C4B900236527 /* TextFinder.h */,
+				DC1230F31125C4B900236527 /* UserPanel.h */,
 			);
 			path = app;
 			sourceTree = "<group>";
 		};
-		DC39B1D91121FC3000B5D15B /* iPhone */ = {
+		DC1230D91125C4B900236527 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1DA1121FC3000B5D15B /* iPhoneSCGraphView.h */,
-				DC39B1DB1121FC3000B5D15B /* iPhoneSCView.h */,
+				DC1230DA1125C4B900236527 /* iPhoneSCGraphView.h */,
+				DC1230DB1125C4B900236527 /* iPhoneSCView.h */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
 		};
-		DC39B1E91121FC3000B5D15B /* SMLAdvancedFind */ = {
+		DC1230E91125C4B900236527 /* SMLAdvancedFind */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1EA1121FC3000B5D15B /* ICU */,
-				DC39B1EF1121FC3000B5D15B /* SMLAdvancedFindController.h */,
-				DC39B1F01121FC3000B5D15B /* SMLStatusBarTextFieldCell.h */,
+				DC1230EA1125C4B900236527 /* ICU */,
+				DC1230EF1125C4B900236527 /* SMLAdvancedFindController.h */,
+				DC1230F01125C4B900236527 /* SMLStatusBarTextFieldCell.h */,
 			);
 			path = SMLAdvancedFind;
 			sourceTree = "<group>";
 		};
-		DC39B1EA1121FC3000B5D15B /* ICU */ = {
+		DC1230EA1125C4B900236527 /* ICU */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1EB1121FC3000B5D15B /* ICUMatcher.h */,
-				DC39B1EC1121FC3000B5D15B /* ICUPattern.h */,
-				DC39B1ED1121FC3000B5D15B /* LICENSE.txt */,
-				DC39B1EE1121FC3000B5D15B /* NSStringICUAdditions.h */,
+				DC1230EB1125C4B900236527 /* ICUMatcher.h */,
+				DC1230EC1125C4B900236527 /* ICUPattern.h */,
+				DC1230ED1125C4B900236527 /* LICENSE.txt */,
+				DC1230EE1125C4B900236527 /* NSStringICUAdditions.h */,
 			);
 			path = ICU;
 			sourceTree = "<group>";
 		};
-		DC39B1F41121FC3000B5D15B /* common */ = {
+		DC1230F41125C4B900236527 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B1F51121FC3000B5D15B /* dfftlib.h */,
-				DC39B1F61121FC3000B5D15B /* fftlib.h */,
-				DC39B1F71121FC3000B5D15B /* SC_AllocPool.h */,
-				DC39B1F81121FC3000B5D15B /* SC_Altivec.h */,
-				DC39B1F91121FC3000B5D15B /* SC_DirUtils.h */,
-				DC39B1FA1121FC3000B5D15B /* SC_Endian.h */,
-				DC39B1FB1121FC3000B5D15B /* SC_fftlib.h */,
-				DC39B1FC1121FC3000B5D15B /* SC_FIFO.h */,
-				DC39B1FD1121FC3000B5D15B /* sc_popen.h */,
-				DC39B1FE1121FC3000B5D15B /* SC_Reply.h */,
-				DC39B1FF1121FC3000B5D15B /* SC_Sem.h */,
-				DC39B2001121FC3000B5D15B /* SC_StandAloneInfo_Darwin.h */,
-				DC39B2011121FC3000B5D15B /* SC_StringBuffer.h */,
-				DC39B2021121FC3000B5D15B /* SC_StringParser.h */,
-				DC39B2031121FC3000B5D15B /* SC_VFP11.h */,
-				DC39B2041121FC3000B5D15B /* SC_Win32Utils.h */,
-				DC39B2051121FC3000B5D15B /* scsynthsend.h */,
+				DC1230F51125C4B900236527 /* dfftlib.h */,
+				DC1230F61125C4B900236527 /* fftlib.h */,
+				DC1230F71125C4B900236527 /* SC_AllocPool.h */,
+				DC1230F81125C4B900236527 /* SC_Altivec.h */,
+				DC1230F91125C4B900236527 /* SC_DirUtils.h */,
+				DC1230FA1125C4B900236527 /* SC_Endian.h */,
+				DC1230FB1125C4B900236527 /* SC_fftlib.h */,
+				DC1230FC1125C4B900236527 /* SC_FIFO.h */,
+				DC1230FD1125C4B900236527 /* sc_popen.h */,
+				DC1230FE1125C4B900236527 /* SC_Reply.h */,
+				DC1230FF1125C4B900236527 /* SC_Sem.h */,
+				DC1231001125C4B900236527 /* SC_StandAloneInfo_Darwin.h */,
+				DC1231011125C4B900236527 /* SC_StringBuffer.h */,
+				DC1231021125C4B900236527 /* SC_StringParser.h */,
+				DC1231031125C4B900236527 /* SC_VFP11.h */,
+				DC1231041125C4B900236527 /* SC_Win32Utils.h */,
+				DC1231051125C4B900236527 /* scsynthsend.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
 		};
-		DC39B2061121FC3000B5D15B /* lang */ = {
+		DC1231061125C4B900236527 /* lang */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B2071121FC3000B5D15B /* AdvancingAllocPool.h */,
-				DC39B2081121FC3000B5D15B /* AllocPools.h */,
-				DC39B2091121FC3000B5D15B /* bullet.h */,
-				DC39B20A1121FC3000B5D15B /* ByteCodeArray.h */,
-				DC39B20B1121FC3000B5D15B /* FIFOT.h */,
-				DC39B20C1121FC3000B5D15B /* GC.h */,
-				DC39B20D1121FC3000B5D15B /* HashTable.h */,
-				DC39B20E1121FC3000B5D15B /* InitAlloc.h */,
-				DC39B20F1121FC3000B5D15B /* MiscInlineMath.h */,
-				DC39B2101121FC3000B5D15B /* Opcodes.h */,
-				DC39B2111121FC3000B5D15B /* OSCData.h */,
-				DC39B2121121FC3000B5D15B /* PowerOfTwoAllocPool.h */,
-				DC39B2131121FC3000B5D15B /* PredefinedSymbols.h */,
-				DC39B2141121FC3000B5D15B /* PriorityQueue.h */,
-				DC39B2151121FC3000B5D15B /* PyrArchiverT.h */,
-				DC39B2161121FC3000B5D15B /* PyrDeepCopier.h */,
-				DC39B2171121FC3000B5D15B /* PyrDeepFreezer.h */,
-				DC39B2181121FC3000B5D15B /* PyrErrors.h */,
-				DC39B2191121FC3000B5D15B /* PyrFilePrim.h */,
-				DC39B21A1121FC3000B5D15B /* PyrFileUtils.h */,
-				DC39B21B1121FC3000B5D15B /* PyrInterpreter.h */,
-				DC39B21C1121FC3000B5D15B /* PyrKernel.h */,
-				DC39B21D1121FC3000B5D15B /* PyrKernelProto.h */,
-				DC39B21E1121FC3000B5D15B /* PyrLexer.h */,
-				DC39B21F1121FC3000B5D15B /* PyrListPrim.h */,
-				DC39B2201121FC3000B5D15B /* PyrMathPrim.h */,
-				DC39B2211121FC3000B5D15B /* PyrMessage.h */,
-				DC39B2221121FC3000B5D15B /* PyrObject.h */,
-				DC39B2231121FC3000B5D15B /* PyrObjectProto.h */,
-				DC39B2241121FC3000B5D15B /* PyrParseNode.h */,
-				DC39B2251121FC3000B5D15B /* PyrPrimitive.h */,
-				DC39B2261121FC3000B5D15B /* PyrPrimitiveProto.h */,
-				DC39B2271121FC3000B5D15B /* PyrSched.h */,
-				DC39B2281121FC3000B5D15B /* PyrSignal.h */,
-				DC39B2291121FC3000B5D15B /* PyrSignalPrim.h */,
-				DC39B22A1121FC3000B5D15B /* PyrSlot.h */,
-				DC39B22B1121FC3000B5D15B /* PyrSlot32.h */,
-				DC39B22C1121FC3000B5D15B /* PyrSlot64.h */,
-				DC39B22D1121FC3000B5D15B /* PyrSymbol.h */,
-				DC39B22E1121FC3000B5D15B /* PyrSymbolTable.h */,
-				DC39B22F1121FC3000B5D15B /* readSamples.h */,
-				DC39B2301121FC3000B5D15B /* ReadWriteMacros.h */,
-				DC39B2311121FC3000B5D15B /* Samp.h */,
-				DC39B2321121FC3000B5D15B /* SC_ComPort.h */,
-				DC39B2331121FC3000B5D15B /* SC_LanguageClient.h */,
-				DC39B2341121FC3000B5D15B /* SC_LibraryConfig.h */,
-				DC39B2351121FC3000B5D15B /* SC_List.h */,
-				DC39B2361121FC3000B5D15B /* SC_LogFile.h */,
-				DC39B2371121FC3000B5D15B /* SC_Msg.h */,
-				DC39B2381121FC3000B5D15B /* SC_SynthImpl.h */,
-				DC39B2391121FC3000B5D15B /* SC_TerminalClient.h */,
-				DC39B23A1121FC3000B5D15B /* SC_UnorderedList.h */,
-				DC39B23B1121FC3000B5D15B /* SCBase.h */,
-				DC39B23C1121FC3000B5D15B /* SFHeaders.h */,
-				DC39B23D1121FC3000B5D15B /* SimpleStack.h */,
-				DC39B23E1121FC3000B5D15B /* VMGlobals.h */,
+				DC1231071125C4B900236527 /* AdvancingAllocPool.h */,
+				DC1231081125C4B900236527 /* AllocPools.h */,
+				DC1231091125C4B900236527 /* bullet.h */,
+				DC12310A1125C4B900236527 /* ByteCodeArray.h */,
+				DC12310B1125C4B900236527 /* FIFOT.h */,
+				DC12310C1125C4B900236527 /* GC.h */,
+				DC12310D1125C4B900236527 /* HashTable.h */,
+				DC12310E1125C4B900236527 /* InitAlloc.h */,
+				DC12310F1125C4B900236527 /* MiscInlineMath.h */,
+				DC1231101125C4B900236527 /* Opcodes.h */,
+				DC1231111125C4B900236527 /* OSCData.h */,
+				DC1231121125C4B900236527 /* PowerOfTwoAllocPool.h */,
+				DC1231131125C4B900236527 /* PredefinedSymbols.h */,
+				DC1231141125C4B900236527 /* PriorityQueue.h */,
+				DC1231151125C4B900236527 /* PyrArchiverT.h */,
+				DC1231161125C4B900236527 /* PyrDeepCopier.h */,
+				DC1231171125C4B900236527 /* PyrDeepFreezer.h */,
+				DC1231181125C4B900236527 /* PyrErrors.h */,
+				DC1231191125C4B900236527 /* PyrFilePrim.h */,
+				DC12311A1125C4B900236527 /* PyrFileUtils.h */,
+				DC12311B1125C4B900236527 /* PyrInterpreter.h */,
+				DC12311C1125C4B900236527 /* PyrKernel.h */,
+				DC12311D1125C4B900236527 /* PyrKernelProto.h */,
+				DC12311E1125C4B900236527 /* PyrLexer.h */,
+				DC12311F1125C4B900236527 /* PyrListPrim.h */,
+				DC1231201125C4B900236527 /* PyrMathPrim.h */,
+				DC1231211125C4B900236527 /* PyrMessage.h */,
+				DC1231221125C4B900236527 /* PyrObject.h */,
+				DC1231231125C4B900236527 /* PyrObjectProto.h */,
+				DC1231241125C4B900236527 /* PyrParseNode.h */,
+				DC1231251125C4B900236527 /* PyrPrimitive.h */,
+				DC1231261125C4B900236527 /* PyrPrimitiveProto.h */,
+				DC1231271125C4B900236527 /* PyrSched.h */,
+				DC1231281125C4B900236527 /* PyrSignal.h */,
+				DC1231291125C4B900236527 /* PyrSignalPrim.h */,
+				DC12312A1125C4B900236527 /* PyrSlot.h */,
+				DC12312B1125C4B900236527 /* PyrSlot32.h */,
+				DC12312C1125C4B900236527 /* PyrSlot64.h */,
+				DC12312D1125C4B900236527 /* PyrSymbol.h */,
+				DC12312E1125C4B900236527 /* PyrSymbolTable.h */,
+				DC12312F1125C4B900236527 /* readSamples.h */,
+				DC1231301125C4B900236527 /* ReadWriteMacros.h */,
+				DC1231311125C4B900236527 /* Samp.h */,
+				DC1231321125C4B900236527 /* SC_ComPort.h */,
+				DC1231331125C4B900236527 /* SC_LanguageClient.h */,
+				DC1231341125C4B900236527 /* SC_LibraryConfig.h */,
+				DC1231351125C4B900236527 /* SC_List.h */,
+				DC1231361125C4B900236527 /* SC_LogFile.h */,
+				DC1231371125C4B900236527 /* SC_Msg.h */,
+				DC1231381125C4B900236527 /* SC_SynthImpl.h */,
+				DC1231391125C4B900236527 /* SC_TerminalClient.h */,
+				DC12313A1125C4B900236527 /* SC_UnorderedList.h */,
+				DC12313B1125C4B900236527 /* SCBase.h */,
+				DC12313C1125C4B900236527 /* SFHeaders.h */,
+				DC12313D1125C4B900236527 /* SimpleStack.h */,
+				DC12313E1125C4B900236527 /* VMGlobals.h */,
 			);
 			path = lang;
 			sourceTree = "<group>";
 		};
-		DC39B23F1121FC3000B5D15B /* plugin_interface */ = {
+		DC12313F1125C4B900236527 /* plugin_interface */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B2401121FC3000B5D15B /* clz.h */,
-				DC39B2411121FC3000B5D15B /* Hash.h */,
-				DC39B2421121FC3000B5D15B /* SC_BoundsMacros.h */,
-				DC39B2431121FC3000B5D15B /* SC_BufGen.h */,
-				DC39B2441121FC3000B5D15B /* SC_Constants.h */,
-				DC39B2451121FC3000B5D15B /* SC_DemandUnit.h */,
-				DC39B2461121FC3000B5D15B /* SC_Dimension.h */,
-				DC39B2471121FC3000B5D15B /* SC_FifoMsg.h */,
-				DC39B2481121FC3000B5D15B /* SC_Graph.h */,
-				DC39B2491121FC3000B5D15B /* SC_InlineBinaryOp.h */,
-				DC39B24A1121FC3000B5D15B /* SC_InlineUnaryOp.h */,
-				DC39B24B1121FC3000B5D15B /* SC_InterfaceTable.h */,
-				DC39B24C1121FC3000B5D15B /* sc_msg_iter.h */,
-				DC39B24D1121FC3000B5D15B /* SC_Node.h */,
-				DC39B24E1121FC3000B5D15B /* SC_PlugIn.h */,
-				DC39B24F1121FC3000B5D15B /* SC_Rate.h */,
-				DC39B2501121FC3000B5D15B /* SC_RGen.h */,
-				DC39B2511121FC3000B5D15B /* SC_SndBuf.h */,
-				DC39B2521121FC3000B5D15B /* SC_sndfile_stub.h */,
-				DC39B2531121FC3000B5D15B /* SC_Types.h */,
-				DC39B2541121FC3000B5D15B /* SC_Unit.h */,
-				DC39B2551121FC3000B5D15B /* SC_Wire.h */,
-				DC39B2561121FC3000B5D15B /* SC_World.h */,
-				DC39B2571121FC3000B5D15B /* SC_WorldOptions.h */,
-				DC39B2581121FC3000B5D15B /* Unroll.h */,
+				DC1231401125C4B900236527 /* clz.h */,
+				DC1231411125C4B900236527 /* Hash.h */,
+				DC1231421125C4B900236527 /* SC_BoundsMacros.h */,
+				DC1231431125C4B900236527 /* SC_BufGen.h */,
+				DC1231441125C4B900236527 /* SC_Constants.h */,
+				DC1231451125C4B900236527 /* SC_DemandUnit.h */,
+				DC1231461125C4B900236527 /* SC_Dimension.h */,
+				DC1231471125C4B900236527 /* SC_FifoMsg.h */,
+				DC1231481125C4B900236527 /* SC_Graph.h */,
+				DC1231491125C4B900236527 /* SC_InlineBinaryOp.h */,
+				DC12314A1125C4B900236527 /* SC_InlineUnaryOp.h */,
+				DC12314B1125C4B900236527 /* SC_InterfaceTable.h */,
+				DC12314C1125C4B900236527 /* sc_msg_iter.h */,
+				DC12314D1125C4B900236527 /* SC_Node.h */,
+				DC12314E1125C4B900236527 /* SC_PlugIn.h */,
+				DC12314F1125C4B900236527 /* SC_Rate.h */,
+				DC1231501125C4B900236527 /* SC_RGen.h */,
+				DC1231511125C4B900236527 /* SC_SndBuf.h */,
+				DC1231521125C4B900236527 /* SC_sndfile_stub.h */,
+				DC1231531125C4B900236527 /* SC_Types.h */,
+				DC1231541125C4B900236527 /* SC_Unit.h */,
+				DC1231551125C4B900236527 /* SC_Wire.h */,
+				DC1231561125C4B900236527 /* SC_World.h */,
+				DC1231571125C4B900236527 /* SC_WorldOptions.h */,
+				DC1231581125C4B900236527 /* Unroll.h */,
 			);
 			path = plugin_interface;
 			sourceTree = "<group>";
 		};
-		DC39B2591121FC3000B5D15B /* server */ = {
+		DC1231591125C4B900236527 /* server */ = {
 			isa = PBXGroup;
 			children = (
-				DC39B25A1121FC3000B5D15B /* HashTable.h */,
-				DC39B25B1121FC3000B5D15B /* MsgFifo.h */,
-				DC39B25C1121FC3000B5D15B /* OSC_Packet.h */,
-				DC39B25D1121FC3000B5D15B /* PriorityQueue.h */,
-				DC39B25E1121FC3000B5D15B /* ReadWriteMacros.h */,
-				DC39B25F1121FC3000B5D15B /* Rendezvous.h */,
-				DC39B2601121FC3000B5D15B /* SC_AU.h */,
-				DC39B2611121FC3000B5D15B /* SC_Complex.h */,
-				DC39B2621121FC3000B5D15B /* SC_ComPort.h */,
-				DC39B2631121FC3000B5D15B /* SC_CoreAudio.h */,
-				DC39B2641121FC3000B5D15B /* SC_Errors.h */,
-				DC39B2651121FC3000B5D15B /* SC_GraphDef.h */,
-				DC39B2661121FC3000B5D15B /* SC_Group.h */,
-				DC39B2671121FC3000B5D15B /* SC_HiddenWorld.h */,
-				DC39B2681121FC3000B5D15B /* SC_Lib.h */,
-				DC39B2691121FC3000B5D15B /* SC_Lib_Cintf.h */,
-				DC39B26A1121FC3000B5D15B /* SC_List.h */,
-				DC39B26B1121FC3000B5D15B /* SC_Lock.h */,
-				DC39B26C1121FC3000B5D15B /* SC_Prototypes.h */,
-				DC39B26D1121FC3000B5D15B /* SC_Samp.h */,
-				DC39B26E1121FC3000B5D15B /* SC_SequencedCommand.h */,
-				DC39B26F1121FC3000B5D15B /* SC_Str4.h */,
-				DC39B2701121FC3000B5D15B /* SC_SyncCondition.h */,
-				DC39B2711121FC3000B5D15B /* SC_SynthDef.h */,
-				DC39B2721121FC3000B5D15B /* SC_UnitDef.h */,
-				DC39B2731121FC3000B5D15B /* SC_UnitSpec.h */,
-				DC39B2741121FC3000B5D15B /* SC_WireSpec.h */,
+				DC12315A1125C4B900236527 /* HashTable.h */,
+				DC12315B1125C4B900236527 /* MsgFifo.h */,
+				DC12315C1125C4B900236527 /* OSC_Packet.h */,
+				DC12315D1125C4B900236527 /* PriorityQueue.h */,
+				DC12315E1125C4B900236527 /* ReadWriteMacros.h */,
+				DC12315F1125C4B900236527 /* Rendezvous.h */,
+				DC1231601125C4B900236527 /* SC_AU.h */,
+				DC1231611125C4B900236527 /* SC_Complex.h */,
+				DC1231621125C4B900236527 /* SC_ComPort.h */,
+				DC1231631125C4B900236527 /* SC_CoreAudio.h */,
+				DC1231641125C4B900236527 /* SC_Errors.h */,
+				DC1231651125C4B900236527 /* SC_GraphDef.h */,
+				DC1231661125C4B900236527 /* SC_Group.h */,
+				DC1231671125C4B900236527 /* SC_HiddenWorld.h */,
+				DC1231681125C4B900236527 /* SC_Lib.h */,
+				DC1231691125C4B900236527 /* SC_Lib_Cintf.h */,
+				DC12316A1125C4B900236527 /* SC_List.h */,
+				DC12316B1125C4B900236527 /* SC_Lock.h */,
+				DC12316C1125C4B900236527 /* SC_Prototypes.h */,
+				DC12316D1125C4B900236527 /* SC_Samp.h */,
+				DC12316E1125C4B900236527 /* SC_SequencedCommand.h */,
+				DC12316F1125C4B900236527 /* SC_Str4.h */,
+				DC1231701125C4B900236527 /* SC_SyncCondition.h */,
+				DC1231711125C4B900236527 /* SC_SynthDef.h */,
+				DC1231721125C4B900236527 /* SC_UnitDef.h */,
+				DC1231731125C4B900236527 /* SC_UnitSpec.h */,
+				DC1231741125C4B900236527 /* SC_WireSpec.h */,
 			);
 			path = server;
 			sourceTree = "<group>";
@@ -614,160 +614,160 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC39B2751121FC3000B5D15B /* ChangeCounter.h in Headers */,
-				DC39B2761121FC3000B5D15B /* ControlSpec.h in Headers */,
-				DC39B2771121FC3000B5D15B /* DrawBackground.h in Headers */,
-				DC39B2781121FC3000B5D15B /* GetStringFromUser.h in Headers */,
-				DC39B2791121FC3000B5D15B /* GoToPanel.h in Headers */,
-				DC39B27A1121FC3000B5D15B /* HTMLRenderer.h in Headers */,
-				DC39B27B1121FC3000B5D15B /* iPhoneSCGraphView.h in Headers */,
-				DC39B27C1121FC3000B5D15B /* iPhoneSCView.h in Headers */,
-				DC39B27D1121FC3000B5D15B /* MyDocument.h in Headers */,
-				DC39B27E1121FC3000B5D15B /* RendezvousClient.h in Headers */,
-				DC39B27F1121FC3000B5D15B /* SCCocoaView.h in Headers */,
-				DC39B2801121FC3000B5D15B /* SCDialog.h in Headers */,
-				DC39B2811121FC3000B5D15B /* SCGeom.h in Headers */,
-				DC39B2821121FC3000B5D15B /* SCGraphView.h in Headers */,
-				DC39B2831121FC3000B5D15B /* SCImage.h in Headers */,
-				DC39B2841121FC3000B5D15B /* SCNSWindow.h in Headers */,
-				DC39B2851121FC3000B5D15B /* SCService.h in Headers */,
-				DC39B2861121FC3000B5D15B /* SCSoundFileView.h in Headers */,
-				DC39B2871121FC3000B5D15B /* SCTextView.h in Headers */,
-				DC39B2881121FC3000B5D15B /* SCView.h in Headers */,
-				DC39B2891121FC3000B5D15B /* SCVirtualMachine.h in Headers */,
-				DC39B28A1121FC3000B5D15B /* ICUMatcher.h in Headers */,
-				DC39B28B1121FC3000B5D15B /* ICUPattern.h in Headers */,
-				DC39B28D1121FC3000B5D15B /* NSStringICUAdditions.h in Headers */,
-				DC39B28E1121FC3000B5D15B /* SMLAdvancedFindController.h in Headers */,
-				DC39B28F1121FC3000B5D15B /* SMLStatusBarTextFieldCell.h in Headers */,
-				DC39B2901121FC3000B5D15B /* TabletEvents.h in Headers */,
-				DC39B2911121FC3000B5D15B /* TextFinder.h in Headers */,
-				DC39B2921121FC3000B5D15B /* UserPanel.h in Headers */,
-				DC39B2931121FC3000B5D15B /* dfftlib.h in Headers */,
-				DC39B2941121FC3000B5D15B /* fftlib.h in Headers */,
-				DC39B2951121FC3000B5D15B /* SC_AllocPool.h in Headers */,
-				DC39B2961121FC3000B5D15B /* SC_Altivec.h in Headers */,
-				DC39B2971121FC3000B5D15B /* SC_DirUtils.h in Headers */,
-				DC39B2981121FC3000B5D15B /* SC_Endian.h in Headers */,
-				DC39B2991121FC3000B5D15B /* SC_fftlib.h in Headers */,
-				DC39B29A1121FC3000B5D15B /* SC_FIFO.h in Headers */,
-				DC39B29B1121FC3000B5D15B /* sc_popen.h in Headers */,
-				DC39B29C1121FC3000B5D15B /* SC_Reply.h in Headers */,
-				DC39B29D1121FC3000B5D15B /* SC_Sem.h in Headers */,
-				DC39B29E1121FC3000B5D15B /* SC_StandAloneInfo_Darwin.h in Headers */,
-				DC39B29F1121FC3000B5D15B /* SC_StringBuffer.h in Headers */,
-				DC39B2A01121FC3000B5D15B /* SC_StringParser.h in Headers */,
-				DC39B2A11121FC3000B5D15B /* SC_VFP11.h in Headers */,
-				DC39B2A21121FC3000B5D15B /* SC_Win32Utils.h in Headers */,
-				DC39B2A31121FC3000B5D15B /* scsynthsend.h in Headers */,
-				DC39B2A41121FC3000B5D15B /* AdvancingAllocPool.h in Headers */,
-				DC39B2A51121FC3000B5D15B /* AllocPools.h in Headers */,
-				DC39B2A61121FC3000B5D15B /* bullet.h in Headers */,
-				DC39B2A71121FC3000B5D15B /* ByteCodeArray.h in Headers */,
-				DC39B2A81121FC3000B5D15B /* FIFOT.h in Headers */,
-				DC39B2A91121FC3000B5D15B /* GC.h in Headers */,
-				DC39B2AA1121FC3000B5D15B /* HashTable.h in Headers */,
-				DC39B2AB1121FC3000B5D15B /* InitAlloc.h in Headers */,
-				DC39B2AC1121FC3000B5D15B /* MiscInlineMath.h in Headers */,
-				DC39B2AD1121FC3000B5D15B /* Opcodes.h in Headers */,
-				DC39B2AE1121FC3000B5D15B /* OSCData.h in Headers */,
-				DC39B2AF1121FC3000B5D15B /* PowerOfTwoAllocPool.h in Headers */,
-				DC39B2B01121FC3000B5D15B /* PredefinedSymbols.h in Headers */,
-				DC39B2B11121FC3000B5D15B /* PriorityQueue.h in Headers */,
-				DC39B2B21121FC3000B5D15B /* PyrArchiverT.h in Headers */,
-				DC39B2B31121FC3000B5D15B /* PyrDeepCopier.h in Headers */,
-				DC39B2B41121FC3000B5D15B /* PyrDeepFreezer.h in Headers */,
-				DC39B2B51121FC3000B5D15B /* PyrErrors.h in Headers */,
-				DC39B2B61121FC3000B5D15B /* PyrFilePrim.h in Headers */,
-				DC39B2B71121FC3000B5D15B /* PyrFileUtils.h in Headers */,
-				DC39B2B81121FC3000B5D15B /* PyrInterpreter.h in Headers */,
-				DC39B2B91121FC3000B5D15B /* PyrKernel.h in Headers */,
-				DC39B2BA1121FC3000B5D15B /* PyrKernelProto.h in Headers */,
-				DC39B2BB1121FC3000B5D15B /* PyrLexer.h in Headers */,
-				DC39B2BC1121FC3000B5D15B /* PyrListPrim.h in Headers */,
-				DC39B2BD1121FC3000B5D15B /* PyrMathPrim.h in Headers */,
-				DC39B2BE1121FC3000B5D15B /* PyrMessage.h in Headers */,
-				DC39B2BF1121FC3000B5D15B /* PyrObject.h in Headers */,
-				DC39B2C01121FC3000B5D15B /* PyrObjectProto.h in Headers */,
-				DC39B2C11121FC3000B5D15B /* PyrParseNode.h in Headers */,
-				DC39B2C21121FC3000B5D15B /* PyrPrimitive.h in Headers */,
-				DC39B2C31121FC3000B5D15B /* PyrPrimitiveProto.h in Headers */,
-				DC39B2C41121FC3000B5D15B /* PyrSched.h in Headers */,
-				DC39B2C51121FC3000B5D15B /* PyrSignal.h in Headers */,
-				DC39B2C61121FC3000B5D15B /* PyrSignalPrim.h in Headers */,
-				DC39B2C71121FC3000B5D15B /* PyrSlot.h in Headers */,
-				DC39B2C81121FC3000B5D15B /* PyrSlot32.h in Headers */,
-				DC39B2C91121FC3000B5D15B /* PyrSlot64.h in Headers */,
-				DC39B2CA1121FC3000B5D15B /* PyrSymbol.h in Headers */,
-				DC39B2CB1121FC3000B5D15B /* PyrSymbolTable.h in Headers */,
-				DC39B2CC1121FC3000B5D15B /* readSamples.h in Headers */,
-				DC39B2CD1121FC3000B5D15B /* ReadWriteMacros.h in Headers */,
-				DC39B2CE1121FC3000B5D15B /* Samp.h in Headers */,
-				DC39B2CF1121FC3000B5D15B /* SC_ComPort.h in Headers */,
-				DC39B2D01121FC3000B5D15B /* SC_LanguageClient.h in Headers */,
-				DC39B2D11121FC3000B5D15B /* SC_LibraryConfig.h in Headers */,
-				DC39B2D21121FC3000B5D15B /* SC_List.h in Headers */,
-				DC39B2D31121FC3000B5D15B /* SC_LogFile.h in Headers */,
-				DC39B2D41121FC3000B5D15B /* SC_Msg.h in Headers */,
-				DC39B2D51121FC3000B5D15B /* SC_SynthImpl.h in Headers */,
-				DC39B2D61121FC3000B5D15B /* SC_TerminalClient.h in Headers */,
-				DC39B2D71121FC3000B5D15B /* SC_UnorderedList.h in Headers */,
-				DC39B2D81121FC3000B5D15B /* SCBase.h in Headers */,
-				DC39B2D91121FC3000B5D15B /* SFHeaders.h in Headers */,
-				DC39B2DA1121FC3000B5D15B /* SimpleStack.h in Headers */,
-				DC39B2DB1121FC3000B5D15B /* VMGlobals.h in Headers */,
-				DC39B2DC1121FC3000B5D15B /* clz.h in Headers */,
-				DC39B2DD1121FC3000B5D15B /* Hash.h in Headers */,
-				DC39B2DE1121FC3000B5D15B /* SC_BoundsMacros.h in Headers */,
-				DC39B2DF1121FC3000B5D15B /* SC_BufGen.h in Headers */,
-				DC39B2E01121FC3000B5D15B /* SC_Constants.h in Headers */,
-				DC39B2E11121FC3000B5D15B /* SC_DemandUnit.h in Headers */,
-				DC39B2E21121FC3000B5D15B /* SC_Dimension.h in Headers */,
-				DC39B2E31121FC3000B5D15B /* SC_FifoMsg.h in Headers */,
-				DC39B2E41121FC3000B5D15B /* SC_Graph.h in Headers */,
-				DC39B2E51121FC3000B5D15B /* SC_InlineBinaryOp.h in Headers */,
-				DC39B2E61121FC3000B5D15B /* SC_InlineUnaryOp.h in Headers */,
-				DC39B2E71121FC3000B5D15B /* SC_InterfaceTable.h in Headers */,
-				DC39B2E81121FC3000B5D15B /* sc_msg_iter.h in Headers */,
-				DC39B2E91121FC3000B5D15B /* SC_Node.h in Headers */,
-				DC39B2EA1121FC3000B5D15B /* SC_PlugIn.h in Headers */,
-				DC39B2EB1121FC3000B5D15B /* SC_Rate.h in Headers */,
-				DC39B2EC1121FC3000B5D15B /* SC_RGen.h in Headers */,
-				DC39B2ED1121FC3000B5D15B /* SC_SndBuf.h in Headers */,
-				DC39B2EE1121FC3000B5D15B /* SC_sndfile_stub.h in Headers */,
-				DC39B2EF1121FC3000B5D15B /* SC_Types.h in Headers */,
-				DC39B2F01121FC3000B5D15B /* SC_Unit.h in Headers */,
-				DC39B2F11121FC3000B5D15B /* SC_Wire.h in Headers */,
-				DC39B2F21121FC3000B5D15B /* SC_World.h in Headers */,
-				DC39B2F31121FC3000B5D15B /* SC_WorldOptions.h in Headers */,
-				DC39B2F41121FC3000B5D15B /* Unroll.h in Headers */,
-				DC39B2F51121FC3000B5D15B /* HashTable.h in Headers */,
-				DC39B2F61121FC3000B5D15B /* MsgFifo.h in Headers */,
-				DC39B2F71121FC3000B5D15B /* OSC_Packet.h in Headers */,
-				DC39B2F81121FC3000B5D15B /* PriorityQueue.h in Headers */,
-				DC39B2F91121FC3000B5D15B /* ReadWriteMacros.h in Headers */,
-				DC39B2FA1121FC3000B5D15B /* Rendezvous.h in Headers */,
-				DC39B2FB1121FC3000B5D15B /* SC_AU.h in Headers */,
-				DC39B2FC1121FC3000B5D15B /* SC_Complex.h in Headers */,
-				DC39B2FD1121FC3000B5D15B /* SC_ComPort.h in Headers */,
-				DC39B2FE1121FC3000B5D15B /* SC_CoreAudio.h in Headers */,
-				DC39B2FF1121FC3000B5D15B /* SC_Errors.h in Headers */,
-				DC39B3001121FC3000B5D15B /* SC_GraphDef.h in Headers */,
-				DC39B3011121FC3000B5D15B /* SC_Group.h in Headers */,
-				DC39B3021121FC3000B5D15B /* SC_HiddenWorld.h in Headers */,
-				DC39B3031121FC3000B5D15B /* SC_Lib.h in Headers */,
-				DC39B3041121FC3000B5D15B /* SC_Lib_Cintf.h in Headers */,
-				DC39B3051121FC3000B5D15B /* SC_List.h in Headers */,
-				DC39B3061121FC3000B5D15B /* SC_Lock.h in Headers */,
-				DC39B3071121FC3000B5D15B /* SC_Prototypes.h in Headers */,
-				DC39B3081121FC3000B5D15B /* SC_Samp.h in Headers */,
-				DC39B3091121FC3000B5D15B /* SC_SequencedCommand.h in Headers */,
-				DC39B30A1121FC3000B5D15B /* SC_Str4.h in Headers */,
-				DC39B30B1121FC3000B5D15B /* SC_SyncCondition.h in Headers */,
-				DC39B30C1121FC3000B5D15B /* SC_SynthDef.h in Headers */,
-				DC39B30D1121FC3000B5D15B /* SC_UnitDef.h in Headers */,
-				DC39B30E1121FC3000B5D15B /* SC_UnitSpec.h in Headers */,
-				DC39B30F1121FC3000B5D15B /* SC_WireSpec.h in Headers */,
+				DC1231751125C4B900236527 /* ChangeCounter.h in Headers */,
+				DC1231761125C4B900236527 /* ControlSpec.h in Headers */,
+				DC1231771125C4B900236527 /* DrawBackground.h in Headers */,
+				DC1231781125C4B900236527 /* GetStringFromUser.h in Headers */,
+				DC1231791125C4B900236527 /* GoToPanel.h in Headers */,
+				DC12317A1125C4B900236527 /* HTMLRenderer.h in Headers */,
+				DC12317B1125C4B900236527 /* iPhoneSCGraphView.h in Headers */,
+				DC12317C1125C4B900236527 /* iPhoneSCView.h in Headers */,
+				DC12317D1125C4B900236527 /* MyDocument.h in Headers */,
+				DC12317E1125C4B900236527 /* RendezvousClient.h in Headers */,
+				DC12317F1125C4B900236527 /* SCCocoaView.h in Headers */,
+				DC1231801125C4B900236527 /* SCDialog.h in Headers */,
+				DC1231811125C4B900236527 /* SCGeom.h in Headers */,
+				DC1231821125C4B900236527 /* SCGraphView.h in Headers */,
+				DC1231831125C4B900236527 /* SCImage.h in Headers */,
+				DC1231841125C4B900236527 /* SCNSWindow.h in Headers */,
+				DC1231851125C4B900236527 /* SCService.h in Headers */,
+				DC1231861125C4B900236527 /* SCSoundFileView.h in Headers */,
+				DC1231871125C4B900236527 /* SCTextView.h in Headers */,
+				DC1231881125C4B900236527 /* SCView.h in Headers */,
+				DC1231891125C4B900236527 /* SCVirtualMachine.h in Headers */,
+				DC12318A1125C4B900236527 /* ICUMatcher.h in Headers */,
+				DC12318B1125C4B900236527 /* ICUPattern.h in Headers */,
+				DC12318D1125C4B900236527 /* NSStringICUAdditions.h in Headers */,
+				DC12318E1125C4B900236527 /* SMLAdvancedFindController.h in Headers */,
+				DC12318F1125C4B900236527 /* SMLStatusBarTextFieldCell.h in Headers */,
+				DC1231901125C4B900236527 /* TabletEvents.h in Headers */,
+				DC1231911125C4B900236527 /* TextFinder.h in Headers */,
+				DC1231921125C4B900236527 /* UserPanel.h in Headers */,
+				DC1231931125C4B900236527 /* dfftlib.h in Headers */,
+				DC1231941125C4B900236527 /* fftlib.h in Headers */,
+				DC1231951125C4B900236527 /* SC_AllocPool.h in Headers */,
+				DC1231961125C4B900236527 /* SC_Altivec.h in Headers */,
+				DC1231971125C4B900236527 /* SC_DirUtils.h in Headers */,
+				DC1231981125C4B900236527 /* SC_Endian.h in Headers */,
+				DC1231991125C4B900236527 /* SC_fftlib.h in Headers */,
+				DC12319A1125C4B900236527 /* SC_FIFO.h in Headers */,
+				DC12319B1125C4B900236527 /* sc_popen.h in Headers */,
+				DC12319C1125C4B900236527 /* SC_Reply.h in Headers */,
+				DC12319D1125C4B900236527 /* SC_Sem.h in Headers */,
+				DC12319E1125C4B900236527 /* SC_StandAloneInfo_Darwin.h in Headers */,
+				DC12319F1125C4B900236527 /* SC_StringBuffer.h in Headers */,
+				DC1231A01125C4B900236527 /* SC_StringParser.h in Headers */,
+				DC1231A11125C4B900236527 /* SC_VFP11.h in Headers */,
+				DC1231A21125C4B900236527 /* SC_Win32Utils.h in Headers */,
+				DC1231A31125C4B900236527 /* scsynthsend.h in Headers */,
+				DC1231A41125C4B900236527 /* AdvancingAllocPool.h in Headers */,
+				DC1231A51125C4B900236527 /* AllocPools.h in Headers */,
+				DC1231A61125C4B900236527 /* bullet.h in Headers */,
+				DC1231A71125C4B900236527 /* ByteCodeArray.h in Headers */,
+				DC1231A81125C4B900236527 /* FIFOT.h in Headers */,
+				DC1231A91125C4B900236527 /* GC.h in Headers */,
+				DC1231AA1125C4B900236527 /* HashTable.h in Headers */,
+				DC1231AB1125C4B900236527 /* InitAlloc.h in Headers */,
+				DC1231AC1125C4B900236527 /* MiscInlineMath.h in Headers */,
+				DC1231AD1125C4B900236527 /* Opcodes.h in Headers */,
+				DC1231AE1125C4B900236527 /* OSCData.h in Headers */,
+				DC1231AF1125C4B900236527 /* PowerOfTwoAllocPool.h in Headers */,
+				DC1231B01125C4B900236527 /* PredefinedSymbols.h in Headers */,
+				DC1231B11125C4B900236527 /* PriorityQueue.h in Headers */,
+				DC1231B21125C4B900236527 /* PyrArchiverT.h in Headers */,
+				DC1231B31125C4B900236527 /* PyrDeepCopier.h in Headers */,
+				DC1231B41125C4B900236527 /* PyrDeepFreezer.h in Headers */,
+				DC1231B51125C4B900236527 /* PyrErrors.h in Headers */,
+				DC1231B61125C4B900236527 /* PyrFilePrim.h in Headers */,
+				DC1231B71125C4B900236527 /* PyrFileUtils.h in Headers */,
+				DC1231B81125C4B900236527 /* PyrInterpreter.h in Headers */,
+				DC1231B91125C4B900236527 /* PyrKernel.h in Headers */,
+				DC1231BA1125C4B900236527 /* PyrKernelProto.h in Headers */,
+				DC1231BB1125C4B900236527 /* PyrLexer.h in Headers */,
+				DC1231BC1125C4B900236527 /* PyrListPrim.h in Headers */,
+				DC1231BD1125C4B900236527 /* PyrMathPrim.h in Headers */,
+				DC1231BE1125C4B900236527 /* PyrMessage.h in Headers */,
+				DC1231BF1125C4B900236527 /* PyrObject.h in Headers */,
+				DC1231C01125C4B900236527 /* PyrObjectProto.h in Headers */,
+				DC1231C11125C4B900236527 /* PyrParseNode.h in Headers */,
+				DC1231C21125C4B900236527 /* PyrPrimitive.h in Headers */,
+				DC1231C31125C4B900236527 /* PyrPrimitiveProto.h in Headers */,
+				DC1231C41125C4B900236527 /* PyrSched.h in Headers */,
+				DC1231C51125C4B900236527 /* PyrSignal.h in Headers */,
+				DC1231C61125C4B900236527 /* PyrSignalPrim.h in Headers */,
+				DC1231C71125C4B900236527 /* PyrSlot.h in Headers */,
+				DC1231C81125C4B900236527 /* PyrSlot32.h in Headers */,
+				DC1231C91125C4B900236527 /* PyrSlot64.h in Headers */,
+				DC1231CA1125C4B900236527 /* PyrSymbol.h in Headers */,
+				DC1231CB1125C4B900236527 /* PyrSymbolTable.h in Headers */,
+				DC1231CC1125C4B900236527 /* readSamples.h in Headers */,
+				DC1231CD1125C4B900236527 /* ReadWriteMacros.h in Headers */,
+				DC1231CE1125C4B900236527 /* Samp.h in Headers */,
+				DC1231CF1125C4B900236527 /* SC_ComPort.h in Headers */,
+				DC1231D01125C4B900236527 /* SC_LanguageClient.h in Headers */,
+				DC1231D11125C4B900236527 /* SC_LibraryConfig.h in Headers */,
+				DC1231D21125C4B900236527 /* SC_List.h in Headers */,
+				DC1231D31125C4B900236527 /* SC_LogFile.h in Headers */,
+				DC1231D41125C4B900236527 /* SC_Msg.h in Headers */,
+				DC1231D51125C4B900236527 /* SC_SynthImpl.h in Headers */,
+				DC1231D61125C4B900236527 /* SC_TerminalClient.h in Headers */,
+				DC1231D71125C4B900236527 /* SC_UnorderedList.h in Headers */,
+				DC1231D81125C4B900236527 /* SCBase.h in Headers */,
+				DC1231D91125C4B900236527 /* SFHeaders.h in Headers */,
+				DC1231DA1125C4B900236527 /* SimpleStack.h in Headers */,
+				DC1231DB1125C4B900236527 /* VMGlobals.h in Headers */,
+				DC1231DC1125C4B900236527 /* clz.h in Headers */,
+				DC1231DD1125C4B900236527 /* Hash.h in Headers */,
+				DC1231DE1125C4B900236527 /* SC_BoundsMacros.h in Headers */,
+				DC1231DF1125C4B900236527 /* SC_BufGen.h in Headers */,
+				DC1231E01125C4B900236527 /* SC_Constants.h in Headers */,
+				DC1231E11125C4B900236527 /* SC_DemandUnit.h in Headers */,
+				DC1231E21125C4B900236527 /* SC_Dimension.h in Headers */,
+				DC1231E31125C4B900236527 /* SC_FifoMsg.h in Headers */,
+				DC1231E41125C4B900236527 /* SC_Graph.h in Headers */,
+				DC1231E51125C4B900236527 /* SC_InlineBinaryOp.h in Headers */,
+				DC1231E61125C4B900236527 /* SC_InlineUnaryOp.h in Headers */,
+				DC1231E71125C4B900236527 /* SC_InterfaceTable.h in Headers */,
+				DC1231E81125C4B900236527 /* sc_msg_iter.h in Headers */,
+				DC1231E91125C4B900236527 /* SC_Node.h in Headers */,
+				DC1231EA1125C4B900236527 /* SC_PlugIn.h in Headers */,
+				DC1231EB1125C4B900236527 /* SC_Rate.h in Headers */,
+				DC1231EC1125C4B900236527 /* SC_RGen.h in Headers */,
+				DC1231ED1125C4B900236527 /* SC_SndBuf.h in Headers */,
+				DC1231EE1125C4B900236527 /* SC_sndfile_stub.h in Headers */,
+				DC1231EF1125C4B900236527 /* SC_Types.h in Headers */,
+				DC1231F01125C4B900236527 /* SC_Unit.h in Headers */,
+				DC1231F11125C4B900236527 /* SC_Wire.h in Headers */,
+				DC1231F21125C4B900236527 /* SC_World.h in Headers */,
+				DC1231F31125C4B900236527 /* SC_WorldOptions.h in Headers */,
+				DC1231F41125C4B900236527 /* Unroll.h in Headers */,
+				DC1231F51125C4B900236527 /* HashTable.h in Headers */,
+				DC1231F61125C4B900236527 /* MsgFifo.h in Headers */,
+				DC1231F71125C4B900236527 /* OSC_Packet.h in Headers */,
+				DC1231F81125C4B900236527 /* PriorityQueue.h in Headers */,
+				DC1231F91125C4B900236527 /* ReadWriteMacros.h in Headers */,
+				DC1231FA1125C4B900236527 /* Rendezvous.h in Headers */,
+				DC1231FB1125C4B900236527 /* SC_AU.h in Headers */,
+				DC1231FC1125C4B900236527 /* SC_Complex.h in Headers */,
+				DC1231FD1125C4B900236527 /* SC_ComPort.h in Headers */,
+				DC1231FE1125C4B900236527 /* SC_CoreAudio.h in Headers */,
+				DC1231FF1125C4B900236527 /* SC_Errors.h in Headers */,
+				DC1232001125C4B900236527 /* SC_GraphDef.h in Headers */,
+				DC1232011125C4B900236527 /* SC_Group.h in Headers */,
+				DC1232021125C4B900236527 /* SC_HiddenWorld.h in Headers */,
+				DC1232031125C4B900236527 /* SC_Lib.h in Headers */,
+				DC1232041125C4B900236527 /* SC_Lib_Cintf.h in Headers */,
+				DC1232051125C4B900236527 /* SC_List.h in Headers */,
+				DC1232061125C4B900236527 /* SC_Lock.h in Headers */,
+				DC1232071125C4B900236527 /* SC_Prototypes.h in Headers */,
+				DC1232081125C4B900236527 /* SC_Samp.h in Headers */,
+				DC1232091125C4B900236527 /* SC_SequencedCommand.h in Headers */,
+				DC12320A1125C4B900236527 /* SC_Str4.h in Headers */,
+				DC12320B1125C4B900236527 /* SC_SyncCondition.h in Headers */,
+				DC12320C1125C4B900236527 /* SC_SynthDef.h in Headers */,
+				DC12320D1125C4B900236527 /* SC_UnitDef.h in Headers */,
+				DC12320E1125C4B900236527 /* SC_UnitSpec.h in Headers */,
+				DC12320F1125C4B900236527 /* SC_WireSpec.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +815,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC39B28C1121FC3000B5D15B /* LICENSE.txt in Resources */,
+				DC12318C1125C4B900236527 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

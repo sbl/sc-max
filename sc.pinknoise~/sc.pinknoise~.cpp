@@ -32,8 +32,11 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
+#include "SC_RGen.h"
 #include "clz.h"
-#include "rgen_helper.h"
+
+#define RGET RGen& rgen = x->rgen; uint32 s1 = rgen.s1; uint32 s2 = rgen.s2; uint32 s3 = rgen.s3;
+#define RPUT rgen.s1 = s1; rgen.s2 = s2; rgen.s3 = s3;
 
 #define N_DICE 16
 
