@@ -66,7 +66,7 @@ int main(void){
 void range_dsp(t_range *x, t_signal **sp, short *count){
 	x->m_connected = count[0];
     
-    dsp_add(range_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[0]->s_n);
+    dsp_add(range_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[1]->s_n);
 }
 
 t_int *range_perform(t_int *w){
@@ -94,7 +94,7 @@ t_int *range_perform(t_int *w){
             add = lo;
         }
         
-        *out++ = (*in * mul) + add;
+        *out++ = (t_float) (*in++ * mul) + add;
     }
     
 	return w + 5;
