@@ -7,27 +7,29 @@ ports by stephen lumenta
 
 http://github.com/sbl/sc-max
 
-some supercollider ugens ported to max-msp.
+some supercollider ugens ported to max-msp 5. the focus lies on the noisier ones. 
 
 all credits are due to the original authors (James McCartney et alt.). these are merely ports to max/msp and might be helpful.
 most helptext is taken directly from the original supercollider helpfiles.
 if you haven't done so. check out supercollider as well. it is a really nice language for sound.
 
-forks and patches are welcome. if someone wants to do a windows port please let me know. 
-the included sc header files are from the supercollider sourceforge svn repository
+bugs, anything else? contact me via github. http://github.com/sbl
 
-bugs, anything else? contact me via github.
 
-////////////////////////
-
-Installation (.zip):
+////////////////////////////////////////////////
+Installation (if you have downloaded the zip file):
+////////////////////////////////////////////////
 
 Drop the sc-max folder somewhere in your max-search-path
 
-Building:
+/////////////////////////////////////////////
+Building (if you got the source from github):
+/////////////////////////////////////////////
+
 * you have to update the C74SUPPORT path in xcodeconfig
 * compile from xcode
-* or use the supplied rakefile. it will compile all and copy the helpfiles to the _build directory
+* OR use the supplied rakefile. it will compile all and copy the helpfiles to the _build directory
+
 
 ////////////////////////
 
