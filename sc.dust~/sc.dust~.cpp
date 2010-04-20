@@ -19,7 +19,6 @@
 */
 
 /*
-
  sc.dust~
  (c) stephen lumenta under GPL
  http://www.gnu.org/licenses/gpl.html

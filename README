@@ -20,6 +20,17 @@ bugs, anything else? contact me via github.
 
 ////////////////////////
 
+Installation (.zip):
+
+Drop the sc-max folder somewhere in your max-search-path
+
+Building:
+* you have to update the C74SUPPORT path in xcodeconfig
+* compile from xcode
+* or use the supplied rakefile. it will compile all and copy the helpfiles to the _build directory
+
+////////////////////////
+
 SuperCollider:
 http://www.audiosynth.com
 http://supercollider.sourceforge.net

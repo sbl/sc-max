@@ -5,3 +5,4 @@ _build/*
 *.o
 */build/*
 *.tmproj
+*.zip
