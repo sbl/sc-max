@@ -16,7 +16,6 @@ task :compile_xcode do
   puts "-------------------"
   puts "COMPILING EXTERNALS"
   puts "-------------------"
-
   
   Dir.glob("sc.*/*.xcodeproj").each do |path|
     sh "xcodebuild -project #{path} -target 'max-external' -configuration 'Deployment' build"
