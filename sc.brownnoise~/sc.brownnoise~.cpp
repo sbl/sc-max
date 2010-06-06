@@ -60,7 +60,7 @@ t_int *brownnoise_perform(t_int *w);
 
 int main(void){	
 	t_class *c;
-    
+        
 	c = class_new("sc.brownnoise~", (method)brownnoise_new, (method)dsp_free, (long)sizeof(t_brownnoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)brownnoise_dsp,		"dsp",		A_CANT, 0);
