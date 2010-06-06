@@ -32,23 +32,17 @@
 #include "ext_obex.h"
 #include "z_dsp.h"
 
-// from SCBOUNDSMacrosH.h
-#define sc_max(a,b) (((a) > (b)) ? (a) : (b))
-#define sc_min(a,b) (((a) < (b)) ? (a) : (b))
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct _ringz 
 {
 	t_pxobject      ob;
     
-    short           m_connected[2];
-    float           m_chaos_param;
-    float           m_freq;
-    float           m_sr;
-    
-    double          m_y1; // init value
-	long            m_counter;
+    short           m_connected[3];
+    t_float           m_y1, m_y2, m_b1, m_b2, m_freq, m_decayTime;
+    t_float           m_sr, m_rps;
+    int             m_floops, m_fremains; 
+    double          m_fslope;
 } t_ringz;
 
 t_class *ringz_class;
@@ -62,9 +56,11 @@ void    ringz_int        (t_ringz *x, long l);
 void    ringz_dsp        (t_ringz *x, t_signal **sp, short *count);
 t_int   *ringz_perform   (t_int *w);
 
+void    calcRates        (t_ringz *x, t_signal *sp);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int main(void)
+{	
 	t_class *c;
     
 	c = class_new("sc.ringz~", (method)ringz_new, (method)dsp_free, (long)sizeof(t_ringz), 0L, A_GIMME, 0);
@@ -85,11 +81,12 @@ int main(void){
 
 void ringz_float(t_ringz *x, double f){
     switch (proxy_getinlet((t_object *)x)) {
-        case 0:
-            x->m_chaos_param = f;
-            break;
         case 1:
             x->m_freq = f;
+            post("frequency: %d", x->m_freq);
+            break;
+        case 2:
+            x->m_decayTime = f;
             break;
     }
 }
@@ -98,50 +95,111 @@ void ringz_int(t_ringz *x, long l){
     ringz_float(x, (double) l);
 }
 
-void ringz_dsp(t_ringz *x, t_signal **sp, short *count){
+void ringz_dsp(t_ringz *x, t_signal **sp, short *count)
+{
     x->m_connected[0] = count[0];
     x->m_connected[1] = count[1];
-    // class, param, freq, out, n
-	dsp_add(ringz_perform, 5, x, sp[0]->s_vec, sp[1]->s_vec, sp[2]->s_vec, sp[2]->s_n);
+    x->m_connected[2] = count[2];
+    
+    calcRates(x, sp[0]);
+    post("loops: %d", x->m_floops);
+    post("remains: %d", x->m_fremains);
+    post("n: %d", sp[0]->s_n);
+    
+    // in, freq, decay, out, n
+	dsp_add(ringz_perform, 6, x, sp[0]->s_vec, sp[1]->s_vec, sp[2]->s_vec, sp[3]->s_vec, sp[0]->s_n);    
 }
 
-#define OFFSET 6
+#define OFFSET 7
 
-t_int *ringz_perform(t_int *w){
-    t_ringz  *x          = (t_ringz *)(w[1]);
-    t_float     paramf      = x->m_connected[0] ? (*(t_float *)(w[2])) : x->m_chaos_param;
-    t_float     freq        = x->m_connected[1] ? (*(t_float *)(w[3])) : x->m_freq;
-    double      y1          = x->m_y1;
-    long        counter     = x->m_counter;
-    t_float     *out        = (t_float *)(w[4]);
-	int         n           = (int)w[5];
-    long        i;
-    
+t_int *ringz_perform(t_int *w)
+{
+    t_ringz     *x          = (t_ringz *)(w[1]);
+        
+    // no processing when disabled
     if (x->ob.z_disabled) return w + OFFSET;    
+
+    t_float     *in         = (t_float *)(w[2]);
+    t_float     *out        = (t_float *)(w[5]);
+    t_float     freq        = x->m_connected[1] ? (*(t_float *)(w[3])) : x->m_freq;
+    t_float     decayTime   = x->m_connected[2] ? (*(t_float *)(w[4])) : x->m_decayTime;
+    int         n           = (int) w[6];
     
-    long remain = n;
-    if (freq > x->m_sr) freq = x->m_sr;
-    if (freq < 0) freq = 0;
+    float y0;
+	float y1 = x->m_y1;
+	float y2 = x->m_y2;
+	float a0 = 0.5f;
+	float b1 = x->m_b1;
+	float b2 = x->m_b2;
     
-    do{
-        if (counter<=0) {
-			counter = (long)(x->m_sr  / sc_max(freq, .001f));
-			counter = sc_max(1, counter);
-			y1 = paramf * y1 * (1.0 - y1);	// chaotic equation
-		}
-		long nsmps = sc_min(counter, remain);
-		counter -= nsmps;
-		remain  -= nsmps;
+    // on coeff change
+    if (freq != x->m_freq || decayTime != x->m_decayTime) {
+		float ffreq = freq * x->m_rps;
+
+		float R = decayTime == 0.f ? 0.f : exp(log(0.001)/(decayTime * x->m_sr));
+		float twoR = 2.f * R;
+		float R2 = R * R;
+		float cost = (twoR * cos(ffreq)) / (1.f + R2);
+		float b1_next = twoR * cost;
+		float b2_next = -R2;
+		float b1_slope = (b1_next - b1) * x->m_fslope;
+		float b2_slope = (b2_next - b2) * x->m_fslope;
         
-        for(i=0; i<nsmps;i++){
-            *out++ = y1;
-        }
-        
-    } while(remain);
-    
-    x->m_y1 = y1;
-	x->m_counter = counter;
+        while(x->m_floops--){
+            t_float tmp_in = *in++;
+            t_float tmp_out;
             
+            y0 = tmp_in + b1 * y1 + b2 * y2;
+            tmp_out = a0 * (y0 - y2);
+            
+            y2 = tmp_in + b1 * y0 + b2 * y1;
+            tmp_out = a0 * (y2 - y1);
+            
+            y1 = tmp_in + b1 * y2 + b2 * y0;
+            *out++ = a0 * (y1 - y0);
+            
+            b1 += b1_slope;
+            b2 += b2_slope;            
+        };
+        
+        while (x->m_fremains--) {
+            y0 = *in++ + b1 * y1 + b2 * y2;
+            *out++ = a0 * (y0 - y2);
+            y2 = y1;
+            y1 = y0;
+        };
+        
+		x->m_freq = freq;
+		x->m_decayTime = decayTime;
+		x->m_b1 = b1_next;
+		x->m_b2 = b2_next;
+	} 
+    // no coeff change
+        else {
+        while (x->m_floops--) {
+            t_float tmp_in = *in++;
+            t_float tmp_out;
+                
+            y0 = tmp_in + b1 * y1 + b2 * y2;
+            tmp_out = a0 * (y0 - y2);
+            
+            y2 = tmp_in + b1 * y0 + b2 * y1;
+            tmp_out = a0 * (y2 - y1);
+            
+            y1 = tmp_in + b1 * y2 + b2 * y0;
+            *out++ = a0 * (y1 - y0);            
+        }
+        while (x->m_fremains--) {
+            y0 = *in++ + b1 * y1 + b2 * y2;
+            *out++ = a0 * (y0 - y2);
+            y2 = y1;
+            y1 = y0;            
+        }        
+	}
+    
+            
+	// unit->m_y1 = zapgremlins(y1);
+	// unit->m_y2 = zapgremlins(y2);
         
 	return w + OFFSET;
 }
@@ -153,10 +211,13 @@ void ringz_assist(t_ringz *x, void *b, long m, long a, char *s)
 	if (m == ASSIST_INLET) { //inlet
         switch (a) {
             case 0:
-                sprintf(s, "(signal/float) chaos param");
+                sprintf(s, "(signal) the signal to ring");
                 break;
             case 1:
-                sprintf(s, "(signal/float) freq");
+                sprintf(s, "(signal/float) frequency");
+                break;
+            case 2:
+                sprintf(s, "(signal/float) decay time ");
                 break;
             default:
                 break;
@@ -167,23 +228,43 @@ void ringz_assist(t_ringz *x, void *b, long m, long a, char *s)
 	}
 }
 
-void *ringz_new(t_symbol *s, long argc, t_atom *argv){
+void *ringz_new(t_symbol *s, long argc, t_atom *argv)
+{
 	t_ringz *x = NULL;
 	x = (t_ringz *)object_alloc(ringz_class);
     
 	if (x) {
-		dsp_setup((t_pxobject *)x, 2);
+		dsp_setup((t_pxobject *)x, 3);
         
-        float chaos_param   = atom_getfloatarg(0,argc,argv);
-        float freq          = atom_getfloatarg(1,argc,argv);
+        // TODO fix me
+        float freq          = atom_getfloatarg(0,argc,argv);
+        float decayTime     = atom_getfloatarg(1,argc,argv);
         
-        x->m_chaos_param    = (short) chaos_param ? chaos_param : 3.f;
-        x->m_freq           = (short) freq ? freq : 1000.f;
-        x->m_y1             = 0.5f;
-        x->m_counter        = 0L;
-        x->m_sr             = sys_getsr();
+        x->m_b1 = 0.f;
+        x->m_b2 = 0.f;
+        x->m_y1 = 0.f;
+        x->m_y2 = 0.f;
+        x->m_freq = 1000;
+        x->m_decayTime = 0.5;
+        
         
         outlet_new((t_object *)x, "signal");
 	}
 	return (x);
+}
+
+void calcRates(t_ringz *x, t_signal *sp)
+{
+    // we need this for our calculations
+    x->m_sr         = sp->s_sr;
+    x->m_rps        = TWOPI / x->m_sr;
+    x->m_floops     = sp->s_n / 3;
+    x->m_fremains   = sp->s_n % 3;
+    
+    if (x->m_floops == 0) {
+        x->m_fslope = 0;
+    } else {
+        x->m_fslope = (double) 1. / x->m_floops;
+    }
+
 }
