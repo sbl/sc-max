@@ -34,7 +34,6 @@
 
 #include "scmax.h"
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct _ringz 
@@ -118,28 +117,31 @@ void ringz_dsp(t_ringz *x, t_signal **sp, short *count)
 
 t_int *ringz_perform(t_int *w)
 {
-    t_ringz     *x          = (t_ringz *)(w[1]);
-        
-    // no processing when disabled
-    // if (x->ob.z_disabled) return w + OFFSET;    
-
-    t_float   *in           = (t_float *)(w[2]);
-    t_float   *out          = (t_float *)(w[5]);
-    float     freq          = x->m_connected[1] ? (*(t_float *)(w[3])) : x->m_freq;
-    float     decayTime     = x->m_connected[2] ? (*(t_float *)(w[4])) : x->m_decayTime;
+    t_ringz *x = (t_ringz*)w[1];
     
-    float y0;
+	float *out = (t_float*)w[5];
+	float *in = (t_float*)w[2];
+    t_float     freq        = x->m_connected[2] ? (*(t_float *)(w[3])) : x->m_freq;
+    t_float     decayTime   = x->m_connected[3] ? (*(t_float *)(w[4])) : x->m_decayTime;
+
+
+//	float freq = ZIN0(1);
+//	float decayTime = ZIN0(2);
+    
+	float y0;
 	float y1 = x->m_y1;
 	float y2 = x->m_y2;
 	float a0 = 0.5f;
 	float b1 = x->m_b1;
 	float b2 = x->m_b2;
     
-    // on coeff change
-    if (freq != x->m_freq || decayTime != x->m_decayTime) {        
+    if (x->ob.z_disabled){
+        return w+OFFSET;
+    }
+    
+	if (freq != x->m_freq || decayTime != x->m_decayTime) {
 		float ffreq = freq * x->m_rps;
-
-		float R = decayTime == 0.f ? 0.f : exp(log(0.001)/(decayTime * x->m_sr));
+		float R = decayTime == 0.f ? 0.f : exp(abs(log(0.001))/(decayTime * SAMPLERATE));
 		float twoR = 2.f * R;
 		float R2 = R * R;
 		float cost = (twoR * cos(ffreq)) / (1.f + R2);
@@ -147,7 +149,7 @@ t_int *ringz_perform(t_int *w)
 		float b2_next = -R2;
 		float b1_slope = (b1_next - b1) * x->m_fslope;
 		float b2_slope = (b2_next - b2) * x->m_fslope;
-        
+
 		LOOP(x->m_floops,
              y0 = ZXP(in) + b1 * y1 + b2 * y2;
              ZXP(out) = a0 * (y0 - y2);
@@ -168,14 +170,11 @@ t_int *ringz_perform(t_int *w)
              y1 = y0;
              );
         
-        
 		x->m_freq = freq;
 		x->m_decayTime = decayTime;
 		x->m_b1 = b1_next;
 		x->m_b2 = b2_next;
-	} 
-    // no coeff change
-    else {
+	} else {
 		LOOP(x->m_floops,
              y0 = ZXP(in) + b1 * y1 + b2 * y2;
              ZXP(out) = a0 * (y0 - y2);
@@ -194,13 +193,11 @@ t_int *ringz_perform(t_int *w)
              );
 	}
     
-            
 //	x->m_y1 = zapgremlins(y1);
 //	x->m_y2 = zapgremlins(y2);
-        
-	return w + OFFSET;
+    
+    return w+OFFSET;
 }
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void ringz_assist(t_ringz *x, void *b, long m, long a, char *s)
@@ -243,7 +240,6 @@ void *ringz_new(t_symbol *s, long argc, t_atom *argv)
         x->m_y2 = 0.f;
         x->m_freq = freq;
         x->m_decayTime = decayTime;
-        
         
         outlet_new((t_object *)x, "signal");
 	}
