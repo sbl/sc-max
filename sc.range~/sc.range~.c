@@ -48,11 +48,11 @@ int main(void){
 	class_addmethod(c, (method)range_dsp,		"dsp",		A_CANT, 0);
 	class_addmethod(c, (method)range_assist,    "assist",	A_CANT, 0);
     
-    CLASS_ATTR_FLOAT        (c, "low",      ATTR_FLAGS_NONE, t_range, m_low);
-    CLASS_ATTR_FLOAT        (c, "high",     ATTR_FLAGS_NONE, t_range, m_high);
+  CLASS_ATTR_FLOAT        (c, "low",      ATTR_FLAGS_NONE, t_range, m_low);
+  CLASS_ATTR_FLOAT        (c, "high",     ATTR_FLAGS_NONE, t_range, m_high);
     
-    CLASS_ATTR_CHAR         (c, "mode",     ATTR_FLAGS_NONE, t_range, m_mode);
-    CLASS_ATTR_STYLE_LABEL  (c, "mode",     ATTR_FLAGS_NONE, "onoff", "mode");
+  CLASS_ATTR_CHAR         (c, "mode",     ATTR_FLAGS_NONE, t_range, m_mode);
+  CLASS_ATTR_STYLE_LABEL  (c, "mode",     ATTR_FLAGS_NONE, "onoff", "mode");
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
