@@ -1,0 +1,18 @@
+sc.whitenoise~	equal power noise	Generates noise whose spectrum has equal power at all frequencies
+
+sc.brownnoise~	browninan motion	Generates noise whose spectrum falls off in power by 6 dB per octave
+sc.clipnoise~	Clip Noise.	Generates noise whose spectrum falls off in power by 3 dB per octave.
+sc.crackle~	Chaotic noise function.	A noise generator based on a chaotic function.	
+sc.dust~	Random Impulses.	Generates random impulses from 0 to +1.	
+sc.dust2~	Random Impulses.	Generates random impulses from -1 to +1.	
+sc.gendy1~	An implementation of the dynamic stochastic synthesis generator conceived by Iannis Xenakis and described in Formalized Music			
+sc.gendy2~	An implementation of the dynamic stochastic synthesis generator conceived by Iannis Xenakis and described in Formalized Music				
+sc.gendy3~	An implementation of the dynamic stochastic synthesis generator conceived by Iannis Xenakis and described in Formalized Music			
+sc.graynoise~	Generates noise which results from flipping random bits in a word.				
+sc.lfclipnoise~	Clipped Noise. 	Randomly generates the values -1 or +1 at a rate given by the nearest integer division of the sample rate by the freq argument		
+sc.lfnoise0~	Generates random values at a rate			
+sc.lfnoise1~	Generates linearly interpolated random values at a rate				
+sc.lfnoise2~	Generates quadratically interpolated random values at a rate				
+sc.logistic~	chaotic noise function. 	A noise generator based on the logistic map y = chaosParam * y * (1.0 - y)	
+sc.mantissamask~	Reduce Precision.	Masks off bits in the mantissa of the floating point sample value	
+sc.pinknoise~	1/f noise	Generates noise whose spectrum falls off in power by 3 dB per octave	

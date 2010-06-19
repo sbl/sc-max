@@ -31,6 +31,7 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
+#include "scmax.h"
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -38,6 +39,11 @@
 typedef struct _lpf 
 {
 	t_pxobject					ob;
+    short m_connected[2];
+    
+    float m_y1, m_y2, m_a0, m_b1, m_b2, m_freq;
+    float mRadiansPerSample, mFilterSlope;
+    int mFilterLoops, mFilterRemain;
 } t_lpf;
 
 t_class *lpf_class;
@@ -71,21 +77,98 @@ int main(void){
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void lpf_dsp(t_lpf *x, t_signal **sp, short *count){
-	dsp_add(lpf_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[0]->s_n);
+    x->mRadiansPerSample = sc_radiansPerSample();
+    x->mFilterSlope = sc_filterSlope();
+    x->mFilterLoops = sc_filterLoops();
+    x->mFilterRemain = sc_filterRemain();
+    
+    x->m_connected[0] = count[0];
+    x->m_connected[1] = count[1];
+    
+    // the chain
+    dsp_add(lpf_perform, 4, x, sp[0]->s_vec, sp[2]->s_vec, sp[1]->s_vec);
 }
 
 t_int *lpf_perform(t_int *w){
     t_lpf *x = (t_lpf *)(w[1]);
     t_float *in = (t_float *)(w[2]);
-    t_float *out = (t_float *)(w[3]);
-	int n = (int)w[4];
+    t_float *out = (t_float *)(w[4]);
+
+    t_float freq = x->m_connected[1] ? (*(t_float *)w[3]) : x->m_freq;
     
     if (x->ob.z_disabled)
         return w + 5;    
     
-    while (n--) {
-        *out++ = *in++;
-    }
+    
+    float y0;
+	float y1 = x->m_y1;
+	float y2 = x->m_y2;
+	float a0 = x->m_a0;
+	float b1 = x->m_b1;
+	float b2 = x->m_b2;
+    
+	if (freq != x->m_freq) {
+        
+		float pfreq = freq * x->mRadiansPerSample * 0.5;
+        
+		float C = 1.f / tan(pfreq);
+		float C2 = C * C;
+		float sqrt2C = C * sqrt2_f;
+		float next_a0 = 1.f / (1.f + sqrt2C + C2);
+		float next_b1 = -2.f * (1.f - C2) * next_a0 ;
+		float next_b2 = -(1.f - sqrt2C + C2) * next_a0;
+        
+		//post("%g %g %g   %g %g   %g %g %g   %g %g\n", *freq, pfreq, qres, D, C, cosf, next_b1, next_b2, next_a0, y1, y2);
+        
+		float a0_slope = (next_a0 - a0) * x->mFilterSlope;
+		float b1_slope = (next_b1 - b1) * x->mFilterSlope;
+		float b2_slope = (next_b2 - b2) * x->mFilterSlope;
+
+		LOOP(x->mFilterLoops,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
+             
+             y2 = ZXP(in) + b1 * y0 + b2 * y1;
+             ZXP(out) = a0 * (y2 + 2.f * y0 + y1);
+             
+             y1 = ZXP(in) + b1 * y2 + b2 * y0;
+             ZXP(out) = a0 * (y1 + 2.f * y2 + y0);
+             
+             a0 += a0_slope;
+             b1 += b1_slope;
+             b2 += b2_slope;
+             );
+		LOOP(x->mFilterRemain,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
+             y2 = y1;
+             y1 = y0;
+             );
+        
+		x->m_freq = freq;
+		x->m_a0 = a0;
+		x->m_b1 = b1;
+		x->m_b2 = b2;
+	} else {
+		LOOP(x->mFilterLoops,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
+             
+             y2 = ZXP(in) + b1 * y0 + b2 * y1;
+             ZXP(out) = a0 * (y2 + 2.f * y0 + y1);
+             
+             y1 = ZXP(in) + b1 * y2 + b2 * y0;
+             ZXP(out) = a0 * (y1 + 2.f * y2 + y0);
+             );
+		LOOP(x->mFilterRemain,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
+             y2 = y1;
+             y1 = y0;
+             );
+	}
+	x->m_y1 = zapgremlins(y1);
+	x->m_y2 = zapgremlins(y2);
     
 	return w + 5;
 }
@@ -108,10 +191,16 @@ void *lpf_new(){
     
 	if (x) {
         // number of inlets
-		dsp_setup((t_pxobject *)x, 1);
+		dsp_setup((t_pxobject *)x, 2);
         
         outlet_new((t_object *)x, "signal");
         
+        x->m_a0 = 0.f;
+		x->m_b1 = 0.f;
+		x->m_b2 = 0.f;
+		x->m_y1 = 0.f;
+		x->m_y2 = 0.f;
+		x->m_freq = 0.f;
 	}
 	return (x);
 }
