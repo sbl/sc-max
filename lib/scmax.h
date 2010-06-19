@@ -55,6 +55,17 @@ float sc_filterSlope(){
 	    return 1. / loops;
 }
 
+#define PUSH_LOOPVALS \
+int tmp_floops = sc_filterLoops(); \
+int tmp_fremain = sc_filterRemain(); \
+x->mFilterLoops = 0; \
+x->mFilterRemain = 1;
+
+#define POP_LOOPVALS \
+x->mFilterLoops = tmp_floops; \
+x->mFilterRemain = tmp_fremain;
+
+
 // DSP loops
 
 #define ZXP(z) (*(z)++)
