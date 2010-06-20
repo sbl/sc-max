@@ -61,8 +61,8 @@ float sc_filterSlope(){
 
 
 #define LOOP(length, stmt)			\
-{	int xxn = (length);			\
-while (--xxn) {				\
+{	\
+for(int _tmp_i=0;_tmp_i!=length; _tmp_i++) {				\
 stmt;					\
 }							\
 }

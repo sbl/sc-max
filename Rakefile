@@ -2,7 +2,7 @@
 
 task :default => :release
 
-# compile all externals, copy helpfiles, zip it up
+desc "compile all externals, copy helpfiles, zip it up"
 task :release => [:compile_xcode, :copy_helpfiles] do
   v = File.open("VERSION", "r"){|f| f.read}
 
@@ -11,7 +11,7 @@ task :release => [:compile_xcode, :copy_helpfiles] do
   sh "zip -r sc-max-#{v}.zip _build"
 end
 
-# compile all projects that start with sc.*
+desc "compile all projects that start with sc.*"
 task :compile_xcode do
   puts "-------------------"
   puts "COMPILING EXTERNALS"
@@ -22,7 +22,7 @@ task :compile_xcode do
   end  
 end
 
-# copy over all helpfiles from the sc.* projects
+desc "copy over all helpfiles from the sc.* projects"
 task :copy_helpfiles  do
   puts "-----------------"
   puts "COPYING HELPFILES"
@@ -34,7 +34,7 @@ task :copy_helpfiles  do
   
 end
 
-# remove mxo's and maxhelp from _build
+desc "remove mxo's and maxhelp from _build"
 task :clean do
   puts "-----------"
   puts "CLEANING UP"
