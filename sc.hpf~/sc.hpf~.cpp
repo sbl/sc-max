@@ -20,7 +20,7 @@
 
 /*
 
- sc.lpf~
+ sc.hpf~
  (c) stephen lumenta under GPL
  http://www.gnu.org/licenses/gpl.html
  
@@ -36,7 +36,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct _lpf 
+typedef struct _hpf 
 {
 	t_pxobject					ob;
     short m_connected[2];
@@ -44,19 +44,19 @@ typedef struct _lpf
     float m_y1, m_y2, m_a0, m_b1, m_b2, m_freq;
     float mRadiansPerSample, mFilterSlope;
     int mFilterLoops, mFilterRemain;
-} t_lpf;
+} t_hpf;
 
-t_class *lpf_class;
+t_class *hpf_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *lpf_new   (double freq    );
-void lpf_free   (t_lpf *x);
-void lpf_assist (t_lpf *x, void *b, long m, long a, char *s);
-void lpf_float  (t_lpf *x, double f);
-void lpf_int    (t_lpf *x, long i);
-void lpf_dsp    (t_lpf *x, t_signal **sp, short *count);
-t_int *lpf_perform(t_int *w);
+void *hpf_new   (double freq    );
+void hpf_free   (t_hpf *x);
+void hpf_assist (t_hpf *x, void *b, long m, long a, char *s);
+void hpf_float  (t_hpf *x, double f);
+void hpf_int    (t_hpf *x, long i);
+void hpf_dsp    (t_hpf *x, t_signal **sp, short *count);
+t_int *hpf_perform(t_int *w);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,28 +64,28 @@ int main(void)
 {	
 	t_class *c;
     
-	c = class_new("sc.lpf~", (method)lpf_new, (method)dsp_free, (long)sizeof(t_lpf), 0L, A_DEFFLOAT, 0);
+	c = class_new("sc.hpf~", (method)hpf_new, (method)dsp_free, (long)sizeof(t_hpf), 0L, A_DEFFLOAT, 0);
 	
-	class_addmethod(c, (method)lpf_dsp,		"dsp",		A_CANT, 0);
-	class_addmethod(c, (method)lpf_assist,    "assist",	A_CANT, 0);
-    class_addmethod(c, (method)lpf_float, "float", A_FLOAT, 0);
-    class_addmethod(c, (method)lpf_int, "int", A_LONG, 0);
+	class_addmethod(c, (method)hpf_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)hpf_assist,    "assist",	A_CANT, 0);
+    class_addmethod(c, (method)hpf_float, "float", A_FLOAT, 0);
+    class_addmethod(c, (method)hpf_int, "int", A_LONG, 0);
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
-	lpf_class = c;
+	hpf_class = c;
 	
 	return 0;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lpf_int(t_lpf *x, long i)
+void hpf_int(t_hpf *x, long i)
 {
-    lpf_float(x, i);
+    hpf_float(x, i);
 }
 
-void lpf_float(t_lpf *x, double f)
+void hpf_float(t_hpf *x, double f)
 {
     long in = proxy_getinlet((t_object *)x);
     if(in==1){
@@ -96,7 +96,7 @@ void lpf_float(t_lpf *x, double f)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lpf_dsp(t_lpf *x, t_signal **sp, short *count)
+void hpf_dsp(t_hpf *x, t_signal **sp, short *count)
 {
     x->mRadiansPerSample = sc_radiansPerSample();
     x->mFilterSlope = sc_filterSlope();
@@ -107,18 +107,19 @@ void lpf_dsp(t_lpf *x, t_signal **sp, short *count)
     x->m_connected[1] = count[1];
     
     x->m_a0 = 0.f;
-    x->m_b1 = 0.f;
-    x->m_b2 = 0.f;
-    x->m_y1 = 0.f;
-    x->m_y2 = 0.f;
-    x->changed = 1;
+	x->m_b1 = 0.f;
+	x->m_b2 = 0.f;
+	x->m_y1 = 0.f;
+	x->m_y2 = 0.f;
     
-    dsp_add(lpf_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[2]->s_vec);
+    x->changed = 1;
+        
+    dsp_add(hpf_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[2]->s_vec);
 }
 
-t_int *lpf_perform(t_int *w)
+t_int *hpf_perform(t_int *w)
 {
-    t_lpf *x = (t_lpf*) w[1];
+    t_hpf *x = (t_hpf*) w[1];
     t_float *in = (t_float*)w[2];
     t_float freq = x->m_connected[1] ? (*(t_float *)w[3]) : x->m_freq;
     t_float *out = (t_float*)w[4];
@@ -134,73 +135,66 @@ t_int *lpf_perform(t_int *w)
     
     freq = freq< 10.f ? 10.f : freq;
     
-    if (freq != x->m_freq || x->changed)
-    {
-        float pfreq = freq * x->mRadiansPerSample * 0.5;
+	if (freq != x->m_freq || x->changed) {
         
-        float C = 1.f / tan(pfreq);
-        float C2 = C * C;
-        float sqrt2C = C * sqrt2_f;
-        float next_a0 = 1.f / (1.f + sqrt2C + C2);
-        float next_b1 = -2.f * (1.f - C2) * next_a0 ;
-        float next_b2 = -(1.f - sqrt2C + C2) * next_a0;
+		float pfreq = freq * x->mRadiansPerSample * 0.5;
         
-        float a0_slope = (next_a0 - a0) * x->mFilterSlope;
-        float b1_slope = (next_b1 - b1) * x->mFilterSlope;
-        float b2_slope = (next_b2 - b2) * x->mFilterSlope;
-            
-
-        LOOP(x->mFilterLoops,
-            y0 = ZXP(in) + b1 * y1 + b2 * y2; 
-            ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
-            
-            y2 = ZXP(in) + b1 * y0 + b2 * y1; 
-            ZXP(out) = a0 * (y2 + 2.f * y0 + y1);
-            
-            y1 = ZXP(in) + b1 * y2 + b2 * y0; 
-            ZXP(out) = a0 * (y1 + 2.f * y2 + y0);
-            
-            a0 += a0_slope; 
-            b1 += b1_slope; 
-            b2 += b2_slope;
+		float C = tan(pfreq);
+		float C2 = C * C;
+		float sqrt2C = C * sqrt2_f;
+		float next_a0 = 1.f / (1.f + sqrt2C + C2);
+		float next_b1 = 2.f * (1.f - C2) * next_a0 ;
+		float next_b2 = -(1.f - sqrt2C + C2) * next_a0;
+        
+		float a0_slope = (next_a0 - a0) * x->mFilterSlope;
+		float b1_slope = (next_b1 - b1) * x->mFilterSlope;
+		float b2_slope = (next_b2 - b2) * x->mFilterSlope;
+		LOOP(x->mFilterLoops,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 - 2.f * y1 + y2);
+             
+             y2 = ZXP(in) + b1 * y0 + b2 * y1;
+             ZXP(out) = a0 * (y2 - 2.f * y0 + y1);
+             
+             y1 = ZXP(in) + b1 * y2 + b2 * y0;
+             ZXP(out) = a0 * (y1 - 2.f * y2 + y0);
+             
+             a0 += a0_slope;
+             b1 += b1_slope;
+             b2 += b2_slope;
+             );
+		LOOP(x->mFilterRemain,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 - 2.f * y1 + y2);
+             y2 = y1;
+             y1 = y0;
              );
         
-        LOOP(x->mFilterRemain,
-            y0 = ZXP(in) + b1 * y1 + b2 * y2; 
-            ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
-            y2 = y1; 
-            y1 = y0;
-             );
-        
-        x->m_a0 = a0;
-        x->m_b1 = b1;
-        x->m_b2 = b2;
-        x->m_freq = freq;
+		x->m_freq = freq;
+		x->m_a0 = a0;
+		x->m_b1 = b1;
+		x->m_b2 = b2;
         x->changed = 0;
-    }
-    else
-    {
-        LOOP(x->mFilterLoops,
-            y0 = ZXP(in) + b1 * y1 + b2 * y2; 
-            ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
-            
-            y2 = ZXP(in) + b1 * y0 + b2 * y1; 
-            ZXP(out) = a0 * (y2 + 2.f * y0 + y1);
-            
-            y1 = ZXP(in) + b1 * y2 + b2 * y0; 
-            ZXP(out) = a0 * (y1 + 2.f * y2 + y0);
+	} else {
+		LOOP(x->mFilterLoops,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 - 2.f * y1 + y2);
+             
+             y2 = ZXP(in) + b1 * y0 + b2 * y1;
+             ZXP(out) = a0 * (y2 - 2.f * y0 + y1);
+             
+             y1 = ZXP(in) + b1 * y2 + b2 * y0;
+             ZXP(out) = a0 * (y1 - 2.f * y2 + y0);
              );
-        
-        LOOP(x->mFilterRemain,
-             y0 = ZXP(in) + b1 * y1 + b2 * y2; 
-            ZXP(out) = a0 * (y0 + 2.f * y1 + y2);
-            y2 = y1; 
-            y1 = y0;
+		LOOP(x->mFilterRemain,
+             y0 = ZXP(in) + b1 * y1 + b2 * y2;
+             ZXP(out) = a0 * (y0 - 2.f * y1 + y2);
+             y2 = y1;
+             y1 = y0;
              );
-    }
-
-    x->m_y1 = zapgremlins(y1);
-    x->m_y2 = zapgremlins(y2);
+	}
+	x->m_y1 = zapgremlins(y1);
+	x->m_y2 = zapgremlins(y2);
     
 ending:
     return w+5;
@@ -208,7 +202,7 @@ ending:
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lpf_assist(t_lpf *x, void *b, long m, long a, char *s)
+void hpf_assist(t_hpf *x, void *b, long m, long a, char *s)
 {
 	if (m == ASSIST_INLET) { //inlet
         switch (a) {
@@ -222,14 +216,14 @@ void lpf_assist(t_lpf *x, void *b, long m, long a, char *s)
 		
 	} 
 	else {	// outlet
-		sprintf(s, "(signal) LPFed Signal"); 			
+		sprintf(s, "(signal) Filtered Signal"); 			
 	}
 }
 
-void *lpf_new(double freq)
+void *hpf_new(double freq)
 {
-	t_lpf *x = NULL;
-	x = (t_lpf *)object_alloc(lpf_class);
+	t_hpf *x = NULL;
+	x = (t_hpf *)object_alloc(hpf_class);
     
 	if (x) {
         // number of inlets
@@ -238,6 +232,7 @@ void *lpf_new(double freq)
         outlet_new((t_object *)x, "signal");
         
 		x->m_freq = freq;
+        x->changed = 1;
 	}
 	return (x);
 }

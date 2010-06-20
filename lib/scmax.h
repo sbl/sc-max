@@ -62,9 +62,9 @@ float sc_filterSlope(){
 
 #define LOOP(length, stmt)			\
 {	\
-for(int _tmp_i=0;_tmp_i!=length; _tmp_i++) {				\
-stmt;					\
-}							\
+    for(int _tmp_i=0;_tmp_i!=length; _tmp_i++) {				\
+        stmt;					\
+    }							\
 }
 
 // math
@@ -80,6 +80,11 @@ const float pi32_f  = pi_f * 1.5f;
 const float twopi_f = pi_f * 2.f;
 const float sqrt2_f = std::sqrt(2.f);
 const float rsqrt2_f= 1.f/std::sqrt(2.f);
+
+#define sc_abs(a) std::abs(a)
+#define sc_max(a,b) (((a) > (b)) ? (a) : (b))
+#define sc_min(a,b) (((a) < (b)) ? (a) : (b))
+
 
 
 typedef float float32;

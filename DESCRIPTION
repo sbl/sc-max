@@ -1,4 +1,17 @@
-sc.lpf~	Buttworth 2nd order lowpass filter		
+sc.lpf~	Buttworth 2nd order lowpass filter  
+sc.rlpf~
+sc.resonz~	Resonant filter			
+sc.hpf~
+sc.rhpf~	
+sc.ringz~ 
+sc.bpf~ 
+sc.rbpf~ 
+sc.mideq~
+sc.formlet~	
+sc.moogff~ 
+sc.freqshift~	
+
+
 
 sc.brownnoise~	browninan motion	Generates noise whose spectrum falls off in power by 6 dB per octave
 sc.clipnoise~	Clip Noise.	Generates noise whose spectrum falls off in power by 3 dB per octave.
