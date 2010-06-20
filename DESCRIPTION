@@ -1,4 +1,4 @@
-sc.whitenoise~	equal power noise	Generates noise whose spectrum has equal power at all frequencies
+sc.lpf~	Buttworth 2nd order lowpass filter		
 
 sc.brownnoise~	browninan motion	Generates noise whose spectrum falls off in power by 6 dB per octave
 sc.clipnoise~	Clip Noise.	Generates noise whose spectrum falls off in power by 3 dB per octave.
@@ -16,3 +16,4 @@ sc.lfnoise2~	Generates quadratically interpolated random values at a rate
 sc.logistic~	chaotic noise function. 	A noise generator based on the logistic map y = chaosParam * y * (1.0 - y)	
 sc.mantissamask~	Reduce Precision.	Masks off bits in the mantissa of the floating point sample value	
 sc.pinknoise~	1/f noise	Generates noise whose spectrum falls off in power by 3 dB per octave	
+sc.whitenoise~	equal power noise	Generates noise whose spectrum has equal power at all frequencies

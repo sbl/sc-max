@@ -82,10 +82,7 @@ int main(void)
 
 void lpf_int(t_lpf *x, long i)
 {
-    long in = proxy_getinlet((t_object *)x);
-    if (in==1) {
-        lpf_float(x, i);
-    }
+    lpf_float(x, i);
 }
 
 void lpf_float(t_lpf *x, double f)
@@ -209,7 +206,15 @@ ending:
 void lpf_assist(t_lpf *x, void *b, long m, long a, char *s)
 {
 	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "Something to filter");
+        switch (a) {
+            case 0:
+                sprintf(s, "(signal) Something to filter");
+                break;
+            case 1:
+                sprintf(s, "(signal/float) Filter freq");
+                break;
+        }
+		
 	} 
 	else {	// outlet
 		sprintf(s, "(signal) LPFed Signal"); 			
