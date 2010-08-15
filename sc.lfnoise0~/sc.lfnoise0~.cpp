@@ -31,16 +31,7 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
-#include "SC_RGen.h"
-
-// macros to get pseudo-random number generator, and put its state in registers
-#define RGET RGen& rgen = x->rgen; uint32 s1 = rgen.s1; uint32 s2 = rgen.s2; uint32 s3 = rgen.s3;
-#define RPUT rgen.s1 = s1; rgen.s2 = s2; rgen.s3 = s3;
-
-// from SCBOUNDSMacrosH.h
-#define sc_max(a,b) (((a) > (b)) ? (a) : (b))
-#define sc_min(a,b) (((a) < (b)) ? (a) : (b))
-
+#include "scmax.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -166,7 +157,7 @@ void *lfnoise_new(double freq){
         x->m_sr         = sys_getsr();
         
         
-        x->rgen.init(time(NULL));
+        x->rgen.init(sc_randomSeed());
         
         outlet_new((t_object *)x, "signal");
 	}

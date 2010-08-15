@@ -32,11 +32,8 @@
 #include "ext.h"
 #include "ext_obex.h"
 #include "z_dsp.h"
-#include "SC_RGen.h"
+#include "scmax.h"
 #include "clz.h"
-
-#define RGET RGen& rgen = x->rgen; uint32 s1 = rgen.s1; uint32 s2 = rgen.s2; uint32 s3 = rgen.s3;
-#define RPUT rgen.s1 = s1; rgen.s2 = s2; rgen.s3 = s3;
 
 #define N_DICE 16
 
@@ -136,7 +133,7 @@ void *pinknoise_new(long argc, t_atom *argv){
 		dsp_setup((t_pxobject *)x, 0);
         
         outlet_new((t_object *)x, "signal");
-        x->rgen.init(time(NULL));
+        x->rgen.init(sc_randomSeed());
         
         // set up 
         RGET

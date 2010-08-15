@@ -10,6 +10,7 @@
 		22CF119B0EE9A8250054F513 /* sc.dust~.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.dust~.cpp */; };
 		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
 		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
+		DCC7A6591217F55B004D7116 /* scmax.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC7A6581217F55B004D7116 /* scmax.h */; };
 		DCC9D4471125C6110050A91B /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D3A51125C6110050A91B /* ChangeCounter.h */; };
 		DCC9D4481125C6110050A91B /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D3A61125C6110050A91B /* ControlSpec.h */; };
 		DCC9D4491125C6110050A91B /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D3A71125C6110050A91B /* DrawBackground.h */; };
@@ -173,6 +174,7 @@
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.dust~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.dust~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
+		DCC7A6581217F55B004D7116 /* scmax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scmax.h; path = ../lib/scmax.h; sourceTree = SOURCE_ROOT; };
 		DCC9D3A51125C6110050A91B /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCounter.h; sourceTree = "<group>"; };
 		DCC9D3A61125C6110050A91B /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpec.h; sourceTree = "<group>"; };
 		DCC9D3A71125C6110050A91B /* DrawBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBackground.h; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DCC7A6581217F55B004D7116 /* scmax.h */,
 				22CF119A0EE9A8250054F513 /* sc.dust~.cpp */,
 			);
 			name = Source;
@@ -768,6 +771,7 @@
 				DCC9D4DF1125C6110050A91B /* SC_UnitDef.h in Headers */,
 				DCC9D4E01125C6110050A91B /* SC_UnitSpec.h in Headers */,
 				DCC9D4E11125C6110050A91B /* SC_WireSpec.h in Headers */,
+				DCC7A6591217F55B004D7116 /* scmax.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

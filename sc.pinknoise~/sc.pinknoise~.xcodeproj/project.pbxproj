@@ -165,6 +165,7 @@
 		DC1230B91125C45000236527 /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12301E1125C45000236527 /* SC_UnitDef.h */; };
 		DC1230BA1125C45000236527 /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC12301F1125C45000236527 /* SC_UnitSpec.h */; };
 		DC1230BB1125C45000236527 /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1230201125C45000236527 /* SC_WireSpec.h */; };
+		DCC7A6EF1217F6C7004D7116 /* scmax.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC7A6EE1217F6C7004D7116 /* scmax.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -328,6 +329,7 @@
 		DC12301E1125C45000236527 /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitDef.h; sourceTree = "<group>"; };
 		DC12301F1125C45000236527 /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitSpec.h; sourceTree = "<group>"; };
 		DC1230201125C45000236527 /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WireSpec.h; sourceTree = "<group>"; };
+		DCC7A6EE1217F6C7004D7116 /* scmax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scmax.h; path = ../lib/scmax.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DCC7A6EE1217F6C7004D7116 /* scmax.h */,
 				22CF119A0EE9A8250054F513 /* sc.pinknoise~.cpp */,
 			);
 			name = Source;
@@ -768,6 +771,7 @@
 				DC1230B91125C45000236527 /* SC_UnitDef.h in Headers */,
 				DC1230BA1125C45000236527 /* SC_UnitSpec.h in Headers */,
 				DC1230BB1125C45000236527 /* SC_WireSpec.h in Headers */,
+				DCC7A6EF1217F6C7004D7116 /* scmax.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
