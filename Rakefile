@@ -4,7 +4,7 @@ task :default => :release
 
 desc "compile all externals, copy helpfiles, zip it up"
 task :release => [:compile_xcode, :copy_helpfiles] do
-  v = File.open("VERSION", "r"){|f| f.read}
+  v = File.open("VERSION", "r"){|f| f.read}.chomp
 
   sh "cp COPYING _build/"
   sh "cp README _build/"
