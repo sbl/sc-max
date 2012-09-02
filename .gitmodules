@@ -1,0 +1,6 @@
+[submodule "lib/max6-sdk"]
+	path = lib/max6-sdk
+	url = https://github.com/Cycling74/max6-sdk.git
+[submodule "lib/supercollider"]
+	path = lib/supercollider
+	url = https://github.com/supercollider/supercollider.git
