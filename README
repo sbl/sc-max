@@ -26,7 +26,7 @@ Drop the sc-max folder somewhere in your max-search-path
 Building (if you got the source from github):
 /////////////////////////////////////////////
 
-* you have to update the C74SUPPORT path in xcodeconfig
+* make sure to initialize the submodules
 * compile from xcode
 * OR use the supplied rakefile. it will compile all and copy the helpfiles to the _build directory
 
