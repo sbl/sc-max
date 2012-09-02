@@ -8,164 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		22CF119B0EE9A8250054F513 /* sc.clipnoise~.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22CF119A0EE9A8250054F513 /* sc.clipnoise~.cpp */; };
-		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
-		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
+		DC82255015F397850002455B /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82254F15F397850002455B /* MaxAPI.framework */; };
+		DC82255215F397890002455B /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82255115F397890002455B /* MaxAudioAPI.framework */; };
 		DCC7A63E1217F531004D7116 /* scmax.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC7A63D1217F531004D7116 /* scmax.h */; };
-		DCC9D5A71125C64B0050A91B /* ChangeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5051125C64B0050A91B /* ChangeCounter.h */; };
-		DCC9D5A81125C64B0050A91B /* ControlSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5061125C64B0050A91B /* ControlSpec.h */; };
-		DCC9D5A91125C64B0050A91B /* DrawBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5071125C64B0050A91B /* DrawBackground.h */; };
-		DCC9D5AA1125C64B0050A91B /* GetStringFromUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5081125C64B0050A91B /* GetStringFromUser.h */; };
-		DCC9D5AB1125C64B0050A91B /* GoToPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5091125C64B0050A91B /* GoToPanel.h */; };
-		DCC9D5AC1125C64B0050A91B /* HTMLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D50A1125C64B0050A91B /* HTMLRenderer.h */; };
-		DCC9D5AD1125C64B0050A91B /* iPhoneSCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D50C1125C64B0050A91B /* iPhoneSCGraphView.h */; };
-		DCC9D5AE1125C64B0050A91B /* iPhoneSCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D50D1125C64B0050A91B /* iPhoneSCView.h */; };
-		DCC9D5AF1125C64B0050A91B /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D50E1125C64B0050A91B /* MyDocument.h */; };
-		DCC9D5B01125C64B0050A91B /* RendezvousClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D50F1125C64B0050A91B /* RendezvousClient.h */; };
-		DCC9D5B11125C64B0050A91B /* SCCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5101125C64B0050A91B /* SCCocoaView.h */; };
-		DCC9D5B21125C64B0050A91B /* SCDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5111125C64B0050A91B /* SCDialog.h */; };
-		DCC9D5B31125C64B0050A91B /* SCGeom.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5121125C64B0050A91B /* SCGeom.h */; };
-		DCC9D5B41125C64B0050A91B /* SCGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5131125C64B0050A91B /* SCGraphView.h */; };
-		DCC9D5B51125C64B0050A91B /* SCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5141125C64B0050A91B /* SCImage.h */; };
-		DCC9D5B61125C64B0050A91B /* SCNSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5151125C64B0050A91B /* SCNSWindow.h */; };
-		DCC9D5B71125C64B0050A91B /* SCService.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5161125C64B0050A91B /* SCService.h */; };
-		DCC9D5B81125C64B0050A91B /* SCSoundFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5171125C64B0050A91B /* SCSoundFileView.h */; };
-		DCC9D5B91125C64B0050A91B /* SCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5181125C64B0050A91B /* SCTextView.h */; };
-		DCC9D5BA1125C64B0050A91B /* SCView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5191125C64B0050A91B /* SCView.h */; };
-		DCC9D5BB1125C64B0050A91B /* SCVirtualMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D51A1125C64B0050A91B /* SCVirtualMachine.h */; };
-		DCC9D5BC1125C64B0050A91B /* ICUMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D51D1125C64B0050A91B /* ICUMatcher.h */; };
-		DCC9D5BD1125C64B0050A91B /* ICUPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D51E1125C64B0050A91B /* ICUPattern.h */; };
-		DCC9D5BE1125C64B0050A91B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCC9D51F1125C64B0050A91B /* LICENSE.txt */; };
-		DCC9D5BF1125C64B0050A91B /* NSStringICUAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5201125C64B0050A91B /* NSStringICUAdditions.h */; };
-		DCC9D5C01125C64B0050A91B /* SMLAdvancedFindController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5211125C64B0050A91B /* SMLAdvancedFindController.h */; };
-		DCC9D5C11125C64B0050A91B /* SMLStatusBarTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5221125C64B0050A91B /* SMLStatusBarTextFieldCell.h */; };
-		DCC9D5C21125C64B0050A91B /* TabletEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5231125C64B0050A91B /* TabletEvents.h */; };
-		DCC9D5C31125C64B0050A91B /* TextFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5241125C64B0050A91B /* TextFinder.h */; };
-		DCC9D5C41125C64B0050A91B /* UserPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5251125C64B0050A91B /* UserPanel.h */; };
-		DCC9D5C51125C64B0050A91B /* dfftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5271125C64B0050A91B /* dfftlib.h */; };
-		DCC9D5C61125C64B0050A91B /* fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5281125C64B0050A91B /* fftlib.h */; };
-		DCC9D5C71125C64B0050A91B /* SC_AllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5291125C64B0050A91B /* SC_AllocPool.h */; };
-		DCC9D5C81125C64B0050A91B /* SC_Altivec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52A1125C64B0050A91B /* SC_Altivec.h */; };
-		DCC9D5C91125C64B0050A91B /* SC_DirUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52B1125C64B0050A91B /* SC_DirUtils.h */; };
-		DCC9D5CA1125C64B0050A91B /* SC_Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52C1125C64B0050A91B /* SC_Endian.h */; };
-		DCC9D5CB1125C64B0050A91B /* SC_fftlib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52D1125C64B0050A91B /* SC_fftlib.h */; };
-		DCC9D5CC1125C64B0050A91B /* SC_FIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52E1125C64B0050A91B /* SC_FIFO.h */; };
-		DCC9D5CD1125C64B0050A91B /* sc_popen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D52F1125C64B0050A91B /* sc_popen.h */; };
-		DCC9D5CE1125C64B0050A91B /* SC_Reply.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5301125C64B0050A91B /* SC_Reply.h */; };
-		DCC9D5CF1125C64B0050A91B /* SC_Sem.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5311125C64B0050A91B /* SC_Sem.h */; };
-		DCC9D5D01125C64B0050A91B /* SC_StandAloneInfo_Darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5321125C64B0050A91B /* SC_StandAloneInfo_Darwin.h */; };
-		DCC9D5D11125C64B0050A91B /* SC_StringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5331125C64B0050A91B /* SC_StringBuffer.h */; };
-		DCC9D5D21125C64B0050A91B /* SC_StringParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5341125C64B0050A91B /* SC_StringParser.h */; };
-		DCC9D5D31125C64B0050A91B /* SC_VFP11.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5351125C64B0050A91B /* SC_VFP11.h */; };
-		DCC9D5D41125C64B0050A91B /* SC_Win32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5361125C64B0050A91B /* SC_Win32Utils.h */; };
-		DCC9D5D51125C64B0050A91B /* scsynthsend.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5371125C64B0050A91B /* scsynthsend.h */; };
-		DCC9D5D61125C64B0050A91B /* AdvancingAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5391125C64B0050A91B /* AdvancingAllocPool.h */; };
-		DCC9D5D71125C64B0050A91B /* AllocPools.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53A1125C64B0050A91B /* AllocPools.h */; };
-		DCC9D5D81125C64B0050A91B /* bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53B1125C64B0050A91B /* bullet.h */; };
-		DCC9D5D91125C64B0050A91B /* ByteCodeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53C1125C64B0050A91B /* ByteCodeArray.h */; };
-		DCC9D5DA1125C64B0050A91B /* FIFOT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53D1125C64B0050A91B /* FIFOT.h */; };
-		DCC9D5DB1125C64B0050A91B /* GC.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53E1125C64B0050A91B /* GC.h */; };
-		DCC9D5DC1125C64B0050A91B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D53F1125C64B0050A91B /* HashTable.h */; };
-		DCC9D5DD1125C64B0050A91B /* InitAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5401125C64B0050A91B /* InitAlloc.h */; };
-		DCC9D5DE1125C64B0050A91B /* MiscInlineMath.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5411125C64B0050A91B /* MiscInlineMath.h */; };
-		DCC9D5DF1125C64B0050A91B /* Opcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5421125C64B0050A91B /* Opcodes.h */; };
-		DCC9D5E01125C64B0050A91B /* OSCData.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5431125C64B0050A91B /* OSCData.h */; };
-		DCC9D5E11125C64B0050A91B /* PowerOfTwoAllocPool.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5441125C64B0050A91B /* PowerOfTwoAllocPool.h */; };
-		DCC9D5E21125C64B0050A91B /* PredefinedSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5451125C64B0050A91B /* PredefinedSymbols.h */; };
-		DCC9D5E31125C64B0050A91B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5461125C64B0050A91B /* PriorityQueue.h */; };
-		DCC9D5E41125C64B0050A91B /* PyrArchiverT.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5471125C64B0050A91B /* PyrArchiverT.h */; };
-		DCC9D5E51125C64B0050A91B /* PyrDeepCopier.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5481125C64B0050A91B /* PyrDeepCopier.h */; };
-		DCC9D5E61125C64B0050A91B /* PyrDeepFreezer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5491125C64B0050A91B /* PyrDeepFreezer.h */; };
-		DCC9D5E71125C64B0050A91B /* PyrErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54A1125C64B0050A91B /* PyrErrors.h */; };
-		DCC9D5E81125C64B0050A91B /* PyrFilePrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54B1125C64B0050A91B /* PyrFilePrim.h */; };
-		DCC9D5E91125C64B0050A91B /* PyrFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54C1125C64B0050A91B /* PyrFileUtils.h */; };
-		DCC9D5EA1125C64B0050A91B /* PyrInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54D1125C64B0050A91B /* PyrInterpreter.h */; };
-		DCC9D5EB1125C64B0050A91B /* PyrKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54E1125C64B0050A91B /* PyrKernel.h */; };
-		DCC9D5EC1125C64B0050A91B /* PyrKernelProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D54F1125C64B0050A91B /* PyrKernelProto.h */; };
-		DCC9D5ED1125C64B0050A91B /* PyrLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5501125C64B0050A91B /* PyrLexer.h */; };
-		DCC9D5EE1125C64B0050A91B /* PyrListPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5511125C64B0050A91B /* PyrListPrim.h */; };
-		DCC9D5EF1125C64B0050A91B /* PyrMathPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5521125C64B0050A91B /* PyrMathPrim.h */; };
-		DCC9D5F01125C64B0050A91B /* PyrMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5531125C64B0050A91B /* PyrMessage.h */; };
-		DCC9D5F11125C64B0050A91B /* PyrObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5541125C64B0050A91B /* PyrObject.h */; };
-		DCC9D5F21125C64B0050A91B /* PyrObjectProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5551125C64B0050A91B /* PyrObjectProto.h */; };
-		DCC9D5F31125C64B0050A91B /* PyrParseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5561125C64B0050A91B /* PyrParseNode.h */; };
-		DCC9D5F41125C64B0050A91B /* PyrPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5571125C64B0050A91B /* PyrPrimitive.h */; };
-		DCC9D5F51125C64B0050A91B /* PyrPrimitiveProto.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5581125C64B0050A91B /* PyrPrimitiveProto.h */; };
-		DCC9D5F61125C64B0050A91B /* PyrSched.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5591125C64B0050A91B /* PyrSched.h */; };
-		DCC9D5F71125C64B0050A91B /* PyrSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55A1125C64B0050A91B /* PyrSignal.h */; };
-		DCC9D5F81125C64B0050A91B /* PyrSignalPrim.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55B1125C64B0050A91B /* PyrSignalPrim.h */; };
-		DCC9D5F91125C64B0050A91B /* PyrSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55C1125C64B0050A91B /* PyrSlot.h */; };
-		DCC9D5FA1125C64B0050A91B /* PyrSlot32.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55D1125C64B0050A91B /* PyrSlot32.h */; };
-		DCC9D5FB1125C64B0050A91B /* PyrSlot64.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55E1125C64B0050A91B /* PyrSlot64.h */; };
-		DCC9D5FC1125C64B0050A91B /* PyrSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D55F1125C64B0050A91B /* PyrSymbol.h */; };
-		DCC9D5FD1125C64B0050A91B /* PyrSymbolTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5601125C64B0050A91B /* PyrSymbolTable.h */; };
-		DCC9D5FE1125C64B0050A91B /* readSamples.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5611125C64B0050A91B /* readSamples.h */; };
-		DCC9D5FF1125C64B0050A91B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5621125C64B0050A91B /* ReadWriteMacros.h */; };
-		DCC9D6001125C64B0050A91B /* Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5631125C64B0050A91B /* Samp.h */; };
-		DCC9D6011125C64B0050A91B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5641125C64B0050A91B /* SC_ComPort.h */; };
-		DCC9D6021125C64B0050A91B /* SC_LanguageClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5651125C64B0050A91B /* SC_LanguageClient.h */; };
-		DCC9D6031125C64B0050A91B /* SC_LibraryConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5661125C64B0050A91B /* SC_LibraryConfig.h */; };
-		DCC9D6041125C64B0050A91B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5671125C64B0050A91B /* SC_List.h */; };
-		DCC9D6051125C64B0050A91B /* SC_LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5681125C64B0050A91B /* SC_LogFile.h */; };
-		DCC9D6061125C64B0050A91B /* SC_Msg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5691125C64B0050A91B /* SC_Msg.h */; };
-		DCC9D6071125C64B0050A91B /* SC_SynthImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56A1125C64B0050A91B /* SC_SynthImpl.h */; };
-		DCC9D6081125C64B0050A91B /* SC_TerminalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56B1125C64B0050A91B /* SC_TerminalClient.h */; };
-		DCC9D6091125C64B0050A91B /* SC_UnorderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56C1125C64B0050A91B /* SC_UnorderedList.h */; };
-		DCC9D60A1125C64B0050A91B /* SCBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56D1125C64B0050A91B /* SCBase.h */; };
-		DCC9D60B1125C64B0050A91B /* SFHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56E1125C64B0050A91B /* SFHeaders.h */; };
-		DCC9D60C1125C64B0050A91B /* SimpleStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D56F1125C64B0050A91B /* SimpleStack.h */; };
-		DCC9D60D1125C64B0050A91B /* VMGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5701125C64B0050A91B /* VMGlobals.h */; };
-		DCC9D60E1125C64B0050A91B /* clz.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5721125C64B0050A91B /* clz.h */; };
-		DCC9D60F1125C64B0050A91B /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5731125C64B0050A91B /* Hash.h */; };
-		DCC9D6101125C64B0050A91B /* SC_BoundsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5741125C64B0050A91B /* SC_BoundsMacros.h */; };
-		DCC9D6111125C64B0050A91B /* SC_BufGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5751125C64B0050A91B /* SC_BufGen.h */; };
-		DCC9D6121125C64B0050A91B /* SC_Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5761125C64B0050A91B /* SC_Constants.h */; };
-		DCC9D6131125C64B0050A91B /* SC_DemandUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5771125C64B0050A91B /* SC_DemandUnit.h */; };
-		DCC9D6141125C64B0050A91B /* SC_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5781125C64B0050A91B /* SC_Dimension.h */; };
-		DCC9D6151125C64B0050A91B /* SC_FifoMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5791125C64B0050A91B /* SC_FifoMsg.h */; };
-		DCC9D6161125C64B0050A91B /* SC_Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57A1125C64B0050A91B /* SC_Graph.h */; };
-		DCC9D6171125C64B0050A91B /* SC_InlineBinaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57B1125C64B0050A91B /* SC_InlineBinaryOp.h */; };
-		DCC9D6181125C64B0050A91B /* SC_InlineUnaryOp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57C1125C64B0050A91B /* SC_InlineUnaryOp.h */; };
-		DCC9D6191125C64B0050A91B /* SC_InterfaceTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57D1125C64B0050A91B /* SC_InterfaceTable.h */; };
-		DCC9D61A1125C64B0050A91B /* sc_msg_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57E1125C64B0050A91B /* sc_msg_iter.h */; };
-		DCC9D61B1125C64B0050A91B /* SC_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D57F1125C64B0050A91B /* SC_Node.h */; };
-		DCC9D61C1125C64B0050A91B /* SC_PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5801125C64B0050A91B /* SC_PlugIn.h */; };
-		DCC9D61D1125C64B0050A91B /* SC_Rate.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5811125C64B0050A91B /* SC_Rate.h */; };
-		DCC9D61E1125C64B0050A91B /* SC_RGen.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5821125C64B0050A91B /* SC_RGen.h */; };
-		DCC9D61F1125C64B0050A91B /* SC_SndBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5831125C64B0050A91B /* SC_SndBuf.h */; };
-		DCC9D6201125C64B0050A91B /* SC_sndfile_stub.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5841125C64B0050A91B /* SC_sndfile_stub.h */; };
-		DCC9D6211125C64B0050A91B /* SC_Types.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5851125C64B0050A91B /* SC_Types.h */; };
-		DCC9D6221125C64B0050A91B /* SC_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5861125C64B0050A91B /* SC_Unit.h */; };
-		DCC9D6231125C64B0050A91B /* SC_Wire.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5871125C64B0050A91B /* SC_Wire.h */; };
-		DCC9D6241125C64B0050A91B /* SC_World.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5881125C64B0050A91B /* SC_World.h */; };
-		DCC9D6251125C64B0050A91B /* SC_WorldOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5891125C64B0050A91B /* SC_WorldOptions.h */; };
-		DCC9D6261125C64B0050A91B /* Unroll.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D58A1125C64B0050A91B /* Unroll.h */; };
-		DCC9D6271125C64B0050A91B /* HashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D58C1125C64B0050A91B /* HashTable.h */; };
-		DCC9D6281125C64B0050A91B /* MsgFifo.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D58D1125C64B0050A91B /* MsgFifo.h */; };
-		DCC9D6291125C64B0050A91B /* OSC_Packet.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D58E1125C64B0050A91B /* OSC_Packet.h */; };
-		DCC9D62A1125C64B0050A91B /* PriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D58F1125C64B0050A91B /* PriorityQueue.h */; };
-		DCC9D62B1125C64B0050A91B /* ReadWriteMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5901125C64B0050A91B /* ReadWriteMacros.h */; };
-		DCC9D62C1125C64B0050A91B /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5911125C64B0050A91B /* Rendezvous.h */; };
-		DCC9D62D1125C64B0050A91B /* SC_AU.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5921125C64B0050A91B /* SC_AU.h */; };
-		DCC9D62E1125C64B0050A91B /* SC_Complex.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5931125C64B0050A91B /* SC_Complex.h */; };
-		DCC9D62F1125C64B0050A91B /* SC_ComPort.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5941125C64B0050A91B /* SC_ComPort.h */; };
-		DCC9D6301125C64B0050A91B /* SC_CoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5951125C64B0050A91B /* SC_CoreAudio.h */; };
-		DCC9D6311125C64B0050A91B /* SC_Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5961125C64B0050A91B /* SC_Errors.h */; };
-		DCC9D6321125C64B0050A91B /* SC_GraphDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5971125C64B0050A91B /* SC_GraphDef.h */; };
-		DCC9D6331125C64B0050A91B /* SC_Group.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5981125C64B0050A91B /* SC_Group.h */; };
-		DCC9D6341125C64B0050A91B /* SC_HiddenWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5991125C64B0050A91B /* SC_HiddenWorld.h */; };
-		DCC9D6351125C64B0050A91B /* SC_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59A1125C64B0050A91B /* SC_Lib.h */; };
-		DCC9D6361125C64B0050A91B /* SC_Lib_Cintf.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59B1125C64B0050A91B /* SC_Lib_Cintf.h */; };
-		DCC9D6371125C64B0050A91B /* SC_List.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59C1125C64B0050A91B /* SC_List.h */; };
-		DCC9D6381125C64B0050A91B /* SC_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59D1125C64B0050A91B /* SC_Lock.h */; };
-		DCC9D6391125C64B0050A91B /* SC_Prototypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59E1125C64B0050A91B /* SC_Prototypes.h */; };
-		DCC9D63A1125C64B0050A91B /* SC_Samp.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D59F1125C64B0050A91B /* SC_Samp.h */; };
-		DCC9D63B1125C64B0050A91B /* SC_SequencedCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A01125C64B0050A91B /* SC_SequencedCommand.h */; };
-		DCC9D63C1125C64B0050A91B /* SC_Str4.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A11125C64B0050A91B /* SC_Str4.h */; };
-		DCC9D63D1125C64B0050A91B /* SC_SyncCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A21125C64B0050A91B /* SC_SyncCondition.h */; };
-		DCC9D63E1125C64B0050A91B /* SC_SynthDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A31125C64B0050A91B /* SC_SynthDef.h */; };
-		DCC9D63F1125C64B0050A91B /* SC_UnitDef.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A41125C64B0050A91B /* SC_UnitDef.h */; };
-		DCC9D6401125C64B0050A91B /* SC_UnitSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A51125C64B0050A91B /* SC_UnitSpec.h */; };
-		DCC9D6411125C64B0050A91B /* SC_WireSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9D5A61125C64B0050A91B /* SC_WireSpec.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +19,8 @@
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.clipnoise~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.clipnoise~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
+		DC82254F15F397850002455B /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../lib/max6-sdk/c74support/max-includes/MaxAPI.framework"; sourceTree = "<group>"; };
+		DC82255115F397890002455B /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../lib/max6-sdk/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = "<group>"; };
 		DCC7A63D1217F531004D7116 /* scmax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scmax.h; path = ../lib/scmax.h; sourceTree = SOURCE_ROOT; };
 		DCC9D5051125C64B0050A91B /* ChangeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCounter.h; sourceTree = "<group>"; };
 		DCC9D5061125C64B0050A91B /* ControlSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpec.h; sourceTree = "<group>"; };
@@ -337,8 +184,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */,
-				22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */,
+				DC82255015F397850002455B /* MaxAPI.framework in Frameworks */,
+				DC82255215F397890002455B /* MaxAudioAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +195,8 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
+				DC82255115F397890002455B /* MaxAudioAPI.framework */,
+				DC82254F15F397850002455B /* MaxAPI.framework */,
 				22CF10220EE984600054F513 /* maxmspsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
@@ -617,160 +466,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCC9D5A71125C64B0050A91B /* ChangeCounter.h in Headers */,
-				DCC9D5A81125C64B0050A91B /* ControlSpec.h in Headers */,
-				DCC9D5A91125C64B0050A91B /* DrawBackground.h in Headers */,
-				DCC9D5AA1125C64B0050A91B /* GetStringFromUser.h in Headers */,
-				DCC9D5AB1125C64B0050A91B /* GoToPanel.h in Headers */,
-				DCC9D5AC1125C64B0050A91B /* HTMLRenderer.h in Headers */,
-				DCC9D5AD1125C64B0050A91B /* iPhoneSCGraphView.h in Headers */,
-				DCC9D5AE1125C64B0050A91B /* iPhoneSCView.h in Headers */,
-				DCC9D5AF1125C64B0050A91B /* MyDocument.h in Headers */,
-				DCC9D5B01125C64B0050A91B /* RendezvousClient.h in Headers */,
-				DCC9D5B11125C64B0050A91B /* SCCocoaView.h in Headers */,
-				DCC9D5B21125C64B0050A91B /* SCDialog.h in Headers */,
-				DCC9D5B31125C64B0050A91B /* SCGeom.h in Headers */,
-				DCC9D5B41125C64B0050A91B /* SCGraphView.h in Headers */,
-				DCC9D5B51125C64B0050A91B /* SCImage.h in Headers */,
-				DCC9D5B61125C64B0050A91B /* SCNSWindow.h in Headers */,
-				DCC9D5B71125C64B0050A91B /* SCService.h in Headers */,
-				DCC9D5B81125C64B0050A91B /* SCSoundFileView.h in Headers */,
-				DCC9D5B91125C64B0050A91B /* SCTextView.h in Headers */,
-				DCC9D5BA1125C64B0050A91B /* SCView.h in Headers */,
-				DCC9D5BB1125C64B0050A91B /* SCVirtualMachine.h in Headers */,
-				DCC9D5BC1125C64B0050A91B /* ICUMatcher.h in Headers */,
-				DCC9D5BD1125C64B0050A91B /* ICUPattern.h in Headers */,
-				DCC9D5BF1125C64B0050A91B /* NSStringICUAdditions.h in Headers */,
-				DCC9D5C01125C64B0050A91B /* SMLAdvancedFindController.h in Headers */,
-				DCC9D5C11125C64B0050A91B /* SMLStatusBarTextFieldCell.h in Headers */,
-				DCC9D5C21125C64B0050A91B /* TabletEvents.h in Headers */,
-				DCC9D5C31125C64B0050A91B /* TextFinder.h in Headers */,
-				DCC9D5C41125C64B0050A91B /* UserPanel.h in Headers */,
-				DCC9D5C51125C64B0050A91B /* dfftlib.h in Headers */,
-				DCC9D5C61125C64B0050A91B /* fftlib.h in Headers */,
-				DCC9D5C71125C64B0050A91B /* SC_AllocPool.h in Headers */,
-				DCC9D5C81125C64B0050A91B /* SC_Altivec.h in Headers */,
-				DCC9D5C91125C64B0050A91B /* SC_DirUtils.h in Headers */,
-				DCC9D5CA1125C64B0050A91B /* SC_Endian.h in Headers */,
-				DCC9D5CB1125C64B0050A91B /* SC_fftlib.h in Headers */,
-				DCC9D5CC1125C64B0050A91B /* SC_FIFO.h in Headers */,
-				DCC9D5CD1125C64B0050A91B /* sc_popen.h in Headers */,
-				DCC9D5CE1125C64B0050A91B /* SC_Reply.h in Headers */,
-				DCC9D5CF1125C64B0050A91B /* SC_Sem.h in Headers */,
-				DCC9D5D01125C64B0050A91B /* SC_StandAloneInfo_Darwin.h in Headers */,
-				DCC9D5D11125C64B0050A91B /* SC_StringBuffer.h in Headers */,
-				DCC9D5D21125C64B0050A91B /* SC_StringParser.h in Headers */,
-				DCC9D5D31125C64B0050A91B /* SC_VFP11.h in Headers */,
-				DCC9D5D41125C64B0050A91B /* SC_Win32Utils.h in Headers */,
-				DCC9D5D51125C64B0050A91B /* scsynthsend.h in Headers */,
-				DCC9D5D61125C64B0050A91B /* AdvancingAllocPool.h in Headers */,
-				DCC9D5D71125C64B0050A91B /* AllocPools.h in Headers */,
-				DCC9D5D81125C64B0050A91B /* bullet.h in Headers */,
-				DCC9D5D91125C64B0050A91B /* ByteCodeArray.h in Headers */,
-				DCC9D5DA1125C64B0050A91B /* FIFOT.h in Headers */,
-				DCC9D5DB1125C64B0050A91B /* GC.h in Headers */,
-				DCC9D5DC1125C64B0050A91B /* HashTable.h in Headers */,
-				DCC9D5DD1125C64B0050A91B /* InitAlloc.h in Headers */,
-				DCC9D5DE1125C64B0050A91B /* MiscInlineMath.h in Headers */,
-				DCC9D5DF1125C64B0050A91B /* Opcodes.h in Headers */,
-				DCC9D5E01125C64B0050A91B /* OSCData.h in Headers */,
-				DCC9D5E11125C64B0050A91B /* PowerOfTwoAllocPool.h in Headers */,
-				DCC9D5E21125C64B0050A91B /* PredefinedSymbols.h in Headers */,
-				DCC9D5E31125C64B0050A91B /* PriorityQueue.h in Headers */,
-				DCC9D5E41125C64B0050A91B /* PyrArchiverT.h in Headers */,
-				DCC9D5E51125C64B0050A91B /* PyrDeepCopier.h in Headers */,
-				DCC9D5E61125C64B0050A91B /* PyrDeepFreezer.h in Headers */,
-				DCC9D5E71125C64B0050A91B /* PyrErrors.h in Headers */,
-				DCC9D5E81125C64B0050A91B /* PyrFilePrim.h in Headers */,
-				DCC9D5E91125C64B0050A91B /* PyrFileUtils.h in Headers */,
-				DCC9D5EA1125C64B0050A91B /* PyrInterpreter.h in Headers */,
-				DCC9D5EB1125C64B0050A91B /* PyrKernel.h in Headers */,
-				DCC9D5EC1125C64B0050A91B /* PyrKernelProto.h in Headers */,
-				DCC9D5ED1125C64B0050A91B /* PyrLexer.h in Headers */,
-				DCC9D5EE1125C64B0050A91B /* PyrListPrim.h in Headers */,
-				DCC9D5EF1125C64B0050A91B /* PyrMathPrim.h in Headers */,
-				DCC9D5F01125C64B0050A91B /* PyrMessage.h in Headers */,
-				DCC9D5F11125C64B0050A91B /* PyrObject.h in Headers */,
-				DCC9D5F21125C64B0050A91B /* PyrObjectProto.h in Headers */,
-				DCC9D5F31125C64B0050A91B /* PyrParseNode.h in Headers */,
-				DCC9D5F41125C64B0050A91B /* PyrPrimitive.h in Headers */,
-				DCC9D5F51125C64B0050A91B /* PyrPrimitiveProto.h in Headers */,
-				DCC9D5F61125C64B0050A91B /* PyrSched.h in Headers */,
-				DCC9D5F71125C64B0050A91B /* PyrSignal.h in Headers */,
-				DCC9D5F81125C64B0050A91B /* PyrSignalPrim.h in Headers */,
-				DCC9D5F91125C64B0050A91B /* PyrSlot.h in Headers */,
-				DCC9D5FA1125C64B0050A91B /* PyrSlot32.h in Headers */,
-				DCC9D5FB1125C64B0050A91B /* PyrSlot64.h in Headers */,
-				DCC9D5FC1125C64B0050A91B /* PyrSymbol.h in Headers */,
-				DCC9D5FD1125C64B0050A91B /* PyrSymbolTable.h in Headers */,
-				DCC9D5FE1125C64B0050A91B /* readSamples.h in Headers */,
-				DCC9D5FF1125C64B0050A91B /* ReadWriteMacros.h in Headers */,
-				DCC9D6001125C64B0050A91B /* Samp.h in Headers */,
-				DCC9D6011125C64B0050A91B /* SC_ComPort.h in Headers */,
-				DCC9D6021125C64B0050A91B /* SC_LanguageClient.h in Headers */,
-				DCC9D6031125C64B0050A91B /* SC_LibraryConfig.h in Headers */,
-				DCC9D6041125C64B0050A91B /* SC_List.h in Headers */,
-				DCC9D6051125C64B0050A91B /* SC_LogFile.h in Headers */,
-				DCC9D6061125C64B0050A91B /* SC_Msg.h in Headers */,
-				DCC9D6071125C64B0050A91B /* SC_SynthImpl.h in Headers */,
-				DCC9D6081125C64B0050A91B /* SC_TerminalClient.h in Headers */,
-				DCC9D6091125C64B0050A91B /* SC_UnorderedList.h in Headers */,
-				DCC9D60A1125C64B0050A91B /* SCBase.h in Headers */,
-				DCC9D60B1125C64B0050A91B /* SFHeaders.h in Headers */,
-				DCC9D60C1125C64B0050A91B /* SimpleStack.h in Headers */,
-				DCC9D60D1125C64B0050A91B /* VMGlobals.h in Headers */,
-				DCC9D60E1125C64B0050A91B /* clz.h in Headers */,
-				DCC9D60F1125C64B0050A91B /* Hash.h in Headers */,
-				DCC9D6101125C64B0050A91B /* SC_BoundsMacros.h in Headers */,
-				DCC9D6111125C64B0050A91B /* SC_BufGen.h in Headers */,
-				DCC9D6121125C64B0050A91B /* SC_Constants.h in Headers */,
-				DCC9D6131125C64B0050A91B /* SC_DemandUnit.h in Headers */,
-				DCC9D6141125C64B0050A91B /* SC_Dimension.h in Headers */,
-				DCC9D6151125C64B0050A91B /* SC_FifoMsg.h in Headers */,
-				DCC9D6161125C64B0050A91B /* SC_Graph.h in Headers */,
-				DCC9D6171125C64B0050A91B /* SC_InlineBinaryOp.h in Headers */,
-				DCC9D6181125C64B0050A91B /* SC_InlineUnaryOp.h in Headers */,
-				DCC9D6191125C64B0050A91B /* SC_InterfaceTable.h in Headers */,
-				DCC9D61A1125C64B0050A91B /* sc_msg_iter.h in Headers */,
-				DCC9D61B1125C64B0050A91B /* SC_Node.h in Headers */,
-				DCC9D61C1125C64B0050A91B /* SC_PlugIn.h in Headers */,
-				DCC9D61D1125C64B0050A91B /* SC_Rate.h in Headers */,
-				DCC9D61E1125C64B0050A91B /* SC_RGen.h in Headers */,
-				DCC9D61F1125C64B0050A91B /* SC_SndBuf.h in Headers */,
-				DCC9D6201125C64B0050A91B /* SC_sndfile_stub.h in Headers */,
-				DCC9D6211125C64B0050A91B /* SC_Types.h in Headers */,
-				DCC9D6221125C64B0050A91B /* SC_Unit.h in Headers */,
-				DCC9D6231125C64B0050A91B /* SC_Wire.h in Headers */,
-				DCC9D6241125C64B0050A91B /* SC_World.h in Headers */,
-				DCC9D6251125C64B0050A91B /* SC_WorldOptions.h in Headers */,
-				DCC9D6261125C64B0050A91B /* Unroll.h in Headers */,
-				DCC9D6271125C64B0050A91B /* HashTable.h in Headers */,
-				DCC9D6281125C64B0050A91B /* MsgFifo.h in Headers */,
-				DCC9D6291125C64B0050A91B /* OSC_Packet.h in Headers */,
-				DCC9D62A1125C64B0050A91B /* PriorityQueue.h in Headers */,
-				DCC9D62B1125C64B0050A91B /* ReadWriteMacros.h in Headers */,
-				DCC9D62C1125C64B0050A91B /* Rendezvous.h in Headers */,
-				DCC9D62D1125C64B0050A91B /* SC_AU.h in Headers */,
-				DCC9D62E1125C64B0050A91B /* SC_Complex.h in Headers */,
-				DCC9D62F1125C64B0050A91B /* SC_ComPort.h in Headers */,
-				DCC9D6301125C64B0050A91B /* SC_CoreAudio.h in Headers */,
-				DCC9D6311125C64B0050A91B /* SC_Errors.h in Headers */,
-				DCC9D6321125C64B0050A91B /* SC_GraphDef.h in Headers */,
-				DCC9D6331125C64B0050A91B /* SC_Group.h in Headers */,
-				DCC9D6341125C64B0050A91B /* SC_HiddenWorld.h in Headers */,
-				DCC9D6351125C64B0050A91B /* SC_Lib.h in Headers */,
-				DCC9D6361125C64B0050A91B /* SC_Lib_Cintf.h in Headers */,
-				DCC9D6371125C64B0050A91B /* SC_List.h in Headers */,
-				DCC9D6381125C64B0050A91B /* SC_Lock.h in Headers */,
-				DCC9D6391125C64B0050A91B /* SC_Prototypes.h in Headers */,
-				DCC9D63A1125C64B0050A91B /* SC_Samp.h in Headers */,
-				DCC9D63B1125C64B0050A91B /* SC_SequencedCommand.h in Headers */,
-				DCC9D63C1125C64B0050A91B /* SC_Str4.h in Headers */,
-				DCC9D63D1125C64B0050A91B /* SC_SyncCondition.h in Headers */,
-				DCC9D63E1125C64B0050A91B /* SC_SynthDef.h in Headers */,
-				DCC9D63F1125C64B0050A91B /* SC_UnitDef.h in Headers */,
-				DCC9D6401125C64B0050A91B /* SC_UnitSpec.h in Headers */,
-				DCC9D6411125C64B0050A91B /* SC_WireSpec.h in Headers */,
 				DCC7A63E1217F531004D7116 /* scmax.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,7 +499,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "sc.clipnoise~" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* iterator */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -819,7 +518,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCC9D5BE1125C64B0050A91B /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,7 +564,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../c74support/msp-includes\"",
+					"\"$(SRCROOT)/../lib/max6-sdk/c74support/max-includes\"",
+					"\"$(SRCROOT)/../lib/max6-sdk/c74support/msp-includes\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_VERSION = 5.1.1;
@@ -884,7 +583,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../c74support/msp-includes\"",
+					"\"$(SRCROOT)/../lib/max6-sdk/c74support/max-includes\"",
+					"\"$(SRCROOT)/../lib/max6-sdk/c74support/msp-includes\"",
 				);
 				PRODUCT_VERSION = 5.1.1;
 			};

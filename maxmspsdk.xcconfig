@@ -11,13 +11,13 @@
 
 // Name & Version
 PRODUCT_NAME = $(PROJECT_NAME)
-PRODUCT_VERSION = 5.1.7
+PRODUCT_VERSION = 6.0.0
 
 
 // Paths
-C74SUPPORT = /Users/stephen/Dropbox/code/maxmsp/MaxSDK-5.1.7/c74support
-HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" $(SRCROOT)/../lib/sc-headers
-FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" $(SRCROOT)/../lib/sc-headers
+C74SUPPORT = $(SRCROOT)/../lib/max6-sdk/c74support
+HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" "$(SRCROOT)/../lib/supercollider/include/**"
+FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes"
 DSTROOT = $(SRCROOT)/../_build
 // (This next path is relative to DSTROOT)
 INSTALL_PATH = /
@@ -29,8 +29,8 @@ INFOPLIST_FILE = $(SRCROOT)/../Info.plist
 
 
 // Per architecture and deployment settings
-SDKROOT[arch=i386] = /Developer/SDKs/MacOSX10.6.sdk
-SDKROOT[arch=ppc] = /Developer/SDKs/MacOSX10.6.sdk
+SDKROOT[arch=i386] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+SDKROOT[arch=ppc] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 //GCC_VERSION[arch=i386] = 4.0
 //GCC_VERSION[arch=ppc] = 4.0
 MACOSX_DEPLOYMENT_TARGET = 10.4

@@ -108,7 +108,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "sc.logistic~" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* iterator */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,10 +171,7 @@
 			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../c74support/msp-includes\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_VERSION = 5.1.1;
 			};
@@ -185,10 +186,7 @@
 					i386,
 				);
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../c74support/msp-includes\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_VERSION = 5.1.1;
 			};
 			name = Deployment;

@@ -44,9 +44,6 @@ task :clean do
     sh "xcodebuild -project #{path} clean"
   end
 
-  Dir.glob("_build/*.maxhelp").each do |maxhelp|
-    sh "rm #{maxhelp}"
-  end
-  
-  sh "rm sc-max*.zip"
+  sh "rm -rf _build/*"
+  sh "rm -rf sc-max*.zip"
 end
