@@ -11,12 +11,13 @@
 
 // Name & Version
 PRODUCT_NAME = $(PROJECT_NAME)
-PRODUCT_VERSION = 6.0.0
-
+PRODUCT_VERSION = 6.1.4
+ARCHS = i386 x86_64
 
 // Paths
 C74SUPPORT = $(SRCROOT)/../lib/max6-sdk/c74support
-HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" "$(SRCROOT)/../lib/supercollider/include/**"
+HEADER_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" "$(SRCROOT)/../lib/supercollider/include/**"
+///Developer/Headers/FlatCarbon 
 FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes"
 DSTROOT = $(SRCROOT)/../_build
 // (This next path is relative to DSTROOT)
@@ -29,11 +30,11 @@ INFOPLIST_FILE = $(SRCROOT)/../Info.plist
 
 
 // Per architecture and deployment settings
-SDKROOT[arch=i386] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-SDKROOT[arch=ppc] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+//SDKROOT[arch=i386] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+//SDKROOT[arch=ppc] = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 //GCC_VERSION[arch=i386] = 4.0
 //GCC_VERSION[arch=ppc] = 4.0
-MACOSX_DEPLOYMENT_TARGET = 10.4
+MACOSX_DEPLOYMENT_TARGET = 10.8
 
 
 // Static Configuration (don't change these)
@@ -41,3 +42,9 @@ WRAPPER_EXTENSION = mxo;
 WARNING_CFLAGS = -Wmost -Wno-four-char-constants -Wno-unknown-pragmas
 DEPLOYMENT_LOCATION = YES
 GENERATE_PKGINFO_FILE = YES
+
+C74_SYM_LINKER_FLAGS = @$(C74SUPPORT)/max-includes/c74_linker_flags.txt
+
+// hide all symbols by default
+// mark a function to be exported with the C74_EXPORT macro -- most likely this will only apply to the main() function
+OTHER_CFLAGS = -fvisibility=hidden
