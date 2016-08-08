@@ -30,8 +30,6 @@
  *
  **
  ***		64bit update by volker boehm, august 2016
- **
- *
 */
 
 #include "ext.h"
@@ -140,11 +138,11 @@ void crackle_dsp64(t_crackle *x, t_object *dsp64, short *count, double samplerat
 	object_method(dsp64, gensym("dsp_add64"), x, crackle_perform64, 0, NULL);
 }
 
-// 64 bit signal input version
+// 64bit perform method
 void crackle_perform64(t_crackle *x, t_object *dsp64, double **ins, long numins,
 					   double **outs, long numouts, long sampleframes, long flags, void *userparam) {
 	
-	t_double param = x->m_connected ? (*(t_float *)(ins[0])) : x->m_param;
+	t_double param = x->m_connected ? (*(t_double *)(ins[0])) : x->m_param;
 	t_double *out = outs[0];
 	int vs = sampleframes;
 	

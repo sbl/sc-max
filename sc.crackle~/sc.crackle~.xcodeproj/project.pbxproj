@@ -183,7 +183,7 @@
 					"/Users/vb/project-files/C-prog/MaxSDK-6.1.4/myGitHub/sc-max/lib/max6-sdk/c74support/msp-includes/x64",
 				);
 				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
-				PRODUCT_VERSION = 5.1.1;
+				PRODUCT_VERSION = 6.1.4;
 			};
 			name = Development;
 		};
@@ -204,7 +204,7 @@
 					"/Users/vb/project-files/C-prog/MaxSDK-6.1.4/myGitHub/sc-max/lib/max6-sdk/c74support/msp-includes/x64",
 				);
 				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
-				PRODUCT_VERSION = 5.1.1;
+				PRODUCT_VERSION = 6.1.4;
 			};
 			name = Deployment;
 		};

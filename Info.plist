@@ -11,7 +11,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.stephenlumenta.${PRODUCT_NAME}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+	<string>6.1.4</string>
 	<key>CFBundlePackageType</key>
 	<string>iLaX</string>
 	<key>CFBundleSignature</key>

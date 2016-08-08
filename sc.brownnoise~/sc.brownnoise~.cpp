@@ -26,6 +26,12 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by volker boehm, august 2016
+ **
+ *
 */
 
 #include "ext.h"
@@ -53,14 +59,20 @@ void brownnoise_assist(t_brownnoise *x, void *b, long m, long a, char *s);
 void brownnoise_dsp(t_brownnoise *x, t_signal **sp, short *count);
 t_int *brownnoise_perform(t_int *w);
 
+void brownnoise_dsp64(t_brownnoise *x, t_object *dsp64, short *count, double samplerate,
+				 long maxvectorsize, long flags);
+void brownnoise_perform64(t_brownnoise *x, t_object *dsp64, double **ins, long numins,
+					 double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
         
 	c = class_new("sc.brownnoise~", (method)brownnoise_new, (method)dsp_free, (long)sizeof(t_brownnoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)brownnoise_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)brownnoise_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)brownnoise_assist,   "assist",	A_CANT, 0);
     
 	class_dspinit(c);				
@@ -102,6 +114,38 @@ t_int *brownnoise_perform(t_int *w){
     
     
 	return w + 4;
+}
+
+void brownnoise_dsp64(t_brownnoise *x, t_object *dsp64, short *count, double samplerate,
+					  long maxvectorsize, long flags) {
+	object_method(dsp64, gensym("dsp_add64"), x, brownnoise_perform64, 0, NULL);
+}
+
+
+void brownnoise_perform64(t_brownnoise *x, t_object *dsp64, double **ins, long numins,
+						  double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+	t_double *out = outs[0];
+	int n = sampleframes;
+	
+	if (x->ob.z_disabled)
+        return;
+    
+    RGET
+    
+    float z = x->m_level;
+    
+	while (n--){
+        z += frand8(s1, s2, s3);
+		if (z > 1.f) z = 2.f - z;
+		else if (z < -1.f) z = -2.f - z;
+		
+		*out++ = z;
+    }
+    
+    x->m_level = z;
+    
+    RPUT
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
