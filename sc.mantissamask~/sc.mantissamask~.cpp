@@ -26,6 +26,10 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -52,14 +56,20 @@ void mantissamask_int       (t_mantissamask *x, long bits);
 void mantissamask_dsp       (t_mantissamask *x, t_signal **sp, short *count);
 t_int *mantissamask_perform (t_int *w);
 
+void mantissamask_dsp64	(t_mantissamask *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags);
+void mantissamask_perform64(t_mantissamask*x, t_object *dsp64, double **ins, long numins,
+						double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.mantissamask~", (method)mantissamask_new, (method)dsp_free, (long)sizeof(t_mantissamask), 0L, A_LONG, 0);
 	
 	class_addmethod(c, (method)mantissamask_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)mantissamask_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)mantissamask_assist,     "assist",	A_CANT, 0);
     
     class_addmethod(c, (method)mantissamask_float,      "float",    A_FLOAT, 0);
@@ -106,6 +116,34 @@ t_int *mantissamask_perform(t_int *w){
 	return w + 6;
 }
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// 64bit dsp
+void mantissamask_dsp64	(t_mantissamask *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags) {
+	// class, in, bits, out, n
+    object_method(dsp64, gensym("dsp_add64"), x, mantissamask_perform64, 0, NULL);
+}
+
+
+void mantissamask_perform64(t_mantissamask*x, t_object *dsp64, double **ins, long numins,
+							double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+	int64           *in     =  (int64*)ins[0];
+	int64           *out    = (int64*)(outs[0]);
+    int64           bits    = x->m_bits;
+	int64           mask    = (int64_t)-1 << (52 - bits);
+    int				n       = sampleframes;
+    
+    if (x->ob.z_disabled) return;
+	
+	while (n--)
+		*out++ = mask & (*(in)++);
+		
+}
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void mantissamask_assist(t_mantissamask *x, void *b, long m, long a, char *s) {
@@ -134,6 +172,12 @@ void *mantissamask_new(long bits){
                 
         x->m_bits = (int) bits;
         outlet_new((t_object *)x, "signal");
+		
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

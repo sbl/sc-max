@@ -29,7 +29,7 @@
  
  *
  **
- ***		64bit update by volker boehm, august 2016
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"

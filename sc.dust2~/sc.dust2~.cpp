@@ -26,6 +26,11 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -41,11 +46,11 @@ typedef struct _dust2
 	t_pxobject		m_ob;
     short           m_connected;
     
-    float           m_density;
-    float           m_thresh;
-    float           m_scale;
-    float           m_sr;
-    float           m_isr;
+    double           m_density;
+    double           m_thresh;
+    double           m_scale;
+    double           m_sr;
+    double           m_isr;
     RGen            rgen;
 } t_dust2;
 
@@ -63,14 +68,20 @@ void dust2_calc_density(t_dust2 *x);
 void dust2_dsp(t_dust2 *x, t_signal **sp, short *count);
 t_int *dust2_perform(t_int *w);
 
+void dust2_dsp64(t_dust2 *x, t_object *dsp64, short *count, double samplerate,
+				long maxvectorsize, long flags);
+void dust2_perform64(t_dust2 *x, t_object *dsp64, double **ins, long numins,
+					double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.dust2~", (method)dust2_new, (method)dsp_free, (long)sizeof(t_dust2), 0L, A_DEFFLOAT, 0);
 	
 	class_addmethod(c, (method)dust2_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)dust2_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)dust2_assist,     "assist",	A_CANT, 0);
     class_addmethod(c, (method)dust2_float,      "float",    A_FLOAT, 0);
     class_addmethod(c, (method)dust2_int,        "int",      A_LONG, 0);
@@ -97,7 +108,7 @@ void dust2_int(t_dust2 *x, long density){
 
 void dust2_calc_density(t_dust2 *x){
     x->m_thresh = x->m_density * x->m_isr;
-    x->m_scale  = x->m_thresh > 0.f ? 2.f / x->m_thresh : 0.f;
+    x->m_scale  = x->m_thresh > 0. ? 2. / x->m_thresh : 0.;
 }
 
 void dust2_dsp(t_dust2 *x, t_signal **sp, short *count){
@@ -136,6 +147,48 @@ t_int *dust2_perform(t_int *w){
 	return w + 5;
 }
 
+
+// 64bit dsp -----------
+void dust2_dsp64(t_dust2 *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags){
+    x->m_connected = count[0];
+    // t_dust, in_density, out_density, n
+	object_method(dsp64, gensym("dsp_add64"), x, dust2_perform64, 0, NULL);
+}
+
+// 64bit perform method
+void dust2_perform64(t_dust2 *x, t_object *dsp64, double **ins, long numins,
+					double **outs, long numouts, long sampleframes, long flags, void *userparam){
+	
+	double density = x->m_connected ? (*(t_double *)(ins[0])) : x->m_density;
+	double *out = outs[0];
+	int n = sampleframes;
+	
+	double thresh = x->m_thresh;
+	double scale = x->m_scale;
+    
+    if (x->m_ob.z_disabled)
+        return;
+    
+    if (density != x->m_density) {
+        x->m_density = density;
+        dust2_calc_density(x);
+    }
+    
+    RGET
+	
+	while (n--){
+        double z = frand(s1, s2, s3);		// drand doesn't seem to do it
+        
+        if (z < thresh) *out = z * scale - 1.;
+		else  *out = 0.;
+		
+		*out++;
+    }
+	
+    
+    RPUT
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void dust2_assist(t_dust2 *x, void *b, long m, long a, char *s)
@@ -166,6 +219,11 @@ void *dust2_new(double density){
         
         dust2_calc_density(x);
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }
 

@@ -26,10 +26,15 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
 #include "ext_obex.h"
+#include "ext_common.h"
 #include "z_dsp.h"
 #include "scmax.h"
 
@@ -39,12 +44,12 @@ typedef struct _lfnoise
 {
 	t_pxobject      ob;
     
-    float           m_freq;
+    double           m_freq;
     short           m_connected;
-    float           m_level, m_slope, m_curve;
-    float           m_nextvalue, m_nextmidpt;
-    float           m_sr;
-    int             m_counter;
+    double           m_level, m_slope, m_curve;
+    double           m_nextvalue, m_nextmidpt;
+    double           m_sr;
+    long             m_counter;
     
     RGen            rgen;
 } t_lfnoise;
@@ -58,20 +63,28 @@ void lfnoise_free       (t_lfnoise *x);
 void lfnoise_assist     (t_lfnoise *x, void *b, long m, long a, char *s);
 
 void lfnoise_float      (t_lfnoise *x, double freq);
+void lfnoise_bang		(t_lfnoise *x);
 
 void lfnoise_dsp        (t_lfnoise *x, t_signal **sp, short *count);
 t_int *lfnoise_perform  (t_int *w);
 
+void lfnoise_dsp64	(t_lfnoise *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags);
+void lfnoise_perform64(t_lfnoise *x, t_object *dsp64, double **ins, long numins,
+					   double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.lfnoise2~", (method)lfnoise_new, (method)dsp_free, (long)sizeof(t_lfnoise), 0L, A_DEFFLOAT, 0);
 	
 	class_addmethod(c, (method)lfnoise_dsp,         "dsp",      A_CANT, 0);
+	class_addmethod(c, (method)lfnoise_dsp64,         "dsp64",      A_CANT, 0);
 	class_addmethod(c, (method)lfnoise_assist,      "assist",	A_CANT, 0);
     class_addmethod(c, (method)lfnoise_float,       "float",	A_FLOAT, 0);
+	class_addmethod(c, (method)lfnoise_bang,       "bang", 0);
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
@@ -85,6 +98,10 @@ int main(void){
 void lfnoise_float(t_lfnoise *x, double freq){
     
     x->m_freq = (float) freq;
+}
+
+void lfnoise_bang	(t_lfnoise *x) {
+	x->m_counter = 0;
 }
 
 void lfnoise_dsp(t_lfnoise *x, t_signal **sp, short *count){
@@ -146,6 +163,70 @@ t_int *lfnoise_perform(t_int *w){
 	return w + 5;
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// 64bit dsp
+void lfnoise_dsp64	(t_lfnoise *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags) {
+	x->m_sr         = samplerate;
+    x->m_connected  = count[0];
+	object_method(dsp64, gensym("dsp_add64"), x, lfnoise_perform64, 0, NULL);
+}
+
+
+void lfnoise_perform64(t_lfnoise *x, t_object *dsp64, double **ins, long numins,
+					   double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+    t_double		*out = outs[0];
+	int				remain  = sampleframes;
+    
+    t_double		freq    = x->m_connected ? (*(t_double *)(ins[0])) : x->m_freq;
+    double			level   = x->m_level;
+	double			slope   = x->m_slope;
+	double			curve	 = x->m_curve;
+	long				counter = x->m_counter;
+    
+    
+    if (x->ob.z_disabled)
+		return;
+    
+    RGET
+    
+	do {
+		if (counter<=0) {
+			double value = x->m_nextvalue;
+			x->m_nextvalue = frand2(s1,s2,s3);
+			level = x->m_nextmidpt;
+			x->m_nextmidpt = (x->m_nextvalue + value) * 0.5;
+            
+			counter = (long)(x->m_sr / MAX(freq, 0.01));
+			counter = MAX(2, counter);
+			double fseglen = (double)counter;
+			curve = 2. * (x->m_nextmidpt - level - fseglen * slope) / (fseglen * fseglen + fseglen);
+		}
+        
+		int nsmps = sc_min(remain, counter);
+		remain -= nsmps;
+		counter -= nsmps;
+        
+        while (nsmps--) {
+            *out++ = level;
+            slope += curve;
+			level += slope;
+        }
+		
+	} while (remain);
+	
+	x->m_level  = level;
+	x->m_slope  = slope;
+    x->m_curve  = curve;
+	x->m_counter= counter;
+    
+    RPUT
+    
+}
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void lfnoise_assist(t_lfnoise *x, void *b, long m, long a, char *s)
@@ -178,6 +259,10 @@ void *lfnoise_new(double freq){
         
         
         outlet_new((t_object *)x, "signal");
+	}
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }

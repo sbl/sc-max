@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
-		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
+		35B90C111D5A1C3B009EFF37 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B90C101D5A1C3B009EFF37 /* MaxAudioAPI.framework */; };
 		DCD522BD1125F56D00DF79BD /* sc.range~.c in Sources */ = {isa = PBXBuildFile; fileRef = DCD522BC1125F56D00DF79BD /* sc.range~.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
-		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* sc.range~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sc.range~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../MaxSDK-5.1.1/c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
+		35B90C101D5A1C3B009EFF37 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../lib/max6-sdk/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = "<group>"; };
 		DCD522BC1125F56D00DF79BD /* sc.range~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sc.range~.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -25,8 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */,
-				22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */,
+				35B90C111D5A1C3B009EFF37 /* MaxAudioAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +44,7 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				54266BCE05E6E9780000000C /* MaxAPI.framework */,
-				22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */,
+				35B90C101D5A1C3B009EFF37 /* MaxAudioAPI.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -106,6 +102,8 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "sc.range~" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
@@ -170,10 +168,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/vb/project-files/C-prog/MaxSDK-6.1.4/myGitHub/sc-max/lib/max6-sdk/c74support/msp-includes",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_VERSION = 5.1.1;
+				PRODUCT_VERSION = "$(PRODUCT_VERSION)";
 			};
 			name = Development;
 		};
@@ -181,13 +183,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_VERSION = 5.1.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/vb/project-files/C-prog/MaxSDK-6.1.4/myGitHub/sc-max/lib/max6-sdk/c74support/msp-includes",
+				);
+				PRODUCT_VERSION = "$(PRODUCT_VERSION)";
 			};
 			name = Deployment;
 		};

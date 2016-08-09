@@ -29,9 +29,7 @@
  
  *
  **
- ***		64bit update by volker boehm, august 2016
- **
- *
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -44,7 +42,7 @@
 typedef struct _brownnoise 
 {
 	t_pxobject		ob;
-    float           m_level;    
+    double           m_level;
     RGen            rgen;
 } t_brownnoise;
 
@@ -131,21 +129,22 @@ void brownnoise_perform64(t_brownnoise *x, t_object *dsp64, double **ins, long n
 	if (x->ob.z_disabled)
         return;
     
-    RGET
+    //RGET
     
-    float z = x->m_level;
+    double z = x->m_level;
     
 	while (n--){
-        z += frand8(s1, s2, s3);
-		if (z > 1.f) z = 2.f - z;
-		else if (z < -1.f) z = -2.f - z;
+        //z += frand8(s1, s2, s3);
+		z += 0.25 * x->rgen.drand()-0.125;
+		if (z > 1.) z = 2. - z;
+		else if (z < -1.) z = -2. - z;
 		
 		*out++ = z;
     }
     
     x->m_level = z;
     
-    RPUT
+    //RPUT
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -170,12 +169,18 @@ void *brownnoise_new(long argc, t_atom *argv){
         outlet_new((t_object *)x, "signal");
         
         x->rgen.init(sc_randomSeed());
-        
+        /*
         RGET
         
         x->m_level = frand2(s1, s2, s3);
         
         RPUT
+		 */
+		x->m_level = 0.25*x->rgen.drand()-0.125;
+	}
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }

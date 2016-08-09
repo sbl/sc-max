@@ -29,6 +29,10 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
  */
 
 #include "ext.h"
@@ -41,9 +45,10 @@
 typedef struct _weaklynonlinear 
 {
 	t_pxobject		ob;
-  float           x,y,t;
+  double           x,y,t;
   int             reset;
-  float           ratex, ratey,freq,initx, inity, alpha, xexponent, beta, yexponent;
+  double           ratex, ratey,freq,initx, inity, alpha, xexponent, beta, yexponent;
+	double		m_sr;
 } t_weaklynonlinear;
 
 t_class *weaklynonlinear_class;
@@ -57,26 +62,32 @@ void weaklynonlinear_assist(t_weaklynonlinear *x, void *b, long m, long a, char 
 void weaklynonlinear_dsp(t_weaklynonlinear *x, t_signal **sp, short *count);
 t_int *weaklynonlinear_perform(t_int *w);
 
+void weaklynonlinear_dsp64	(t_weaklynonlinear *x, t_object *dsp64, short *count, double samplerate,
+						 long maxvectorsize, long flags);
+void weaklynonlinear_perform64(t_weaklynonlinear *x, t_object *dsp64, double **ins, long numins,
+							double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
   
 	c = class_new("sc.weaklynonlinear~", (method)weaklynonlinear_new, (method)dsp_free, (long)sizeof(t_weaklynonlinear), 0L, NULL, 0);
 	
 	class_addmethod(c, (method)weaklynonlinear_dsp,       "dsp",	A_CANT, 0);
+	class_addmethod(c, (method)weaklynonlinear_dsp64,       "dsp64",	A_CANT, 0);
 	class_addmethod(c, (method)weaklynonlinear_assist,    "assist",	A_CANT, 0);
   
   CLASS_ATTR_LONG         (c, "reset",       ATTR_FLAGS_NONE, t_weaklynonlinear, reset);
-  CLASS_ATTR_FLOAT        (c, "ratex",       ATTR_FLAGS_NONE, t_weaklynonlinear, ratex);
-  CLASS_ATTR_FLOAT        (c, "ratey",       ATTR_FLAGS_NONE, t_weaklynonlinear, ratey);
-  CLASS_ATTR_FLOAT        (c, "freq",        ATTR_FLAGS_NONE, t_weaklynonlinear, freq);
-  CLASS_ATTR_FLOAT        (c, "initx",       ATTR_FLAGS_NONE, t_weaklynonlinear, initx);
-  CLASS_ATTR_FLOAT        (c, "inity",       ATTR_FLAGS_NONE, t_weaklynonlinear, inity);
-  CLASS_ATTR_FLOAT        (c, "alpha",       ATTR_FLAGS_NONE, t_weaklynonlinear, alpha);
-  CLASS_ATTR_FLOAT        (c, "beta",        ATTR_FLAGS_NONE, t_weaklynonlinear, beta);
-  CLASS_ATTR_FLOAT        (c, "xexponent",   ATTR_FLAGS_NONE, t_weaklynonlinear, xexponent);    
-  CLASS_ATTR_FLOAT        (c, "yexponent",   ATTR_FLAGS_NONE, t_weaklynonlinear, yexponent);    
+  CLASS_ATTR_DOUBLE        (c, "ratex",       ATTR_FLAGS_NONE, t_weaklynonlinear, ratex);
+  CLASS_ATTR_DOUBLE        (c, "ratey",       ATTR_FLAGS_NONE, t_weaklynonlinear, ratey);
+  CLASS_ATTR_DOUBLE        (c, "freq",        ATTR_FLAGS_NONE, t_weaklynonlinear, freq);
+  CLASS_ATTR_DOUBLE        (c, "initx",       ATTR_FLAGS_NONE, t_weaklynonlinear, initx);
+  CLASS_ATTR_DOUBLE        (c, "inity",       ATTR_FLAGS_NONE, t_weaklynonlinear, inity);
+  CLASS_ATTR_DOUBLE        (c, "alpha",       ATTR_FLAGS_NONE, t_weaklynonlinear, alpha);
+  CLASS_ATTR_DOUBLE        (c, "beta",        ATTR_FLAGS_NONE, t_weaklynonlinear, beta);
+  CLASS_ATTR_DOUBLE        (c, "xexponent",   ATTR_FLAGS_NONE, t_weaklynonlinear, xexponent);
+  CLASS_ATTR_DOUBLE        (c, "yexponent",   ATTR_FLAGS_NONE, t_weaklynonlinear, yexponent);
   
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
@@ -160,6 +171,80 @@ ending:
 	return w + 5;
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// 64bit dsp
+void weaklynonlinear_dsp64	(t_weaklynonlinear *x, t_object *dsp64, short *count, double samplerate,
+							 long maxvectorsize, long flags) {
+	x->m_sr = samplerate;
+	object_method(dsp64, gensym("dsp_add64"), x, weaklynonlinear_perform64, 0, NULL);
+}
+
+void weaklynonlinear_perform64(t_weaklynonlinear *unit, t_object *dsp64, double **ins, long numins,
+							   double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+	t_double *in = ins[0];
+	t_double *out = outs[0];
+	long n = sampleframes;
+	
+	int reset = unit->reset;
+	double xrate = unit->ratex;
+	double yrate = unit->ratey;
+	double w0 = unit->freq;
+	double alpha = unit->alpha;
+	double xexponent = unit->xexponent;
+	double beta = unit->beta;
+	double yexponent = unit->yexponent;
+	
+	
+	if (unit->ob.z_disabled) return;
+	
+	
+	w0 = w0 * TWOPI/unit->m_sr; //convert frequency in Hertz to angular frequency
+	w0 = w0*w0; //constant needed for equation
+	
+	double x,y,t;
+	
+	x = unit->x;
+	y = unit->y;
+	t = unit->t;
+	
+	if(reset){
+		x= unit->x;
+		y= unit->y;
+		t=0;
+	}
+	
+	//Runge Kutta? would require four cos calls
+	for (int j=0; j<n;++j) {
+		
+		//the naive Euler update
+		double dxdt= xrate*y;
+		
+		double nonlinear= 0.0;
+		
+		if(alpha>0.000001 || alpha<(-0.000001)) {
+			nonlinear= alpha * (pow(x,xexponent)+beta)*(pow(y,yexponent));
+		}
+		
+		double dydt= yrate*(*(in)++ - w0*x + nonlinear);
+		
+
+		x+=dxdt;
+		y+=dydt;
+		
+		if ((x>1.0) || (x<-1.0))
+			x=fabs(fmod((x-1.0),4.0)-2.0)-1.0;
+		
+		*out++ = x;
+	}
+	
+	unit->x=x;
+	unit->y=y;
+	unit->t=t;
+	
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void weaklynonlinear_assist(t_weaklynonlinear *x, void *b, long m, long a, char *s)
@@ -183,18 +268,23 @@ void *weaklynonlinear_new(t_symbol *s, long ac, t_atom *av){
     x->y = 0.0;
     x->t = 0.0;
     x->reset=0; 
-    x->ratex=1.f; 
-    x->ratey=1.f; 
-    x->freq=440.f;
-    x->initx = 0.f;
-    x->inity = 0.f;
-    x->alpha=0.f; 
-    x->xexponent=0.f;
-    x->beta=0.f;
-    x->yexponent=0.f;
+    x->ratex=1.;
+    x->ratey=1.;
+    x->freq=440.;
+		x->initx = 0.;
+    x->inity = 0.;
+    x->alpha=0.;
+    x->xexponent=0.;
+    x->beta=0.;
+    x->yexponent=0.;
     
     attr_args_process(x, ac, av);
     outlet_new((t_object *)x, "signal");
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

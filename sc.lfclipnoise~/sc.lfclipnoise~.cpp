@@ -26,10 +26,15 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
 #include "ext_obex.h"
+#include "ext_common.h"
 #include "z_dsp.h"
 #include "scmax.h"
 
@@ -40,11 +45,11 @@ typedef struct _lfclipnoise
 {
 	t_pxobject      ob;
     
-    float           m_freq;
-    short           m_connected;
-    float           m_level;
-    float           m_sr;
-    int             m_counter;
+    double			m_freq;
+    short			m_connected;
+    double			m_level;
+    double			m_sr;
+    int				m_counter;
     
     RGen            rgen;
 } t_lfclipnoise;
@@ -53,25 +58,33 @@ t_class *lfclipnoise_class;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void *lfclipnoise_new       (double freq);
-void lfclipnoise_free       (t_lfclipnoise *x);
-void lfclipnoise_assist     (t_lfclipnoise *x, void *b, long m, long a, char *s);
+void *lfclipnoise_new	(double freq);
+void lfclipnoise_free		(t_lfclipnoise *x);
+void lfclipnoise_assist	(t_lfclipnoise *x, void *b, long m, long a, char *s);
 
-void lfclipnoise_float      (t_lfclipnoise *x, double freq);
+void lfclipnoise_float		(t_lfclipnoise *x, double freq);
+void lfclipnoise_bang	(t_lfclipnoise *x);
 
-void lfclipnoise_dsp        (t_lfclipnoise *x, t_signal **sp, short *count);
+void lfclipnoise_dsp		(t_lfclipnoise *x, t_signal **sp, short *count);
 t_int *lfclipnoise_perform  (t_int *w);
+
+void lfclipnoise_dsp64	(t_lfclipnoise *x, t_object *dsp64, short *count, double samplerate,
+				   long maxvectorsize, long flags);
+void lfclipnoise_perform64(t_lfclipnoise *x, t_object *dsp64, double **ins, long numins,
+					   double **outs, long numouts, long sampleframes, long flags, void *userparam);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.lfclipnoise~", (method)lfclipnoise_new, (method)dsp_free, (long)sizeof(t_lfclipnoise), 0L, A_DEFFLOAT, 0);
 	
 	class_addmethod(c, (method)lfclipnoise_dsp,         "dsp",      A_CANT, 0);
+	class_addmethod(c, (method)lfclipnoise_dsp64,         "dsp64",      A_CANT, 0);
 	class_addmethod(c, (method)lfclipnoise_assist,      "assist",	A_CANT, 0);
     class_addmethod(c, (method)lfclipnoise_float,       "float",	A_FLOAT, 0);
+	class_addmethod(c, (method)lfclipnoise_bang,       "bang",	0);
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
@@ -82,8 +95,13 @@ int main(void){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void lfclipnoise_float(t_lfclipnoise *x, double freq){    
-    x->m_freq = (float) freq;
+void lfclipnoise_float(t_lfclipnoise *x, double freq){
+	x->m_freq = freq;
+}
+
+void lfclipnoise_bang(t_lfclipnoise *x) {
+	// recover from very low frequeny settings -> very long periods.
+    x->m_counter = 0;
 }
 
 void lfclipnoise_dsp(t_lfclipnoise *x, t_signal **sp, short *count){
@@ -103,8 +121,8 @@ t_int *lfclipnoise_perform(t_int *w){
 	int32           counter = x->m_counter;
     
     
-    if (x->ob.z_disabled) return w + 5;
-    
+    if (x->ob.z_disabled)
+		return w + 5;
     
     
     RGET
@@ -112,13 +130,13 @@ t_int *lfclipnoise_perform(t_int *w){
 	do {
 		if (counter<=0) {
             // otherwise not working
-            if(freq < 0.0001) freq = 0.0001;
+            //if(freq < 0.0001) freq = 0.0001;
             
-			counter = (int) x->m_sr / sc_max(freq, 0.001f);
-			counter = sc_max(1, counter);
+			counter = (int) x->m_sr / MAX(freq, 0.01f);
+			counter = MAX(1, counter);
 			level = fcoin(s1,s2,s3);
 		}
-		int nsmps = sc_min(remain, counter);
+		int nsmps = MIN(remain, counter);
 		remain -= nsmps;
 		counter -= nsmps;
         
@@ -134,6 +152,59 @@ t_int *lfclipnoise_perform(t_int *w){
 	x->m_counter = counter;
     
 	return w + 5;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//64-bit dsp method
+void lfclipnoise_dsp64(t_lfclipnoise *x, t_object *dsp64, short *count, double samplerate,
+					   long maxvectorsize, long flags) {
+	x->m_sr         = samplerate;
+    x->m_connected  = count[0];
+	object_method(dsp64, gensym("dsp_add64"), x, lfclipnoise_perform64, 0, NULL);
+}
+
+
+void lfclipnoise_perform64(t_lfclipnoise *x, t_object *dsp64, double **ins, long numins,
+						   double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+    t_double *out = outs[0];
+	int             remain  = sampleframes;
+    
+    t_double       freq    = x->m_connected ? (*(t_double *)(ins[0])) : x->m_freq;
+    double           level   = x->m_level;
+	int32           counter = x->m_counter;
+    
+    
+    if (x->ob.z_disabled)
+		return;
+    
+    
+    RGET
+    
+	do {
+		if (counter<=0) {
+            // otherwise not working
+           // if(freq < 0.0001) freq = 0.0001;
+            
+			counter = x->m_sr / MAX(freq, 0.01);
+			counter = MAX(1, counter);
+			level = fcoin(s1,s2,s3);
+		}
+		int nsmps = MIN(remain, counter);
+		remain -= nsmps;
+		counter -= nsmps;
+        
+        int i;
+        for(i=0; i<nsmps;i++){
+            *out++ = level;
+        }
+	} while (remain);
+    
+    RPUT
+    
+    x->m_level = level;
+	x->m_counter = counter;
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -156,7 +227,7 @@ void *lfclipnoise_new(double freq){
         // 1 inlet
 		dsp_setup((t_pxobject *)x, 1);
         
-        x->m_freq       = freq <= 0 ? 500 : freq;
+        x->m_freq       = freq <= 0.01 ? 500 : freq;
         x->m_counter    = 0;
         x->m_level      = 0.0;
         x->m_sr         = sys_getsr();
@@ -164,5 +235,10 @@ void *lfclipnoise_new(double freq){
         
         outlet_new((t_object *)x, "signal");
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

@@ -29,7 +29,7 @@
 
  *
  **
- ***		64bit update by volker boehm, august 2016
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -216,5 +216,10 @@ void *dust_new(double density){
         
         dust_calc_density(x);
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

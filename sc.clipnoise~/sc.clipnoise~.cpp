@@ -30,9 +30,7 @@
  
  *
  **
- ***		64bit update by volker boehm, august 2016
- **
- *
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -151,6 +149,10 @@ void *clipnoise_new(long argc, t_atom *argv){
         outlet_new((t_object *)x, "signal");
         
         x->rgen.init(sc_randomSeed());
+	}
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }
