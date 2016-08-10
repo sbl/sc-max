@@ -44,6 +44,7 @@
 
 #include "ext.h"
 #include "ext_obex.h"
+#include "ext_common.h"
 #include "z_dsp.h"
 
 #include "SC_RGen.h"
@@ -137,8 +138,9 @@ int C74_EXPORT main(void){
     CLASS_ATTR_ORDER        (c, "durscale",	ATTR_FLAGS_NONE, "8");
     
     CLASS_ATTR_LONG         (c, "knum",     ATTR_FLAGS_NONE, t_gendy, g_knum);
+	CLASS_ATTR_FILTER_MIN   (c, "knum",     1);
     CLASS_ATTR_ORDER        (c, "knum",     ATTR_FLAGS_NONE, "9");
-	//TODO: needs clip??
+
     
 	class_dspinit(c);				
 	class_register(CLASS_BOX, c);
@@ -342,7 +344,8 @@ void gendy_perform64(t_gendy *x, t_object *dsp64, double **ins, long numins,
             
             int num     = x->g_knum;
 			
-            if((num>(x->g_cps)) || (num<1)) num=x->g_cps; // clip
+            //if((num>(x->g_cps)) || (num<1)) num=x->g_cps; // clip
+			num = MIN(num, x->g_cps);
             
             int j;
             

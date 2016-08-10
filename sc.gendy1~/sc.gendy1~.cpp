@@ -43,6 +43,7 @@
 
 #include "ext.h"
 #include "ext_obex.h"
+#include "ext_common.h"
 #include "z_dsp.h"
 
 #include "SC_RGen.h"
@@ -57,11 +58,11 @@ typedef struct _gendy
 	t_pxobject          ob;
     
     // these are set from the outside
-    int					g_ampdist, g_durdist;
+    long					g_ampdist, g_durdist;
     double				g_adparam, g_ddparam;
     double				g_minfreq, g_maxfreq;
     double				g_ampscale, g_durscale;
-    int					g_cps, g_knum;   // defaults to 12
+    long					g_cps, g_knum;   // defaults to 12
 
     double				mPhase;
     double				mFreqMul, mAmp, mNextAmp, mSpeed, mDur;
@@ -122,22 +123,23 @@ int C74_EXPORT main(void){
     CLASS_ATTR_ORDER        (c, "ddparam",	ATTR_FLAGS_NONE, "4");
     
     CLASS_ATTR_DOUBLE        (c, "minfreq",  ATTR_FLAGS_NONE, t_gendy, g_minfreq);
-    CLASS_ATTR_FILTER_MIN   (c, "minfreq",  1.f);
+    CLASS_ATTR_FILTER_MIN   (c, "minfreq",  1.);
     CLASS_ATTR_ORDER        (c, "minfreq",	ATTR_FLAGS_NONE, "5");
     
     CLASS_ATTR_DOUBLE        (c, "maxfreq",  ATTR_FLAGS_NONE, t_gendy, g_maxfreq);
-    CLASS_ATTR_FILTER_MIN   (c, "maxfreq",  1.f);
+    CLASS_ATTR_FILTER_MIN   (c, "maxfreq",  1.);
     CLASS_ATTR_ORDER        (c, "maxfreq",	ATTR_FLAGS_NONE, "6");
     
     CLASS_ATTR_DOUBLE        (c, "ampscale", ATTR_FLAGS_NONE, t_gendy, g_ampscale);
-    CLASS_ATTR_FILTER_CLIP  (c, "ampscale", 0.f, 1.f);
+    CLASS_ATTR_FILTER_CLIP  (c, "ampscale", 0., 1.);
     CLASS_ATTR_ORDER        (c, "ampscale",	ATTR_FLAGS_NONE, "7");
     
     CLASS_ATTR_DOUBLE        (c, "durscale", ATTR_FLAGS_NONE, t_gendy, g_durscale);
-    CLASS_ATTR_FILTER_CLIP  (c, "durscale", 0.f, 1.f);
+    CLASS_ATTR_FILTER_CLIP  (c, "durscale", 0., 1.);
     CLASS_ATTR_ORDER        (c, "durscale",	ATTR_FLAGS_NONE, "8");
     
     CLASS_ATTR_LONG         (c, "knum",     ATTR_FLAGS_NONE, t_gendy, g_knum);
+	CLASS_ATTR_FILTER_MIN   (c, "knum",  1);
     CLASS_ATTR_ORDER        (c, "knum",     ATTR_FLAGS_NONE, "9");
     
 	class_dspinit(c);				
@@ -305,7 +307,8 @@ void gendy_perform64(t_gendy *x, t_object *dsp64, double **ins, long numins,
             int index   = x->mIndex;
             int num     = x->g_knum;
 			
-            if((num>(x->g_cps)) || (num<1)) num=x->g_cps; // clip
+            //if((num>(x->g_cps)) || (num<1)) num=x->g_cps; // clip
+			num = MIN(num, x->g_cps);
             
             index=(index+1) % num;
             amp=nextamp;
