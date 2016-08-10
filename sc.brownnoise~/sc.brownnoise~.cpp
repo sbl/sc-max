@@ -26,6 +26,10 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -38,7 +42,7 @@
 typedef struct _brownnoise 
 {
 	t_pxobject		ob;
-    float           m_level;    
+    double           m_level;
     RGen            rgen;
 } t_brownnoise;
 
@@ -53,14 +57,20 @@ void brownnoise_assist(t_brownnoise *x, void *b, long m, long a, char *s);
 void brownnoise_dsp(t_brownnoise *x, t_signal **sp, short *count);
 t_int *brownnoise_perform(t_int *w);
 
+void brownnoise_dsp64(t_brownnoise *x, t_object *dsp64, short *count, double samplerate,
+				 long maxvectorsize, long flags);
+void brownnoise_perform64(t_brownnoise *x, t_object *dsp64, double **ins, long numins,
+					 double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
         
 	c = class_new("sc.brownnoise~", (method)brownnoise_new, (method)dsp_free, (long)sizeof(t_brownnoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)brownnoise_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)brownnoise_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)brownnoise_assist,   "assist",	A_CANT, 0);
     
 	class_dspinit(c);				
@@ -104,6 +114,39 @@ t_int *brownnoise_perform(t_int *w){
 	return w + 4;
 }
 
+void brownnoise_dsp64(t_brownnoise *x, t_object *dsp64, short *count, double samplerate,
+					  long maxvectorsize, long flags) {
+	object_method(dsp64, gensym("dsp_add64"), x, brownnoise_perform64, 0, NULL);
+}
+
+
+void brownnoise_perform64(t_brownnoise *x, t_object *dsp64, double **ins, long numins,
+						  double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+	t_double *out = outs[0];
+	int n = sampleframes;
+	
+	if (x->ob.z_disabled)
+        return;
+    
+    //RGET
+    
+    double z = x->m_level;
+    
+	while (n--){
+        //z += frand8(s1, s2, s3);
+		z += 0.25 * x->rgen.drand()-0.125;
+		if (z > 1.) z = 2. - z;
+		else if (z < -1.) z = -2. - z;
+		
+		*out++ = z;
+    }
+    
+    x->m_level = z;
+    
+    //RPUT
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void brownnoise_assist(t_brownnoise *x, void *b, long m, long a, char *s)
@@ -126,12 +169,18 @@ void *brownnoise_new(long argc, t_atom *argv){
         outlet_new((t_object *)x, "signal");
         
         x->rgen.init(sc_randomSeed());
-        
+        /*
         RGET
         
         x->m_level = frand2(s1, s2, s3);
         
         RPUT
+		 */
+		x->m_level = 0.25*x->rgen.drand()-0.125;
+	}
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }

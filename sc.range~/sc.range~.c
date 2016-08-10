@@ -11,6 +11,10 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -24,7 +28,7 @@ typedef struct _range
 	t_pxobject      ob;
     short           m_connected;
     char            m_mode; // 0: bipolar (default) 1: unipolar
-    float           m_high, m_low; // boundaries
+    double           m_high, m_low; // boundaries
     
 } t_range;
 
@@ -38,18 +42,24 @@ void    range_assist(t_range *x, void *b, long m, long a, char *s);
 void    range_dsp(t_range *x, t_signal **sp, short *count);
 t_int   *range_perform(t_int *w);
 
+void range_dsp64	(t_range *x, t_object *dsp64, short *count, double samplerate,
+						 long maxvectorsize, long flags);
+void range_perform64(t_range*x, t_object *dsp64, double **ins, long numins,
+							double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.range~", (method)range_new, (method)dsp_free, (long)sizeof(t_range), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)range_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)range_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)range_assist,    "assist",	A_CANT, 0);
     
-  CLASS_ATTR_FLOAT        (c, "low",      ATTR_FLAGS_NONE, t_range, m_low);
-  CLASS_ATTR_FLOAT        (c, "high",     ATTR_FLAGS_NONE, t_range, m_high);
+  CLASS_ATTR_DOUBLE        (c, "low",      ATTR_FLAGS_NONE, t_range, m_low);
+  CLASS_ATTR_DOUBLE        (c, "high",     ATTR_FLAGS_NONE, t_range, m_high);
     
   CLASS_ATTR_CHAR         (c, "mode",     ATTR_FLAGS_NONE, t_range, m_mode);
   CLASS_ATTR_STYLE_LABEL  (c, "mode",     ATTR_FLAGS_NONE, "onoff", "mode");
@@ -100,6 +110,43 @@ t_int *range_perform(t_int *w){
 	return w + 5;
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// 64bit dsp
+void range_dsp64	(t_range *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags) {
+	object_method(dsp64, gensym("dsp_add64"), x, range_perform64, 0, NULL);
+}
+
+void range_perform64(t_range*x, t_object *dsp64, double **ins, long numins,
+					 double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+    t_double *in     = ins[0];
+    t_double *out    = outs[0];
+	int     n       = sampleframes;
+    double   hi      = x->m_high;
+    double   lo      = x->m_low;
+	double   mul, add;
+	
+    if (x->ob.z_disabled) return;
+    
+	
+	// bipolar
+	if(x->m_mode == 0){
+		mul = (hi - lo) * 0.5;
+		add = mul + lo;
+	}
+	// unipolar
+	else {
+		mul = hi - lo;
+		add = lo;
+	}
+    
+	while (n--)
+        *out++ = (*in++ * mul) + add;
+
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void range_assist(t_range *x, void *b, long m, long a, char *s)
@@ -126,6 +173,11 @@ void *range_new(t_symbol *s, long ac, t_atom *av){
         attr_args_process(x, ac, av);
         
         outlet_new((t_object *)x, "signal");
+	}
+	
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }

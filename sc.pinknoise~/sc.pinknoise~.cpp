@@ -27,6 +27,10 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -57,14 +61,20 @@ void pinknoise_assist(t_pinknoise *x, void *b, long m, long a, char *s);
 void pinknoise_dsp(t_pinknoise *x, t_signal **sp, short *count);
 t_int *pinknoise_perform(t_int *w);
 
+void pinknoise_dsp64	(t_pinknoise *x, t_object *dsp64, short *count, double samplerate,
+						 long maxvectorsize, long flags);
+void pinknoise_perform64(t_pinknoise *x, t_object *dsp64, double **ins, long numins,
+							double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.pinknoise~", (method)pinknoise_new, (method)dsp_free, (long)sizeof(t_pinknoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)pinknoise_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)pinknoise_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)pinknoise_assist,    "assist",	A_CANT, 0);
     
 	class_dspinit(c);				
@@ -114,6 +124,50 @@ t_int *pinknoise_perform(t_int *w){
 	return w + 4;
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// 64bit dsp
+void pinknoise_dsp64(t_pinknoise *x, t_object *dsp64, short *count, double samplerate,
+						 long maxvectorsize, long flags) {
+	// class, in, bits, out, n
+    object_method(dsp64, gensym("dsp_add64"), x, pinknoise_perform64, 0, NULL);
+}
+
+
+void pinknoise_perform64(t_pinknoise *x, t_object *dsp64, double **ins, long numins,
+								double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+
+    t_double *out = outs[0];
+	int n = sampleframes;
+    
+    if (x->ob.z_disabled)
+        return;
+    
+    RGET
+    
+    uint32 total = x->m_total;
+	uint32 *dice = x->m_dice;
+    
+	// TODO: make dsp-loop double precision
+	while (n--){
+        uint32 counter = trand(s1,s2,s3); // Magnus Jonsson's suggestion.
+		uint32 newrand = counter >> 13;
+		int k = (CTZ(counter)) & 15;
+		uint32 prevrand = dice[k];
+		dice[k] = newrand;
+		total += (newrand - prevrand);
+		newrand = trand(s1,s2,s3) >> 13;
+		elem32 val; // ensure write before read <sk>
+		val.u = (total + newrand) | 0x40000000;
+		*out++ = val.f - 3.0;
+		counter ++;
+    }
+    
+    x->m_total = total;
+    
+    RPUT
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void pinknoise_assist(t_pinknoise *x, void *b, long m, long a, char *s){
@@ -149,5 +203,10 @@ void *pinknoise_new(long argc, t_atom *argv){
         
         RPUT
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

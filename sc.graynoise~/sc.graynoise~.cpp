@@ -26,6 +26,11 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -53,14 +58,20 @@ void graynoise_assist(t_graynoise *x, void *b, long m, long a, char *s);
 void graynoise_dsp(t_graynoise *x, t_signal **sp, short *count);
 t_int *graynoise_perform(t_int *w);
 
+void graynoise_dsp64(t_graynoise *x, t_object *dsp64, short *count, double samplerate,
+				 long maxvectorsize, long flags);
+void graynoise_perform64(t_graynoise *x, t_object *dsp64, double **ins, long numins,
+					 double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.graynoise~", (method)graynoise_new, (method)dsp_free, (long)sizeof(t_graynoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)graynoise_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)graynoise_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)graynoise_assist,    "assist",	A_CANT, 0);
     
 	class_dspinit(c);				
@@ -100,6 +111,38 @@ t_int *graynoise_perform(t_int *w){
 	return w + 4;
 }
 
+// 64bit dsp routine
+void graynoise_dsp64(t_graynoise *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags) {
+	object_method(dsp64, gensym("dsp_add64"), x, graynoise_perform64, 0, NULL);
+}
+
+
+void graynoise_perform64(t_graynoise*x, t_object *dsp64, double **ins, long numins,
+					 double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+
+    t_double *out = outs[0];
+	int n = sampleframes;
+	
+	 int counter = x->m_counter;
+    
+    if (x->ob.z_disabled)
+        return;
+    
+    RGET
+    
+	while (n--){
+        counter ^= 1L << (trand(s1,s2,s3) & 31);
+		*out++ = counter * 4.65661287308e-10;
+    }
+    
+    RPUT
+    
+    x->m_counter = counter;
+
+}
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void graynoise_assist(t_graynoise *x, void *b, long m, long a, char *s)
@@ -124,5 +167,10 @@ void *graynoise_new(long argc, t_atom *argv){
         x->rgen.init(sc_randomSeed());
         x->m_counter = 0;
 	}
+	else {
+		object_free(x);
+		x = NULL;
+	}
+	
 	return (x);
 }

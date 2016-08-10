@@ -26,6 +26,11 @@
  
  part of sc-max http://github.com/sbl/sc-max
  see README
+ 
+ 
+ *
+ **
+ ***		64bit update by vb, august 2016 -- http://vboehm.net
 */
 
 #include "ext.h"
@@ -52,14 +57,20 @@ void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s);
 void clipnoise_dsp(t_clipnoise *x, t_signal **sp, short *count);
 t_int *clipnoise_perform(t_int *w);
 
+void clipnoise_dsp64(t_clipnoise *x, t_object *dsp64, short *count, double samplerate,
+					  long maxvectorsize, long flags);
+void clipnoise_perform64(t_clipnoise *x, t_object *dsp64, double **ins, long numins,
+						  double **outs, long numouts, long sampleframes, long flags, void *userparam);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int main(void){	
+int C74_EXPORT main(void){
 	t_class *c;
     
 	c = class_new("sc.clipnoise~", (method)clipnoise_new, (method)dsp_free, (long)sizeof(t_clipnoise), 0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)clipnoise_dsp,		"dsp",		A_CANT, 0);
+	class_addmethod(c, (method)clipnoise_dsp64,		"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)clipnoise_assist,    "assist",	A_CANT, 0);
     
 	class_dspinit(c);				
@@ -94,6 +105,29 @@ t_int *clipnoise_perform(t_int *w){
 	return w + 4;
 }
 
+void clipnoise_dsp64(t_clipnoise *x, t_object *dsp64, short *count, double samplerate,
+					 long maxvectorsize, long flags) {
+	object_method(dsp64, gensym("dsp_add64"), x, clipnoise_perform64, 0, NULL);
+}
+
+void clipnoise_perform64(t_clipnoise *x, t_object *dsp64, double **ins, long numins,
+						 double **outs, long numouts, long sampleframes, long flags, void *userparam) {
+	
+	t_double *out = outs[0];
+	int n = sampleframes;
+	
+	if (x->ob.z_disabled)
+        return;
+    
+    RGET
+    
+	while (n--){
+		*out++ = fcoin(s1, s2, s3);
+    }
+    
+    RPUT
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s){
@@ -115,6 +149,10 @@ void *clipnoise_new(long argc, t_atom *argv){
         outlet_new((t_object *)x, "signal");
         
         x->rgen.init(sc_randomSeed());
+	}
+	else {
+		object_free(x);
+		x = NULL;
 	}
 	return (x);
 }
