@@ -28,94 +28,81 @@
  see README
 */
 
-#include "ext.h"
-#include "ext_obex.h"
-#include "z_dsp.h"
+#include "c74_msp.h"
 #include "scmax.h"
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct _whitenoise 
-{
-	t_pxobject					ob;
-    RGen                        rgen;
-} t_whitenoise;
+using namespace c74::max;
 
-t_class *whitenoise_class;
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+static t_class* this_class = nullptr;
 
-void *whitenoise_new();
-void whitenoise_free(t_whitenoise *x);
-void whitenoise_assist(t_whitenoise *x, void *b, long m, long a, char *s);
+struct t_whitenoise {
+	t_pxobject ob;
+    RGen rgen;
+};
 
-void whitenoise_dsp(t_whitenoise *x, t_signal **sp, short *count);
-t_int *whitenoise_perform(t_int *w);
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-int main(void){	
-	t_class *c;
+void *whitenoise_new(long argc, t_atom *argv) {
+    t_whitenoise *self = (t_whitenoise *)object_alloc(this_class);
     
-	c = class_new("sc.whitenoise~", (method)whitenoise_new, (method)dsp_free, (long)sizeof(t_whitenoise), 0L, NULL, 0);
-	
-	class_addmethod(c, (method)whitenoise_dsp,		"dsp",		A_CANT, 0);
-	class_addmethod(c, (method)whitenoise_assist,    "assist",	A_CANT, 0);
+    dsp_setup((t_pxobject *)self, 0);
+    outlet_new((t_object *)self, "signal");
+    self->rgen.init(sc_randomSeed());
     
-	class_dspinit(c);				
-	class_register(CLASS_BOX, c);
-	whitenoise_class = c;
-	
-	return 0;
+    return self;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void whitenoise_dsp(t_whitenoise *x, t_signal **sp, short *count){
-	dsp_add(whitenoise_perform, 3, x, sp[0]->s_vec, sp[0]->s_n);
-}
-
-t_int *whitenoise_perform(t_int *w){
-    t_whitenoise *x = (t_whitenoise *)(w[1]);	
-    t_float *out = (t_float *)(w[2]);
-	int n = (int)w[3];
-    
-    if (x->ob.z_disabled)
-        return w + 4;    
+void whitenoise_perform64(t_whitenoise* self,
+                          t_object* dsp64,
+                          double** ins,
+                          long numins,
+                          double** outs,
+                          long numouts,
+                          long sampleframes,
+                          long flags,
+                          void* userparam) {
+    double *out = outs[0];
+	long n = sampleframes;
     
     RGET
-    
 	while (n--){
 		*out++ = frand2(s1, s2, s3);
     }
-    
     RPUT
-    
-    
-	return w + 4;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void whitenoise_assist(t_whitenoise *x, void *b, long m, long a, char *s)
-{
-	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "Ignore this inlet");
-	} 
-	else {	// outlet
-		sprintf(s, "(signal) White Noise"); 			
-	}
+void whitenoise_dsp64(t_whitenoise *self,
+                      t_object* dsp64,
+                      short* count,
+                      double samplerate,
+                      long maxvectorsize,
+                      long flags) {
+    object_method_direct(void, (t_object*, t_object*, t_perfroutine64, long, void*),
+                         dsp64, gensym("dsp_add64"), (t_object*)self, (t_perfroutine64)whitenoise_perform64, 0, NULL);
 }
 
-void *whitenoise_new(){
-	t_whitenoise *x = NULL;
-	x = (t_whitenoise *)object_alloc(whitenoise_class);
+void whitenoise_assist(t_whitenoise *self,
+                       void *unused,
+                       t_assist_function io,
+                       long index,
+                       char *s) {
+    if (io == ASSIST_INLET) { //inlet
+        sprintf(s, "Ignore this inlet");
+    }
+    else {	// outlet
+        sprintf(s, "(signal) White Noise");
+    }
+}
+
+void ext_main(void* r) {
+    this_class = class_new("sc.whitenoise~",
+                           (method)whitenoise_new,
+                           (method)dsp_free,
+                           (long)sizeof(t_whitenoise),
+                           0, A_GIMME, 0);
     
-	if (x) {
-		dsp_setup((t_pxobject *)x, 0);
-        
-        outlet_new((t_object *)x, "signal");
-        
-        x->rgen.init(sc_randomSeed());
-	}
-	return (x);
+    class_addmethod(this_class, (method)whitenoise_dsp64, "dsp64", A_CANT, 0);
+    class_addmethod(this_class, (method)whitenoise_assist, "assist", A_CANT, 0);
+    
+    class_dspinit(this_class);
+    class_register(CLASS_BOX, this_class);
 }

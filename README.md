@@ -34,7 +34,7 @@ You will also need to install [CMake](https://cmake.org/download/).
 3. `cd build` to put yourself into that folder
 4. Now you can generate the projects for your choosen build environment:
 
-### Mac 
+### Mac
 
 You can build on the command line using Makefiles, or you can generate an Xcode project and use the GUI to build.
 
