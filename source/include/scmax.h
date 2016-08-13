@@ -13,8 +13,10 @@
 #ifndef SCMAX_H_XHP91X4G
 #define SCMAX_H_XHP91X4G
 
-#include <cmath>
+#include "SC_Constants.h"
 #include "SC_RGen.h"
+
+using namespace c74::max;
 
 // rate conversions
 
@@ -28,7 +30,7 @@
 #define SAMPLEDUR sc_sampleDur()
 
 double sc_radiansPerSample(){
-    return TWOPI / sys_getsr();
+    return twopi / sys_getsr();
 }
 
 double sc_sampleDur(){
@@ -83,22 +85,6 @@ unsigned long sc_randomSeed( void )
     }							\
 }
 
-// math
-const double log001 = std::log(0.001);
-const double log01  = std::log(0.01);
-const double log1   = std::log(0.1);
-const double rlog2  = 1./std::log(2.);
-const double sqrt2  = std::sqrt(2.);
-const double rsqrt2 = 1. / sqrt2;
-
-const double rtwopi = 1. / TWOPI;
-const float pi_f    = std::acos(-1.f);
-const float pi2_f   = pi_f * 0.5f;
-const float pi32_f  = pi_f * 1.5f;
-const float twopi_f = pi_f * 2.f;
-const float sqrt2_f = std::sqrt(2.f);
-const float rsqrt2_f= 1.f/std::sqrt(2.f);
-
 #define sc_abs(a) std::abs(a)
 #define sc_max(a,b) (((a) > (b)) ? (a) : (b))
 #define sc_min(a,b) (((a) < (b)) ? (a) : (b))
@@ -117,7 +103,7 @@ typedef double float64;
 
 inline float32 zapgremlins(float32 x)
 {
-	float32 absx = abs(x);
+	float32 absx = std::abs(x);
 	// very small numbers fail the first test, eliminating denormalized numbers
 	// (zero also fails the first test, but that is OK since it returns zero.)
 	// very large numbers fail the second test, eliminating infinities
@@ -125,7 +111,7 @@ inline float32 zapgremlins(float32 x)
 	return (absx > (float32)1e-15 && absx < (float32)1e15) ? x : (float32)0.;
 }
 
-#define RGET RGen& rgen = x->rgen; uint32 s1 = rgen.s1; uint32 s2 = rgen.s2; uint32 s3 = rgen.s3;
+#define RGET RGen& rgen = self->rgen; uint32 s1 = rgen.s1; uint32 s2 = rgen.s2; uint32 s3 = rgen.s3;
 #define RPUT rgen.s1 = s1; rgen.s2 = s2; rgen.s3 = s3;
 
 
