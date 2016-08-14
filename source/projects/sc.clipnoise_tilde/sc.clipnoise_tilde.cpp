@@ -1,7 +1,7 @@
 /*
-	SuperCollider real time audio synthesis system
+  SuperCollider real time audio synthesis system
     Copyright (c) 2002 James McCartney. All rights reserved.
-	http://www.audiosynth.com
+  http://www.audiosynth.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
  sc.clipnoise~
  (c) stephen lumenta under GPL
  http://www.gnu.org/licenses/gpl.html
- 
+
  part of sc-max http://github.com/sbl/sc-max
  see README
 */
@@ -37,13 +37,13 @@ using namespace c74::max;
 static t_class *this_class = nullptr;
 
 struct t_clipnoise {
-	t_pxobject ob;
-    RGen rgen;
+  t_pxobject ob;
+  RGen rgen;
 };
 
 void *clipnoise_new(long argc, t_atom *argv) {
     t_clipnoise *self = (t_clipnoise *)object_alloc(this_class);
-    
+
     dsp_setup((t_pxobject *)self, 0);
     outlet_new((t_object *)self, "signal");
     self->rgen.init(sc_randomSeed());
@@ -62,7 +62,7 @@ void clipnoise_perform64(t_clipnoise* self,
                          void* userparam) {
     double *out = outs[0];
     long n = sampleframes;
-    
+
     RGET
     while (n--){
         *out++ = fcoin(s1, s2, s3);
@@ -81,20 +81,20 @@ void clipnoise_dsp64(t_clipnoise *self,
 }
 
 void clipnoise_assist(t_clipnoise *self, void *b, long m, long a, char *s) {
-	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "Ignore this inlet");
-	} 
-	else {	// outlet
-		sprintf(s, "(signal) Clip Noise"); 			
-	}
+  if (m == ASSIST_INLET) { //inlet
+    sprintf(s, "Ignore this inlet");
+  }
+  else {  // outlet
+    sprintf(s, "(signal) Clip Noise");
+  }
 }
 
 void ext_main(void* r) {
     this_class = class_new("sc.clipnoise~", (method)clipnoise_new, (method)dsp_free, (long)sizeof(t_clipnoise), 0L, A_GIMME, 0);
-    
+
     class_addmethod(this_class, (method)clipnoise_dsp64, "dsp64", A_CANT, 0);
-    class_addmethod(this_class, (method)clipnoise_assist, "assist",	A_CANT, 0);
-    
+    class_addmethod(this_class, (method)clipnoise_assist, "assist", A_CANT, 0);
+
     class_dspinit(this_class);
     class_register(CLASS_BOX, this_class);
 }
