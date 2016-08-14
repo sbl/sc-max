@@ -28,75 +28,59 @@
  see README
 */
 
-#include "ext.h"
-#include "ext_obex.h"
-#include "z_dsp.h"
+#include "c74_msp.h"
 #include "scmax.h"
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+using namespace c74::max;
 
-typedef struct _clipnoise 
-{
-	t_pxobject					ob;
-    RGen                        rgen;
-} t_clipnoise;
 
-t_class *clipnoise_class;
+static t_class *this_class = nullptr;
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+struct t_clipnoise {
+	t_pxobject ob;
+    RGen rgen;
+};
 
-void *clipnoise_new(long argc, t_atom *argv);
-void clipnoise_free(t_clipnoise *x);
-void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s);
-
-void clipnoise_dsp(t_clipnoise *x, t_signal **sp, short *count);
-t_int *clipnoise_perform(t_int *w);
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-int main(void){	
-	t_class *c;
+void *clipnoise_new(long argc, t_atom *argv) {
+    t_clipnoise *self = (t_clipnoise *)object_alloc(this_class);
     
-	c = class_new("sc.clipnoise~", (method)clipnoise_new, (method)dsp_free, (long)sizeof(t_clipnoise), 0L, A_GIMME, 0);
-	
-	class_addmethod(c, (method)clipnoise_dsp,		"dsp",		A_CANT, 0);
-	class_addmethod(c, (method)clipnoise_assist,    "assist",	A_CANT, 0);
-    
-	class_dspinit(c);				
-	class_register(CLASS_BOX, c);
-	clipnoise_class = c;
-	
-	return 0;
+    dsp_setup((t_pxobject *)self, 0);
+    outlet_new((t_object *)self, "signal");
+    self->rgen.init(sc_randomSeed());
+
+    return self;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void clipnoise_dsp(t_clipnoise *x, t_signal **sp, short *count){
-	dsp_add(clipnoise_perform, 3, x, sp[0]->s_vec, sp[0]->s_n);
-}
-
-t_int *clipnoise_perform(t_int *w){
-    t_clipnoise *x = (t_clipnoise *)(w[1]);	
-    t_float *out = (t_float *)(w[2]);
-	int n = (int)w[3];
-    
-    if (x->ob.z_disabled)
-        return w + 4;    
+void clipnoise_perform64(t_clipnoise* self,
+                         t_object* dsp64,
+                         double** ins,
+                         long numins,
+                         double** outs,
+                         long numouts,
+                         long sampleframes,
+                         long flags,
+                         void* userparam) {
+    double *out = outs[0];
+    long n = sampleframes;
     
     RGET
-    
-	while (n--){
-		*out++ = fcoin(s1, s2, s3);
+    while (n--){
+        *out++ = fcoin(s1, s2, s3);
     }
-    
     RPUT
-    
-	return w + 4;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+void clipnoise_dsp64(t_clipnoise *self,
+                     t_object* dsp64,
+                     short* count,
+                     double samplerate,
+                     long maxvectorsize,
+                     long flags) {
+    object_method_direct(void, (t_object*, t_object*, t_perfroutine64, long, void*),
+                         dsp64, gensym("dsp_add64"), (t_object*)self, (t_perfroutine64)clipnoise_perform64, 0, NULL);
+}
 
-void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s){
+void clipnoise_assist(t_clipnoise *self, void *b, long m, long a, char *s) {
 	if (m == ASSIST_INLET) { //inlet
 		sprintf(s, "Ignore this inlet");
 	} 
@@ -105,16 +89,12 @@ void clipnoise_assist(t_clipnoise *x, void *b, long m, long a, char *s){
 	}
 }
 
-void *clipnoise_new(long argc, t_atom *argv){
-	t_clipnoise *x = NULL;
-	x = (t_clipnoise *)object_alloc(clipnoise_class);
+void ext_main(void* r) {
+    this_class = class_new("sc.clipnoise~", (method)clipnoise_new, (method)dsp_free, (long)sizeof(t_clipnoise), 0L, A_GIMME, 0);
     
-	if (x) {
-		dsp_setup((t_pxobject *)x, 0);
-        
-        outlet_new((t_object *)x, "signal");
-        
-        x->rgen.init(sc_randomSeed());
-	}
-	return (x);
+    class_addmethod(this_class, (method)clipnoise_dsp64, "dsp64", A_CANT, 0);
+    class_addmethod(this_class, (method)clipnoise_assist, "assist",	A_CANT, 0);
+    
+    class_dspinit(this_class);
+    class_register(CLASS_BOX, this_class);
 }

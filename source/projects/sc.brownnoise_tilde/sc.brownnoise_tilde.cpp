@@ -83,8 +83,7 @@ void brownnoise_dsp64(t_brownnoise* self,
                       short* count,
                       double samplerate,
                       long maxvectorsize,
-                      long flags
-                      ) {
+                      long flags) {
     object_method_direct(void, (t_object*, t_object*, t_perfroutine64, long, void*),
                          dsp64, gensym("dsp_add64"), (t_object*)self, (t_perfroutine64)brownnoise_perform64, 0, NULL);
 }
