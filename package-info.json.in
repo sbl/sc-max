@@ -1,9 +1,8 @@
 {
-	"author" : "Cycling '74",
-	"description" : "Lightweight reference implementation of a package built around the core Max-API.",
-	"homepatcher" : "max-devkit.maxpat",
+	"author" : "Stephen Lumenta",
+	"description" : "supercollider UGENs ported to max/msp.",
 	"max_version_min" : "7.1",
-	"name" : "max-devkit",
+	"name" : "sc-max",
 	"os" : {
 		"macintosh" : {
 			"platform" : [ "ia32", "x64" ],
@@ -14,11 +13,11 @@
 			"min_version" : "none"
 		}
 	},
-	"package_extra" : { 
+	"package_extra" : {
 		"reverse_domain" : "com.cycling74",
 		"copyright" : "Copyright (c) 2016 Cycling '74"
 	},
 	"tags" : [ ],
 	"version" : "@GIT_VERSION_MAJ@.@GIT_VERSION_MIN@.@GIT_VERSION_SUB@",
-	"website" : "http://www.github.com/Cycling74/max-devkit"
+	"website" : "https://github.com/sbl/sc-max"
 }
