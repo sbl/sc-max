@@ -1,6 +1,6 @@
 # sc-max
 
-Some supercollider ugens ported to max-msp (32 + 64 bit) the focus lies on the noisier ones.
+Some supercollider ugens ported to max-msp (v>6.19 - 32 + 64 bit) the focus lies on the noisier ones.
 Ports by Stephen Lumenta.
 
 All credits are due to the original authors (James McCartney et alt.). these
