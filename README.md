@@ -5,18 +5,25 @@ Ports by Stephen Lumenta.
 
 All credits are due to the original authors (James McCartney et alt.). these
 are merely ports to max/msp and might be helpful.
-Helptext is taken directly from the original supercollider helpfiles. If you haven't done so.
-Check out [supercollider](http://supercollider.github.io/) as well. It is a really nice language for sound.
+Helptext is taken directly from the original supercollider helpfiles. If you
+haven't done so, check out [supercollider](http://supercollider.github.io/) as
+well. It is a really nice language for sound.
 
 Use the issue tracker for bug reports or other issues.
 
+## Installation:
 
-## Installation (if you have downloaded the zip file):
+- latest version [mac]()
 
 Drop the sc-max folder somewhere in your max-search-path for projects.
 
+## Older versions:
 
-## Prerequisites
+If you're looking for an older unmaintained version:
+
+- [0.2.1 mac UB](http://github.com/downloads/sbl/sc-max/sc-max-0.2.1.zip)
+
+## Compilation Prerequisites
 
 To build the externals in this package you will need some form of compiler support on your system. 
 
@@ -24,7 +31,6 @@ To build the externals in this package you will need some form of compiler suppo
 * On Windows this most likely means some version of Visual Studio (the free versions should work fine).
 
 You will also need to install [CMake](https://cmake.org/download/).
-
 
 ## Building
 
