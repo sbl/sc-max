@@ -89,7 +89,6 @@ void dust_perform64(t_dust* self,
                     long sampleframes,
                     long flags,
                     void* userparam) {
-
     double density = self->m_connected ? *ins[0] : self->m_density;
     double *out = outs[0];
     int n = sampleframes;
