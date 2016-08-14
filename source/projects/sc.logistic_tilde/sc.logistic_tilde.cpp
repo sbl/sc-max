@@ -82,7 +82,7 @@ void logistic_int(t_logistic *x, long l) {
     logistic_float(x, (double) l);
 }
 
-void logistic_perform64(t_logistic* x,
+void logistic_perform64(t_logistic* self,
                         t_object* dsp64,
                         double** ins,
                         long numins,
@@ -94,21 +94,21 @@ void logistic_perform64(t_logistic* x,
     double *out = outs[0];
     long i;
     
-    double paramf = x->m_connected[0] ? *ins[0] : x->m_chaos_param;
-    double freq = x->m_connected[1] ? *ins[1] : x->m_freq;
+    double paramf = self->m_connected[0] ? *ins[0] : self->m_chaos_param;
+    double freq = self->m_connected[1] ? *ins[1] : self->m_freq;
     
-    double  y1 = x->m_y1;
-    long counter = x->m_counter;
+    double  y1 = self->m_y1;
+    long counter = self->m_counter;
 
-    if (x->ob.z_disabled) return ;
+    if (self->ob.z_disabled) return ;
 
     long remain = sampleframes;
-    if (freq > x->m_sr) freq = x->m_sr;
+    if (freq > self->m_sr) freq = self->m_sr;
     if (freq < 0) freq = 0;
 
     do {
         if (counter<=0) {
-            counter = (long)(x->m_sr  / sc_max(freq, 0.001));
+            counter = (long)(self->m_sr  / sc_max(freq, 0.001));
             counter = sc_max(1, counter);
             y1 = paramf * y1 * (1.0 - y1);  // chaotic equation
         }
@@ -122,8 +122,8 @@ void logistic_perform64(t_logistic* x,
 
     } while(remain);
 
-    x->m_y1 = y1;
-    x->m_counter = counter;
+    self->m_y1 = y1;
+    self->m_counter = counter;
 }
 
 void logistic_dsp64(t_logistic *self, t_object* dsp64, short* count, double samplerate, long maxvectorsize, long flags) {
