@@ -1,4 +1,5 @@
 # sc-max
+[![Build Status](https://travis-ci.org/sbl/sc-max.svg?branch=master)](https://travis-ci.org/sbl/sc-max)
 
 Some supercollider ugens ported to max-msp (v>6.19 - 32 + 64 bit) the focus lies on the noisier ones.
 Ports by Stephen Lumenta.
