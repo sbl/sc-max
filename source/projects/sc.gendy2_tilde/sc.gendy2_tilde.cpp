@@ -40,7 +40,7 @@
 #include "c74_msp.h"
 #include "scmax.h"
 
-# define CONTROL_POINTS 12
+#define CONTROL_POINTS 12
 
 using namespace c74::max;
 

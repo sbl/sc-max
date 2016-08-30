@@ -127,6 +127,12 @@ void *gendy_new(t_symbol *s, long ac, t_atom *av){
     return self;
 }
 
+void gendy_free(t_gendy *self) {
+    dsp_free((t_pxobject *)self);
+    sysmem_freeptr(self->mMemoryAmp);
+    sysmem_freeptr(self->mMemoryDur);
+}
+
 double gendy_distribution(int which, double a, double f) {
     double temp, c;
     
@@ -321,12 +327,6 @@ void gendy_dsp64(t_gendy *self, t_object* dsp64, short* count, double samplerate
     self->mFreqMul = (double) 1.0 / samplerate;
     object_method_direct(void, (t_object*, t_object*, t_perfroutine64, long, void*),
                          dsp64, gensym("dsp_add64"), (t_object*)self, (t_perfroutine64)gendy_perform64, 0, NULL);
-}
-
-void gendy_free(t_gendy *self) {
-    dsp_free((t_pxobject *)self);
-    sysmem_freeptr(self->mMemoryAmp);
-    sysmem_freeptr(self->mMemoryDur);
 }
 
 void gendy_assist(t_gendy *self, void *b, t_assist_function io, long a, char *s) {
