@@ -1,7 +1,13 @@
 # sc-max
+[![Build Status](https://travis-ci.org/sbl/sc-max.svg?branch=master)](https://travis-ci.org/sbl/sc-max)
 
 Some supercollider ugens ported to max-msp (v>6.19 - 32 + 64 bit) the focus lies on the noisier ones.
 Ports by Stephen Lumenta.
+
+- gendys
+- dusts
+- noises
+- lfnoises
 
 All credits are due to the original authors (James McCartney et alt.). these
 are merely ports to max/msp and might be helpful.
@@ -19,7 +25,7 @@ Drop the sc-max folder somewhere in your max-search-path for projects.
 
 ## Older versions:
 
-If you're looking for an older unmaintained version:
+If you're looking for an older unmaintained (32 bit only) version:
 
 - [0.2.1 mac UB](http://github.com/downloads/sbl/sc-max/sc-max-0.2.1.zip)
 
