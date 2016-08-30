@@ -19,7 +19,7 @@ Drop the sc-max folder somewhere in your max-search-path for projects.
 
 ## Older versions:
 
-If you're looking for an older unmaintained version:
+If you're looking for an older unmaintained (32 bit only) version:
 
 - [0.2.1 mac UB](http://github.com/downloads/sbl/sc-max/sc-max-0.2.1.zip)
 
