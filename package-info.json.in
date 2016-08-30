@@ -1,0 +1,23 @@
+{
+	"author" : "Stephen Lumenta",
+	"description" : "supercollider UGENs ported to max/msp.",
+	"max_version_min" : "7.1",
+	"name" : "sc-max",
+	"os" : {
+		"macintosh" : {
+			"platform" : [ "ia32", "x64" ],
+			"min_version" : "none"
+		},
+		"windows" : {
+			"platform" : [ "ia32", "x64" ],
+			"min_version" : "none"
+		}
+	},
+	"package_extra" : {
+		"reverse_domain" : "com.cycling74",
+		"copyright" : "Copyright (c) 2016 Cycling '74"
+	},
+	"tags" : [ ],
+	"version" : "@GIT_VERSION_MAJ@.@GIT_VERSION_MIN@.@GIT_VERSION_SUB@",
+	"website" : "https://github.com/sbl/sc-max"
+}
