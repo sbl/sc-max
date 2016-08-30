@@ -19,7 +19,7 @@ Use the issue tracker for bug reports or other issues.
 
 ## Installation:
 
-- latest version [mac]()
+- latest version [mac](https://github.com/sbl/sc-max/releases/download/1.0.0/sc-max-1.0.0.zip)
 
 Drop the sc-max folder somewhere in your max-search-path for projects.
 
