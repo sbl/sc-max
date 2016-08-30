@@ -4,6 +4,11 @@
 Some supercollider ugens ported to max-msp (v>6.19 - 32 + 64 bit) the focus lies on the noisier ones.
 Ports by Stephen Lumenta.
 
+- gendys
+- dusts
+- noises
+- lfnoises
+
 All credits are due to the original authors (James McCartney et alt.). these
 are merely ports to max/msp and might be helpful.
 Helptext is taken directly from the original supercollider helpfiles. If you
