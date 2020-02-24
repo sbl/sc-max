@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
+project(sc-max)
 
 # Fetch the correct verion of the max-api
 message(STATUS "Updating Git Submodules")
@@ -7,9 +8,12 @@ execute_process(
 	WORKING_DIRECTORY	"${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
+# global PATHS, cmake -DSC_PATH=../.. -DMAX_API_PATH=../..
+set(SC_PATH 		"/Users/sbl/src/github.com/sbl/bruits/third_party/supercollider")
+set(C74_MAX_API_DIR	"/Users/sbl/src/github.com/sbl/bruits/third_party/min-api/max-api")
 
 # Misc setup and subroutines
-include(${CMAKE_CURRENT_SOURCE_DIR}/source/max-api/script/max-package.cmake)
+include(${C74_MAX_API_DIR}/script/max-package.cmake)
 
 
 # Generate a project for every folder in the "source/projects" folder

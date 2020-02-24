@@ -46,6 +46,12 @@ You will also need to install [CMake](https://cmake.org/download/).
 3. `cd build` to put yourself into that folder
 4. Now you can generate the projects for your choosen build environment:
 
+## MAX-API and SC_PATH
+
+When configuring there are two global paths that you should configure. When inside the `build` directory add them once you generate the project. 
+
+`cmake -DSC_PATH=../.. -DC74_MAX_API_DIR=../..`
+
 ### Mac
 
 You can build on the command line using Makefiles, or you can generate an Xcode project and use the GUI to build.

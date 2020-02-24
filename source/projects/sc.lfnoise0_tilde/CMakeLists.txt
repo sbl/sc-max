@@ -7,5 +7,3 @@ add_library(
 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../scmax-posttarget.cmake)
-
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../max-api/script/max-posttarget.cmake)
