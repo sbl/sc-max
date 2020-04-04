@@ -1,0 +1,24 @@
+{
+	"author" : "Stephen Lumenta",
+	"description" : "bruits for max msp",
+	"homepatcher" : "Min Object Development Kit.maxpat",
+	"max_version_min" : "8.0", "max_version_max" : "none",
+	"name" : "@C74_PACKAGE_NAME@",
+	"os" : {
+		"macintosh" : {
+			"platform" : [ "x64" ],
+			"min_version" : "none"
+		},
+		"windows" : {
+			"platform" : [ "x64" ],
+			"min_version" : "none"
+		}
+	},
+	"package_extra" : {
+		"reverse_domain" : "com.stephenlumenta",
+		"copyright" : "Copyright (c) 2020 Stephen Lumenta"
+	},
+	"tags" : [ ],
+	"version" : "@GIT_VERSION_MAJ@.@GIT_VERSION_MIN@.@GIT_VERSION_SUB@",
+	"website" : "http://www.github.com/sbl/max-bruits"
+}

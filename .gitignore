@@ -1,0 +1,7 @@
+.vimrc
+.clangd
+
+tests
+
+compile_commands.json
+build*

@@ -1,0 +1,12 @@
+[submodule "third_party/eurorack"]
+	path = third_party/eurorack
+	url = https://github.com/pichenettes/eurorack.git
+[submodule "third_party/supercollider"]
+	path = third_party/supercollider
+	url = git@github.com:supercollider/supercollider.git
+[submodule "third_party/min-api"]
+	path = third_party/min-api
+	url = https://github.com/Cycling74/min-api.git
+[submodule "sc-max"]
+	path = sc-max
+	url = git@github.com:sbl/sc-max.git

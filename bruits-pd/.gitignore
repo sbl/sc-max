@@ -1,0 +1,12 @@
+build
+*pd_darwin
+*dll
+*pd_linux
+*tar.gz
+*sha256
+*app
+*exp
+deken
+
+./externs/
+compile_commands.json
