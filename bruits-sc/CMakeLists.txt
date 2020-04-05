@@ -24,10 +24,10 @@ enable_testing()
 #####################################################################
 # subprojects
 
-add_subdirectory(src/FriendZone)
 add_subdirectory(src/MS20)
 add_subdirectory(src/VCM)
 add_subdirectory(src/Varshape)
+add_subdirectory(src/WRShaper)
 add_subdirectory(src/Warsaw)
 add_subdirectory(src/Wellen)
 add_subdirectory(src/Zopf)

@@ -6,14 +6,26 @@ s.boot;
 s.reboot;
 
 s.doWhenBooted {
-  Ndef(\jf, {
-    FriendZone.ar(100);
-  }).play;
 
   s.scope;
 }
 
 )
+
+
+
+
+// just friends ???
+
+
+(
+Ndef(\jf, {
+  FriendZone.ar(100);
+}).play;
+)
+
+
+
 
 // ms20
 

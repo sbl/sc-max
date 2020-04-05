@@ -2,6 +2,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 extern const float log_lut[]; // make LUT public to project
 
 float shaper_apply(float input, // input
@@ -9,3 +13,7 @@ float shaper_apply(float input, // input
                    float coeff // (0,1)
 );
 float* shaper_apply_v(float shape, float* shape_audio, float* io, int b_size);
+
+#ifdef __cplusplus
+}
+#endif

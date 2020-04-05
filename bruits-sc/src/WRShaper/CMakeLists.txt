@@ -6,8 +6,8 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/../../cmake_modules/scplugin-pretarget.cmake
 add_library(${PROJECT_NAME} MODULE
     ${PROJECT_NAME}.cpp
 
-    wrDsp/wrFuncGen.c
-    wrDsp/wrVtl.c
+    wrDsp/wrShaper.c
+    wrDsp/wrOscSine.c
     wrLib/wrMath.c
 )
 
