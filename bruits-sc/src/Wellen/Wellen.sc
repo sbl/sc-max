@@ -1,3 +1,4 @@
+// Mutable Instruments Tides 2
 Wellen : MultiOutUGen {
   const <modeAD = 0;
   const <modeLooping = 1;

@@ -24,7 +24,7 @@ enable_testing()
 #####################################################################
 # subprojects
 
-add_subdirectory(src/Griesinger)
+add_subdirectory(src/FriendZone)
 add_subdirectory(src/MS20)
 add_subdirectory(src/VCM)
 add_subdirectory(src/Varshape)
