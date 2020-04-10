@@ -2,8 +2,8 @@
 // Created by ezra on 12/8/17.
 //
 
-#ifndef Softcut_INTERPOLATE_H
-#define Softcut_INTERPOLATE_H
+#ifndef SOFTCUT_INTERPOLATE_H
+#define SOFTCUT_INTERPOLATE_H
 
 namespace softcut {
     class Interpolate {
@@ -40,4 +40,4 @@ namespace softcut {
     };
 }
 
-#endif //Softcut_INTERPOLATE_H
+#endif //SOFTCUT_INTERPOLATE_H

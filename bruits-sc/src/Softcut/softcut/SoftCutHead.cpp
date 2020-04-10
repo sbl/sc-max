@@ -5,15 +5,19 @@
 #include <limits>
 
 
-#include "softcut/Interpolate.h"
-#include "softcut/Resampler.h"
+#include "Interpolate.h"
+#include "Resampler.h"
 
-#include "softcut/ReadWriteHead.h"
+#include "SoftCutHead.h"
 
 using namespace softcut;
 using namespace std;
 
-void ReadWriteHead::init(FadeCurves *fc) {
+SoftCutHead::SoftCutHead() {
+    this->init();
+}
+
+void SoftCutHead::init() {
     start = 0.f;
     end = 0.f;
     active = 0;
@@ -22,18 +26,21 @@ void ReadWriteHead::init(FadeCurves *fc) {
     testBuf.init();
     queuedCrossfade = 0;
     queuedCrossfadeFlag = false;
-    head[0].init(fc);
-    head[1].init(fc);
+    head[0].init();
+    head[1].init();
 }
 
-void ReadWriteHead::processSample(sample_t in, sample_t *out) {
+void SoftCutHead::processSample(sample_t in, sample_t *out) {
 
     *out = mixFade(head[0].peek(), head[1].peek(), head[0].fade(), head[1].fade());
 
-    BOOST_ASSERT_MSG(!(head[0].state_ == Playing && head[1].state_ == Playing), "multiple active heads");
+    int numFades = (head[0].state_ == FadeIn || head[0].state_ == FadeOut)
+            + (head[1].state_ == FadeIn || head[1].state_ == FadeOut);
 
-    head[0].poke(in, pre, rec);
-    head[1].poke(in, pre, rec);
+    BOOST_ASSERT_MSG(!(head[0].state_ == Active && head[1].state_ == Active), "multiple active heads");
+
+    head[0].poke(in, pre, rec, numFades);
+    head[1].poke(in, pre, rec, numFades);
 
     takeAction(head[0].updatePhase(start, end, loopFlag));
     takeAction(head[1].updatePhase(start, end, loopFlag));
@@ -44,13 +51,15 @@ void ReadWriteHead::processSample(sample_t in, sample_t *out) {
 }
 
 
-void ReadWriteHead::processSampleNoRead(sample_t in, sample_t *out) {
+void SoftCutHead::processSampleNoRead(sample_t in, sample_t *out) {
     (void)out;
+    int numFades = (head[0].state_ == FadeIn || head[0].state_ == FadeOut)
+                   + (head[1].state_ == FadeIn || head[1].state_ == FadeOut);
 
-    BOOST_ASSERT_MSG(!(head[0].state_ == Playing && head[1].state_ == Playing), "multiple active heads");
+    BOOST_ASSERT_MSG(!(head[0].state_ == Active && head[1].state_ == Active), "multiple active heads");
 
-    head[0].poke(in, pre, rec);
-    head[1].poke(in, pre, rec);
+    head[0].poke(in, pre, rec, numFades);
+    head[1].poke(in, pre, rec, numFades);
 
     takeAction(head[0].updatePhase(start, end, loopFlag));
     takeAction(head[1].updatePhase(start, end, loopFlag));
@@ -60,11 +69,11 @@ void ReadWriteHead::processSampleNoRead(sample_t in, sample_t *out) {
     dequeueCrossfade();
 }
 
-void ReadWriteHead::processSampleNoWrite(sample_t in, sample_t *out) {
+void SoftCutHead::processSampleNoWrite(sample_t in, sample_t *out) {
     (void)in;
     *out = mixFade(head[0].peek(), head[1].peek(), head[0].fade(), head[1].fade());
 
-    BOOST_ASSERT_MSG(!(head[0].state_ == Playing && head[1].state_ == Playing), "multiple active heads");
+    BOOST_ASSERT_MSG(!(head[0].state_ == Active && head[1].state_ == Active), "multiple active heads");
 
     takeAction(head[0].updatePhase(start, end, loopFlag));
     takeAction(head[1].updatePhase(start, end, loopFlag));
@@ -74,7 +83,8 @@ void ReadWriteHead::processSampleNoWrite(sample_t in, sample_t *out) {
     dequeueCrossfade();
 }
 
-void ReadWriteHead::setRate(rate_t x)
+
+void SoftCutHead::setRate(rate_t x)
 {
     rate = x;
     calcFadeInc();
@@ -82,17 +92,17 @@ void ReadWriteHead::setRate(rate_t x)
     head[1].setRate(x);
 }
 
-void ReadWriteHead::setLoopStartSeconds(float x)
+void SoftCutHead::setLoopStartSeconds(float x)
 {
     start = x * sr;
 }
 
-void ReadWriteHead::setLoopEndSeconds(float x)
+void SoftCutHead::setLoopEndSeconds(float x)
 {
     end = x * sr;
 }
 
-void ReadWriteHead::takeAction(Action act)
+void SoftCutHead::takeAction(Action act)
 {
     switch (act) {
         case Action::LoopPos:
@@ -108,13 +118,13 @@ void ReadWriteHead::takeAction(Action act)
     }
 }
 
-void ReadWriteHead::enqueueCrossfade(phase_t pos) {
+void SoftCutHead::enqueueCrossfade(phase_t pos) {
     // std::cout <<"enqueuing crossfade\n";
     queuedCrossfade = pos;
     queuedCrossfadeFlag = true;
 }
 
-void ReadWriteHead::dequeueCrossfade() {
+void SoftCutHead::dequeueCrossfade() {
     State s = head[active].state();
     if(! (s == State::FadeIn || s == State::FadeOut)) {
 	if(queuedCrossfadeFlag ) {
@@ -126,7 +136,7 @@ void ReadWriteHead::dequeueCrossfade() {
 }
 
 
-void ReadWriteHead::cutToPhase(phase_t pos) {
+void SoftCutHead::cutToPhase(phase_t pos) {
     State s = head[active].state();
 
     if(s == State::FadeIn || s == State::FadeOut) {
@@ -137,7 +147,7 @@ void ReadWriteHead::cutToPhase(phase_t pos) {
 
     // activate the inactive head
     int newActive = active ^ 1;
-    if(s != State::Stopped) {
+    if(s != State::Inactive) {
         head[active].setState(State::FadeOut);
     }
 
@@ -149,56 +159,56 @@ void ReadWriteHead::cutToPhase(phase_t pos) {
     active = newActive;
 }
 
-void ReadWriteHead::setFadeTime(float secs) {
+void SoftCutHead::setFadeTime(float secs) {
     fadeTime = secs;
     calcFadeInc();
 }
-void ReadWriteHead::calcFadeInc() {
+void SoftCutHead::calcFadeInc() {
     fadeInc = (float) fabs(rate) / std::max(1.f, (fadeTime * sr));
     fadeInc = std::max(0.f, std::min(fadeInc, 1.f));
 }
 
-void ReadWriteHead::setBuffer(float *b, uint32_t bf) {
+void SoftCutHead::setBuffer(float *b, uint32_t bf) {
     buf = b;
     head[0].setBuffer(b, bf);
     head[1].setBuffer(b, bf);
 }
 
-void ReadWriteHead::setLoopFlag(bool val) {
+void SoftCutHead::setLoopFlag(bool val) {
     loopFlag = val;
 }
 
-void ReadWriteHead::setSampleRate(float sr_) {
+void SoftCutHead::setSampleRate(float sr_) {
     sr = sr_;
     head[0].setSampleRate(sr);
     head[1].setSampleRate(sr);
 }
 
-sample_t ReadWriteHead::mixFade(sample_t x, sample_t y, float a, float b) {
+sample_t SoftCutHead::mixFade(sample_t x, sample_t y, float a, float b) {
         return x * sinf(a * (float)M_PI_2) + y * sinf(b * (float) M_PI_2);
 }
 
-void ReadWriteHead::setRec(float x) {
+void SoftCutHead::setRec(float x) {
     rec = x;
 }
 
-void ReadWriteHead::setPre(float x) {
+void SoftCutHead::setPre(float x) {
     pre = x;
 }
 
-phase_t ReadWriteHead::getActivePhase() {
+phase_t SoftCutHead::getActivePhase() {
   return head[active].phase();
 }
 
-void ReadWriteHead::cutToPos(float seconds) {
+void SoftCutHead::cutToPos(float seconds) {
     enqueueCrossfade(seconds * sr);
 }
 
-rate_t ReadWriteHead::getRate() {
+rate_t SoftCutHead::getRate() {
     return rate;
 }
 
-void ReadWriteHead::setRecOffsetSamples(int d) {
+void SoftCutHead::setRecOffsetSamples(int d) {
     head[0].setRecOffsetSamples(d);
     head[1].setRecOffsetSamples(d);
 }

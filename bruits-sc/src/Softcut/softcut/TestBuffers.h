@@ -2,8 +2,8 @@
 // Created by ezra on 11/16/18.
 //
 
-#ifndef Softcut_TESTBUFFERS_H
-#define Softcut_TESTBUFFERS_H
+#ifndef SOFTCUT_TESTBUFFERS_H
+#define SOFTCUT_TESTBUFFERS_H
 
 #include <iostream>
 #include <fstream>
@@ -38,8 +38,8 @@ public:
     // print buffer contents in matlab format
     void print() {
         using std::endl;
-        std::ofstream ofs ("Softcut_test_buffers.m", std::ofstream::out);
-        ofs << "function y = Softcut_test_buffers() " << endl;
+        std::ofstream ofs ("softcut_test_buffers.m", std::ofstream::out);
+        ofs << "function y = softcut_test_buffers() " << endl;
         ofs << "  y = [" << endl;
         for (int ch=0; ch<numChannels; ++ch) {
             ofs << "    [ ";
@@ -57,4 +57,4 @@ public:
 }
 
 
-#endif //Softcut_TESTBUFFERS_H
+#endif //SOFTCUT_TESTBUFFERS_H

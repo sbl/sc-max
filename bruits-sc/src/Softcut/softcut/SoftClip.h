@@ -2,8 +2,8 @@
 // Created by ezra on 11/9/18.
 //
 
-#ifndef Softcut_SOFTCLIP_H
-#define Softcut_SOFTCLIP_H
+#ifndef SOFTCUT_SOFTCLIP_H
+#define SOFTCUT_SOFTCLIP_H
 
 #include <cmath>
 #include <boost/math/special_functions/sign.hpp>
@@ -42,7 +42,7 @@ namespace softcut {
 
         float processSample(float x) {
             float ax = fabs(x);
-            const float sx = static_cast<float>(boost::math::sign(x));
+            const float sx = boost::math::sign(x);
 
             if (ax > 1.f) {
                 ax = 1.f;
@@ -76,4 +76,4 @@ namespace softcut {
     };
 }
 
-#endif //Softcut_SOFTCLIP_H
+#endif //SOFTCUT_SOFTCLIP_H

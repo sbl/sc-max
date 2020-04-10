@@ -2,24 +2,40 @@
 // Created by emb on 11/10/18.
 //
 
-#ifndef Softcut_Softcut_H
-#define Softcut_Softcut_H
+#ifndef SOFTCUT_SOFTCUT_H
+#define SOFTCUT_SOFTCUT_H
 
-#include "Types.h"
-#include "Voice.h"
-#include <memory>
 #include <thread>
 
+#include "FadeCurves.h"
+#include "SoftCutVoice.h"
+
 namespace softcut {
-template <int numVoices> class Softcut {
+
+template <int numVoices> class SoftCut {
+private:
+    SoftCutVoice scv[numVoices];
+
+    void init() {
+        FadeCurves::setPreShape(FadeCurves::Shape::Linear);
+        FadeCurves::setRecShape(FadeCurves::Shape::Raised);
+        FadeCurves::setMinPreWindowFrames(0);
+        FadeCurves::setMinRecDelayFrames(0);
+        FadeCurves::setPreWindowRatio(1.f / 8);
+        FadeCurves::setRecDelayRatio(1.f / (8 * 16));
+    }
+
 public:
-    Softcut() {
+    SoftCut() {
+        this->init();
         this->reset();
     }
 
     void reset() {
         for (int v = 0; v < numVoices; ++v) {
             scv[v].reset();
+            /* scv[v].phase_quant(i, 1); */
+            /* scv[v].phase_offset(i, 0); */
         };
     }
 
@@ -136,32 +152,32 @@ public:
 
 #if 0 // not allowing realtime manipulation of fade logic params
         void setPreFadeWindow(float x) {
-    auto t = std::thread([x] {
-        FadeCurves::setPreWindowRatio(x);
-    });
-    t.detach();
-}
+            auto t = std::thread([x] {
+                FadeCurves::setPreWindowRatio(x);
+            });
+            t.detach();
+        }
 
-void setRecFadeDelay(float x) {
-    auto t = std::thread([x] {
-        FadeCurves::setRecDelayRatio(x);
-    });
-    t.detach();
-}
+        void setRecFadeDelay(float x) {
+            auto t = std::thread([x] {
+                FadeCurves::setRecDelayRatio(x);
+            });
+            t.detach();
+        }
 
-void setPreFadeShape(float x) {
-    auto t = std::thread([x] {
-        FadeCurves::setPreShape(static_cast<FadeCurves::Shape>(x));
-    });
-    t.detach();
-}
+        void setPreFadeShape(float x) {
+            auto t = std::thread([x] {
+                FadeCurves::setPreShape(static_cast<FadeCurves::Shape>(x));
+            });
+            t.detach();
+        }
 
-void setRecFadeShape(float x) {
-    auto t = std::thread([x] {
-        FadeCurves::setRecShape(static_cast<FadeCurves::Shape>(x));
-    });
-    t.detach();
-}
+        void setRecFadeShape(float x) {
+            auto t = std::thread([x] {
+                FadeCurves::setRecShape(static_cast<FadeCurves::Shape>(x));
+            });
+            t.detach();
+        }
 #endif
 
     void setRecOffset(int i, float d) {
@@ -207,10 +223,7 @@ void setRecFadeShape(float x) {
     void setVoiceBuffer(int id, float* buf, size_t bufFrames) {
         scv[id].setBuffer(buf, bufFrames);
     }
-
-private:
-    Voice scv[numVoices];
 };
 }
 
-#endif // Softcut_Softcut_H2
+#endif // SOFTCUT_SOFTCUT_H2

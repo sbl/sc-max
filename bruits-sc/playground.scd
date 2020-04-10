@@ -4,16 +4,14 @@ s.reboot;
 // softcut
 
 
-b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
+b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16);
 b.play;
 
 (
 {
-  SoftCutHead.ar(b, SinOsc.ar);
+  Softcut.ar(b, Saw.ar(330));
 }.play;
 )
-
-
 
 
 // Trigon
