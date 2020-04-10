@@ -1,17 +1,13 @@
 s.boot;
-
-
-(
-
 s.reboot;
 
-s.doWhenBooted {
+// Trigon
 
-  s.scope;
-}
-
+(
+Ndef(\trigon, {
+  Trigon.ar(220, 0.5, 0.5, 0.5)
+}).play;
 )
-
 
 
 

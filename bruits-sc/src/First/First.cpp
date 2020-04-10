@@ -28,5 +28,5 @@ static InterfaceTable* ft;
 
 PluginLoad(FirstUGens) {
     ft = inTable;
-    registerUnit<bruits::First>(ft, "First");
+    registerUnit<bruits::First>(ft, typeid(bruits::First).name());
 }
