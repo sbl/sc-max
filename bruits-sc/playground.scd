@@ -1,6 +1,24 @@
 s.boot;
 s.reboot;
 
+// softcut
+
+
+b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
+
+
+(
+{
+  Softcut.ar(b, SoundIn.ar(0));
+
+}.play;
+
+
+)
+
+
+
+
 // Trigon
 
 (

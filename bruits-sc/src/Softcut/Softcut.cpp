@@ -1,16 +1,31 @@
+#include "softcut/Softcut.h"
 #include "SC_PlugIn.hpp"
+#include "buffer.h"
+#include <iostream>
+
+static InterfaceTable* ft;
 
 namespace bruits {
 
-struct Softcut : public SCUnit {
-    Softcut() {
-        set_calc_function<Softcut, &Softcut::next>();
+struct SCSC : public SCUnit {
+    SCSC() {
+        set_calc_function<SCSC, &SCSC::next>();
+        soft.setSampleRate(sampleRate());
 
         next(1);
     }
 
     void next(int nSamples) {
-        const float* input = in(0);
+        GET_CPP_BUFFER
+        if (!bufData) {
+            std::cout << "no buffer data" << std::endl;
+            ft->fClearUnitOutputs(this, nSamples);
+            return;
+        }
+
+        soft.setVoiceBuffer(0, bufData, bufFrames);
+
+        const float* input = in(1);
         float* outbuf = out(0);
 
         // simple gain function
@@ -20,12 +35,13 @@ struct Softcut : public SCUnit {
     }
 
 private:
+    softcut::Softcut<1> soft;
+    float m_fbufnum = -1e9f;
+    SndBuf* m_buf;
 };
 }
 
-static InterfaceTable* ft;
-
 PluginLoad(BruitsUGens) {
     ft = inTable;
-    registerUnit<bruits::Softcut>(ft, "Softcut");
+    registerUnit<bruits::SCSC>(ft, "Softcut");
 }
