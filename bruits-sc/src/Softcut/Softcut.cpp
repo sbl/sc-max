@@ -17,21 +17,25 @@ struct SCSC : public SCUnit {
 
     void next(int nSamples) {
         GET_CPP_BUFFER
+        auto* input = in(1);
+        auto* outbuf = out(0);
+
         if (!bufData) {
             std::cout << "no buffer data" << std::endl;
-            ft->fClearUnitOutputs(this, nSamples);
+            for (auto i = 0; i < nSamples; i++) {
+                outbuf[i] = input[i];
+            }
             return;
         }
 
         soft.setVoiceBuffer(0, bufData, bufFrames);
+        soft.setPlayFlag(0, true);
+        soft.setLoopFlag(0, true);
+        soft.setRate(0, 1);
+        soft.setLoopStart(0, 0);
+        soft.setLoopEnd(0, 1);
 
-        const float* input = in(1);
-        float* outbuf = out(0);
-
-        // simple gain function
-        for (int i = 0; i < nSamples; ++i) {
-            outbuf[i] = input[i];
-        }
+        soft.processBlock(0, input, outbuf, nSamples);
     }
 
 private:
