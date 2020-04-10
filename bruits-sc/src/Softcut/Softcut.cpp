@@ -11,6 +11,7 @@ struct SCSC : public SCUnit {
     SCSC() {
         set_calc_function<SCSC, &SCSC::next>();
         soft.setSampleRate(sampleRate());
+        soft.reset();
 
         next(1);
     }
@@ -18,12 +19,15 @@ struct SCSC : public SCUnit {
     void next(int nSamples) {
         GET_CPP_BUFFER
         auto* input = in(1);
-        auto* outbuf = out(0);
+        auto* output = out(0);
 
+        float fakeBuf[nSamples];
+        
+        
         if (!bufData) {
             std::cout << "no buffer data" << std::endl;
             for (auto i = 0; i < nSamples; i++) {
-                outbuf[i] = input[i];
+                output[i] = input[i];
             }
             return;
         }
@@ -31,11 +35,27 @@ struct SCSC : public SCUnit {
         soft.setVoiceBuffer(0, bufData, bufFrames);
         soft.setPlayFlag(0, true);
         soft.setLoopFlag(0, true);
+        soft.setRecFlag(0, false);
+        
+        soft.setPhaseQuant(0, 0);
+        soft.setPhaseOffset(0, 0);
+        soft.setRecOffset(0, 0.0001);
+        
+        soft.setPreLevel(0, 0.2);
+        soft.setRecLevel(0, 1);
+        
         soft.setRate(0, 1);
         soft.setLoopStart(0, 0);
         soft.setLoopEnd(0, 1);
+        
+        soft.setFadeTime(0, 0.001);
 
-        soft.processBlock(0, input, outbuf, nSamples);
+        soft.processBlock(0, input, fakeBuf, nSamples);
+        
+        for(auto i = 0; i < nSamples; i++) {
+            output[i] = fakeBuf[i];
+        }
+        
     }
 
 private:
