@@ -1,7 +1,0 @@
-# Xcode
-.DS_Store
-
-build/
-tmp/
-externals/
-package-info.json
