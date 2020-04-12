@@ -4,8 +4,8 @@
 // state variable filter
 // after Hal Chamberlin, Andy Simper
 
-#ifndef SOFTCUT_SVF_H
-#define SOFTCUT_SVF_H
+#ifndef Softcut_SVF_H
+#define Softcut_SVF_H
 
 #include <memory>
 
@@ -74,4 +74,4 @@ private:
 };
 
 
-#endif //SOFTCUT_SVF_H
+#endif //Softcut_SVF_H

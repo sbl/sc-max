@@ -2,12 +2,12 @@
 // Created by ezra on 11/3/18.
 //
 
-#include "SoftCutVoice.h"
+#include "softcut/Voice.h"
 #include <functional>
 
 using namespace softcut;
 
-SoftCutVoice::SoftCutVoice() :
+Voice::Voice() :
 rateRamp(48000, 0.1),
 preRamp(48000, 0.1),
 recRamp(48000, 0.1)
@@ -16,7 +16,8 @@ recRamp(48000, 0.1)
     reset();
 }
 
-void SoftCutVoice::reset() {
+void Voice::reset() {
+    fadeCurves.init();
     svfPre.setLpMix(1.0);
     svfPre.setHpMix(0.0);
     svfPre.setBpMix(0.0);
@@ -40,11 +41,10 @@ void SoftCutVoice::reset() {
     recFlag = false;
     playFlag = false;
 
-    sch.init();
-
+    sch.init(&fadeCurves);
 }
 
-void SoftCutVoice:: processBlockMono(const float *in, float *out, int numFrames) {
+void Voice:: processBlockMono(const float *in, float *out, int numFrames) {
     std::function<void(sample_t, sample_t*)> sampleFunc;
     if(playFlag) {
         if(recFlag) {
@@ -72,7 +72,7 @@ void SoftCutVoice:: processBlockMono(const float *in, float *out, int numFrames)
 
     float x, y;
     for(int i=0; i<numFrames; ++i) {
-        x = svfPre.getNextSample(in[i]) + in[i] * svfPreDryLevel;
+        x = svfPre.getNextSample(in[i]) + in[i]*svfPreDryLevel;
         sch.setRate(rateRamp.update());
         sch.setPre(preRamp.update());
         sch.setRec(recRamp.update());
@@ -82,7 +82,7 @@ void SoftCutVoice:: processBlockMono(const float *in, float *out, int numFrames)
     }
 }
 
-void SoftCutVoice::setSampleRate(float hz) {
+void Voice::setSampleRate(float hz) {
     sampleRate = hz;
     rateRamp.setSampleRate(hz);
     preRamp.setSampleRate(hz);
@@ -92,151 +92,151 @@ void SoftCutVoice::setSampleRate(float hz) {
     svfPost.setSampleRate(hz);
 }
 
-void SoftCutVoice::setRate(float rate) {
+void Voice::setRate(float rate) {
     rateRamp.setTarget(rate);
     updatePreSvfFc();
 }
 
-void SoftCutVoice::setLoopStart(float sec) {
+void Voice::setLoopStart(float sec) {
     sch.setLoopStartSeconds(sec);
 }
 
-void SoftCutVoice::setLoopEnd(float sec) {
+void Voice::setLoopEnd(float sec) {
     sch.setLoopEndSeconds(sec);
 }
 
-void SoftCutVoice::setFadeTime(float sec) {
+void Voice::setFadeTime(float sec) {
     sch.setFadeTime(sec);
 }
 
-void SoftCutVoice::cutToPos(float sec) {
+void Voice::cutToPos(float sec) {
     sch.cutToPos(sec);
 }
 
-void SoftCutVoice::setRecLevel(float amp) {
+void Voice::setRecLevel(float amp) {
     recRamp.setTarget(amp);
 }
 
-void SoftCutVoice::setPreLevel(float amp) {
+void Voice::setPreLevel(float amp) {
     preRamp.setTarget(amp);
 }
 
-void SoftCutVoice::setRecFlag(bool val) {
+void Voice::setRecFlag(bool val) {
     recFlag = val;
 }
 
 
-void SoftCutVoice::setPlayFlag(bool val) {
+void Voice::setPlayFlag(bool val) {
     playFlag = val;
 }
 
-void SoftCutVoice::setLoopFlag(bool val) {
+void Voice::setLoopFlag(bool val) {
     sch.setLoopFlag(val);
 }
 
 // input filter
-void SoftCutVoice::setPreFilterFc(float x) {
+void Voice::setPreFilterFc(float x) {
     svfPreFcBase = x;
     updatePreSvfFc();
 }
 
-void SoftCutVoice::setPreFilterRq(float x) {
+void Voice::setPreFilterRq(float x) {
     svfPre.setRq(x);
 }
 
-void SoftCutVoice::setPreFilterLp(float x) {
+void Voice::setPreFilterLp(float x) {
     svfPre.setLpMix(x);
 }
 
-void SoftCutVoice::setPreFilterHp(float x) {
+void Voice::setPreFilterHp(float x) {
     svfPre.setHpMix(x);
 }
 
-void SoftCutVoice::setPreFilterBp(float x) {
+void Voice::setPreFilterBp(float x) {
     svfPre.setBpMix(x);
 }
 
-void SoftCutVoice::setPreFilterBr(float x) {
+void Voice::setPreFilterBr(float x) {
     svfPre.setBrMix(x);
 }
 
-void SoftCutVoice::setPreFilterDry(float x) {
+void Voice::setPreFilterDry(float x) {
     svfPreDryLevel = x;
 }
 
-void SoftCutVoice::setPreFilterFcMod(float x) {
+void Voice::setPreFilterFcMod(float x) {
     svfPreFcMod = x;
 }
 
-void SoftCutVoice::updatePreSvfFc() {
+void Voice::updatePreSvfFc() {
     float fcMod = std::min(svfPreFcBase, svfPreFcBase * std::fabs(static_cast<float>(sch.getRate())));
     fcMod = svfPreFcBase + svfPreFcMod * (fcMod - svfPreFcBase);
     svfPre.setFc(fcMod);
 }
 
 // output filter
-void SoftCutVoice::setPostFilterFc(float x) {
+void Voice::setPostFilterFc(float x) {
     svfPost.setFc(x);
 }
 
-void SoftCutVoice::setPostFilterRq(float x) {
+void Voice::setPostFilterRq(float x) {
     svfPost.setRq(x);
 }
 
-void SoftCutVoice::setPostFilterLp(float x) {
+void Voice::setPostFilterLp(float x) {
     svfPost.setLpMix(x);
 }
 
-void SoftCutVoice::setPostFilterHp(float x) {
+void Voice::setPostFilterHp(float x) {
     svfPost.setHpMix(x);
 }
 
-void SoftCutVoice::setPostFilterBp(float x) {
+void Voice::setPostFilterBp(float x) {
     svfPost.setBpMix(x);
 }
 
-void SoftCutVoice::setPostFilterBr(float x) {
+void Voice::setPostFilterBr(float x) {
     svfPost.setBrMix(x);
 }
 
-void SoftCutVoice::setPostFilterDry(float x) {
+void Voice::setPostFilterDry(float x) {
     // FIXME
     svfPostDryLevel = x;
 }
 
-void SoftCutVoice::setBuffer(float *b, unsigned int nf) {
+void Voice::setBuffer(float *b, unsigned int nf) {
     buf = b;
     bufFrames = nf;
     sch.setBuffer(buf, bufFrames);
 }
 
-void SoftCutVoice::setRecOffset(float d) {
+void Voice::setRecOffset(float d) {
     sch.setRecOffsetSamples(static_cast<int>(d * sampleRate));
 }
 
-void SoftCutVoice::setRecPreSlewTime(float d) {
+void Voice::setRecPreSlewTime(float d) {
     recRamp.setTime(d);
     preRamp.setTime(d);
 }
 
-void SoftCutVoice::setRateSlewTime(float d) {
+void Voice::setRateSlewTime(float d) {
     rateRamp.setTime(d);
 }
 
-void SoftCutVoice::setPhaseQuant(float x) {
+void Voice::setPhaseQuant(float x) {
     phaseQuant = x;
 }
 
-void SoftCutVoice::setPhaseOffset(float x) {
+void Voice::setPhaseOffset(float x) {
     phaseOffset = x * sampleRate;
 }
 
 
-phase_t SoftCutVoice::getQuantPhase() {
+phase_t Voice::getQuantPhase() {
     return quantPhase;
 }
 
-void SoftCutVoice::updateQuantPhase() {
+void Voice::updateQuantPhase() {
     if (phaseQuant == 0) {
         quantPhase = sch.getActivePhase() / sampleRate;
     } else {
@@ -245,14 +245,14 @@ void SoftCutVoice::updateQuantPhase() {
     }
 }
 
-bool SoftCutVoice::getPlayFlag() {
+bool Voice::getPlayFlag() {
     return playFlag;
 }
 
-bool SoftCutVoice::getRecFlag() {
+bool Voice::getRecFlag() {
     return recFlag;
 }
 
-float SoftCutVoice::getPos() {
+float Voice::getPos() {
     return static_cast<float>(sch.getActivePhase() / sampleRate);
 }

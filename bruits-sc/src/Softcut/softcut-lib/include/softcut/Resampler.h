@@ -2,8 +2,8 @@
 // Created by ezra on 4/21/18.
 //
 
-#ifndef SOFTCUTHEAD_RESAMPLER_H
-#define SOFTCUTHEAD_RESAMPLER_H
+#ifndef SoftcutHEAD_RESAMPLER_H
+#define SoftcutHEAD_RESAMPLER_H
 
 #include <iostream>
 #include <cmath>
@@ -173,5 +173,5 @@ namespace softcut {
 
 }
 
-#endif //SOFTCUTHEAD_RESAMPLER_H
+#endif //SoftcutHEAD_RESAMPLER_H
 

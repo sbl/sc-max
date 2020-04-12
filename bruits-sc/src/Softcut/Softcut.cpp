@@ -1,7 +1,6 @@
-#include "softcut/SoftCutVoice.h"
-#include "softcut/FadeCurves.h"
 #include "SC_PlugIn.hpp"
 #include "buffer.h"
+#include "softcut/Voice.h"
 #include <iostream>
 
 static InterfaceTable* ft;
@@ -13,32 +12,16 @@ namespace bruits {
 struct SCSC : public SCUnit {
     SCSC() {
         set_calc_function<SCSC, &SCSC::next>();
-        
-        initCurves();
+
         softcut.reset();
-        
+
         softcut.setSampleRate(sampleRate());
         softcut.setPhaseQuant(1);
         softcut.setPhaseOffset(0);
-        
+
         next(1);
     }
 
-    
-    void initCurves() {
-        /// FIXME: the fade curve data is static, shared among all instances
-        // this is fine in the context of norns,
-        /// but here each instance should probably own a copy
-        /// in any case, this is the wrong place to set these magic numbers!
-        FadeCurves::setPreShape(FadeCurves::Shape::Linear);
-        FadeCurves::setRecShape(FadeCurves::Shape::Raised);
-        FadeCurves::setMinPreWindowFrames(0);
-        FadeCurves::setMinRecDelayFrames(0);
-        FadeCurves::setPreWindowRatio(1.f/8);
-        FadeCurves::setRecDelayRatio(1.f/(8*16));
-    }
-    
-    
     void next(int nSamples) {
         float fbufnum = in0(0);
         if (fbufnum < 0.f) {
@@ -76,7 +59,7 @@ struct SCSC : public SCUnit {
 
         auto* input = in(1);
         auto position = in0(2);
-        
+
         auto* output = out(0);
 
         if (!bufData) {
@@ -92,7 +75,7 @@ struct SCSC : public SCUnit {
         }
 
         // magic
-        
+
         if (has_changes) {
             softcut.setBuffer(bufData, bufFrames);
             softcut.setPreLevel(1);
@@ -116,10 +99,9 @@ struct SCSC : public SCUnit {
     }
 
 private:
-    SoftCutVoice softcut;
+    softcut::Voice softcut;
     float m_fbufnum = -1e9f;
     SndBuf* m_buf;
-    
 
     bool has_changes = false;
 

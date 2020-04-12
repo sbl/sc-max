@@ -5,17 +5,14 @@
 #include <string.h>
 #include <limits>
 
-#include "Interpolate.h"
-#include "FadeCurves.h"
-#include "SubHead.h"
+#include "softcut/Interpolate.h"
+#include "softcut/FadeCurves.h"
+#include "softcut/SubHead.h"
 
 using namespace softcut;
 
-SubHead::SubHead() {
-    this->init();
-}
-
-void SubHead::init() {
+void SubHead::init(FadeCurves *fc) {
+    fadeCurves = fc;
     phase_ = 0;
     fade_ = 0;
     trig_ = 0;
@@ -91,14 +88,13 @@ void SubHead::updateFade(float inc) {
 
 #if 0
 /// test: no resampling
-void SubHead::poke(float in, float pre, float rec, int numFades) {
+void Subhead::poke(float in, float pre, float rec, int numFades) {
     sample_t* p = &buf_[static_cast<unsigned int>(phase_)&bufMask_];
     *p *= pre;
     *p += (in * rec);
 }
 #else
-void SubHead::poke(float in, float pre, float rec, int numFades) {
-    (void)numFades;
+void SubHead::poke(float in, float pre, float rec) {
     // FIXME: since there's never really a reason to not push input, or to reset input ringbuf,
     // it follows that all resamplers could share an input ringbuf
     int nframes = resamp_.processFrame(in);
@@ -109,9 +105,9 @@ void SubHead::poke(float in, float pre, float rec, int numFades) {
 
     BOOST_ASSERT_MSG(fade_ >= 0.f && fade_ <= 1.f, "bad fade coefficient in poke()");
 
+    preFade_ = pre + (1.f-pre) * fadeCurves->getPreFadeValue(fade_);
+    recFade_ = rec * fadeCurves->getRecFadeValue(fade_);
 
-    preFade_ = pre + (1.f-pre) * FadeCurves::getPreFadeValue(fade_);
-    recFade_ = rec * FadeCurves::getRecFadeValue(fade_);
     sample_t y; // write value
     const sample_t* src = resamp_.output();
 
@@ -158,7 +154,7 @@ unsigned int SubHead::wrapBufIndex(int x) {
 }
 
 void SubHead::setSampleRate(float sr) {
-    lpf_.init(static_cast<int>(sr));
+    //... nothing to do
 }
 
 void SubHead::setPhase(phase_t phase) {

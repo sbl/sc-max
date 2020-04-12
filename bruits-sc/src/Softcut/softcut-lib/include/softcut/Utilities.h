@@ -9,7 +9,7 @@
 #include <math.h>
 #include <cmath>
 
-namespace crone {
+namespace softcut {
 
 #ifndef BUILD_SC_UGEN // supercollider headers define these themselves
     static const float log001 = -6.9078;

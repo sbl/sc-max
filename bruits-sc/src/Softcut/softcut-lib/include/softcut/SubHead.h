@@ -6,15 +6,13 @@
  * this class implements one half of a crossfaded read/write sch.
  */
 
-#ifndef SOFTCUTHEAD_SUBHEAD_H
-#define SOFTCUTHEAD_SUBHEAD_H
-
-#include <boost/math/special_functions/sign.hpp>
+#ifndef Softcut_SUBHEAD_H
+#define Softcut_SUBHEAD_H
 
 #include "Resampler.h"
-#include "LowpassBrickwall.h"
 #include "SoftClip.h"
 #include "Types.h"
+#include "FadeCurves.h"
 
 namespace softcut {
 
@@ -22,23 +20,24 @@ namespace softcut {
     typedef enum { None, Stop, LoopPos, LoopNeg } Action ;
 
     class SubHead {
-        friend class SoftCutHead;
+        friend class ReadWriteHead;
+
     public:
-        SubHead();
-        void init();
+        void init(FadeCurves *fc);
         void setSampleRate(float sr);
+
     private:
         sample_t peek4();
         unsigned int wrapBufIndex(int x);
 
     protected:
+        static constexpr int blockSize = 2048;
         sample_t peek();
         //! poke
         //! @param in: input value
         //! @param pre: scaling level for previous buffer content
         //! @param rec: scaling level for new content
-        //! @param numFades: number of heads currently in crossfade
-        void poke(sample_t in, float pre, float rec, int numFades);
+        void poke(sample_t in, float pre, float rec);
         Action updatePhase(phase_t start, phase_t end, bool loop);
         void updateFade(float inc);
 
@@ -50,18 +49,16 @@ namespace softcut {
         
         // setters
         void setState(State state);
-        void setTrig(float trig);
         void setPhase(phase_t phase);
 
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         // **NB** buffer size must be a power of two!!!!
         void setBuffer(sample_t *buf, unsigned int frames);
         void setRate(rate_t rate);
-
+        FadeCurves *fadeCurves;
 
     private:
         Resampler resamp_;
-        LowpassBrickwall lpf_;
         SoftClip clip_;
 
         sample_t* buf_; // output buffer
@@ -87,4 +84,4 @@ namespace softcut {
 }
 
 
-#endif //SOFTCUTHEAD_SUBHEAD_H
+#endif //Softcut_SUBHEAD_H
