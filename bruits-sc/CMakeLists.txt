@@ -26,7 +26,6 @@ enable_testing()
 
 add_subdirectory(src/MS20)
 add_subdirectory(src/Softcut)
-add_subdirectory(src/SoftcutHead)
 add_subdirectory(src/Trigon)
 add_subdirectory(src/VCM)
 add_subdirectory(src/Varshape)

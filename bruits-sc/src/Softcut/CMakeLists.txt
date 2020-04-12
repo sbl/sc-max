@@ -10,7 +10,19 @@ add_library(${PROJECT_NAME} MODULE
     softcut/SoftCutVoice.cpp
     softcut/SubHead.cpp
     softcut/Svf.cpp
-    softcut/TestBuffers.cpp
+
+    softcut/FadeCurves.h
+    softcut/Interpolate.h
+    softcut/LowpassBrickwall.h
+    softcut/Resampler.h
+    softcut/SoftClip.h
+    softcut/SoftCut.h
+    softcut/SoftCutHead.h
+    softcut/SoftCutVoice.h
+    softcut/SubHead.h
+    softcut/Svf.h
+    softcut/TestBuffers.h
+    softcut/Types.h
 )
 
 target_include_directories(${PROJECT_NAME}

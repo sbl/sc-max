@@ -4,13 +4,19 @@ s.reboot;
 // softcut
 
 
-b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16);
-b.play;
-
 (
-{
-  Softcut.ar(b, Saw.ar(330));
-}.play;
+s.reboot;
+s.waitForBoot {
+  fork {
+    b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16);
+    s.sync;
+
+    {
+      Softcut.ar(b, Saw.ar(220, 0.2), MouseButton.kr)
+    }.play;
+  };
+};
+
 )
 
 
