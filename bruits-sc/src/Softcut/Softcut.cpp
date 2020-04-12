@@ -1,6 +1,6 @@
 #include "SC_PlugIn.hpp"
 #include "buffer.h"
-#include "softcut/Voice.h"
+#include "softcut/Softcut.h"
 #include <iostream>
 
 static InterfaceTable* ft;
@@ -14,11 +14,23 @@ struct SCSC : public SCUnit {
         set_calc_function<SCSC, &SCSC::next>();
 
         softcut.reset();
-
         softcut.setSampleRate(sampleRate());
-        softcut.setPhaseQuant(1);
-        softcut.setPhaseOffset(0);
 
+        softcut.setPhaseQuant(0, 1);
+        softcut.setPhaseOffset(0, 0);
+
+        // init
+        
+        softcut.setPreLevel(0, 1);
+        softcut.setLoopFlag(0, true);
+        softcut.setLoopStart(0, 0 );
+        softcut.setLoopEnd(0, 1);
+        softcut.setPhaseOffset(0, 0); // position
+        softcut.setRate(0, 1);
+        softcut.setPlayFlag(0, true);
+                
+        // end init
+        
         next(1);
     }
 
@@ -28,8 +40,6 @@ struct SCSC : public SCUnit {
             fbufnum = 0.f;
         }
         if (fbufnum != m_fbufnum) {
-            has_changes = true;
-
             uint32 bufnum = (int)fbufnum;
             World* world = this->mWorld;
             if (bufnum >= world->mNumSndBufs) {
@@ -45,6 +55,9 @@ struct SCSC : public SCUnit {
                 this->m_buf = world->mSndBufs + bufnum;
             }
             this->m_fbufnum = fbufnum;
+            
+            
+            softcut.setPhaseQuant(0, 0);
         }
         SndBuf* buf = this->m_buf;
         LOCK_SNDBUF(buf);
@@ -58,8 +71,7 @@ struct SCSC : public SCUnit {
         // --------------------------------------------------
 
         auto* input = in(1);
-        auto position = in0(2);
-
+        
         auto* output = out(0);
 
         if (!bufData) {
@@ -70,45 +82,16 @@ struct SCSC : public SCUnit {
             return;
         }
 
-        for (auto i = 0; i < nSamples; i++) {
-            inBuf[i] = input[i];
-        }
 
         // magic
-
-        if (has_changes) {
-            softcut.setBuffer(bufData, bufFrames);
-            softcut.setPreLevel(1);
-            softcut.setLoopFlag(true);
-            softcut.setLoopStart(0);
-            softcut.setLoopEnd(2);
-            softcut.setPhaseOffset(0); // position
-            softcut.setRate(1);
-            softcut.setPlayFlag(true);
-
-            has_changes = false;
-        }
-
-        softcut.processBlockMono(inBuf, outBuf, SOFTCUT_IO_BUF_FRAMES);
-
-        // magic out
-
-        for (auto i = 0; i < nSamples; i++) {
-            output[i] = outBuf[i];
-        }
+        softcut.setVoiceBuffer(0, bufData, bufFrames);
+        softcut.processBlock(0, input, output, nSamples);
     }
 
 private:
-    softcut::Voice softcut;
+    softcut::Softcut<1> softcut;
     float m_fbufnum = -1e9f;
     SndBuf* m_buf;
-
-    bool has_changes = false;
-
-    static constexpr int SOFTCUT_IO_BUF_FRAMES = 1024;
-
-    float inBuf[SOFTCUT_IO_BUF_FRAMES] = { 0 };
-    float outBuf[SOFTCUT_IO_BUF_FRAMES] = { 0 };
 };
 }
 

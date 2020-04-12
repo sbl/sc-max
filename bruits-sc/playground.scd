@@ -12,7 +12,7 @@ s.waitForBoot {
     s.sync;
 
     {
-      Softcut.ar(b, Saw.ar(220, 0.2), MouseButton.kr)
+      Softcut.ar(b, Saw.ar(220, 0.2))
     }.play;
   };
 };

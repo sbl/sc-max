@@ -16,7 +16,7 @@ add_library(${PROJECT_NAME} MODULE
     softcut-lib/include/softcut/ReadWriteHead.h
     softcut-lib/include/softcut/Resampler.h
     softcut-lib/include/softcut/SoftClip.h
-    softcut-lib/include/softcut/SoftCut.h
+    softcut-lib/include/softcut/Softcut.h
     softcut-lib/include/softcut/SubHead.h
     softcut-lib/include/softcut/Svf.h
     softcut-lib/include/softcut/Types.h
