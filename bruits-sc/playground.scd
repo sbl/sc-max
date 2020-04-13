@@ -4,15 +4,20 @@ s.reboot;
 // softcut
 
 
+b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
+b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", bufnum: 0);
+b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/breaks/jungle/apache.wav", bufnum: 0);
+
+
 (
 s.reboot;
 s.waitForBoot {
   fork {
-    b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16);
+    b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
     s.sync;
 
     {
-      Softcut.ar(b, Saw.ar(220, 0.2))
+      Softcut.ar(b, Saw.ar(440))
     }.play;
   };
 };
@@ -25,17 +30,6 @@ s.waitForBoot {
 (
 Ndef(\trigon, {
   Trigon.ar(220, 0.5, 0.5, 0.5)
-}).play;
-)
-
-
-
-// just friends ???
-
-
-(
-Ndef(\jf, {
-  FriendZone.ar(100);
 }).play;
 )
 

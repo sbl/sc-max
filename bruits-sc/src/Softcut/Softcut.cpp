@@ -1,6 +1,5 @@
-#include "SC_PlugIn.hpp"
-#include "buffer.h"
 #include "softcut/Softcut.h"
+#include "SC_PlugIn.hpp"
 #include <iostream>
 
 static InterfaceTable* ft;
@@ -15,26 +14,31 @@ struct SCSC : public SCUnit {
 
         softcut.reset();
         softcut.setSampleRate(sampleRate());
+        softcut.setVoiceEnabled(0, true);
 
-        softcut.setPhaseQuant(0, 1);
-        softcut.setPhaseOffset(0, 0);
+        auto* v = softcut.voice(0);
+
+        v->setPhaseQuant(1);
+        v->setPhaseOffset(0);
 
         // init
-        
-        softcut.setPreLevel(0, 1);
-        softcut.setLoopFlag(0, true);
-        softcut.setLoopStart(0, 0 );
-        softcut.setLoopEnd(0, 1);
-        softcut.setPhaseOffset(0, 0); // position
-        softcut.setRate(0, 1);
-        softcut.setPlayFlag(0, true);
-                
-        // end init
-        
+
+        v->setPreLevel(1);
+        v->setLoopFlag(true);
+        v->setLoopStart(1);
+        v->setLoopEnd(1.5);
+        v->setPhaseOffset(0); // position
+        v->setRate(1);
+        v->setPlayFlag(true);
+
         next(1);
     }
 
     void next(int nSamples) {
+        
+        // --------------------------------------------------
+#pragma mark - buffer loading
+        
         float fbufnum = in0(0);
         if (fbufnum < 0.f) {
             fbufnum = 0.f;
@@ -55,37 +59,28 @@ struct SCSC : public SCUnit {
                 this->m_buf = world->mSndBufs + bufnum;
             }
             this->m_fbufnum = fbufnum;
+            LOCK_SNDBUF(m_buf);
             
-            
-            softcut.setPhaseQuant(0, 0);
+            softcut.voice(0)->setPhaseQuant(0);
+            softcut.voice(0)->setBuffer(m_buf->data, m_buf->frames);
         }
-        SndBuf* buf = this->m_buf;
-        LOCK_SNDBUF(buf);
-        float* bufData __attribute__((__unused__)) = buf->data;
-        uint32 bufChannels __attribute__((__unused__)) = buf->channels;
-        uint32 bufSamples __attribute__((__unused__)) = buf->samples;
-        uint32 bufFrames = buf->frames;
-        int mask __attribute__((__unused__)) = buf->mask;
-        int guardFrame __attribute__((__unused__)) = bufFrames - 2;
 
         // --------------------------------------------------
 
         auto* input = in(1);
-        
         auto* output = out(0);
 
-        if (!bufData) {
+        if (!m_buf->data || m_buf->frames <= 0) {
             std::cout << "no buffer data" << std::endl;
             for (auto i = 0; i < nSamples; i++) {
-                output[i] = input[i];
+                output[i] = 0;
             }
             return;
         }
 
-
-        // magic
-        softcut.setVoiceBuffer(0, bufData, bufFrames);
-        softcut.processBlock(0, input, output, nSamples);
+        softcut.setInputBus(0, const_cast<float*>(input));
+        softcut.setOutputBus(0, output);
+        softcut.processBlock(nSamples);
     }
 
 private:
@@ -95,7 +90,7 @@ private:
 };
 }
 
-PluginLoad(BruitsUGens) {
+PluginLoad(SoftcutUGens) {
     ft = inTable;
     registerUnit<bruits::SCSC>(ft, "Softcut");
 }
