@@ -1,4 +1,4 @@
-#include "softcut/Softcut.h"
+#include "softcut/Voice.h"
 #include "SC_PlugIn.hpp"
 #include <iostream>
 
@@ -14,22 +14,22 @@ struct SCSC : public SCUnit {
 
         softcut.reset();
         softcut.setSampleRate(sampleRate());
-        softcut.setVoiceEnabled(0, true);
 
-        auto* v = softcut.voice(0);
 
-        v->setPhaseQuant(1);
-        v->setPhaseOffset(0);
+
+        softcut.setPhaseQuant(1);
+        softcut.setPhaseOffset(0);
 
         // init
 
-        v->setPreLevel(1);
-        v->setLoopFlag(true);
-        v->setLoopStart(1);
-        v->setLoopEnd(1.5);
-        v->setPhaseOffset(0); // position
-        v->setRate(1);
-        v->setPlayFlag(true);
+        softcut.setPreFilterEnabled(false);
+        softcut.setPreLevel(1);
+        softcut.setLoopFlag(true);
+        softcut.setLoopStart(0);
+        softcut.setLoopEnd(1.5);
+        softcut.setPhaseOffset(0); // position
+        softcut.setRate(1);
+        softcut.setPlayFlag(true);
 
         next(1);
     }
@@ -60,13 +60,13 @@ struct SCSC : public SCUnit {
             }
             this->m_fbufnum = fbufnum;
             LOCK_SNDBUF(m_buf);
-            
-            softcut.voice(0)->setPhaseQuant(0);
-            softcut.voice(0)->setBuffer(m_buf->data, m_buf->frames);
         }
 
         // --------------------------------------------------
 
+        softcut.setBuffer(m_buf->data, m_buf->frames);
+        
+        
         auto* input = in(1);
         auto* output = out(0);
 
@@ -78,13 +78,12 @@ struct SCSC : public SCUnit {
             return;
         }
 
-        softcut.setInputBus(0, const_cast<float*>(input));
-        softcut.setOutputBus(0, output);
-        softcut.processBlock(nSamples);
+        // read + write
+        softcut.performReads(output, nSamples);
     }
 
 private:
-    softcut::Softcut<1> softcut;
+    softcut::Voice softcut;
     float m_fbufnum = -1e9f;
     SndBuf* m_buf;
 };
