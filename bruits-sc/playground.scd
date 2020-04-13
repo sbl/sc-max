@@ -17,7 +17,7 @@ s.waitForBoot {
     s.sync;
 
     {
-      Softcut.ar(b, Saw.ar(440))
+      Softcut.ar(b, Saw.ar(440), MouseX.kr(0.5, 2))
     }.play;
   };
 };

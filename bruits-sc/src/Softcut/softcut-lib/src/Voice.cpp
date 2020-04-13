@@ -79,7 +79,9 @@ void Voice:: processBlockMono(const float *in, float *out, int numFrames) {
         sch.setPre(preRamp.update());
         sch.setRec(recRamp.update());
         sampleFunc(x, &y);
-	    out[i] = svfPost.getNextSample(y) + y*svfPostDryLevel;
+        // FIXME broken=?
+//	    out[i] = svfPost.getNextSample(y) + y*svfPostDryLevel;
+        out[i] = y;
         updateQuantPhase();
     }
 }

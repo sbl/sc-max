@@ -12,11 +12,8 @@ struct SCSC : public SCUnit {
     SCSC() {
         set_calc_function<SCSC, &SCSC::next>();
 
-        softcut.reset();
         softcut.setSampleRate(sampleRate());
-
-        softcut.setPhaseQuant(1);
-        softcut.setPhaseOffset(0);
+        softcut.reset();
 
         // init
 
@@ -24,19 +21,27 @@ struct SCSC : public SCUnit {
         softcut.setLoopFlag(true);
         softcut.setLoopStart(0);
         softcut.setLoopEnd(1.5);
-        softcut.setPhaseOffset(0); // position
+        
+        softcut.setPhaseQuant(1.f);
+        softcut.setPhaseOffset(0.f);
+        softcut.cutToPos(0);
+        
         softcut.setRate(1);
         softcut.setPlayFlag(true);
-
+        
+        softcut.setPostFilterFc(14000);
+        softcut.setPostFilterDry(0.5);
+        softcut.setPostFilterLp(1);
+        
         next(1);
     }
 
     void next(int nSamples) {
+        auto fbufnum = in0(0);
+        auto* output = out(0);
         
         // --------------------------------------------------
-#pragma mark - buffer loading
         
-        float fbufnum = in0(0);
         if (fbufnum < 0.f) {
             fbufnum = 0.f;
         }
@@ -59,14 +64,6 @@ struct SCSC : public SCUnit {
             LOCK_SNDBUF(m_buf);
         }
 
-        // --------------------------------------------------
-
-        softcut.setBuffer(m_buf->data, m_buf->frames);
-        
-        
-        auto* input = in(1);
-        auto* output = out(0);
-
         if (!m_buf->data || m_buf->frames <= 0) {
             std::cout << "no buffer data" << std::endl;
             for (auto i = 0; i < nSamples; i++) {
@@ -74,8 +71,18 @@ struct SCSC : public SCUnit {
             }
             return;
         }
+        
+        // --------------------------------------------------
 
+        softcut.setBuffer(m_buf->data, m_buf->frames);
+        
+        auto* input = in(1);
+        auto rate = in0(2);
+        
         // read + write
+        
+        softcut.setRate(rate);
+        
         softcut.processBlockMono(input, output, nSamples);
     }
 
