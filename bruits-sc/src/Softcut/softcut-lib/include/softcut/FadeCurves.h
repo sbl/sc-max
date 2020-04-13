@@ -42,8 +42,8 @@ namespace softcut {
          float recDelayRatio;
          float preWindowRatio;
         // minimum record delay/pre window, in frames
-         unsigned int recDelayMinFrames;
-         unsigned int preWindowMinFrames;
+         unsigned int recDelayMinFrames = 0;
+         unsigned int preWindowMinFrames = 0;
          float recFadeBuf[fadeBufSize];
          float preFadeBuf[fadeBufSize];
          Shape recShape;
