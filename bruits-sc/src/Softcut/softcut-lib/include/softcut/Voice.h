@@ -8,28 +8,19 @@
 #include <array>
 #include <atomic>
 
-#include "dsp-kit/LadderLpf.hpp"
-#include "dsp-kit/Svf.hpp"
-
 #include "ReadWriteHead.h"
+#include "Svf.h"
 #include "Utilities.h"
+#include "FadeCurves.h"
 
 namespace softcut {
     class Voice {
-    protected:
-        friend class TestBuffers;
-
     public:
         Voice();
 
-        //----------------------------------
-        // decomposed single-channel process functions
-        void updatePositions(size_t numFrames);
-        void performReads(float *out, size_t numFrames);
-        void performWrites(float *in, size_t numFrames);
-        //-----------------------------------------
+        void init(FadeCurves *fc);
 
-        void setBuffer(float *buf, size_t numFrames);
+        void setBuffer(float *buf, unsigned int numFrames);
 
         void setSampleRate(float hz);
 
@@ -53,11 +44,19 @@ namespace softcut {
 
         void setPreFilterFc(float);
 
-        void setPreFilterEnabled(bool);
+        void setPreFilterRq(float);
+
+        void setPreFilterLp(float);
+
+        void setPreFilterHp(float);
+
+        void setPreFilterBp(float);
+
+        void setPreFilterBr(float);
+
+        void setPreFilterDry(float);
 
         void setPreFilterFcMod(float x);
-
-        void setPreFilterQ(float x);
 
         void setPostFilterFc(float);
 
@@ -73,8 +72,10 @@ namespace softcut {
 
         void setPostFilterDry(float);
 
-        void setPosition(float sec);
-        void setPhase(phase_t phase);
+        void cutToPos(float sec);
+
+        // process a single channel
+        void processBlockMono(const float *in, float *out, int numFrames);
 
         void setRecOffset(float d);
 
@@ -88,51 +89,32 @@ namespace softcut {
 
         phase_t getQuantPhase();
 
-        // return logical position in seconds
-        float getPos() const;
+        bool getPlayFlag();
 
+        bool getRecFlag();
 
-        bool getPlayFlag() const;
-
-        bool getRecFlag() const;
-
-        void setReadDuckTarget(Voice* v)  {
-            readDuckTarget = v;
-        }
-
-        void setWriteDuckTarget(Voice* v)  {
-            writeDuckTarget = v;
-        }
-
-        void setFollowTarget(Voice* v)  {
-            followTarget = v;
-        }
-
-        void syncPosition(const Voice &v, float offset);
+        float getPos();
 
         void reset();
 
+    private:
+        void updatePreSvfFc();
+
         void updateQuantPhase();
-    private:
-        void processInputFilter(float* src, float *dst, size_t numFrames);
 
     private:
-        // audio buffer
-        float *buf{};
-        // size of buffer in frames
-        size_t bufFrames{};
-        // audio sample rate
-        float sampleRate{};
+        float *buf;
+        int bufFrames;
+        float sampleRate;
 
-        // crossfaded read/write head
-        ReadWriteHead rwh;
-
-        // pre-write filter
-        dspkit::LadderLpf<float> preFilter{};
-        std::array<float, ReadWriteHead::maxBlockSize>  preFilterInputBuf{};
-        // post-read filter
-        dspkit::Svf postFilter;
-
+        // fade curve data
+        FadeCurves fadeCurves;
+        // xfaded read/write head
+        ReadWriteHead sch;
+        // input filter
+        Svf svfPre;
+        // output filter
+        Svf svfPost;
         // rate ramp
         LogRamp rateRamp;
         // pre-level ramp
@@ -140,36 +122,27 @@ namespace softcut {
         // record-level ramp
         LogRamp recRamp;
 
+
         // default frequency for SVF
         // reduced automatically when setting rate
-        float preFilterFcBase;
+        float svfPreFcBase;
         // the amount by which SVF frequency is modulated by rate
-        float preFilterFcMod = 1.0;
-        // dry level at post-playback filtering stage
-        float postFilterDryLevel = 1.0;
-        // phase quantization unit, in fractional frames
-        phase_t phaseQuant{};
+        float svfPreFcMod = 1.0;
+        float svfPreDryLevel = 1.0;
+        float svfPostDryLevel = 1.0;
+        // phase quantization unit, should be in [0,1]
+        phase_t phaseQuant;
         // phase offset in sec
         float phaseOffset = 0;
         // quantized phase
-        std::atomic<phase_t> quantPhase{};
+        std::atomic<phase_t> quantPhase;
 
 
     private:
-        bool playEnabled{};
-        bool recEnabled{};
-        bool preFilterEnabled;
 
-        const Voice *readDuckTarget{nullptr};
-        const Voice *writeDuckTarget{nullptr};
-        const Voice *followTarget{nullptr};
+        bool playFlag;
+        bool recFlag;
 
-        void applyReadDuck(float *out, size_t numFrames);
-        void applyWriteDuck(float *in, size_t numFrames);
-
-        static float calcReadDuckFromPhasePair(double a, double b, float rec, float pre, float fade);
-        static float calcWriteDuckFromPhasePair(double phaseA, double phaseB,
-                float recA, float recB, float preA, float preB);
     };
 }
 

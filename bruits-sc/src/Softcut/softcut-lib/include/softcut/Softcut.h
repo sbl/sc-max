@@ -5,27 +5,14 @@
 #ifndef Softcut_Softcut_H
 #define Softcut_Softcut_H
 
-#include <array>
 #include <memory>
 #include <thread>
-
 #include "Types.h"
 #include "Voice.h"
 
 namespace softcut {
     template<int numVoices>
     class Softcut {
-    protected:
-
-        friend class TestBuffers;
-
-    private:
-        std::array<Voice, numVoices> voices;
-        // enabled flags
-        std::array<bool, numVoices> voiceEnabled;
-        // input and output busses are assigned and persisted
-        std::array<float*, numVoices> input;
-        std::array<float*, numVoices> output;
 
     public:
 
@@ -34,65 +21,200 @@ namespace softcut {
         }
 
         void reset() {
-            for (int i=0; i<numVoices; ++i) {
-                voices[i].reset();
-                /// test: set each voice to duck the next one, in a loop
-                voices[i].setReadDuckTarget(&(voices[(i + 1) % numVoices]) );
+            for (int v = 0; v < numVoices; ++v) {
+                scv[v].reset();
             };
-
         }
 
-        void processBlock(int numFrames) {
-            for (int i=0; i<numVoices; ++i) {
-                if (voiceEnabled[i]) {
-                    voices[i].updatePositions(numFrames);
-                    voices[i].updateQuantPhase();
-                }
-            }
-            for (int i=0; i<numVoices; ++i) {
-                if (voiceEnabled[i]) {
-                    voices[i].performReads(output[i], numFrames);
-                }
-            }
-            for (int i=0; i<numVoices; ++i) {
-                if (voiceEnabled[i]) {
-                    voices[i].performWrites(input[i], numFrames);
-                }
-            }
+        // assumption: channel count is equal to voice count!
+        void processBlock(int v, const float *in, float *out, int numFrames) {
+            scv[v].processBlockMono(in, out, numFrames);
         }
 
         void setSampleRate(unsigned int hz) {
-            for (auto &v : voices) {
+            for (auto &v : scv) {
                 v.setSampleRate(hz);
             }
         }
 
-        Voice *voice(int i) {
-            if (i >= 0 && i < numVoices) {
-                return &(voices[i]);
-            } else {
-                return nullptr;
-            }
+        void setRate(int voice, float rate) {
+            scv[voice].setRate(rate);
         }
 
-
-        void syncVoice(int follower, int leader, float offset) {
-            voices[follower].syncPosition(voices[leader], offset);
+        void setLoopStart(int voice, float sec) {
+            scv[voice].setLoopStart(sec);
         }
 
-
-        void setInputBus( int vIdx, float* src) {
-            input[vIdx] = src;
-        }
-        void setOutputBus(int vIdx, float* dst) {
-            output[vIdx] = dst;
-        }
-        void setVoiceEnabled(int vIdx, bool val) {
-            voiceEnabled[vIdx] = val;
+        void setLoopEnd(int voice, float sec) {
+            scv[voice].setLoopEnd(sec);
         }
 
+        void setLoopFlag(int voice, bool val) {
+            scv[voice].setLoopFlag(val);
+        }
+
+        void setFadeTime(int voice, float sec) {
+            scv[voice].setFadeTime(sec);
+        }
+
+        void setRecLevel(int voice, float amp) {
+            scv[voice].setRecLevel(amp);
+        }
+
+        void setPreLevel(int voice, float amp) {
+            scv[voice].setPreLevel(amp);
+        }
+
+        void setRecFlag(int voice, bool val) {
+            scv[voice].setRecFlag(val);
+        }
+
+        void setPlayFlag(int voice, bool val) {
+            scv[voice].setPlayFlag(val);
+        }
+
+        void cutToPos(int voice, float sec) {
+            scv[voice].cutToPos(sec);
+        }
+
+        void setPreFilterFc(int voice, float x) {
+            scv[voice].setPreFilterFc(x);
+        }
+
+        void setPreFilterRq(int voice, float x) {
+            scv[voice].setPreFilterRq(x);
+        }
+
+        void setPreFilterLp(int voice, float x) {
+            scv[voice].setPreFilterLp(x);
+        }
+
+        void setPreFilterHp(int voice, float x) {
+            scv[voice].setPreFilterHp(x);
+        }
+
+        void setPreFilterBp(int voice, float x) {
+            scv[voice].setPreFilterBp(x);
+        }
+
+        void setPreFilterBr(int voice, float x) {
+            scv[voice].setPreFilterBr(x);
+        }
+
+        void setPreFilterDry(int voice, float x) {
+            scv[voice].setPreFilterDry(x);
+        }
+
+        void setPreFilterFcMod(int voice, float x) {
+            scv[voice].setPreFilterFcMod(x);
+        }
+
+        void setPostFilterFc(int voice, float x) {
+            scv[voice].setPostFilterFc(x);
+        }
+
+        void setPostFilterRq(int voice, float x) {
+            scv[voice].setPostFilterRq(x);
+        }
+
+        void setPostFilterLp(int voice, float x) {
+            scv[voice].setPostFilterLp(x);
+        }
+
+        void setPostFilterHp(int voice, float x) {
+            scv[voice].setPostFilterHp(x);
+        }
+
+        void setPostFilterBp(int voice, float x) {
+            scv[voice].setPostFilterBp(x);
+        }
+
+        void setPostFilterBr(int voice, float x) {
+            scv[voice].setPostFilterBr(x);
+        }
+
+        void setPostFilterDry(int voice, float x) {
+            scv[voice].setPostFilterDry(x);
+        }
+
+#if 0 // not allowing realtime manipulation of fade logic params
+        void setPreFadeWindow(float x) {
+    auto t = std::thread([x] {
+        FadeCurves::setPreWindowRatio(x);
+    });
+    t.detach();
+}
+
+void setRecFadeDelay(float x) {
+    auto t = std::thread([x] {
+        FadeCurves::setRecDelayRatio(x);
+    });
+    t.detach();
+}
+
+void setPreFadeShape(float x) {
+    auto t = std::thread([x] {
+        FadeCurves::setPreShape(static_cast<FadeCurves::Shape>(x));
+    });
+    t.detach();
+}
+
+void setRecFadeShape(float x) {
+    auto t = std::thread([x] {
+        FadeCurves::setRecShape(static_cast<FadeCurves::Shape>(x));
+    });
+    t.detach();
+}
+#endif
+
+        void setRecOffset(int i, float d) {
+            scv[i].setRecOffset(d);
+        }
+
+        void setLevelSlewTime(int i, float d) {
+            scv[i].setLevelSlewTime(d);
+        }
+
+        void setRecPreSlewTime(int i, float d) {
+            scv[i].setRecPreSlewTime(d);
+        }
+
+        void setRateSlewTime(int i, float d) {
+            scv[i].setRateSlewTime(d);
+        }
+
+        phase_t getQuantPhase(int i) {
+            return scv[i].getQuantPhase();
+        }
+
+        void setPhaseQuant(int i, phase_t q) {
+            scv[i].setPhaseQuant(q);
+        }
+
+        void setPhaseOffset(int i, float sec) {
+            scv[i].setPhaseOffset(sec);
+        }
+
+        bool getRecFlag(int i) {
+            return scv[i].getRecFlag();
+        }
+
+        bool getPlayFlag(int i) {
+            return scv[i].getPlayFlag();
+        }
+
+        void syncVoice(int follow, int lead, float offset) {
+            scv[follow].cutToPos(scv[lead].getPos() + offset);
+        }
+
+        void setVoiceBuffer(int id, float *buf, size_t bufFrames) {
+            scv[id].setBuffer(buf, bufFrames);
+        }
+
+    private:
+        Voice scv[numVoices];
     };
 }
 
 
-#endif //Softcut_Softcut_H
+#endif //Softcut_Softcut_H2

@@ -15,14 +15,11 @@ struct SCSC : public SCUnit {
         softcut.reset();
         softcut.setSampleRate(sampleRate());
 
-
-
         softcut.setPhaseQuant(1);
         softcut.setPhaseOffset(0);
 
         // init
 
-        softcut.setPreFilterEnabled(false);
         softcut.setPreLevel(1);
         softcut.setLoopFlag(true);
         softcut.setLoopStart(0);
@@ -79,7 +76,7 @@ struct SCSC : public SCUnit {
         }
 
         // read + write
-        softcut.performReads(output, nSamples);
+        softcut.processBlockMono(input, output, nSamples);
     }
 
 private:
