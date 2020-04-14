@@ -5,24 +5,32 @@ s.reboot;
 
 
 b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
-b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", bufnum: 0);
+b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", 0, 2 ** 16, bufnum: 0);
 b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/breaks/jungle/apache.wav", bufnum: 0);
 
 
 (
-s.reboot;
-s.waitForBoot {
-  fork {
-    b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
-    s.sync;
 
-    {
-      Softcut.ar(b, Saw.ar(440), MouseX.kr(0.5, 2))
-    }.play;
-  };
+fork {
+  b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
+  s.sync;
+
+  Ndef(\cutter, {
+    Softcut.ar(b, Saw.ar(330))
+  }).play
+
 };
 
 )
+
+(
+Ndef(\cutter, {
+  Softcut.ar(b, Saw.ar(330))
+}).play
+)
+
+
+
 
 
 // Trigon
