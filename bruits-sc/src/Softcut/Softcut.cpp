@@ -1,4 +1,4 @@
-#include "softcut/Voice.h"
+#include "softcut/Softcut.h"
 #include "SC_PlugIn.hpp"
 #include <iostream>
 
@@ -17,22 +17,18 @@ struct SCSC : public SCUnit {
 
         // init
 
-        softcut.setPreLevel(1);
-        softcut.setLoopFlag(true);
-        softcut.setLoopStart(0);
-        softcut.setLoopEnd(1.5);
+        softcut.setPreLevel(0, 1);
+        softcut.setLoopFlag(0, true);
+        softcut.setLoopStart(0, 0);
+        softcut.setLoopEnd(0, 1.5);
         
-        softcut.setPhaseQuant(1.f);
-        softcut.setPhaseOffset(0.f);
-        softcut.cutToPos(0);
+        softcut.setPhaseQuant(0, 1.f);
+        softcut.setPhaseOffset(0, 0.f);
+        softcut.cutToPos(0, 0);
         
-        softcut.setRate(1);
-        softcut.setPlayFlag(true);
-        
-        softcut.setPostFilterFc(14000);
-        softcut.setPostFilterDry(0.5);
-        softcut.setPostFilterLp(1);
-        
+        softcut.setRate(0, 1);
+        softcut.setPlayFlag(0, true);
+                
         next(1);
     }
 
@@ -74,20 +70,20 @@ struct SCSC : public SCUnit {
         
         // --------------------------------------------------
 
-        softcut.setBuffer(m_buf->data, m_buf->frames);
+        softcut.setVoiceBuffer(0, m_buf->data, m_buf->frames);
         
         auto* input = in(1);
         auto rate = in0(2);
         
         // read + write
         
-        softcut.setRate(rate);
+        softcut.setRate(0, rate);
         
-        softcut.processBlockMono(input, output, nSamples);
+        softcut.processBlock(0, input, output, nSamples);
     }
 
 private:
-    softcut::Voice softcut;
+    softcut::Softcut<1> softcut;
     float m_fbufnum = -1e9f;
     SndBuf* m_buf;
 };

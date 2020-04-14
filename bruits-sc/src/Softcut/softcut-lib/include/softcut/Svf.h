@@ -35,11 +35,11 @@ private:
     //-- C implementation
     typedef struct _svf {
         // sample rate
-        float sr;
+        float sr = 44100;
         // corner frequency in hz
-        float fc;
+        float fc = 12000;
         // reciprocal of Q in [0,1]
-        float rq;
+        float rq = 1;
         // intermediate coefficients
         float g;
         float g1;
