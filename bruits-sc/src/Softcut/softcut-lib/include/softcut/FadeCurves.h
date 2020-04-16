@@ -39,13 +39,13 @@ namespace softcut {
         static constexpr unsigned int fadeBufSize = 1001;
 
         // record delay and pre window in fade, as proportion of fade time
-         float recDelayRatio;
-         float preWindowRatio;
+         float recDelayRatio = 1;
+         float preWindowRatio = 1;
         // minimum record delay/pre window, in frames
-         unsigned int recDelayMinFrames = 0;
-         unsigned int preWindowMinFrames = 0;
-         float recFadeBuf[fadeBufSize];
-         float preFadeBuf[fadeBufSize];
+         unsigned int recDelayMinFrames = 1;
+         unsigned int preWindowMinFrames = 1;
+         float recFadeBuf[fadeBufSize] = {0};
+         float preFadeBuf[fadeBufSize] = {0};
          Shape recShape;
          Shape preShape;
     };

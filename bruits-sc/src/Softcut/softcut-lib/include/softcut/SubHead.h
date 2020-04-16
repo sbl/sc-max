@@ -62,14 +62,14 @@ namespace softcut {
         SoftClip clip_;
 
         sample_t* buf_; // output buffer
-        unsigned int wrIdx_; // write index
-        unsigned int bufFrames_;
-        unsigned int bufMask_;
+        unsigned int wrIdx_ = 0; // write index
+        unsigned int bufFrames_ = 0;
+        unsigned int bufMask_ = 0;
 
         State state_;
         rate_t rate_;
         int inc_dir_;
-        phase_t phase_;
+        phase_t phase_ = 0;
         float fade_;
         float trig_; // output trigger value
         bool active_;

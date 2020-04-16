@@ -9,27 +9,28 @@ b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", 0, 2 ** 16, bufnum: 0);
 b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/breaks/jungle/apache.wav", bufnum: 0);
 
 
-(
+s.reboot;
 
+(
 fork {
   b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
   s.sync;
 
   Ndef(\cutter, {
-    Softcut.ar(b, Saw.ar(330))
+    Softcut.ar(b, 0, 1, 0)
   }).play
 
 };
-
 )
+
+b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/recs/NotwistPianpo.wav", 0, 2 ** 17, bufnum: 0);
+
 
 (
-Ndef(\cutter, {
-  Softcut.ar(b, Saw.ar(330))
-}).play
+{
+  Softcut.ar(b, 0, 0.5, MouseX.kr(0, 1), fadeTime: 0.5);
+}.play
 )
-
-
 
 
 
