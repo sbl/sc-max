@@ -8,7 +8,6 @@ using namespace softcut;
 
 namespace bruits {
 
-
 struct SCSC : public SCUnit {
     SCSC() {
         set_calc_function<SCSC, &SCSC::next>();
@@ -16,23 +15,23 @@ struct SCSC : public SCUnit {
         svc.setSampleRate(sampleRate());
         svc.reset();
         svc.cutToPos(0);
-        
+
         next(1);
     }
 
     void next(int nSamples) {
-        auto* unit = this; // for our GET_BUF macro
+        auto* unit = this; // for the GET_BUF macro
         auto* output = out(0);
-        
+
         GET_BUF
         if (!m_buf->data || m_buf->frames <= 0) {
             for (auto i = 0; i < nSamples; i++) {
                 output[i] = 0;
             }
-            return ;
+            return;
         }
         svc.setBuffer(bufData, bufFrames);
-                
+
         auto* input = in(1);
         auto rate = in0(2);
         auto trigger = in0(3);
@@ -45,18 +44,34 @@ struct SCSC : public SCUnit {
         auto recLevel = in0(10);
         auto recOffset = in0(11);
         auto rec = in0(12) > 0.001f;
-        auto fadeTime = in0(13);
-        auto recPreSlewTime = in0(14);
-        auto rateSlewTime = in0(15);
-        
+        auto preFilterFc = in0(13);
+        auto preFilterRq = in0(14);
+        auto preFilterLp = in0(15);
+        auto preFilterHp = in0(16);
+        auto preFilterBp = in0(17);
+        auto preFilterBr = in0(18);
+        auto preFilterDry = in0(19);
+        auto postFilterFc = in0(20);
+        auto postFilterRq = in0(21);
+        auto postFilterLp = in0(22);
+        auto postFilterHp = in0(23);
+        auto postFilterBp = in0(24);
+        auto postFilterBr = in0(25);
+        auto postFilterDry = in0(26);
+        auto fadeTime = in0(27);
+        auto recPreSlewTime = in0(28);
+        auto rateSlewTime = in0(29);
+
         svc.setRate(rate);
-        
+
         // require a trigger to cut to new positions
-        if (trigger > 0.f && prevtrig <= 0.f) {
+        if (trigger > 0.f && m_prevtrig <= 0.f) {
             svc.cutToPos(position);
         }
-        prevtrig = trigger;
-        
+        m_prevtrig = trigger;
+
+        // playback controls
+
         svc.setPlayFlag(play);
         svc.setLoopStart(loopStart);
         svc.setLoopEnd(loopEnd);
@@ -65,6 +80,26 @@ struct SCSC : public SCUnit {
         svc.setRecLevel(recLevel);
         svc.setRecOffset(recOffset);
         svc.setRecFlag(rec);
+
+        // filters
+
+        svc.setPreFilterFc(preFilterFc);
+        svc.setPreFilterRq(preFilterRq);
+        svc.setPreFilterLp(preFilterLp);
+        svc.setPreFilterHp(preFilterHp);
+        svc.setPreFilterBp(preFilterBp);
+        svc.setPreFilterBr(preFilterBr);
+        svc.setPreFilterDry(preFilterDry);
+        svc.setPostFilterFc(postFilterFc);
+        svc.setPostFilterRq(postFilterRq);
+        svc.setPostFilterLp(postFilterLp);
+        svc.setPostFilterHp(postFilterHp);
+        svc.setPostFilterBp(postFilterBp);
+        svc.setPostFilterBr(postFilterBr);
+        svc.setPostFilterDry(postFilterDry);
+
+        // fades
+
         svc.setFadeTime(fadeTime);
         svc.setRecPreSlewTime(recPreSlewTime);
         svc.setRateSlewTime(rateSlewTime);
@@ -77,9 +112,8 @@ private:
     softcut::Voice svc;
     float m_fbufnum = -1e9f;
     SndBuf* m_buf = nullptr;
-    
-    // params
-    float prevtrig;
+
+    float m_prevtrig;
 };
 }
 

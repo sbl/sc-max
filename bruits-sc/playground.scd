@@ -17,11 +17,11 @@ s.waitForBoot {
 
     s.sync;
 
-
     Ndef(\cutter, { arg rate = 1, t_trig = 1, pos = 0, play = 1,
       loopStart = 0, loopEnd = 1, loop = 0,
       preLevel = 1, recLevel = 1, recOffset = 0, rec = 0,
       fadeTime = 0.1, recPreSlewTime = 0.01, rateSlewTime = 0.01;
+
       Softcut.ar(b, 0, rate, t_trig, pos, play, loopStart, loopEnd, loop,
         preLevel, recLevel, recOffset, rec,
         fadeTime, recPreSlewTime, rateSlewTime);
@@ -31,9 +31,30 @@ s.waitForBoot {
 };
 )
 
-Ndef(\cutter).set(\pos, 0, \t_trig, 1, \loop, 1, \loopStart, 0, \fadeTime, 0);
+Ndef(\cutter).set(\rate, 2.1);
 
-Ndef(\cutter).set(\loopStart, 0)
+Ndef(\cutter).set(\pos, 0, \t_trig, 1, \loop, 1, \loopStart, 0, \fadeTime, 0.4, \rateSlewTime, 0.2);
+
+Ndef(\cutter).set(\loopStart, 0, \loopEnd, 3);
+
+
+(
+Tdef(\foo, {
+
+  var seq = Pseq([-1,-1.1,1.2,-1.5], inf).asStream;
+
+  loop {
+    Ndef(\cutter).set(\rate, seq.next);
+    2.wait;
+  }
+
+
+}).play;
+
+
+)
+
+
 
 // Trigon
 
