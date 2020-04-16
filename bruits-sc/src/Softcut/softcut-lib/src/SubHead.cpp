@@ -154,6 +154,7 @@ unsigned int SubHead::wrapBufIndex(int x) {
 }
 
 void SubHead::setSampleRate(float sr) {
+    (void)sr;
     //... nothing to do
 }
 

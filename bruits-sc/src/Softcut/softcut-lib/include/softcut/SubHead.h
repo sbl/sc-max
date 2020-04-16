@@ -66,17 +66,17 @@ namespace softcut {
         unsigned int bufFrames_ = 0;
         unsigned int bufMask_ = 0;
 
-        State state_;
-        rate_t rate_;
-        int inc_dir_;
+        State state_ = Stopped;
+        rate_t rate_ = 1;
+        int inc_dir_ = 0;
         phase_t phase_ = 0;
-        float fade_;
-        float trig_; // output trigger value
-        bool active_;
-        int recOffset_;
+        float fade_ = 0;
+        float trig_ = 0; // output trigger value
+        bool active_ = false;
+        int recOffset_ = 0;
 
-        float preFade_;
-        float recFade_;
+        float preFade_ = 0;
+        float recFade_ = 0;
 
         void setRecOffsetSamples(int d);
     };

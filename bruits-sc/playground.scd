@@ -6,33 +6,34 @@ s.reboot;
 
 b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
 b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", 0, 2 ** 16, bufnum: 0);
-b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/breaks/jungle/apache.wav", bufnum: 0);
-
-
-s.reboot;
-
-(
-fork {
-  b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, bufnum: 0);
-  s.sync;
-
-  Ndef(\cutter, {
-    Softcut.ar(b, 0, 1, 0)
-  }).play
-
-};
-)
-
 b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/recs/NotwistPianpo.wav", 0, 2 ** 17, bufnum: 0);
 
 
 (
-{
-  Softcut.ar(b, 0, 0.5, MouseX.kr(0, 1), fadeTime: 0.5);
-}.play
+s.reboot;
+s.waitForBoot {
+  fork {
+    b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/recs/NotwistPianpo.wav", 0, 2 ** 17, bufnum: 0);
+
+    s.sync;
+
+
+    Ndef(\cutter, { arg rate = 1, t_trig = 1, pos = 0, play = 1,
+      loopStart = 0, loopEnd = 1, loop = 0,
+      preLevel = 1, recLevel = 1, recOffset = 0, rec = 0,
+      fadeTime = 0.1, recPreSlewTime = 0.01, rateSlewTime = 0.01;
+      Softcut.ar(b, 0, rate, t_trig, pos, play, loopStart, loopEnd, loop,
+        preLevel, recLevel, recOffset, rec,
+        fadeTime, recPreSlewTime, rateSlewTime);
+    }).play;
+
+  };
+};
 )
 
+Ndef(\cutter).set(\pos, 0, \t_trig, 1, \loop, 1, \loopStart, 0, \fadeTime, 0);
 
+Ndef(\cutter).set(\loopStart, 0)
 
 // Trigon
 
