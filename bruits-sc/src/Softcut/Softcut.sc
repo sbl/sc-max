@@ -65,6 +65,82 @@ Softcut : UGen {
       rateSlewTime,
     );
   }
+
+  addSynthDef {
+    SynthDef(\softcut, {
+      arg
+      in = 0,
+      out = 0,
+      pan = 0,
+
+      buffer,
+      rate = 1,
+      pos = 0,
+      play = 1,
+      loopStart = 0,
+      loopEnd = 1,
+      loop = 0,
+      preLevel = 0.9,
+      recLevel = 0.9,
+      recOffset = 0,
+      rec = 0,
+      preFilterFc = 16000,
+      preFilterRq = 4,
+      preFilterLp = 0,
+      preFilterHp = 0,
+      preFilterBp = 0,
+      preFilterBr = 0,
+      preFilterDry = 1,
+      postFilterFc = 12000,
+      postFilterRq = 4,
+      postFilterLp = 0,
+      postFilterHp = 0,
+      postFilterBp = 0,
+      postFilterBr = 0,
+      postFilterDry = 1,
+      fadeTime = 0.1,
+      recPreSlewTime = 0.01,
+      rateSlewTime = 0.01;
+
+      var trigger = \trigger.tr(1);
+      var snd = Softcut.ar(buffer,
+        In.ar(in),
+        rate,
+        trigger,
+        pos,
+        play,
+        loopStart,
+        loopEnd,
+        loop,
+        preLevel,
+        recLevel,
+        recOffset,
+        rec,
+        preFilterFc,
+        preFilterRq,
+        preFilterLp,
+        preFilterHp,
+        preFilterBp,
+        preFilterBr,
+        preFilterDry,
+        postFilterFc,
+        postFilterRq,
+        postFilterLp,
+        postFilterHp,
+        postFilterBp,
+        postFilterBr,
+        postFilterDry,
+        fadeTime,
+        recPreSlewTime,
+        rateSlewTime
+      );
+
+      snd = Pan2.ar(snd, pan);
+
+      Out.ar(0, snd);
+    }).add;
+  }
+
   checkInputs {
     ^this.checkValidInputs;
   }
