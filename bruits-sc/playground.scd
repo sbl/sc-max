@@ -1,5 +1,12 @@
-s.boot;
+(
+s.options.memSize = 2 ** 16;
+s.options.inDevice = "BlackHole 16ch";
+s.options.numInputBusChannels = 8;
+s.options.outDevice = "Built-in Output";
+
 s.reboot;
+)
+
 
 // softcut
 
@@ -8,51 +15,116 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav", 0, 2 ** 16, b
 b = Buffer.read(s, "/Users/sbl/Desktop/sport.wav", 0, 2 ** 16, bufnum: 0);
 b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/recs/NotwistPianpo.wav", 0, 2 ** 17, bufnum: 0);
 
-
-(
-s.reboot;
-s.waitForBoot {
-  fork {
-    b = Buffer.read(s, "/Users/sbl/Library/Mobile Documents/com~apple~CloudDocs/audio/samples/recs/NotwistPianpo.wav", 0, 2 ** 17, bufnum: 0);
-
-    s.sync;
-
-    Ndef(\cutter, { arg rate = 1, t_trig = 1, pos = 0, play = 1,
-      loopStart = 0, loopEnd = 1, loop = 0,
-      preLevel = 1, recLevel = 1, recOffset = 0, rec = 0,
-      fadeTime = 0.1, recPreSlewTime = 0.01, rateSlewTime = 0.01;
-
-      Softcut.ar(b, 0, rate, t_trig, pos, play, loopStart, loopEnd, loop,
-        preLevel, recLevel, recOffset, rec,
-        fadeTime, recPreSlewTime, rateSlewTime);
-    }).play;
-
-  };
-};
-)
-
-Ndef(\cutter).set(\rate, 2.1);
-
-Ndef(\cutter).set(\pos, 0, \t_trig, 1, \loop, 1, \loopStart, 0, \fadeTime, 0.4, \rateSlewTime, 0.2);
-
-Ndef(\cutter).set(\loopStart, 0, \loopEnd, 3);
+b = Buffer.alloc(s, 2 ** 20, bufnum: 0);
 
 
 (
-Tdef(\foo, {
+SynthDef(\softcut, {
+  arg
+  in = 0,
+  out = 0,
+  pan = 0,
+  level = 1.0,
 
-  var seq = Pseq([-1,-1.1,1.2,-1.5], inf).asStream;
+  buffer,
+  rate = 1,
+  pos = 0,
+  play = 1,
+  loopStart = 0,
+  loopEnd = 1,
+  loop = 0,
+  preLevel = 0.9,
+  recLevel = 0.9,
+  rec = 0,
+  preFilterFc = 16000,
+  preFilterRq = 4,
+  preFilterLp = 0,
+  preFilterHp = 0,
+  preFilterBp = 0,
+  preFilterBr = 0,
+  preFilterDry = 1,
+  postFilterFc = 12000,
+  postFilterRq = 4,
+  postFilterLp = 0,
+  postFilterHp = 0,
+  postFilterBp = 0,
+  postFilterBr = 0,
+  postFilterDry = 1,
+  fadeTime = 0.1,
+  recPreSlewTime = 0.01,
+  rateSlewTime = 0.01;
 
-  loop {
-    Ndef(\cutter).set(\rate, seq.next);
-    2.wait;
-  }
+  var trigger = \trigger.tr(1);
+  var sndInput = SoundIn.ar(in);
+
+  var snd = Softcut.ar(buffer,
+    sndInput,
+    rate,
+    trigger,
+    pos,
+    play,
+    loopStart,
+    loopEnd,
+    loop,
+    preLevel,
+    recLevel,
+    rec,
+    preFilterFc,
+    preFilterRq,
+    preFilterLp,
+    preFilterHp,
+    preFilterBp,
+    preFilterBr,
+    preFilterDry,
+    postFilterFc,
+    postFilterRq,
+    postFilterLp,
+    postFilterHp,
+    postFilterBp,
+    postFilterBr,
+    postFilterDry,
+    fadeTime,
+    recPreSlewTime,
+    rateSlewTime
+  );
+
+  snd = Pan2.ar(snd, pan, level);
+
+  Out.ar(0, snd);
+}).store;
+)
 
 
-}).play;
+(
+x = Synth(\softcut, [\bufnum, b, \rec, 1, \in, 6, \loop, 1]);
+y = { |level = 1| SoundIn.ar([6, 7]) * level }.play;
+)
 
+y.free;
+
+
+x.set(\level, 1);
+y.set(\level, 0);
+
+
+(
+var blen = b.numFrames / b.sampleRate;
+
+x.set(
+  \trigger, 1,
+  \rec, 1,
+  \pos, 0,
+  \fadeTime, 0.01,
+  \preLevel, 0,
+  \recLevel, 0.7,
+  \loopEnd, 1,
+  \rate, 1,
+);
 
 )
+
+
+
 
 
 

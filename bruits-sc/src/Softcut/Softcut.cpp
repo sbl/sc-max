@@ -14,6 +14,7 @@ struct SCSC : public SCUnit {
 
         svc.setSampleRate(sampleRate());
         svc.reset();
+        svc.setRecOffset(-8 / sampleRate());
         svc.cutToPos(0);
 
         next(1);
@@ -42,25 +43,24 @@ struct SCSC : public SCUnit {
         auto loop = in0(8) > 0.001f;
         auto preLevel = in0(9);
         auto recLevel = in0(10);
-        auto recOffset = in0(11);
-        auto rec = in0(12) > 0.001f;
-        auto preFilterFc = in0(13);
-        auto preFilterRq = in0(14);
-        auto preFilterLp = in0(15);
-        auto preFilterHp = in0(16);
-        auto preFilterBp = in0(17);
-        auto preFilterBr = in0(18);
-        auto preFilterDry = in0(19);
-        auto postFilterFc = in0(20);
-        auto postFilterRq = in0(21);
-        auto postFilterLp = in0(22);
-        auto postFilterHp = in0(23);
-        auto postFilterBp = in0(24);
-        auto postFilterBr = in0(25);
-        auto postFilterDry = in0(26);
-        auto fadeTime = in0(27);
-        auto recPreSlewTime = in0(28);
-        auto rateSlewTime = in0(29);
+        auto rec = in0(11) > 0.001f;
+        auto preFilterFc = in0(12);
+        auto preFilterRq = in0(13);
+        auto preFilterLp = in0(14);
+        auto preFilterHp = in0(15);
+        auto preFilterBp = in0(16);
+        auto preFilterBr = in0(17);
+        auto preFilterDry = in0(18);
+        auto postFilterFc = in0(19);
+        auto postFilterRq = in0(20);
+        auto postFilterLp = in0(21);
+        auto postFilterHp = in0(22);
+        auto postFilterBp = in0(23);
+        auto postFilterBr = in0(24);
+        auto postFilterDry = in0(25);
+        auto fadeTime = in0(26);
+        auto recPreSlewTime = in0(27);
+        auto rateSlewTime = in0(28);
 
         svc.setRate(rate);
 
@@ -78,7 +78,6 @@ struct SCSC : public SCUnit {
         svc.setLoopFlag(loop);
         svc.setPreLevel(preLevel);
         svc.setRecLevel(recLevel);
-        svc.setRecOffset(recOffset);
         svc.setRecFlag(rec);
 
         // filters
