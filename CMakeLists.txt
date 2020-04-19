@@ -10,7 +10,7 @@ execute_process(
 
 # global PATHS, cmake -DSC_PATH=../.. -DMAX_API_PATH=../..
 set(SC_PATH 		    "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/supercollider")
-set(C74_MAX_API_DIR	"${CMAKE_CURRENT_SOURCE_DIR}/../third_party/min-api/max-api")
+set(C74_MAX_API_DIR	"${CMAKE_CURRENT_SOURCE_DIR}/../third_party/max-api")
 
 # Misc setup and subroutines
 include(${C74_MAX_API_DIR}/script/max-package.cmake)
