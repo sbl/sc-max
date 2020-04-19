@@ -9,7 +9,7 @@ if (${CMAKE_GENERATOR} MATCHES "Xcode")
 endif ()
 
 
-set(C74_MAX_API_DIR ${CMAKE_CURRENT_LIST_DIR}/../max-api)
+set(C74_MAX_API_DIR ${CMAKE_CURRENT_LIST_DIR}/../../max-api)
 
 if (APPLE)
     if (CMAKE_OSX_ARCHITECTURES STREQUAL "")

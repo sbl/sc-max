@@ -24,7 +24,7 @@ add_custom_target( API ALL
 )
 
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test/mock)
+#add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test/mock)
 
 
 # Add unit tests for the API
