@@ -71,6 +71,7 @@ Softcut : UGen {
       out = 0,
       pan = 0,
       level = 1.0,
+      mix = 0,
 
       buffer,
       rate = 1,
@@ -137,6 +138,7 @@ Softcut : UGen {
         rateSlewTime
       );
 
+      snd = XFade2.ar(sndInput, snd, mix.lag(levelSlewTime));
       snd = Pan2.ar(snd, pan, level.lag(levelSlewTime));
       Out.ar(out, snd);
     }).add;
