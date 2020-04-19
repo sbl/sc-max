@@ -112,19 +112,20 @@ var blen = b.numFrames / b.sampleRate;
 
 x.set(
   \trigger, 1,
+  \play, 1,
   \rec, 1,
   \pos, 0,
-  \fadeTime, 0.01,
-  \preLevel, 0,
+  \fadeTime, 0.1,
+  \preLevel, 0.5,
   \recLevel, 0.7,
-  \loopEnd, 1,
+  \loopEnd, 20,
   \rate, 1,
 );
 
 )
 
 
-
+b.plot
 
 
 

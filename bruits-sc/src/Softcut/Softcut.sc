@@ -64,12 +64,13 @@ Softcut : UGen {
     );
   }
 
-  addSynthDef {
+  *initClass {
     SynthDef(\softcut, {
       arg
       in = 0,
       out = 0,
       pan = 0,
+      level = 1.0,
 
       buffer,
       rate = 1,
@@ -95,13 +96,18 @@ Softcut : UGen {
       postFilterBp = 0,
       postFilterBr = 0,
       postFilterDry = 1,
+
       fadeTime = 0.1,
       recPreSlewTime = 0.01,
-      rateSlewTime = 0.01;
+      rateSlewTime = 0.01,
+      levelSlewTime = 0.01
+      ;
 
-      var trigger = \trigger.tr(1);
+      var trigger = \trigger.tr(0);
+      var sndInput = SoundIn.ar(in);
+
       var snd = Softcut.ar(buffer,
-        In.ar(in),
+        sndInput,
         rate,
         trigger,
         pos,
@@ -131,9 +137,8 @@ Softcut : UGen {
         rateSlewTime
       );
 
-      snd = Pan2.ar(snd, pan);
-
-      Out.ar(0, snd);
+      snd = Pan2.ar(snd, pan, level.lag(levelSlewTime));
+      Out.ar(out, snd);
     }).add;
   }
 
